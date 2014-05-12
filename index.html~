@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.v3.js"></script>
+	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
+      href="lib/sugar-web/graphics/css/sugar-96dpi.css">
+	<link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
+      href="lib/sugar-web/graphics/css/sugar-200dpi.css">
+	<link rel="stylesheet" href="css/activity.css">
+	<script data-main="js/loader" src="lib/require.js"></script>
+
+    </head>
+    <body>
+
+<div id="main-toolbar" class="toolbar">
+  <button class="toolbutton" id="activity-button" title="My Activity"></button>
+
+  <!-- Add more buttons here -->
+
+  <!-- Buttons with class="pull-right" will be right aligned -->
+  <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+</div>
+
+<script type="text/javascript">
+
+//Circle Data Set
+var circleData = [
+  { "cx": 100, "cy": 200, "radius": 20, "color" : "yellow" },
+  { "cx": 700, "cy": 700, "radius": 20, "color" : "purple" }];
+
+//Create the SVG Viewport
+var svgContainer = d3.select("body").append("svg")
+                                     .attr("width",900)
+                                     .attr("height",890);
+
+//Add circles to the svgContainer
+var circles = svgContainer.selectAll("circle")
+                           .data(circleData)
+                           .enter()
+                           .append("circle");
+
+//Add the circle attributes
+var circleAttributes = circles
+                       .attr("cx", function (d) { return d.cx; })
+                       .attr("cy", function (d) { return d.cy; })
+                       .attr("r", function (d) { return d.radius; })
+                       .style("fill", function (d) { return d.color; });
+
+//Add the SVG Text Element to the svgContainer
+var text = svgContainer.selectAll("text")
+                        .data(circleData)
+                        .enter()
+                        .append("text");
+
+//Add SVG Text Element Attributes
+var textLabels = text
+                 .attr("x", function(d) { return d.cx-5; })
+                 .attr("y", function(d) { return d.cy+5; })
+                 .text("1")
+                 .attr("font-family", "sans-serif")
+                 .attr("font-size", "20px")
+                 .attr("fill", "red");
+
+</script>
+
+</body>
+</html>
