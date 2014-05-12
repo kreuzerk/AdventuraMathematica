@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>D3 Test</title>
+	<script type="text/javascript" src="js/mainscript.js"></script>
         <script type="text/javascript" src="d3/d3.v3.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
@@ -27,13 +28,34 @@
 
 //Circle Data Set
 var circleData = [
-  { "cx": 100, "cy": 200, "radius": 40, "color" : "yellow" },
-  { "cx": 700, "cy": 700, "radius": 40, "color" : "purple" }];
+  { "cx": 50, "cy": 770, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 1 },
+  { "cx": 120, "cy": 770, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 770, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 3},
+  { "cx": 260, "cy": 770, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 770, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 770, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 760, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 740, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
+  { "cx": 680, "cy": 740, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 760, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 11},
+  { "cx": 820, "cy": 770, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 12},
+  { "cx": 820, "cy": 690, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 13},
+  { "cx": 750, "cy": 650, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 14},
+  { "cx": 750, "cy": 580, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 15},
+  { "cx": 820, "cy": 580, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 16},
+  { "cx": 890, "cy": 560, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 17},
+  { "cx": 920, "cy": 630, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 18},
+  { "cx": 1000, "cy": 650, "radius": 30, "color" : "blue", "fontcolor" : "black", "number" : 19},
+  { "cx": 1070, "cy": 650, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 20},
+  { "cx": 1140, "cy": 650, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 21},
+  { "cx": 1140, "cy": 580, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 22},
+  { "cx": 20, "cy": 20, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 4}];
 
 //Create the SVG Viewport
 var svgContainer = d3.select("body").append("svg")
-                                     .attr("width",900)
-                                     .attr("height",890);
+                                     .attr("width",1200)
+                                     .attr("height",820);
 
 //Add circles to the svgContainer
 var circles = svgContainer.selectAll("circle")
@@ -58,10 +80,10 @@ var text = svgContainer.selectAll("text")
 var textLabels = text
                  .attr("x", function(d) { return d.cx-5; })
                  .attr("y", function(d) { return d.cy+5; })
-                 .text("1")
-                 .attr("font-family", "sans-serif")
+                 .text(function(d) { return d.number; })
+                 .attr("font-family", "Chalkboard")
                  .attr("font-size", "20px")
-                 .attr("fill", "red");
+                 .attr("fill", function(d) { return d.fontcolor; });
 
 //Adding an image
 svgContainer.append("svg:image")
@@ -69,6 +91,11 @@ svgContainer.append("svg:image")
       .attr("width", 100)
       .attr("height", 100).attr("x", 80).attr("y",600);
 
+//Adding the cube
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/cube.png").attr("onclick","hallo()")
+      .attr("width", 100)
+      .attr("height", 100).attr("x", 20).attr("y",20);
 
 </script>
 
