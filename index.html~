@@ -14,7 +14,6 @@
 
     </head>
     <body>
-
 <div id="main-toolbar" class="toolbar">
   <button class="toolbutton" id="activity-button" title="My Activity"></button>
 

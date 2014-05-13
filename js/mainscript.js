@@ -14,10 +14,30 @@ dicesound.play();
 
 diceresult = Math.floor(Math.random() * 6) + 1;
 
-alert(diceresult);
+var filename;
+//Draw the corresponding image to the diceresult
+switch(diceresult){
+case 1:
+	filename = "One";
+break;
+case 2:
+	filename = "Two";
+break;
+case 3:
+	filename = "Three";
+break;
+case 4:
+	filename = "Four";
+break;
+case 5:
+	filename = "Five";
+break;
+case 6:
+	filename = "Six";
+break;
+}
 
-//Set the new currentfield
-alert(currentfield + " + " + diceresult + " = " + (diceresult + currentfield));
+drawcube(filename);
 
 i=currentfield;
 move();
@@ -58,3 +78,39 @@ function deletelion(){
 var lion = document.getElementById("Lion");
 lion.parentNode.removeChild(lion);
 }
+
+function drawcube($filename){
+
+/* evtl. noch ein Rechteck dazu zeichnen
+svgContainer.append("rect")
+                            .attr("x", (width/2)-300)
+                            .attr("y", (height/2)-100)
+                            .attr("width", 500)
+			    .attr("fill", "white")
+                            .attr("height", 150);
+*/
+
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/" + $filename +".png").attr("id", "One")
+      .attr("width", 100)
+      .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
+
+svgContainer.append("text")
+      .attr("x", (width/2)-200)
+      .attr("y", (height/2)+20)
+      .text(currentfield + " + ")
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+svgContainer.append("text")
+      .attr("x", (width/2)+ 50)
+      .attr("y", (height/2)+20)
+      .text("= " + (currentfield+diceresult))
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+}
+
+
