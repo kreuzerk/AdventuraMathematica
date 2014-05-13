@@ -108,19 +108,19 @@ svgContainer.append("rect")
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/" + $filename +".png").attr("id", "diceimage")
       .attr("width", 100)
-      .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
+      .attr("height", 100).attr("x", 290).attr("y",30);
 
 svgContainer.append("text").attr("id", "dicetextone")
-      .attr("x", (width/2)-200)
-      .attr("y", (height/2)+20)
+      .attr("x", 160)
+      .attr("y", 100)
       .text(currentfield + " + ")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
       .attr("fill", "black");
 
 svgContainer.append("text").attr("id", "diceresult")
-      .attr("x", (width/2)+ 50)
-      .attr("y", (height/2)+20)
+      .attr("x", 420)
+      .attr("y", 100)
       .text("= " + (currentfield+diceresult))
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
@@ -181,12 +181,12 @@ function green(){
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/bananas.png").attr("id", "plusbananaimage")
       .attr("width", 100)
-      .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
+      .attr("height", 100).attr("x", 290).attr("y",30);
 
 //Display the amount of Bananas
 svgContainer.append("text").attr("id", "plusbananatext")
-      .attr("x", (width/2)-200)
-      .attr("y", (height/2)+20)
+      .attr("x", 160)
+      .attr("y", 100)
       .text(" + 3")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
@@ -225,12 +225,12 @@ function red(){
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/bananas.png").attr("id", "minusbananaimage")
       .attr("width", 100)
-      .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
+      .attr("height", 100).attr("x", 290).attr("y",30);
 
 //Display the amount of Bananas
 svgContainer.append("text").attr("id", "minusbananatext")
-      .attr("x", (width/2)-200)
-      .attr("y", (height/2)+20)
+      .attr("x", 160)
+      .attr("y", 100)
       .text(" - 3")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")

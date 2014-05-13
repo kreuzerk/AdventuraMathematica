@@ -58,7 +58,69 @@ var circleData = [
   { "cx": 1000, "cy": 500, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 25},
   { "cx": 930, "cy": 450, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 26},
   { "cx": 860, "cy": 450, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 27},
-  { "cx": 20, "cy": 20, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 4}];
+  { "cx": 790, "cy": 470, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 28},
+  { "cx": 720, "cy": 470, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 29},
+  { "cx": 560, "cy": 450, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 30},
+  { "cx": 490, "cy": 450, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 31},
+  { "cx": 420, "cy": 450, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 32},
+  { "cx": 420, "cy": 520, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 33},
+  { "cx": 420, "cy": 590, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 34},
+  { "cx": 350, "cy": 670, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 35},
+  { "cx": 280, "cy": 650, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 36},
+  { "cx": 210, "cy": 660, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 37},
+  { "cx": 140, "cy": 650, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 38},
+  { "cx": 140, "cy": 580, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 39},
+  { "cx": 70, "cy": 580, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 40},
+  { "cx": 70, "cy": 510, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 41},
+  { "cx": 140, "cy": 510, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 42},
+  { "cx": 140, "cy": 440, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 43},
+  { "cx": 70, "cy": 440, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 44},
+  { "cx": 70, "cy": 370, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 45},
+  { "cx": 210, "cy": 370, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 46},
+  { "cx": 280, "cy": 370, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 47},
+  { "cx": 350, "cy": 350, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 48},
+  { "cx": 420, "cy": 340, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 49},
+  { "cx": 480, "cy": 360, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 50},
+  { "cx": 550, "cy": 370, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 51},
+  { "cx": 620, "cy": 360, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 52},
+  { "cx": 690, "cy": 350, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 53},
+  { "cx": 760, "cy": 330, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 54},
+  { "cx": 830, "cy": 350, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 55},
+  { "cx": 900, "cy": 360, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 56},
+  { "cx": 970, "cy": 370, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 57},
+  { "cx": 1040, "cy": 370, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 58},
+  { "cx": 1110, "cy": 370, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 59},
+  { "cx": 1110, "cy": 300, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 60},
+  { "cx": 1040, "cy": 300, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 61},
+  { "cx": 970, "cy": 280, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 62},
+  { "cx": 900, "cy": 260, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 63},
+  { "cx": 830, "cy": 240, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 64},
+  { "cx": 760, "cy": 240, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 65},
+  { "cx": 690, "cy": 260, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 66},
+  { "cx": 620, "cy": 240, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 67},
+  { "cx": 550, "cy": 270, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 68},
+  { "cx": 480, "cy": 280, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 69},
+  { "cx": 410, "cy": 260, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 70},
+  { "cx": 340, "cy": 280, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 71},
+  { "cx": 270, "cy": 300, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 72},
+  { "cx": 200, "cy": 300, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 73},
+  { "cx": 130, "cy": 300, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 74},
+  { "cx": 60, "cy": 250, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 75},
+  { "cx": 130, "cy": 230, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 76},
+  { "cx": 210, "cy": 230, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 77},
+  { "cx": 280, "cy": 210, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 78},
+  { "cx": 350, "cy": 200, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 79},
+  { "cx": 420, "cy": 190, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 80},
+  { "cx": 490, "cy": 200, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 81},
+  { "cx": 560, "cy": 200, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 82},
+  { "cx": 630, "cy": 160, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 83},
+  { "cx": 700, "cy": 160, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 84},
+  { "cx": 770, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 85},
+  { "cx": 820, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 86},
+  { "cx": 910, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 87},
+  { "cx": 980, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 88},
+  { "cx": 1050, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 89},
+  { "cx": 1120, "cy": 20, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 90}];
 
 //Create the SVG Viewport
 var svgContainer = d3.select("body").append("svg")
@@ -131,7 +193,7 @@ svgContainer.append("text").attr("id", "bananaamount")
 svgContainer.append("svg:image").attr("id", "moneyamount")
       .attr("xlink:href", "./images/money.png").attr("onclick","hallo()")
       .attr("width", 80)
-      .attr("height", 80).attr("x", width-370).attr("y",height-120);
+      .attr("height", 80).attr("x", width-360).attr("y",height-120);
 
 //Adding the moneytext
 svgContainer.append("text")
@@ -141,6 +203,19 @@ svgContainer.append("text")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
       .attr("fill", "black");
+
+//=============================================
+//Images on the map
+//=============================================
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/house.png")
+      .attr("width", 80)
+      .attr("height", 80).attr("x", 600).attr("y",420);
+
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/Hippopotamus.png")
+      .attr("width", 150)
+      .attr("height", 150).attr("x", 190).attr("y",460);
 
 
 </script>
