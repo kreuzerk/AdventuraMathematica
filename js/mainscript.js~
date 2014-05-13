@@ -1,4 +1,8 @@
 var currentfield = 1;
+var i;
+var diceresult;
+var cx;
+var cy;
 
 function hallo(){
 
@@ -8,25 +12,38 @@ dicesound.play();
 
 
 
-var diceresult = Math.floor(Math.random() * 6) + 1;
+diceresult = Math.floor(Math.random() * 6) + 1;
 
 alert(diceresult);
 
 //Set the new currentfield
 alert(currentfield + " + " + diceresult + " = " + (diceresult + currentfield));
-currentfield = diceresult+currentfield;
 
-var cx = circleData[currentfield-1].cx;
-var cy = circleData[currentfield-1].cy;
-
-//drawlion(cx, cy);
-deleteimages();
-
-height = 200;
-width = 200;
-
+i=currentfield;
+move();
 }
 
+function move(){
+
+  if(i<=(currentfield+diceresult)){
+    window.setTimeout("move()",1000);
+
+    cx = circleData[i-1].cx;
+    cy = circleData[i-1].cy;
+
+    //Delete the lion
+    deletelion();
+
+
+    //Draw the lion
+    drawlion(cx,cy);
+
+    i++;
+  }
+  else{
+  currentfield = diceresult + currentfield;
+ }
+}
 
 function drawlion($cx, $cy){
 
@@ -36,8 +53,8 @@ svgContainer.append("svg:image")
       .attr("height", 100).attr("x", $cx-50).attr("y",$cy-90);
 }
 
-function deleteimages(){
+function deletelion(){
 
 var lion = document.getElementById("Lion");
-svgContainer.append(lion);
+lion.parentNode.removeChild(lion);
 }
