@@ -62,6 +62,7 @@ function move(){
   }
   else{
   currentfield = diceresult + currentfield;
+  removedicedisplay();
  }
 }
 
@@ -91,11 +92,11 @@ svgContainer.append("rect")
 */
 
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/" + $filename +".png").attr("id", "One")
+      .attr("xlink:href", "./images/" + $filename +".png").attr("id", "diceimage")
       .attr("width", 100)
       .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
 
-svgContainer.append("text")
+svgContainer.append("text").attr("id", "dicetextone")
       .attr("x", (width/2)-200)
       .attr("y", (height/2)+20)
       .text(currentfield + " + ")
@@ -103,7 +104,7 @@ svgContainer.append("text")
       .attr("font-size", "50px")
       .attr("fill", "black");
 
-svgContainer.append("text")
+svgContainer.append("text").attr("id", "diceresult")
       .attr("x", (width/2)+ 50)
       .attr("y", (height/2)+20)
       .text("= " + (currentfield+diceresult))
@@ -111,6 +112,19 @@ svgContainer.append("text")
       .attr("font-size", "50px")
       .attr("fill", "black");
 
+}
+
+//Remove the dice display in the middle of the window
+function removedicedisplay(){
+
+var dicetextone = document.getElementById("dicetextone");
+var diceimage = document.getElementById("diceimage");
+var diceresult = document.getElementById("diceresult");
+
+//remove the elements
+dicetextone.parentNode.removeChild(dicetextone);
+diceimage.parentNode.removeChild(diceimage);
+diceresult.parentNode.removeChild(diceresult);
 }
 
 
