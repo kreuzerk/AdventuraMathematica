@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>D3 Test</title>
 	<script type="text/javascript" src="js/mainscript.js"></script>
+	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="d3/d3.v3.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
@@ -25,6 +26,9 @@
 
 <script type="text/javascript">
 
+var width = 1200;
+var height = 820;
+
 //Circle Data Set
 var circleData = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 1 },
@@ -36,11 +40,11 @@ var circleData = [
   { "cx": 470, "cy": 760, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 7},
   { "cx": 540, "cy": 740, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 8},
   { "cx": 610, "cy": 720, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
-  { "cx": 680, "cy": 740, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 760, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 11},
-  { "cx": 820, "cy": 770, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 12},
-  { "cx": 820, "cy": 690, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 13},
-  { "cx": 750, "cy": 650, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 14},
+  { "cx": 610, "cy": 650, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" :10},
+  { "cx": 540, "cy": 650, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 11},
+  { "cx": 540, "cy": 580, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 12},
+  { "cx": 610, "cy": 580, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 13},
+  { "cx": 680, "cy": 560, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 14},
   { "cx": 750, "cy": 580, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 15},
   { "cx": 820, "cy": 580, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 16},
   { "cx": 890, "cy": 560, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 17},
@@ -58,8 +62,8 @@ var circleData = [
 
 //Create the SVG Viewport
 var svgContainer = d3.select("body").append("svg")
-                                     .attr("width",1200)
-                                     .attr("height",820);
+                                     .attr("width",width)
+                                     .attr("height",height);
 
 //Add circles to the svgContainer
 var circles = svgContainer.selectAll("circle")
@@ -103,7 +107,47 @@ svgContainer.append("svg:image")
       .attr("width", 100)
       .attr("height", 100).attr("x", 20).attr("y",20);
 
+//=============================================
+//RIGHT BOTTOM
+//=============================================
+
+
+//Adding the bananaimage
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/bananas.png").attr("onclick","hallo()")
+      .attr("width", 80)
+      .attr("height", 80).attr("x", width-130).attr("y",height-120);
+
+//Adding the Bananatext
+svgContainer.append("text").attr("id", "bananaamount")
+      .attr("x", width-250)
+      .attr("y", height-50)
+      .text("0 x")
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+//Adding the moneyimage
+svgContainer.append("svg:image").attr("id", "moneyamount")
+      .attr("xlink:href", "./images/money.png").attr("onclick","hallo()")
+      .attr("width", 80)
+      .attr("height", 80).attr("x", width-320).attr("y",height-120);
+
+//Adding the moneytext
+svgContainer.append("text")
+      .attr("x", width-440)
+      .attr("y", height-50)
+      .text("0 x")
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+
 </script>
 
+<!--
+<button onclick="hide()">Hide</button>
+<button onclick="show()">Show</button>
+-->
 </body>
 </html>

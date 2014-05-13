@@ -3,6 +3,10 @@ var i;
 var diceresult;
 var cx;
 var cy;
+var bananacounter = 0;
+
+//boolean variables
+var green_entered;
 
 function hallo(){
 
@@ -10,6 +14,10 @@ dicesound = new Audio();
 dicesound.src = "../sounds/Diceroll.mp3";
 dicesound.play();
 
+//Call Methods at the beginning of each dice throw
+if(green_entered){
+removegreen();
+}
 
 
 diceresult = Math.floor(Math.random() * 6) + 1;
@@ -63,6 +71,7 @@ function move(){
   else{
   currentfield = diceresult + currentfield;
   removedicedisplay();
+  checkfield();
  }
 }
 
@@ -127,4 +136,73 @@ diceimage.parentNode.removeChild(diceimage);
 diceresult.parentNode.removeChild(diceresult);
 }
 
+/*
+function hide(){
+$("svg").hide();
+}
+
+function show(){
+$("svg").show();
+}
+*/
+
+
+/*=================================================================================
+Function that detects on which field the caracter is standing
+===================================================================================*/
+
+function checkfield(){
+
+var currentcolor = circleData[currentfield-1].color;
+
+//Say which method needs to be called. Corresponding to the color the caracter is standing on.
+switch(currentcolor){
+case "green":
+green();
+break;
+}
+
+}
+
+
+/*=================================================================================
+Function for green fields
+===================================================================================*/
+function green(){
+
+//Display banana
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/bananas.png").attr("id", "plusbananaimage")
+      .attr("width", 100)
+      .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
+
+//Display the amount of Bananas
+svgContainer.append("text").attr("id", "plusbananatext")
+      .attr("x", (width/2)-200)
+      .attr("y", (height/2)+20)
+      .text(" + 3")
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+var bananaamount = document.getElementById("bananaamount");
+bananacounter = bananacounter + 3;
+bananaamount.textContent = "+ " + bananacounter;
+
+green_entered = true;
+
+}
+
+//Remove the images from the display
+function removegreen(){
+
+var plusbananaimage = document.getElementById("plusbananaimage");
+var plusbananatext = document.getElementById("plusbananatext");
+
+//remove the elements
+plusbananaimage.parentNode.removeChild(plusbananaimage);
+plusbananatext.parentNode.removeChild(plusbananatext);
+
+green_entered = false;
+}
 
