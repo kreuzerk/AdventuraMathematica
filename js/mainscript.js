@@ -7,6 +7,7 @@ var bananacounter = 0;
 
 //boolean variables
 var green_entered;
+var red_entered;
 
 function hallo(){
 
@@ -17,6 +18,10 @@ dicesound.play();
 //Call Methods at the beginning of each dice throw
 if(green_entered){
 removegreen();
+}
+
+if(red_entered){
+removered();
 }
 
 
@@ -160,8 +165,10 @@ switch(currentcolor){
 case "green":
 green();
 break;
+case "red":
+red();
+break;
 }
-
 }
 
 
@@ -205,4 +212,51 @@ plusbananatext.parentNode.removeChild(plusbananatext);
 
 green_entered = false;
 }
+
+
+/*=================================================================================
+Function for red fields
+===================================================================================*/
+
+//Display function
+function red(){
+
+//Display banana
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/bananas.png").attr("id", "minusbananaimage")
+      .attr("width", 100)
+      .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
+
+//Display the amount of Bananas
+svgContainer.append("text").attr("id", "minusbananatext")
+      .attr("x", (width/2)-200)
+      .attr("y", (height/2)+20)
+      .text(" - 3")
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "red");
+
+var bananaamount = document.getElementById("bananaamount");
+if(bananacounter > 0){
+bananacounter = bananacounter - 3;
+}
+
+bananaamount.textContent = "+ " + bananacounter;
+
+red_entered = true;
+}
+
+//Removefunction
+function removered(){
+
+var minusbananaimage = document.getElementById("minusbananaimage");
+var minusbananatext = document.getElementById("minusbananatext");
+
+//remove the elements
+minusbananaimage.parentNode.removeChild(minusbananaimage);
+minusbananatext.parentNode.removeChild(minusbananatext);
+
+red_entered = false;
+}
+
 

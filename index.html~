@@ -131,7 +131,7 @@ svgContainer.append("text").attr("id", "bananaamount")
 svgContainer.append("svg:image").attr("id", "moneyamount")
       .attr("xlink:href", "./images/money.png").attr("onclick","hallo()")
       .attr("width", 80)
-      .attr("height", 80).attr("x", width-320).attr("y",height-120);
+      .attr("height", 80).attr("x", width-370).attr("y",height-120);
 
 //Adding the moneytext
 svgContainer.append("text")
