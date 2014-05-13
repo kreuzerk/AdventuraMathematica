@@ -104,10 +104,6 @@ svgContainer.append("svg:image")
       .attr("width", 100)
       .attr("height", 100).attr("x", 20).attr("y",20);
 
-function getdata($i){
-return selection.filter(function(d, i) { return i==$i });
-}
-
 </script>
 
 </body>
