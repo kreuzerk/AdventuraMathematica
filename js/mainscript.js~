@@ -141,15 +141,16 @@ diceimage.parentNode.removeChild(diceimage);
 diceresult.parentNode.removeChild(diceresult);
 }
 
-/*
+
 function hide(){
 $("svg").hide();
 }
 
+
 function show(){
 $("svg").show();
 }
-*/
+
 
 
 /*=================================================================================
@@ -181,7 +182,7 @@ function green(){
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/bananas.png").attr("id", "plusbananaimage")
       .attr("width", 100)
-      .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
+      .attr("height", 100).attr("x", 290).attr("y",30);
 
 //Display the amount of Bananas
 svgContainer.append("text").attr("id", "plusbananatext")
@@ -225,12 +226,12 @@ function red(){
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/bananas.png").attr("id", "minusbananaimage")
       .attr("width", 100)
-      .attr("height", 100).attr("x", (width/2)-80).attr("y",(height/2)-50);
+      .attr("height", 100).attr("x", 290).attr("y",30);
 
 //Display the amount of Bananas
 svgContainer.append("text").attr("id", "minusbananatext")
-      .attr("x", (width/2)-200)
-      .attr("y", (height/2)+20)
+      .attr("x", 160)
+      .attr("y", 100)
       .text(" - 3")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")

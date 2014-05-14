@@ -115,12 +115,12 @@ var circleData = [
   { "cx": 560, "cy": 200, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 82},
   { "cx": 630, "cy": 160, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 83},
   { "cx": 700, "cy": 160, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 84},
-  { "cx": 770, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 85},
-  { "cx": 820, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 86},
-  { "cx": 910, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 87},
-  { "cx": 980, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 88},
-  { "cx": 1050, "cy": 160, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 89},
-  { "cx": 1120, "cy": 20, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 90}];
+  { "cx": 770, "cy": 140, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 85},
+  { "cx": 820, "cy": 120, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 86},
+  { "cx": 910, "cy": 100, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 87},
+  { "cx": 980, "cy": 100, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 88},
+  { "cx": 1050, "cy": 80, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 89},
+  { "cx": 1120, "cy": 60, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 90}];
 
 //Create the SVG Viewport
 var svgContainer = d3.select("body").append("svg")
@@ -217,6 +217,7 @@ svgContainer.append("svg:image")
       .attr("width", 150)
       .attr("height", 150).attr("x", 190).attr("y",460);
 
+//hide();
 
 </script>
 
@@ -224,5 +225,39 @@ svgContainer.append("svg:image")
 <button onclick="hide()">Hide</button>
 <button onclick="show()">Show</button>
 -->
+
+
+<!-- ==========================================================================================
+Code for the Shop Mini Game
+=============================================================================================-->
+
+<table id="shoptable">
+<tr>
+<td>
+	<table class="shopitems">
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/ball.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/soap.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/guitar.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/waterball.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/bear.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	</table>
+</td>
+<td>
+	<table>
+	<tr>
+		<svg id="shopsvg" width="400" height="350"></svg>
+	</tr>
+	<tr>
+		<td><button>Vaciar</button></td>
+		<td><button>Pagar</button></td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+
+
+
 </body>
 </html>

@@ -39,6 +39,6 @@ td{
   background-color:light-brown;
   background-image: url(../images/Shop/wood.jpg);
   background-repeat: no-repeat;
-  background-size: 400px 700px;
+  background-size: 400px 720px;
 }
 

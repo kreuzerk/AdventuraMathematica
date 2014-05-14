@@ -217,6 +217,7 @@ svgContainer.append("svg:image")
       .attr("width", 150)
       .attr("height", 150).attr("x", 190).attr("y",460);
 
+//hide();
 
 </script>
 
@@ -224,5 +225,39 @@ svgContainer.append("svg:image")
 <button onclick="hide()">Hide</button>
 <button onclick="show()">Show</button>
 -->
+
+
+<!-- ==========================================================================================
+Code for the Shop Mini Game
+=============================================================================================-->
+
+<table id="shoptable">
+<tr>
+<td>
+	<table class="shopitems">
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/ball.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/soap.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/guitar.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/waterball.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	<tr><td class="shopimage"><img border="0" src="./images/Shop/bear.png" width="100" height="100"></td><td class="shopprice">2.00</td></tr>
+	</table>
+</td>
+<td>
+	<table>
+	<tr>
+		<svg id="shopsvg" width="400" height="350"></svg>
+	</tr>
+	<tr>
+		<td><button>Vaciar</button></td>
+		<td><button>Pagar</button></td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+
+
+
 </body>
 </html>

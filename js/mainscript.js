@@ -141,11 +141,12 @@ diceimage.parentNode.removeChild(diceimage);
 diceresult.parentNode.removeChild(diceresult);
 }
 
-/*
+
 function hide(){
 $("svg").hide();
 }
 
+/*
 function show(){
 $("svg").show();
 }
