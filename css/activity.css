@@ -2,7 +2,7 @@
   background-image: url(../activity/activity-icon.svg);
 }
 
-svg{
+#maingamesvg{
   /*background-image: url(../images/dschungel.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -21,7 +21,21 @@ Styles for Shopactivities
 
 }
 
-td{
+#cartlist{
+  width: 500px;
+  background-image: url(../images/Shop/zettel.jpg);
+  font-size: 20px;
+}
+
+#item11{
+  font-weight: bold;
+}
+
+#price11{
+  font-weight: bold;
+}
+
+.shopimage{
   padding:15px;
 }
 
@@ -29,7 +43,16 @@ td{
   
   width:1200px;
   height:820px;
-  background-color: white;
+    background-image: url(../images/Shop/background.jpg);
+}
+
+.shopbuttons{
+  width: 300px;
+  height: 100px;
+  background-color:white;
+  color:black;
+  font-size: 40px;
+  padding:20px;
 }
 
 .shopitems{
@@ -41,4 +64,10 @@ td{
   background-repeat: no-repeat;
   background-size: 400px 700px;
 }
+
+.buttonrow{
+  background:transparent;
+}
+
+
 
