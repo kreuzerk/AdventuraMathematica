@@ -6,8 +6,8 @@ var cy;
 var bananacounter = 0;
 
 //boolean variables
-var green_entered;
-var red_entered;
+var entered;
+
 
 function hallo(){
 
@@ -16,13 +16,10 @@ dicesound.src = "../sounds/Diceroll.mp3";
 dicesound.play();
 
 //Call Methods at the beginning of each dice throw
-if(green_entered){
-removegreen();
+if(entered){
+remove();
 }
 
-if(red_entered){
-removered();
-}
 
 
 diceresult = Math.floor(Math.random() * 6) + 1;
@@ -143,7 +140,13 @@ diceresult.parentNode.removeChild(diceresult);
 
 
 function hide(){
-$("svg").hide();
+
+$("#shoptable").hide();
+
+alert(table);
+
+//$("svg").hide();
+
 }
 
 /*
@@ -169,6 +172,13 @@ break;
 case "red":
 red();
 break;
+case "blue":
+//Hide the main game
+$("#maingamesvg").hide();
+$("#shoptable").show();
+createexercise();
+break;
+
 }
 }
 
@@ -177,41 +187,22 @@ break;
 Function for green fields
 ===================================================================================*/
 function green(){
-
-//Display banana
-svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/bananas.png").attr("id", "plusbananaimage")
-      .attr("width", 100)
-      .attr("height", 100).attr("x", 290).attr("y",30);
-
-//Display the amount of Bananas
-svgContainer.append("text").attr("id", "plusbananatext")
-      .attr("x", 160)
-      .attr("y", 100)
-      .text(" + 3")
-      .attr("font-family", "Chalkboard")
-      .attr("font-size", "50px")
-      .attr("fill", "black");
-
-var bananaamount = document.getElementById("bananaamount");
-bananacounter = bananacounter + 3;
-bananaamount.textContent = "+ " + bananacounter;
-
-green_entered = true;
-
+drawimage(3, true);
 }
 
-//Remove the images from the display
-function removegreen(){
+/*=================================================================================
+Remove the images from the display
+===================================================================================*/
+function remove(){
 
-var plusbananaimage = document.getElementById("plusbananaimage");
-var plusbananatext = document.getElementById("plusbananatext");
+var plusbananaimage = document.getElementById("bananaimage");
+var plusbananatext = document.getElementById("bananatext");
 
 //remove the elements
 plusbananaimage.parentNode.removeChild(plusbananaimage);
 plusbananatext.parentNode.removeChild(plusbananatext);
 
-green_entered = false;
+entered = false;
 }
 
 
@@ -221,43 +212,84 @@ Function for red fields
 
 //Display function
 function red(){
+drawimage(3, false);
+}
+
+/*=================================================================================
+Function for blue fields
+===================================================================================*/
+
+function correctblue(){
+hideblue();
+drawimage(10, true);
+alert("Enhorabuena que la respuesta es correcta");
+}
+
+function wrongblue(){
+hideblue();
+drawimage(5, false);
+alert("Por desgracia, la respuesta es incorrecta");
+}
+
+function hideblue(){
+$("#shoptable").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function for drawing an image
+===================================================================================*/
+function drawimage($amount, $positive){
 
 //Display banana
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/bananas.png").attr("id", "minusbananaimage")
+      .attr("xlink:href", "./images/bananas.png").attr("id", "bananaimage")
       .attr("width", 100)
       .attr("height", 100).attr("x", 290).attr("y",30);
 
-//Display the amount of Bananas
-svgContainer.append("text").attr("id", "minusbananatext")
+
+if($positive){
+
+//Plus
+svgContainer.append("text").attr("id", "bananatext")
       .attr("x", 160)
       .attr("y", 100)
-      .text(" - 3")
+      .text(" + " + $amount)
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+var bananaamount = document.getElementById("bananaamount");
+bananacounter = bananacounter + $amount;
+bananaamount.textContent = "+ " + bananacounter;
+}
+else{
+
+//Minus
+svgContainer.append("text").attr("id", "bananatext")
+      .attr("x", 160)
+      .attr("y", 100)
+      .text(" - " + $amount)
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
       .attr("fill", "red");
 
 var bananaamount = document.getElementById("bananaamount");
 if(bananacounter > 0){
-bananacounter = bananacounter - 3;
+bananacounter = bananacounter - $amount;
+	}
 }
 
 bananaamount.textContent = "+ " + bananacounter;
-
-red_entered = true;
+entered = true;
 }
 
-//Removefunction
-function removered(){
 
-var minusbananaimage = document.getElementById("minusbananaimage");
-var minusbananatext = document.getElementById("minusbananatext");
+function wronganswer(){
 
-//remove the elements
-minusbananaimage.parentNode.removeChild(minusbananaimage);
-minusbananatext.parentNode.removeChild(minusbananatext);
 
-red_entered = false;
 }
+
+
 
 
