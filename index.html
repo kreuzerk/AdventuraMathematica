@@ -5,6 +5,7 @@
         <title>D3 Test</title>
 	<script type="text/javascript" src="js/mainscript.js"></script>
 	<script type="text/javascript" src="js/shopgame.js"></script>
+	<script type="text/javascript" src="js/krokogame.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="d3/d3.v3.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
@@ -315,14 +316,14 @@ Krokogame
                             .attr("x", 150)
                             .attr("y", 10)
                             .attr("width", 250)
-                            .attr("height", 560)
+                            .attr("height", 550)
 			    .attr("fill", "lightblue");
 
 		kroksvg.append("rect")
                             .attr("x", 800)
                             .attr("y", 10)
                             .attr("width", 250)
-                            .attr("height", 560)
+                            .attr("height", 550)
 			    .attr("fill", "lightblue");
 
 		//Adding the Text for the multiplikations
@@ -359,5 +360,6 @@ Krokogame
 </body>
 <script type="text/javascript">
 hide();
+createkrokogame();
 </script>
 </html>

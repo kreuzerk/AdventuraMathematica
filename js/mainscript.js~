@@ -142,7 +142,7 @@ diceresult.parentNode.removeChild(diceresult);
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
+//$("#maingamesvg").hide();
 
 }
 

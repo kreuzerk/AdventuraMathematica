@@ -234,11 +234,11 @@ Code for the Shop Mini Game
 <tr>
 <td>
 	<table class="shopitems">
-	<tr><td class="shopimage"><img number=0 border="0" src="./images/Shop/ball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">25.00</td></tr>
+	<tr><td class="shopimage"><img number=0 border="0" src="./images/Shop/ball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">10.00</td></tr>
 	<tr><td class="shopimage"><img number=1 border="0" src="./images/Shop/soap.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">5.00</td></tr>
-	<tr><td class="shopimage"><img number=2 border="0" src="./images/Shop/guitar.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">98.00</td></tr>
-	<tr><td class="shopimage"><img number=3 border="0" src="./images/Shop/waterball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">30.00</td></tr>
-	<tr><td class="shopimage"><img number=4 border="0" src="./images/Shop/bear.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">18.00</td></tr>
+	<tr><td class="shopimage"><img number=2 border="0" src="./images/Shop/guitar.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">20.00</td></tr>
+	<tr><td class="shopimage"><img number=3 border="0" src="./images/Shop/waterball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">50.00</td></tr>
+	<tr><td class="shopimage"><img number=4 border="0" src="./images/Shop/bear.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">100.00</td></tr>
 	</table>
 </td>
 <td>
@@ -315,14 +315,14 @@ Krokogame
                             .attr("x", 150)
                             .attr("y", 10)
                             .attr("width", 250)
-                            .attr("height", 560)
+                            .attr("height", 550)
 			    .attr("fill", "lightblue");
 
 		kroksvg.append("rect")
                             .attr("x", 800)
                             .attr("y", 10)
                             .attr("width", 250)
-                            .attr("height", 560)
+                            .attr("height", 550)
 			    .attr("fill", "lightblue");
 
 		//Adding the Text for the multiplikations
@@ -359,5 +359,6 @@ Krokogame
 </body>
 <script type="text/javascript">
 hide();
+createkrokogame();
 </script>
 </html>
