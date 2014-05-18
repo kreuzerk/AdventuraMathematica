@@ -270,7 +270,17 @@ Code for the Shop Mini Game
 	<tr><td id="item8"> </td><td id="price8"> </td></tr>
 	<tr><td id="item9"> </td><td id="price9"> </td></tr>
 	<tr><td id="item10"> </td><td id="price10"> </td></tr>
-        <tr><td id="item11"> </td><td id="price11"> </td></tr>	
+	<tr><td id="item11"> </td><td id="price11"> </td></tr>
+	<tr><td id="item12"> </td><td id="price12"> </td></tr>
+	<tr><td id="item13"> </td><td id="price13"> </td></tr>
+	<tr><td id="item14"> </td><td id="price14"> </td></tr>
+	<tr><td id="item15"> </td><td id="price15"> </td></tr>
+	<tr><td id="item16"> </td><td id="price16"> </td></tr>
+	<tr><td id="item17"> </td><td id="price17"> </td></tr>
+	<tr><td id="item18"> </td><td id="price18"> </td></tr>
+	<tr><td id="item19"> </td><td id="price19"> </td></tr>
+	<tr><td id="item20"> </td><td id="price20"> </td></tr>
+        <tr><td id="item21"> </td><td id="price21"> </td></tr>	
 	<tr class="buttonrow">
 		<td><button class="shopbuttons" onClick="clearlist()">Vaciar</button></td>
 		<td><button class="shopbuttons" onClick="pagar()">Pagar</button></td>
@@ -279,6 +289,70 @@ Code for the Shop Mini Game
         </tr>
         </table>
 </td>
+</tr>
+</table>
+
+<!---- ================================================================
+Krokogame
+====================================================================-->
+
+<table id="krokotable">
+<tr class="krokbuttonrow">
+  <td><button class="krokobuttons">></button></td>
+  <td><button class="krokobuttons">=</button></td>
+  <td><button class="krokobuttons"><</button></td>
+</tr>
+<tr>
+  <table>
+  <tr id="krokorow">
+  <script type="text/javascript">
+
+		var kroksvg = d3.select("#krokorow").append("svg").attr("id", "krokosvg")
+                                     .attr("width",1200)
+                                     .attr("height",600);
+
+		kroksvg.append("rect")
+                            .attr("x", 150)
+                            .attr("y", 10)
+                            .attr("width", 250)
+                            .attr("height", 560)
+			    .attr("fill", "lightblue");
+
+		kroksvg.append("rect")
+                            .attr("x", 800)
+                            .attr("y", 10)
+                            .attr("width", 250)
+                            .attr("height", 560)
+			    .attr("fill", "lightblue");
+
+		//Adding the Text for the multiplikations
+		kroksvg.append("text").attr("id", "multiplier1")
+      			.attr("x", 20)
+      			.attr("y", 300)
+      			.text("1 x")
+      			.attr("font-family", "Chalkboard")
+      			.attr("font-size", "50px")
+      			.attr("fill", "black");
+
+		kroksvg.append("text").attr("id", "multiplier2")
+      			.attr("x", 1080)
+      			.attr("y", 300)
+      			.text("1 x")
+      			.attr("font-family", "Chalkboard")
+      			.attr("font-size", "50px")
+      			.attr("fill", "black");
+
+
+
+/*
+		kroksvg.append("svg:image").attr("id", "cart")
+      		.attr("xlink:href", "./images/Shop/cart.png")
+      		.attr("width", 450)
+      		.attr("height", 250).attr("x", 20).attr("y",50);
+*/
+		</script>
+</tr>
+</table>
 </tr>
 </table>
 

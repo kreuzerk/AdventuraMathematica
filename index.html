@@ -234,11 +234,11 @@ Code for the Shop Mini Game
 <tr>
 <td>
 	<table class="shopitems">
-	<tr><td class="shopimage"><img number=0 border="0" src="./images/Shop/ball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">25.00</td></tr>
+	<tr><td class="shopimage"><img number=0 border="0" src="./images/Shop/ball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">10.00</td></tr>
 	<tr><td class="shopimage"><img number=1 border="0" src="./images/Shop/soap.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">5.00</td></tr>
-	<tr><td class="shopimage"><img number=2 border="0" src="./images/Shop/guitar.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">98.00</td></tr>
-	<tr><td class="shopimage"><img number=3 border="0" src="./images/Shop/waterball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">30.00</td></tr>
-	<tr><td class="shopimage"><img number=4 border="0" src="./images/Shop/bear.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">18.00</td></tr>
+	<tr><td class="shopimage"><img number=2 border="0" src="./images/Shop/guitar.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">20.00</td></tr>
+	<tr><td class="shopimage"><img number=3 border="0" src="./images/Shop/waterball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">50.00</td></tr>
+	<tr><td class="shopimage"><img number=4 border="0" src="./images/Shop/bear.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">100.00</td></tr>
 	</table>
 </td>
 <td>
@@ -289,6 +289,70 @@ Code for the Shop Mini Game
         </tr>
         </table>
 </td>
+</tr>
+</table>
+
+<!---- ================================================================
+Krokogame
+====================================================================-->
+
+<table id="krokotable">
+<tr class="krokbuttonrow">
+  <td><button class="krokobuttons">></button></td>
+  <td><button class="krokobuttons">=</button></td>
+  <td><button class="krokobuttons"><</button></td>
+</tr>
+<tr>
+  <table>
+  <tr id="krokorow">
+  <script type="text/javascript">
+
+		var kroksvg = d3.select("#krokorow").append("svg").attr("id", "krokosvg")
+                                     .attr("width",1200)
+                                     .attr("height",600);
+
+		kroksvg.append("rect")
+                            .attr("x", 150)
+                            .attr("y", 10)
+                            .attr("width", 250)
+                            .attr("height", 560)
+			    .attr("fill", "lightblue");
+
+		kroksvg.append("rect")
+                            .attr("x", 800)
+                            .attr("y", 10)
+                            .attr("width", 250)
+                            .attr("height", 560)
+			    .attr("fill", "lightblue");
+
+		//Adding the Text for the multiplikations
+		kroksvg.append("text").attr("id", "multiplier1")
+      			.attr("x", 20)
+      			.attr("y", 300)
+      			.text("1 x")
+      			.attr("font-family", "Chalkboard")
+      			.attr("font-size", "50px")
+      			.attr("fill", "black");
+
+		kroksvg.append("text").attr("id", "multiplier2")
+      			.attr("x", 1080)
+      			.attr("y", 300)
+      			.text("1 x")
+      			.attr("font-family", "Chalkboard")
+      			.attr("font-size", "50px")
+      			.attr("fill", "black");
+
+
+
+/*
+		kroksvg.append("svg:image").attr("id", "cart")
+      		.attr("xlink:href", "./images/Shop/cart.png")
+      		.attr("width", 450)
+      		.attr("height", 250).attr("x", 20).attr("y",50);
+*/
+		</script>
+</tr>
+</table>
 </tr>
 </table>
 

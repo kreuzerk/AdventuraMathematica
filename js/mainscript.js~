@@ -142,10 +142,7 @@ diceresult.parentNode.removeChild(diceresult);
 function hide(){
 
 $("#shoptable").hide();
-
-alert(table);
-
-//$("svg").hide();
+$("#maingamesvg").hide();
 
 }
 
@@ -222,12 +219,13 @@ Function for blue fields
 function correctblue(){
 hideblue();
 drawimage(10, true);
-
+alert("Enhorabuena que la respuesta es correcta");
 }
 
 function wrongblue(){
 hideblue();
 drawimage(5, false);
+alert("Por desgracia, la respuesta es incorrecta");
 }
 
 function hideblue(){
@@ -283,11 +281,6 @@ bananaamount.textContent = "+ " + bananacounter;
 entered = true;
 }
 
-
-function wronganswer(){
-
-
-}
 
 
 

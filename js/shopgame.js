@@ -1,7 +1,7 @@
 var cart_x = 130;
 var cart_y = 100;
 var names = ["Futbol", "Jabon", "Guitarra", "Bola","Soportar"];
-var prices = [25, 5, 98, 30, 18];
+var prices = [5, 10, 20, 50, 100];
 var actualtotal = 0;
 var counter = 1;
 var total = 0;
@@ -112,7 +112,7 @@ cart_x = 130;
 cart_y = 100;
 actualtotal = 0;
 total = 0;
-
+clearlist();
 
 //Create the total the child must calculate
 for(var i=0; i < 10; i++){

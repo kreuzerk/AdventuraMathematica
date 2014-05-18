@@ -107,12 +107,12 @@ function createexercise(){
 
 
 //Initialise the variables with a first value
-counter = 0;
+counter = 1;
 cart_x = 130;
 cart_y = 100;
 actualtotal = 0;
 total = 0;
-
+clearlist();
 
 //Create the total the child must calculate
 for(var i=0; i < 10; i++){

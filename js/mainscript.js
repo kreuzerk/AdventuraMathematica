@@ -142,10 +142,7 @@ diceresult.parentNode.removeChild(diceresult);
 function hide(){
 
 $("#shoptable").hide();
-
-alert(table);
-
-//$("svg").hide();
+//$("#maingamesvg").hide();
 
 }
 
@@ -284,11 +281,6 @@ bananaamount.textContent = "+ " + bananacounter;
 entered = true;
 }
 
-
-function wronganswer(){
-
-
-}
 
 
 
