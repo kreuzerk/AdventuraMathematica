@@ -37,6 +37,9 @@ kroksvg.append("svg:image")
       .attr("height", 80).attr("x", x_fish).attr("y",y_fish);
 }
 
+x_fish = 830;
+y_fish = -80;
+
 //Draw the fishes for the second water hole
 for(var i=0; i<fishes2; i++){
 
@@ -55,4 +58,35 @@ kroksvg.append("svg:image")
       .attr("height", 80).attr("x", x_fish).attr("y",y_fish);
 }
 
+} //End of CreateKrokogamefunction
+
+
+function drawcroco($sign){
+
+switch ($sign){
+
+case ">":
+kroksvg.append("svg:image")
+      .attr("xlink:href", "./images/Krokogame/crocoleft.png").attr("id", "crocoleft")
+      .attr("width", 300)
+      .attr("height", 200).attr("x", 450).attr("y",200);
+break;
+case "<":
+kroksvg.append("svg:image")
+      .attr("xlink:href", "./images/Krokogame/crocoright.png").attr("id", "crocoleft")
+      .attr("width", 300)
+      .attr("height", 200).attr("x", 450).attr("y",200);
+break;
+case "=":
+kroksvg.append("svg:image")
+      .attr("xlink:href", "./images/Krokogame/crocoleft.png").attr("id", "crocoleft")
+      .attr("width", 300)
+      .attr("height", 200).attr("x", 450).attr("y",100);
+
+kroksvg.append("svg:image")
+      .attr("xlink:href", "./images/Krokogame/crocoright.png").attr("id", "crocoleft")
+      .attr("width", 300)
+      .attr("height", 200).attr("x", 450).attr("y",300);
+break;
+ }
 }

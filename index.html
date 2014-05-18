@@ -299,9 +299,9 @@ Krokogame
 
 <table id="krokotable">
 <tr class="krokbuttonrow">
-  <td><button class="krokobuttons">></button></td>
-  <td><button class="krokobuttons">=</button></td>
-  <td><button class="krokobuttons"><</button></td>
+  <td><button class="krokobuttons" sign=">" onclick="drawcroco($(this).attr('sign'))">></button></td>
+  <td><button class="krokobuttons" sign="=" onclick="drawcroco($(this).attr('sign'))">=</button></td>
+  <td><button class="krokobuttons" sign="<" onclick="drawcroco($(this).attr('sign'))"><</button></td>
 </tr>
 <tr>
   <table>
@@ -311,37 +311,6 @@ Krokogame
 		var kroksvg = d3.select("#krokorow").append("svg").attr("id", "krokosvg")
                                      .attr("width",1200)
                                      .attr("height",600);
-
-		kroksvg.append("rect")
-                            .attr("x", 150)
-                            .attr("y", 10)
-                            .attr("width", 250)
-                            .attr("height", 550)
-			    .attr("fill", "lightblue");
-
-		kroksvg.append("rect")
-                            .attr("x", 800)
-                            .attr("y", 10)
-                            .attr("width", 250)
-                            .attr("height", 550)
-			    .attr("fill", "lightblue");
-
-		//Adding the Text for the multiplikations
-		kroksvg.append("text").attr("id", "multiplier1")
-      			.attr("x", 20)
-      			.attr("y", 300)
-      			.text("1 x")
-      			.attr("font-family", "Chalkboard")
-      			.attr("font-size", "50px")
-      			.attr("fill", "black");
-
-		kroksvg.append("text").attr("id", "multiplier2")
-      			.attr("x", 1080)
-      			.attr("y", 300)
-      			.text("1 x")
-      			.attr("font-family", "Chalkboard")
-      			.attr("font-size", "50px")
-      			.attr("fill", "black");
 
 
 

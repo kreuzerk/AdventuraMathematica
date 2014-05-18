@@ -1,6 +1,39 @@
 
 function createkrokogame(){
 
+kroksvg.append("rect")
+                            .attr("x", 150)
+                            .attr("y", 10)
+                            .attr("width", 250)
+                            .attr("height", 550)
+			    .attr("fill", "lightblue");
+
+		kroksvg.append("rect")
+                            .attr("x", 800)
+                            .attr("y", 10)
+                            .attr("width", 250)
+                            .attr("height", 550)
+			    .attr("fill", "lightblue");
+
+		//Adding the Text for the multiplikations
+		kroksvg.append("text").attr("id", "multiplier1")
+      			.attr("x", 20)
+      			.attr("y", 300)
+      			.text("1 x")
+      			.attr("font-family", "Chalkboard")
+      			.attr("font-size", "50px")
+      			.attr("fill", "black");
+
+		kroksvg.append("text").attr("id", "multiplier2")
+      			.attr("x", 1080)
+      			.attr("y", 300)
+      			.text("1 x")
+      			.attr("font-family", "Chalkboard")
+      			.attr("font-size", "50px")
+      			.attr("fill", "black");
+
+
+
 //Using multiplications inside 12x12. For reasons see the documentation
 
 var multiplier1 = Math.floor(Math.random() * 12) + 1;
@@ -58,4 +91,35 @@ kroksvg.append("svg:image")
       .attr("height", 80).attr("x", x_fish).attr("y",y_fish);
 }
 
+} //End of CreateKrokogamefunction
+
+
+function drawcroco($sign){
+
+switch ($sign){
+
+case ">":
+kroksvg.append("svg:image")
+      .attr("xlink:href", "./images/Krokogame/crocoleft.png").attr("id", "crocoleft")
+      .attr("width", 300)
+      .attr("height", 200).attr("x", 450).attr("y",200);
+break;
+case "<":
+kroksvg.append("svg:image")
+      .attr("xlink:href", "./images/Krokogame/crocoright.png").attr("id", "crocoleft")
+      .attr("width", 300)
+      .attr("height", 200).attr("x", 450).attr("y",200);
+break;
+case "=":
+kroksvg.append("svg:image")
+      .attr("xlink:href", "./images/Krokogame/crocoleft.png").attr("id", "crocoleft")
+      .attr("width", 300)
+      .attr("height", 200).attr("x", 450).attr("y",100);
+
+kroksvg.append("svg:image")
+      .attr("xlink:href", "./images/Krokogame/crocoright.png").attr("id", "crocoleft")
+      .attr("width", 300)
+      .attr("height", 200).attr("x", 450).attr("y",300);
+break;
+ }
 }
