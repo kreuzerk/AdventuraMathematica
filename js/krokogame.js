@@ -1,3 +1,6 @@
+var krokoresult1;
+var krokoresult2;
+
 
 function createkrokogame(){
 
@@ -17,7 +20,7 @@ kroksvg.append("rect")
 
 		//Adding the Text for the multiplikations
 		kroksvg.append("text").attr("id", "multiplier1")
-      			.attr("x", 20)
+      			.attr("x", 40)
       			.attr("y", 300)
       			.text("1 x")
       			.attr("font-family", "Chalkboard")
@@ -25,7 +28,7 @@ kroksvg.append("rect")
       			.attr("fill", "black");
 
 		kroksvg.append("text").attr("id", "multiplier2")
-      			.attr("x", 1080)
+      			.attr("x", 1060)
       			.attr("y", 300)
       			.text("1 x")
       			.attr("font-family", "Chalkboard")
@@ -40,6 +43,9 @@ var multiplier1 = Math.floor(Math.random() * 12) + 1;
 var fishes1 = Math.floor(Math.random() * 12) + 1;
 var multiplier2 = Math.floor(Math.random() * 12) + 1;
 var fishes2 = Math.floor(Math.random() * 12) + 1;
+
+krokoresult1 = multiplier1 * fishes1;
+krokoresult2 = multiplier2 * fishes2;
 
 //Change the text of the multipliers
 var multipliertext1 = document.getElementById("multiplier1");
@@ -122,4 +128,31 @@ kroksvg.append("svg:image")
       .attr("height", 200).attr("x", 450).attr("y",300);
 break;
  }
+
+checkkrokoresult($sign);
+}
+
+function checkkrokoresult($answer){
+
+var kroko_correct = false;
+
+switch($answer){
+
+case ">":
+if(krokoresult1 > krokoresult2){
+	kroko_correct = true;
+}
+break;
+case ">":
+if(krokoresult1 = krokoresult2){
+	kroko_correct = true;
+}
+break;
+case ">":
+if(krokoresult1 < krokoresult2){
+	kroko_correct = true;
+}
+break;
+}
+
 }

@@ -296,7 +296,7 @@ Code for the Shop Mini Game
 <!---- ================================================================
 Krokogame
 ====================================================================-->
-
+<div id="krokodiv">
 <table id="krokotable">
 <tr class="krokbuttonrow">
   <td><button class="krokobuttons" sign=">" onclick="drawcroco($(this).attr('sign'))">></button></td>
@@ -312,37 +312,6 @@ Krokogame
                                      .attr("width",1200)
                                      .attr("height",600);
 
-		kroksvg.append("rect")
-                            .attr("x", 150)
-                            .attr("y", 10)
-                            .attr("width", 250)
-                            .attr("height", 550)
-			    .attr("fill", "lightblue");
-
-		kroksvg.append("rect")
-                            .attr("x", 800)
-                            .attr("y", 10)
-                            .attr("width", 250)
-                            .attr("height", 550)
-			    .attr("fill", "lightblue");
-
-		//Adding the Text for the multiplikations
-		kroksvg.append("text").attr("id", "multiplier1")
-      			.attr("x", 20)
-      			.attr("y", 300)
-      			.text("1 x")
-      			.attr("font-family", "Chalkboard")
-      			.attr("font-size", "50px")
-      			.attr("fill", "black");
-
-		kroksvg.append("text").attr("id", "multiplier2")
-      			.attr("x", 1080)
-      			.attr("y", 300)
-      			.text("1 x")
-      			.attr("font-family", "Chalkboard")
-      			.attr("font-size", "50px")
-      			.attr("fill", "black");
-
 
 
 /*
@@ -355,8 +324,15 @@ Krokogame
 </tr>
 </table>
 </tr>
+<tr>
+<td> </td>
+<td>
+<button id="krokocontinue">Continuar</button>
+</td>
+<td> </td>
+</tr>
 </table>
-
+</div>
 </body>
 <script type="text/javascript">
 hide();

@@ -82,7 +82,7 @@ Styles for Krokoaktivities
 
 .krokbuttonrow{
   width:1200px;
-  height:120px;
+  height:110px;
 
 }
 
@@ -91,9 +91,21 @@ Styles for Krokoaktivities
   height:120px;
 }
 
-#krokosvg{
-  background-color:white;
+#krokodiv{
+  background-image: url(../images/Krokogame/background.jpg);
+  /*background-repeat:no-repeat;
+  background-size:100%;
+  */
+  height:810px;
 }
 
+.continuerow{
+  height:50px;
+}
 
+#krokocontinue{
+  margin-left:490px;
+  width:200px;
+  height:30px;
+}
 
