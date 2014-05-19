@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="js/mainscript.js"></script>
 	<script type="text/javascript" src="js/shopgame.js"></script>
 	<script type="text/javascript" src="js/krokogame.js"></script>
+	<script type="text/javascript" src="js/forms.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="d3/d3.v3.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
@@ -312,20 +313,44 @@ Krokogame
                                      .attr("width",1200)
                                      .attr("height",600);
 
-
-
-/*
-		kroksvg.append("svg:image").attr("id", "cart")
-      		.attr("xlink:href", "./images/Shop/cart.png")
-      		.attr("width", 450)
-      		.attr("height", 250).attr("x", 20).attr("y",50);
-*/
 		</script>
 </tr>
 </table>
 </tr>
 <tr class="continuerow">
-<button id="krokocontinue" onclick="finishkrokogame()">Siguiente Pergunta</button>
+<button id="krokocontinue" onclick="nextquestion()">Siguiente Pergunta</button>
+</tr>
+</table>
+</div>
+
+<!----==================================================================
+Geometrie Game
+====================================================================-->
+
+<div>
+<table>
+<tr>
+</tr>
+<tr>
+<td id="formscolumn">
+  <script type="text/javascript">
+  var formsvg = d3.select("#formscolumn").append("svg").attr("id", "formssvg")
+                                     .attr("width",600)
+                                     .attr("height",820);
+
+   </script>
+</td>
+<td id="formsquestioncolumn">
+<script type="text/javascript">
+  var formquestionssvg = d3.select("#formsquestioncolumn").append("svg").attr("id", "formsquestionssvg")
+                                     .attr("width",600)
+                                     .attr("height",820);
+
+   </script>
+</td>
+</tr>
+<tr id="formsquestionrow">
+  
 </tr>
 </table>
 </div>
@@ -333,5 +358,6 @@ Krokogame
 <script type="text/javascript">
 hide();
 createkrokogame();
+drawform1();
 </script>
 </html>

@@ -139,11 +139,16 @@ diceresult.parentNode.removeChild(diceresult);
 }
 
 
+
+/*=================================================================================
+Hide function at the beginning of the game
+===================================================================================*/
+
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
-//$("#krokodiv").hide();
+//$("#maingamesvg").hide();
+$("#krokodiv").hide();
 }
 
 /*

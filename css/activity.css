@@ -70,7 +70,7 @@ Styles for Shopactivities
 
 
 /*================================================
-Styles for Krokoaktivities
+Styles for Kroko Game
 ================================================*/
 .krokobuttons{
   width:380px;
@@ -108,4 +108,21 @@ Styles for Krokoaktivities
   width:200px;
   height:40px;
 }
+
+/*================================================
+Styles for Form Game
+================================================*/
+#formssvg{
+  background-color:white;
+}
+
+#formsquestionssvg{
+  background-color:blue;
+}
+
+
+
+
+
+
 
