@@ -116,11 +116,25 @@ Styles for Form Game
   background-color:white;
 }
 
-#formsquestionssvg{
-  background-color:blue;
+#formentries{
+  width:600px;
+  height:820px;
 }
 
+.formtd1{
+  font-size:30px;
+}
 
+.forminput{
+  height:50px;
+  font-size:20px;
+}
+
+.formbutton{
+  height:40px;
+  font-size:20px;
+  width:200px;
+}
 
 
 
