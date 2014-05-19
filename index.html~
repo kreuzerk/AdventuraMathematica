@@ -324,12 +324,8 @@ Krokogame
 </tr>
 </table>
 </tr>
-<tr>
-<td> </td>
-<td>
-<button id="krokocontinue">Continuar</button>
-</td>
-<td> </td>
+<tr class="continuerow">
+<button id="krokocontinue" onclick="finishkrokogame()">Siguiente Pergunta</button>
 </tr>
 </table>
 </div>

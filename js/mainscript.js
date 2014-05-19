@@ -139,11 +139,16 @@ diceresult.parentNode.removeChild(diceresult);
 }
 
 
+
+/*=================================================================================
+Hide function at the beginning of the game
+===================================================================================*/
+
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
-
+//$("#maingamesvg").hide();
+$("#krokodiv").hide();
 }
 
 /*
@@ -164,18 +169,21 @@ var currentcolor = circleData[currentfield-1].color;
 //Say which method needs to be called. Corresponding to the color the caracter is standing on.
 switch(currentcolor){
 case "green":
-green();
+  green();
 break;
 case "red":
-red();
+  red();
 break;
 case "blue":
-//Hide the main game
-$("#maingamesvg").hide();
-$("#shoptable").show();
+  //Hide the main game
+  $("#maingamesvg").hide();
+  $("#shoptable").show();
 createexercise();
 break;
-
+case "yellow":
+  $("#maingamesvg").hide();
+  $("#krokodiv").show();
+break;
 }
 }
 
@@ -213,7 +221,7 @@ drawimage(3, false);
 }
 
 /*=================================================================================
-Function for blue fields
+Function for blue fields (Shopgame)
 ===================================================================================*/
 
 function correctblue(){
@@ -232,6 +240,38 @@ function hideblue(){
 $("#shoptable").hide();
 $("#maingamesvg").show();
 }
+
+/*=================================================================================
+Function for yellow fields (Krokogame)
+===================================================================================*/
+
+function checkkrokoanswers($number_correct){
+
+switch($number_correct){
+
+case 0:
+  drawimage(10, false);
+break;
+case 1:
+  drawimage(5, true);
+break;
+case 2:
+  drawimage(10, true);
+break;
+case 3:
+  drawimage(15, true);
+break;
+}
+
+hideyellow();
+
+}
+
+function hideyellow(){
+$("#krokodiv").hide();
+$("#maingamesvg").show();
+}
+
 
 /*=================================================================================
 Function for drawing an image
