@@ -349,15 +349,12 @@ Geometrie Game
    </script>
 </td>
 </tr>
-<tr id="formsquestionrow">
-  
-</tr>
 </table>
 </div>
 </body>
 <script type="text/javascript">
 hide();
 createkrokogame();
-drawform1();
+
 </script>
 </html>
