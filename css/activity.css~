@@ -116,6 +116,10 @@ Styles for Form Game
   background-color:white;
 }
 
+#formsquestionssvg{
+  background-color:blue;
+}
+
 
 
 

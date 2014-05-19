@@ -340,14 +340,6 @@ Geometrie Game
 
    </script>
 </td>
-<td id="formsquestioncolumn">
-<script type="text/javascript">
-  var formquestionssvg = d3.select("#formsquestioncolumn").append("svg").attr("id", "formsquestionssvg")
-                                     .attr("width",600)
-                                     .attr("height",820);
-
-   </script>
-</td>
 </tr>
 </table>
 </div>

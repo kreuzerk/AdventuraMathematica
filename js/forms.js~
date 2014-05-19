@@ -1,92 +1,29 @@
-var colors = ["yellow", "green", "blue", "red", "orange"];
+var picturenames = ["baseball.png","basketball.png","billiardball.png",
+"book.png","chocolate.png","football.png","geotriangle.png","gift.png","musictriangle.png",
+"rectangle.png","redball.png","square.png","television.png","triangle.png","triangle2.png"];
 
+function createformsgame(){
 
-function drawforms(){
+var x = 40;
+var y = -100;
 
-alert("Hier");
+//Draw 20 images to the screen
+for(var i = 0; i < 20; i++){
 
-var numberrect = Math.floor(Math.random() * 10) + 1;
-var numbercircle = Math.floor(Math.random() * 10) + 1;
-var numberelipses = Math.floor(Math.random() * 10) + 1;
+var number = diceresult = Math.floor(Math.random() * picturenames.length) + 1;
 
-//Drawing the rects
-for(var i = 0; i < numberrect; i++){
-
-var x = Math.floor(Math.random() * 520) + 1;
-var y = Math.floor(Math.random() * 750) + 1;
-
-var rectanglewidth = Math.floor(Math.random() * 80) + 20;
-var rectangleheight = Math.floor(Math.random() * 80) + 20;
-
-formsvg.append("rect")
-                            .attr("x", x).attr("id", "rects" + i).attr("onclick", "colorize($(this).attr('id'))")
-                            .attr("y", y)
-                            .attr("width", rectanglewidth)
-                            .attr("height", rectangleheight)
-			    .attr("fill", "grey");
+if(i%4 == 0){ //If true == End of the row
+y = y + 140;
+x = 40;
+}
+else{
+x = x + 140;
 }
 
-
-//Drawing a circle
-for(var i = 0; i < numbercircle; i++){
-
-var x = Math.floor(Math.random() * 520) + 1;
-var y = Math.floor(Math.random() * 750) + 1;
-
-var circleradius = Math.floor(Math.random() * 80) + 20;
-
-formsvg.append("circle")
-                        .attr("cx", x).attr("id", "circle" + i).attr("onclick", "colorize($(this).attr('id'))")
-                        .attr("cy", y)
-                        .attr("r", circleradius)
-			.attr("fill", "grey");
-
+formsvg.append("svg:image")
+      .attr("xlink:href", "./images/Forms/" + picturenames[number])
+      .attr("width", 100)
+      .attr("height", 100).attr("x", x).attr("y",y);
 }
 
-//Drawing an elipse
-for(var i = 0; i < numberelipses; i++){
-
-var elipse_x = Math.floor(Math.random() * 520) + 1;
-var elipse_y = Math.floor(Math.random() * 750) + 1;
-
-var elipsewidth = Math.floor(Math.random() * 80) + 20;
-var elipseheight = Math.floor(Math.random() * 80) + 20;
-
-var circle = svgContainer.append("ellipse").attr("id","ellipse" + i).attr("onclick", "colorize($(this).attr('id'))")
-                         .attr("cx", x)
-                         .attr("cy", y)
-                         .attr("rx", elipsewidth)
-                         .attr("ry", elipseheight);
-
-}
-
-
-form1_next();
-}
-
-function form1_next(){
-
-
-
-formquestionssvg.append("text")
-      .attr("x", 50)
-      .attr("y", 300)
-      .text("Rectángulo")
-      .attr("font-family", "Chalkboard")
-      .attr("font-size", "50px")
-      .attr("fill", "black");
-
-
-}
-
-
-
-function colorize($id){
-
-var color = Math.floor(Math.random() * colors.length) + 1;
-var element = document.getElementById($id);
-
-element.setAttribute("fill", colors[color]);
-
-}
-
+}//End of the method
