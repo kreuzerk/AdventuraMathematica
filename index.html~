@@ -327,7 +327,7 @@ Krokogame
 Geometrie Game
 ====================================================================-->
 
-<div>
+<div id="formgame">
 <table>
 <tr>
 </tr>
@@ -356,8 +356,8 @@ Geometrie Game
 		<td class="formtd2"><input id="forminput3" class="forminput" type="text"/></td>
 	</tr>
 	<tr>
-		<td><button class="formbutton" onclick="checkformresults()">Test</button></td>
-		<td><button class="formbutton">Test</button></td>
+		<td><button class="formbutton" onclick="clearelements()">Vaciar</button></td>
+		<td><button class="formbutton" onclick="checkformresults()">OK</button></td>
 	</tr>
 	</table>
 </td>

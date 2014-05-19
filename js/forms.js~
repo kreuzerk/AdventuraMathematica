@@ -7,6 +7,9 @@ var numberoftriangles = 0;
 
 function createformsgame(){
 
+removeformelements();
+clearelements();
+
 var x = 40;
 var y = -100;
 
@@ -80,6 +83,11 @@ input3.value = "";
 
 }
 
+function removeformelements(){
+$("#formsvg").empty();
+
+}
+
 function checkformresults(){
 
 var input1 = document.getElementById("forminput1");
@@ -108,6 +116,6 @@ if(answer3 == numberoftriangles){
 correctanswers++;
 }
 
-
+checkorangefields(correctanswers);
 
 }

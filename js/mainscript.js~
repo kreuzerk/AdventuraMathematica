@@ -147,8 +147,9 @@ Hide function at the beginning of the game
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
+//$("#maingamesvg").hide();
 $("#krokodiv").hide();
+$("#formgame").hide();
 }
 
 /*
@@ -183,6 +184,12 @@ break;
 case "yellow":
   $("#maingamesvg").hide();
   $("#krokodiv").show();
+break;
+case "orange":
+  $("#maingamesvg").hide();
+  removeformelements();
+  createformsgame();
+  $("#formgame").show();
 break;
 }
 }
@@ -272,6 +279,36 @@ $("#krokodiv").hide();
 $("#maingamesvg").show();
 }
 
+/*=================================================================================
+Function for orange fields
+===================================================================================*/
+
+function checkorangefields($number_correct){
+
+switch($number_correct){
+
+case 0:
+  drawimage(10, false);
+break;
+case 1:
+  drawimage(5, true);
+break;
+case 2:
+  drawimage(10, true);
+break;
+case 3:
+  drawimage(15, true);
+break;
+}
+
+hideorange();
+
+}
+
+function hideorange(){
+$("#formgame").hide();
+$("#maingamesvg").show();
+}
 
 /*=================================================================================
 Function for drawing an image
