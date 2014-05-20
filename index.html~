@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="js/mainscript.js"></script>
 	<script type="text/javascript" src="js/shopgame.js"></script>
 	<script type="text/javascript" src="js/krokogame.js"></script>
+	<script type="text/javascript" src="js/endresultgame.js"></script>
 	<script type="text/javascript" src="js/forms.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="d3/d3.v3.js"></script>
@@ -365,10 +366,37 @@ Geometrie Game
 </tr>
 </table>
 </div>
+
+<!----==================================================================
+Endresult Game
+====================================================================-->
+<div id="endresultgame">
+
+<table>
+<tr>
+<h1>Rellena los personajes que faltan (+,-)</h1>
+</tr>
+<tr>
+	<td class="numbers"><font id="number1"></font></td>
+	<td><input type="text" class="endgameinputs"/></td>
+	<td class="numbers"><font id="number2"></font></td>
+	<td><input type="text" class="endgameinputs"/></td>
+	<td class="numbers"><font id="number3"></font></td>
+	<td><input type="text" class="endgameinputs"/></td>
+	<td class="numbers"><font id="number4"></font></td>
+	<td class="numbers">=</td>
+	<td class="numbers"><font id="result"></font></td>
+</tr>
+</table>
+<button class="endgamebuttons">Vaciar</button>
+<button class="endgamebuttons">Comprobar</button>
+
+</div>
+
 </body>
 <script type="text/javascript">
 hide();
 createkrokogame();
-createformsgame();
+createendresultgame();
 </script>
 </html>

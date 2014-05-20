@@ -147,7 +147,7 @@ Hide function at the beginning of the game
 function hide(){
 
 $("#shoptable").hide();
-//$("#maingamesvg").hide();
+$("#maingamesvg").hide();
 $("#krokodiv").hide();
 $("#formgame").hide();
 }

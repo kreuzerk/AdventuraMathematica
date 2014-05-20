@@ -187,7 +187,6 @@ case "yellow":
 break;
 case "orange":
   $("#maingamesvg").hide();
-  removeformelements();
   createformsgame();
   $("#formgame").show();
 break;
