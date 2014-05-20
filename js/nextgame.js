@@ -133,9 +133,25 @@ aftercircle = true;
 }
 
 
+/*========================================================
+Function for handling the click on an element
+==========================================================*/
 function drawfigure($form, $color){
 
-alert($form + " " + $color);
+if($form == "rect"){
+  drawnextelement($color, true);
+}
+else
+{
+  drawnextelement($color, false);
+}
 
 }
+
+
+
+
+
+
+
 
