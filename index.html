@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="js/shopgame.js"></script>
 	<script type="text/javascript" src="js/krokogame.js"></script>
 	<script type="text/javascript" src="js/endresultgame.js"></script>
+	<script type="text/javascript" src="js/nextgame.js"></script>
 	<script type="text/javascript" src="js/forms.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="d3/d3.v3.js"></script>
@@ -393,10 +394,39 @@ Endresult Game
 
 </div>
 
+<!----==================================================================
+What is next? Game
+====================================================================-->
+<div id="whatisnextgame">
+
+<table>
+<tr id="nextsvgrow">
+<script type="text/javascript">
+  var nextsvg = d3.select("#nextsvgrow").append("svg").attr("id", "nextgamesvg")
+                                     .attr("width",1200)
+                                     .attr("height",410);
+
+   </script>
+<tr>
+<tr>
+
+</tr>
+<script type="text/javascript">
+  var selectsvg = d3.select("#nextsvgrow").append("svg").attr("id", "nextselectsvg")
+                                     .attr("width",1200)
+                                     .attr("height",410);
+
+   </script>
+</table>
+
+
+</div>
+
+
 </body>
 <script type="text/javascript">
 hide();
 createkrokogame();
-createendresultgame();
+nextsvg_drawselections();
 </script>
 </html>

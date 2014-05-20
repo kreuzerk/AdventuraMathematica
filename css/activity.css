@@ -163,4 +163,15 @@ Styles for the Endresultgame
   font-size:20px;
 }
 
+/*================================================
+Styles for the Endresultgame
+================================================*/
+
+#nextgamesvg{
+  background-color:white;
+}
+
+#nextselectsvg{
+  background-color:white;
+}
 
