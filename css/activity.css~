@@ -159,7 +159,7 @@ Styles for the Endresultgame
 .endgamebuttons{
   width: 150px;
   height:80px;
-  font-size:50px;
+  font-size:20px;
 }
 
 

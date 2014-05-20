@@ -147,9 +147,10 @@ Hide function at the beginning of the game
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
+//$("#maingamesvg").hide();
 $("#krokodiv").hide();
 $("#formgame").hide();
+$("#endresultgame").hide();
 }
 
 /*
@@ -189,6 +190,11 @@ case "orange":
   $("#maingamesvg").hide();
   createformsgame();
   $("#formgame").show();
+break;
+case "purple":
+  $("#maingamesvg").hide();
+  createendresultgame();
+  $("#endresultgame").show();
 break;
 }
 }
@@ -306,6 +312,33 @@ hideorange();
 
 function hideorange(){
 $("#formgame").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function for purple fields
+===================================================================================*/
+
+function checkpurplefields($number_correct){
+
+switch($number_correct){
+
+case 0:
+case 1:
+case 2:
+  drawimage(10, false);
+break;
+case 3:
+  drawimage(15, true);
+break;
+}
+
+hidepurple();
+
+}
+
+function hidepurple(){
+$("#endresultgame").hide();
 $("#maingamesvg").show();
 }
 
