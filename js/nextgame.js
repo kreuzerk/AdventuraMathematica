@@ -1,15 +1,17 @@
 var pattern1 = ["rectblue", "circleyellow", "circlegreen", "rectblue", "circleyellow", "circlegreen", "rectblue", "circleyellow", "circlegreen", "rectblue"];
+var solution = new Array(10);
 
 var pattern1_drawn = 4;
 var next_x = -80;
 var next_y = 120;
 var aftercircle = false;
+var drawncounter = -1;
 
 
 function nextsvg_drawselections(){
 
 
-var colors = ["blue","yellow","red"];
+var colors = ["blue","yellow","green"];
 
 //Drawing the exercise part
 //=======================================================================================
@@ -88,6 +90,9 @@ Function for drawing the next element
 
 function drawnextelement($drawingcolor, $rect){
 
+drawncounter++;
+
+
 if($rect){
 next_y = 120;
 
@@ -106,6 +111,10 @@ nextsvg.append("rect")
                             .attr("height", 80).attr("form", "rect")
 			    .attr("fill", $drawingcolor).attr("stroke","black");
 
+//Add the drawn form to the solution array
+solution[drawncounter] = "rect" + $drawingcolor;
+
+//Say that the next form is not after a circle
 aftercircle = false;
 
 }
@@ -127,7 +136,31 @@ nextsvg.append("circle")
                          .attr("r", 40).attr("form","circle")
 			 .attr("fill", $drawingcolor).attr("stroke","black");
 
-aftercircle = true;
+//Add the drawn form to the solution
+solution[drawncounter] = "circle" + $drawingcolor;
+
+aftercircle = true;		//Say that the next form is drawn after a circle
+}
+
+
+
+//Do the correction of the exercise
+
+if(drawncounter == 9){		//9 because it begins with zero at the first iteration
+ 
+ var formiscorrect = true;
+
+ //Check if everything is correct
+ for(var i=0; i < solution.length; i++){
+	if(solution[i] != pattern1[i]){
+		formiscorrect = false;
+		break;
+	}
+
+ }
+
+ alert(formiscorrect);
+
 }
 
 }
