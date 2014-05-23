@@ -147,10 +147,11 @@ Hide function at the beginning of the game
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
+//$("#maingamesvg").hide();
 $("#krokodiv").hide();
 $("#formgame").hide();
 $("#endresultgame").hide();
+$("#whatisnextgame").hide();
 }
 
 /*
@@ -196,6 +197,12 @@ case "purple":
   createendresultgame();
   $("#endresultgame").show();
 break;
+case "pink":
+$("#maingamesvg").hide();
+nextsvg_drawexercise();
+$("#whatisnextgame").show();
+break;
+
 }
 }
 
@@ -341,6 +348,29 @@ function hidepurple(){
 $("#endresultgame").hide();
 $("#maingamesvg").show();
 }
+
+
+/*=================================================================================
+Function for pink fields
+===================================================================================*/
+function checkpinkfields($is_correct){
+
+hidepink();
+
+if($is_correct){
+  drawimage(10,true);
+}
+else{
+  drawimage(10,false);
+}
+
+}
+
+function hidepink(){
+$("#whatisnextgame").hide();
+$("#maingamesvg").show();
+}
+
 
 /*=================================================================================
 Function for drawing an image

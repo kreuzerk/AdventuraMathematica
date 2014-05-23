@@ -6,12 +6,12 @@ var next_x = -80;
 var next_y = 120;
 var aftercircle = false;
 var drawncounter = -1;
-
-
-function nextsvg_drawselections(){
-
-
 var colors = ["blue","yellow","green"];
+
+function nextsvg_drawexercise(){
+
+//Clean the svg element
+cleannextgamesvg();
 
 //Drawing the exercise part
 //=======================================================================================
@@ -45,11 +45,11 @@ else
 
 }
 
-
+}
 
 //Drawing the Selection part
 //========================================================================================
-
+function nextsvg_drawselections(){
 var x = 85;
 var y = 150;
 
@@ -159,7 +159,7 @@ if(drawncounter == 9){		//9 because it begins with zero at the first iteration
 
  }
 
- alert(formiscorrect);
+ checkpinkfields(formiscorrect);
 
 }
 
@@ -181,6 +181,13 @@ else
 
 }
 
+
+/*================================================
+Function to remove everything from the first svg
+==============================================*/
+function cleannextgamesvg(){
+$("#nextgamesvg").empty();
+}
 
 
 
