@@ -194,8 +194,9 @@ Styles for the cheesegame
 
 .sidebar {
     float:left;
-    width:300px;
+    width:280px;
     height:820px;
+    margin-right:-100px;
     background-color:yellow;
 }
 
@@ -237,7 +238,7 @@ Styles for the ten game
  height:820px;
  background-image: url(../images/tengame/background.jpg);
  background-repeat:no-repeat;
- background-size:100%;
+ backgr
 }
 
 

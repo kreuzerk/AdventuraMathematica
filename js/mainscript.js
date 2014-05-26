@@ -147,12 +147,13 @@ Hide function at the beginning of the game
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
+//$("#maingamesvg").hide();
 $("#krokodiv").hide();
 $("#formgame").hide();
 $("#endresultgame").hide();
 $("#whatisnextgame").hide();
 $("#cheese").hide();
+$("#tengame").hide();
 }
 
 /*
@@ -208,7 +209,11 @@ $("#maingamesvg").hide();
 initialisecheesegame();
 $("#cheese").show();
 break;
-
+case "skyblue":
+$("#maingamesvg").hide();
+initialisetennumber();
+$("#tengame").show();
+break;
 }
 }
 
@@ -406,6 +411,27 @@ $("#cheese").hide();
 $("#maingamesvg").show();
 }
 
+
+/*=================================================================================
+Function for skyblue fields
+===================================================================================*/
+function checkskybluefields($is_correct){
+
+hideskyblue();
+
+if($is_correct){
+  drawimage(10,true);
+}
+else{
+  drawimage(10,false);
+}
+
+}
+
+function hideskyblue(){
+$("#tengame").hide();
+$("#maingamesvg").show();
+}
 
 /*=================================================================================
 Function for drawing an image

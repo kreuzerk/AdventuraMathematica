@@ -89,10 +89,10 @@ break;
 }
 
 if(correct){
-alert("richtig");
+checkskybluefields(true);
 }
 else{
-alert("falsch");
+checkskybluefields(false);
 }
 
 }

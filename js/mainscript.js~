@@ -153,6 +153,7 @@ $("#formgame").hide();
 $("#endresultgame").hide();
 $("#whatisnextgame").hide();
 $("#cheese").hide();
+$("#tengame").hide();
 }
 
 /*
@@ -208,7 +209,11 @@ $("#maingamesvg").hide();
 initialisecheesegame();
 $("#cheese").show();
 break;
-
+case "skyblue":
+$("#maingamesvg").hide();
+initialisetennumber();
+$("#tengame").show();
+break;
 }
 }
 
@@ -405,6 +410,11 @@ function hidelavender(){
 $("#cheese").hide();
 $("#maingamesvg").show();
 }
+
+
+/*=================================================================================
+Function for skyblue fields
+===================================================================================*/
 
 
 /*=================================================================================
