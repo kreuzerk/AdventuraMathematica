@@ -102,12 +102,12 @@ lastdroppedid = $id;
 //Function that is clicked by the continue button
 function checkcheese(){
 
-if($id == cheesesolution)
+if(lastdroppedid == cheesesolution)
 {
-
+checklavenderfields(numberoftrys)
 }
 else
 {
-
+alert("Nao e correcta");
 }
 }

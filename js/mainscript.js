@@ -147,11 +147,12 @@ Hide function at the beginning of the game
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
+//$("#maingamesvg").hide();
 $("#krokodiv").hide();
 $("#formgame").hide();
 $("#endresultgame").hide();
 $("#whatisnextgame").hide();
+$("#cheese").hide();
 }
 
 /*
@@ -201,6 +202,11 @@ case "pink":
 $("#maingamesvg").hide();
 nextsvg_drawexercise();
 $("#whatisnextgame").show();
+break;
+case "lavender":
+$("#maingamesvg").hide();
+initialisecheesegame();
+$("#cheese").show();
 break;
 
 }
@@ -368,6 +374,35 @@ else{
 
 function hidepink(){
 $("#whatisnextgame").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function for lavender fields
+===================================================================================*/
+function checklavenderfields($numberoftrys){
+
+hidelavender();
+
+switch($numberoftrys){
+case 1:
+  drawimage(15, true);
+break;
+case 2:
+  drawimage(10, true);
+break;
+case 3:
+  drawimage(5, true);
+break;
+default:
+  drawimage(20, false);
+break;
+}
+
+}
+
+function hidelavender(){
+$("#cheese").hide();
 $("#maingamesvg").show();
 }
 

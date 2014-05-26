@@ -7,6 +7,8 @@ var cheeseresulttexts = ["2/2","3/3","4/4","6/6","8/8","10/10","20/20"];
 
 var cheese_solution;
 var randomcheese;
+var numberoftrys = 0;
+var lastdroppedid;
 
 function initialisecheesegame(){
 
@@ -92,12 +94,20 @@ $("#cheesebutton").show();
 var secondtext = document.getElementById("secondtext");
 secondtext.innerHTML = textsecondimage[randomcheese-1];
 
-if($id == cheesesolution)
-{
+numberoftrys++;
+lastdroppedid = $id;
+}
 
+
+//Function that is clicked by the continue button
+function checkcheese(){
+
+if(lastdroppedid == cheesesolution)
+{
+alert("Korrekt");
 }
 else
 {
-
+alert("Falsch");
 }
 }
