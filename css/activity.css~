@@ -198,12 +198,12 @@ Styles for the Weightgame
 }
 
 .cheeseimages{
-  width:150px;
-  height: 220px;
+  width:300px;
+  height: 300px;
 }
 
 .cheeseexercise{
-  width:200px;
+  width:250px;
   height:800px;
 }
 
