@@ -274,10 +274,10 @@ Styles for the ten game
 /*================================================
 Styles for the Division game
 ===============================================*/
-#division{ 
+#divisiongame{ 
   width:1200px; 
-  
-  margin:0 auto; 
+  height:820px;
+  background-color:white;
 }
 
 #divisionheader {
@@ -286,20 +286,44 @@ Styles for the Division game
  text-align:center; 
 }
 
-#divisionbody { 
-overflow:auto; 
+#divisionmain {
+  width:950px;
+  height:600px;
+  background-color: white;
 }
 
 #divisionsidebar { 
   float:left; 
   width:250px; 
-  background-color:#ccc; 
+  background-color:whitesmoke; 
   min-height:820px; 
 }
 
 .animals{
   width:150px;
   height:150px;
+}
+
+#sortable { 
+  list-style-type: none;
+  padding:100;
+  width: 60%; 
+}
+
+.divisionli{
+  margin-left:100px;
+  margin-top:20px;
+  background-color: whitesmoke;
+  font-size: 50px;
+  width: 1000px;
+}
+
+.divisioncontrolbutton{
+
+  width: 200px;
+  height:100px;
+  font-size:30px;
+  margin-left:300px;
 }
 
 

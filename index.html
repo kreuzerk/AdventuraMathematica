@@ -488,7 +488,21 @@ Division game
 		</tr>
 	</table>
         </div>
-        <div id="divisionmain"> MAIN CONTENT </div>        
+        <div id="divisionmain">
+	<ul id="sortable">
+  		<li class="divisionli"><span></span>Item 1</li>
+  		<li class="divisionli"><span></span>Item 2</li>
+  		<li class="divisionli"><span></span>Item 3</li>
+  		<li class="divisionli"><span></span>Item 4</li>
+  		<li class="divisionli"><span></span>Item 5</li>
+  		<li class="divisionli"><span></span>Item 6</li>
+  		<li class="divisionli"><span></span>Item 7</li>
+	</ul>
+	<p class="divisionp">
+		<button class="divisioncontrolbutton">Control</button>
+	<p>
+	
+	</div>        
     </div>
 </div>
 
@@ -514,6 +528,12 @@ $( "#dropcheese" ).droppable({
         dropped(id);
       }
     });
+});
+
+//Make the elments sortable
+$(function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
 });
 
 </script>
