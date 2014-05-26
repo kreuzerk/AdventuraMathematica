@@ -10,6 +10,9 @@
 	<script type="text/javascript" src="js/nextgame.js"></script>
 	<script type="text/javascript" src="js/forms.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.min.js"></script>
         <script type="text/javascript" src="d3/d3.v3.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
@@ -422,6 +425,38 @@ What is next? Game
 
 </div>
 
+<!----==================================================================
+Cheese Game
+====================================================================-->
+
+<div id="cheese">
+            <div class="centered">
+		<table>
+		<tr>
+		<td class="cheeseexercise"><image src="../images/cheese/2outof3.png" class="cheeseimages"/></td>
+		<td class="cheeseexercise, cheesetext">+</td>
+		<td id="dropcheese" class="cheeseexercise"></td>
+		<td class="cheeseexercise, cheesetext">=</td>
+		<td class="cheeseexercise"><image src="../images/cheese/fullcheese.png" class="cheeseimages"/></td>
+		<tr>
+		</table>            
+
+            </div>
+            <div class="sidebar">
+                <table>
+		<tr>
+		<td><image id="cheeseimage1" src="../images/cheese/1outof3.png" class="cheeseimages"/></td>
+		</tr>
+		<tr>
+		<td><image id="cheeseimage2" src="../images/cheese/1outof3.png" class="cheeseimages"/></td>
+		</tr>
+		<tr>
+		<td><image id="cheeseimage3" src="../images/cheese/1outof3.png" class="cheeseimages"/></td>
+		</tr>
+		</table>
+            </div>
+</div>
+
 
 </body>
 <script type="text/javascript">
@@ -429,5 +464,20 @@ hide();
 createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
+
+//Make some elements draggable
+$(function() {
+    $( "#cheeseimage1" ).draggable();
+    $( "#cheeseimage2" ).draggable();
+    $( "#cheeseimage3" ).draggable();
+
+$( "#dropcheese" ).droppable({
+      drop: function( event, ui ) {
+        alert("dropped");
+      }
+    });
+});
+
+
 </script>
 </html>

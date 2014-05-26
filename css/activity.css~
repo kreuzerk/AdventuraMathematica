@@ -172,6 +172,43 @@ Styles for the Endresultgame
 }
 
 #nextselectsvg{
-  background-color:yellow;
+  background-color:white;
 }
+
+/*================================================
+Styles for the Weightgame
+===============================================*/
+#cheesegame {
+    width:1200px;
+    height:820px;
+}
+
+.centered {
+    border: dashed;
+    float:left;
+    height: 820px;
+    width:1000px;
+    background-color: yellow;
+}
+
+.sidebar {
+    float:left;
+    width:200px;
+    height:820px;
+}
+
+.cheeseimages{
+  width:150px;
+  height: 220px;
+}
+
+.cheeseexercise{
+  width:200px;
+  height:800px;
+}
+
+.cheesetext{
+  font-size:100px;
+}
+
 
