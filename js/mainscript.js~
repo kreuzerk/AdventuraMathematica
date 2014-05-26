@@ -415,7 +415,23 @@ $("#maingamesvg").show();
 /*=================================================================================
 Function for skyblue fields
 ===================================================================================*/
+function checkskybluefields($is_correct){
 
+hideskyblue();
+
+if($is_correct){
+  drawimage(10,true);
+}
+else{
+  drawimage(10,false);
+}
+
+}
+
+function hideskyblue(){
+$("#tengame").hide();
+$("#maingamesvg").show();
+}
 
 /*=================================================================================
 Function for drawing an image
