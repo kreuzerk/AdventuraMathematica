@@ -386,10 +386,10 @@ hidelavender();
 
 switch($numberoftrys){
 case 1:
-  drawimage(15, false);
+  drawimage(15, true);
 break;
 case 2:
-  drawimage(10, false);
+  drawimage(10, true);
 break;
 case 3:
   drawimage(5, true);

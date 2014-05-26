@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="js/nextgame.js"></script>
 	<script type="text/javascript" src="js/cheesegame.js"></script>
 	<script type="text/javascript" src="js/forms.js"></script>
+	<script type="text/javascript" src="js/tennumber.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
@@ -470,6 +471,75 @@ Cheese Game
             </div>
 </div>
 
+<!----==================================================================
+Multiplikation by Ten game
+====================================================================-->
+<div id="tengame">
+
+<table>
+
+<tr>
+<td id="firsttennumber" class="tengamenumber"></td>
+<td class="tennumber"></td>
+<td id="secondtennumber" class="tengamenumber"></td>
+<td>
+	<button id="tenbutton1" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton2" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton3" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton4" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+</td>
+</tr>
+<tr>
+<td id="thirdtennumber" class="tengamenumber"></td>
+<td class="tennumber">0</td>
+<td id="fourthtennumber" class="tengamenumber"></td>
+<td>
+	<button id="tenbutton5" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton6" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton7" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton8" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+</td>
+</tr>
+<tr>
+<td id="fifthtennumber" class="tengamenumber"></td>
+<td class="tennumber">00</td>
+<td id="sixthtennumber" class="tengamenumber"></td>
+<td>
+	<button id="tenbutton9" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton10" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton11" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton12" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+</td>
+</tr>
+<tr>
+<td id="seventhtennumber" class="tengamenumber"></td>
+<td class="tennumber">0000</td>
+<td id="eighttennumber" class="tengamenumber"></td>
+<td>
+	<button id="tenbutton13" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton14" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton15" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton16" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+</td>
+</tr>
+<tr>
+<td id="ninthtennumber" class="tengamenumber"></td>
+<td class="tennumber">0000</td>
+<td id="tenthtennumber" class="tengamenumber"></td>
+<td>
+	<button id="tenbutton17" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton18" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton19" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+	<button id="tenbutton20" class="tenbutton" sign="?" onclick="tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))">?</button>
+</td>
+</tr>
+
+</table>
+<p id="continuetenbutton">
+<button id="tencontinue">Continuar</button>
+</p>
+
+</div>
 
 </body>
 <script type="text/javascript">
@@ -477,7 +547,7 @@ hide();
 createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
-initialisecheesegame();
+initialisetennumber();
 
 //Make some elements draggable
 $(function() {

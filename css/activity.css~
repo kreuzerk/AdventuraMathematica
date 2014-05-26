@@ -176,7 +176,7 @@ Styles for the Endresultgame
 }
 
 /*================================================
-Styles for the Weightgame
+Styles for the cheesegame
 ===============================================*/
 #cheesegame {
     width:1200px;
@@ -228,5 +228,46 @@ Styles for the Weightgame
   height:80px;
   font-size:20px;
 }
+
+/*================================================
+Styles for the ten game 
+===============================================*/
+#tengame{
+ width:1200px;
+ height:820px;
+ background-image: url(../images/tengame/background.jpg);
+}
+
+
+.tengamenumber{
+  font-size: 100px;
+  color: #222;
+  text-shadow: 0px 2px 3px #555;
+}
+
+.tennumber{
+  font-size:100px;
+  color:blue;
+}
+
+.tenbutton{
+  width:80px;
+  height:80px;
+  font-size:40px;
+}
+
+#continuetenbutton{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#tencontinue{
+  margin-left:auto;
+  margin-right:auto;
+  width: 200px;
+  height:50px;
+  font-size:30px;
+}
+
 
 
