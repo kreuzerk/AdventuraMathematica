@@ -184,31 +184,49 @@ Styles for the Weightgame
 }
 
 .centered {
+    background-image: url(../images/cheese/background.jpg);
     border: dashed;
     float:left;
     height: 820px;
-    width:1000px;
-    background-color: yellow;
+    width:900px;
+    /*background-color: yellow;*/
 }
 
 .sidebar {
     float:left;
-    width:200px;
+    width:300px;
     height:820px;
+    background-color:yellow;
 }
 
 .cheeseimages{
-  width:300px;
-  height: 300px;
+  width:200px;
+  height: 200px;
 }
 
 .cheeseexercise{
   width:250px;
-  height:800px;
+  height:400px;
 }
 
 .cheesetext{
   font-size:100px;
+}
+
+.cheesebreak{
+  font-size:50px;
+  text-align:center;
+}
+
+.cheesebuttonrow {
+  text-align:center;
+  width:900px;
+}
+
+#cheesebutton{
+  width:150px;
+  height:80px;
+  font-size:20px;
 }
 
 

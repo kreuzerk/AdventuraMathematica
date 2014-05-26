@@ -1,18 +1,34 @@
 var firstimages = ["1:2_1","2:3","3:4","5:6","7:8","9:10","19:20"];
 var selectionimages = ["1:2_2","1:3","1:4","1:6","1:8","1:10","1:20"];
+
+var textfirstimage = ["1/2","2/3","3/4","5/6","7/8","9/10","19/20"];
+var textsecondimage = ["1/2","1/3","1/4","1/6","1/8","1/10","1/20"];
+var cheeseresulttexts = ["2/2","3/3","4/4","6/6","8/8","10/10","20/20"];
+
 var cheese_solution;
+var randomcheese;
+var numberoftrys = 0;
+var lastdroppedid;
 
 function initialisecheesegame(){
+
+//Hide the cheesebutton
+$("#cheesebutton").hide();
+
 
 var firstcheese = document.getElementById("firstcheese");
 var cheese1 = document.getElementById("cheeseimage1");
 var cheese2 = document.getElementById("cheeseimage2");
 var cheese3 = document.getElementById("cheeseimage3");
+var firsttext = document.getElementById("firsttext");
+var cheseresulttext = document.getElementById("resulttext");
 
-var randomcheese = Math.floor(Math.random() * firstimages.length) + 1;
+
+randomcheese = Math.floor(Math.random() * firstimages.length) + 1;
 
 firstcheese.setAttribute("src", "../images/cheese/" + firstimages[randomcheese-1] + ".png");
-
+firsttext.innerHTML = textfirstimage[randomcheese-1];
+cheseresulttext.innerHTML = cheeseresulttexts[randomcheese-1];
 
 //Choose a second image that is different from the solution image
 var different = false;
@@ -73,12 +89,25 @@ break;
 
 function dropped($id){
 
+$("#cheesebutton").show();
+
+var secondtext = document.getElementById("secondtext");
+secondtext.innerHTML = textsecondimage[randomcheese-1];
+
+numberoftrys++;
+lastdroppedid = $id;
+}
+
+
+//Function that is clicked by the continue button
+function checkcheese(){
+
 if($id == cheesesolution)
 {
-alert("richtig");
+
 }
 else
 {
-alert("falsch");
+
 }
 }
