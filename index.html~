@@ -59,7 +59,35 @@ var circleData = [
   { "cx": 880, "cy": 590, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 14},
   { "cx": 810, "cy": 580, "radius": 30, "color" : "skyblue", "fontcolor" : "white", "number" : 15},
   { "cx": 740, "cy": 580, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 16},
-  { "cx": 670, "cy": 560, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 17},
+  { "cx": 670, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 17},
+  { "cx": 600, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 18},
+  { "cx": 530, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 19},
+  { "cx": 460, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 20},
+  { "cx": 390, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 21},
+  { "cx": 320, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 22},
+  { "cx": 320, "cy": 510, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 23},
+  { "cx": 390, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 24},
+  { "cx": 460, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 25},
+  { "cx": 520, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 26},
+  { "cx": 590, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 27},
+  { "cx": 660, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 28},
+  { "cx": 730, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 29},
+  { "cx": 800, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 30},
+  { "cx": 870, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 31},
+  { "cx": 950, "cy": 480, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 32},
+  { "cx": 1020, "cy": 460, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 33},
+  { "cx": 1070, "cy": 390, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 34},
+  { "cx": 1090, "cy": 320, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 35},
+  { "cx": 1070, "cy": 250, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 36},
+  { "cx": 1050, "cy": 180, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 37},
+  { "cx": 980, "cy": 140, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 38},
+  { "cx": 920, "cy": 130, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 39},
+  { "cx": 850, "cy": 120, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 40},
+  { "cx": 780, "cy": 120, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 41},
+  { "cx": 710, "cy": 120, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 42},
+  { "cx": 640, "cy": 120, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 43},
+  { "cx": 570, "cy": 120, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 44},
+  { "cx": 500, "cy": 120, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 45},
   { "cx": 1120, "cy": 60, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 90}];
 
 //Create the SVG Viewport
@@ -95,13 +123,13 @@ var textLabels = text
                  .attr("font-size", "20px")
                  .attr("fill", function(d) { return d.fontcolor; });
 
-
+/*
 //Adding an image
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/Lion.png").attr("id", "Lion")
       .attr("width", 100)
       .attr("height", 100).attr("x", 0).attr("y",680);
-
+*/
 
 //Adding the cube
 svgContainer.append("svg:image")
@@ -144,6 +172,7 @@ svgContainer.append("text")
       .attr("font-size", "50px")
       .attr("fill", "black");
 
+/*
 //=============================================
 //Images on the map
 //=============================================
@@ -156,7 +185,7 @@ svgContainer.append("svg:image")
       .attr("xlink:href", "./images/Hippopotamus.png")
       .attr("width", 150)
       .attr("height", 150).attr("x", 190).attr("y",460);
-
+*/
 </script>
 
 <!--
