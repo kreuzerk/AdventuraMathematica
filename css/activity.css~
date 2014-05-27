@@ -295,7 +295,7 @@ Styles for the Division game
   float:left; 
   width:250px; 
   background-color:lightcyan; 
-  min-height:820px; 
+  min-height:700px; 
 }
 
 .animals{

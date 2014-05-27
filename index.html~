@@ -500,7 +500,7 @@ Division game
   		<li id="divisionli7" class="divisionli">Item 7</li>
 	</ul>
 	<p class="divisionp">
-		<button class="divisioncontrolbutton">Control</button>
+		<button class="divisioncontrolbutton" onclick="controldivisiongame()">Control</button>
 	<p>
 	
 	</div>        
