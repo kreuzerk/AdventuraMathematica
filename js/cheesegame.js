@@ -9,6 +9,7 @@ var cheese_solution;
 var randomcheese;
 var numberoftrys = 0;
 var lastdroppedid;
+var secondtext;
 
 function initialisecheesegame(){
 
@@ -22,7 +23,9 @@ var cheese2 = document.getElementById("cheeseimage2");
 var cheese3 = document.getElementById("cheeseimage3");
 var firsttext = document.getElementById("firsttext");
 var cheseresulttext = document.getElementById("resulttext");
+secondtext = document.getElementById("secondtext");
 
+secondtext.innerHTML = "";
 
 randomcheese = Math.floor(Math.random() * firstimages.length) + 1;
 
@@ -91,7 +94,6 @@ function dropped($id){
 
 $("#cheesebutton").show();
 
-var secondtext = document.getElementById("secondtext");
 secondtext.innerHTML = textsecondimage[randomcheese-1];
 
 numberoftrys++;

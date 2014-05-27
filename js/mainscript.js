@@ -172,6 +172,7 @@ $("#whatisnextgame").hide();
 $("#cheese").hide();
 $("#tengame").hide();
 $("#divisiongame").hide();
+$("#bananadelivery").hide();
 }
 
 /*
@@ -197,48 +198,49 @@ break;
 case "red":
   red();
 break;
-case "blue":
+case "blue":		//Blue = Shop Game
   //Hide the main game
   $("#maingamesvg").hide();
   $("#shoptable").show();
 createexercise();
 break;
-case "yellow":
+case "yellow":		//Yellow = Krokogame
   $("#maingamesvg").hide();
   $("#krokodiv").show();
 break;
-case "orange":
+case "orange":		//Orange == formgame
   $("#maingamesvg").hide();
   createformsgame();
   $("#formgame").show();
 break;
-case "purple":
+case "purple":		//Purple == Endresultgame
   $("#maingamesvg").hide();
   createendresultgame();
   $("#endresultgame").show();
 break;
-case "pink":
+case "pink":		//Pink == whatisnextgame
 $("#maingamesvg").hide();
 nextsvg_drawexercise();
 $("#whatisnextgame").show();
 break;
-case "lavender":
+case "lavender":	//Lavender == Cheesegame
 $("#maingamesvg").hide();
 initialisecheesegame();
 $("#cheese").show();
 break;
-case "skyblue":
+case "skyblue":		//Skyblue == Tengame
 $("#maingamesvg").hide();
 initialisetennumber();
 $("#tengame").show();
 break;
-case "mediumaquamarine":
+case "mediumaquamarine":	//Mediumaquamarine == divisiongame
 $("#maingamesvg").hide();
 initialisedivisiongame();
 $("#divisiongame").show();
 break;
 case "gold":
-alert("goldfield entered");
+$("#maingamesvg").hide();
+$("#bananadelivery").show();
 break;
 }
 }

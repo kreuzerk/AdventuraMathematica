@@ -358,6 +358,27 @@ Styles for the selection screen
 
 }
 
+/*================================================
+Styles for the banana delivery screen
+===============================================*/
+#bananadelivery{
+  width:1200px;
+  height:820px;
+  background-image: url(../images/delivery/bananadelivery.png);
+}
+
+.deliverybuttons{
+  width: 200px;
+  height:150px;
+  font-size: 50px;
+  margin-top: 500px;
+  margin-left:40px;
+  background-color:ghostwhite;
+  color: black;
+
+}
+
+
 
 /*================================================
 Styles for the dialogs
