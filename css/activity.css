@@ -277,11 +277,11 @@ Styles for the Division game
 #divisiongame{ 
   width:1200px; 
   height:820px;
-  background-color:white;
+  background-color:ivory;
 }
 
 #divisionheader {
- background-color:yellow; 
+ background-color:lightcyan; 
  font-size:50px; 
  text-align:center; 
 }
@@ -289,14 +289,13 @@ Styles for the Division game
 #divisionmain {
   width:950px;
   height:600px;
-  background-color: white;
 }
 
 #divisionsidebar { 
   float:left; 
   width:250px; 
-  background-color:whitesmoke; 
-  min-height:820px; 
+  background-color:lightcyan; 
+  min-height:700px; 
 }
 
 .animals{
@@ -313,7 +312,7 @@ Styles for the Division game
 .divisionli{
   margin-left:100px;
   margin-top:20px;
-  background-color: whitesmoke;
+  background-color: lightcyan;
   font-size: 50px;
   width: 1000px;
 }

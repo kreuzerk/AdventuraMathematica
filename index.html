@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="js/nextgame.js"></script>
 	<script type="text/javascript" src="js/cheesegame.js"></script>
 	<script type="text/javascript" src="js/forms.js"></script>
+	<script type="text/javascript" src="js/divisiongame.js"></script>
 	<script type="text/javascript" src="js/tennumber.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
@@ -490,16 +491,16 @@ Division game
         </div>
         <div id="divisionmain">
 	<ul id="sortable">
-  		<li class="divisionli"><span></span>Item 1</li>
-  		<li class="divisionli"><span></span>Item 2</li>
-  		<li class="divisionli"><span></span>Item 3</li>
-  		<li class="divisionli"><span></span>Item 4</li>
-  		<li class="divisionli"><span></span>Item 5</li>
-  		<li class="divisionli"><span></span>Item 6</li>
-  		<li class="divisionli"><span></span>Item 7</li>
+  		<li id="divisionli1" class="divisionli">Item 1</li>
+  		<li id="divisionli2" class="divisionli">Item 2</li>
+  		<li id="divisionli3" class="divisionli">Item 3</li>
+  		<li id="divisionli4" class="divisionli">Item 4</li>
+  		<li id="divisionli5" class="divisionli">Item 5</li>
+  		<li id="divisionli6" class="divisionli">Item 6</li>
+  		<li id="divisionli7" class="divisionli">Item 7</li>
 	</ul>
 	<p class="divisionp">
-		<button class="divisioncontrolbutton">Control</button>
+		<button class="divisioncontrolbutton" onclick="controldivisiongame()">Control</button>
 	<p>
 	
 	</div>        
@@ -513,7 +514,7 @@ hide();
 createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
-
+initialisedivisiongame();
 
 //Make some elements draggable
 $(function() {
