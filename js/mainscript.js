@@ -4,9 +4,14 @@ var diceresult;
 var cx;
 var cy;
 var bananacounter = 0;
+var filename;
 
 //boolean variables
 var entered;
+
+function setfilename($file){
+ filename = $file;
+}
 
 
 function hallo(){
@@ -80,7 +85,7 @@ function move(){
 function drawlion($cx, $cy){
 
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/Lion.png").attr("id", "Lion")
+      .attr("xlink:href", filename).attr("id", "Lion")
       .attr("width", 100)
       .attr("height", 100).attr("x", $cx-50).attr("y",$cy-90);
 }

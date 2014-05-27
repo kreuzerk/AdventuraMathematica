@@ -9,10 +9,6 @@
   /*background-color:white;*/
 }
 
-body{
-  background-color:mintcream;
-}
-
 /*================================================
 Styles for Shopactivities
 ================================================*/
@@ -351,7 +347,7 @@ Styles for the selection screen
 #caracterselection{
  width:1200px;
  height:820px;
- background-color:mintcream;
+ background-color:lightyellow;
 }
 
 #selectioncontinuebutton{
@@ -361,4 +357,13 @@ Styles for the selection screen
   margin-top:50px;
 
 }
+
+
+/*================================================
+Styles for the dialogs
+===============================================*/
+.dialog{
+  background-color: white;
+}
+
 

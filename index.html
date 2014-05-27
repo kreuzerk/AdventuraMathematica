@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/forms.js"></script>
 	<script type="text/javascript" src="js/divisiongame.js"></script>
 	<script type="text/javascript" src="js/tennumber.js"></script>
+	<script type="text/javascript" src="js/selectionscreen.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
@@ -94,13 +95,13 @@ var textLabels = text
                  .attr("font-size", "20px")
                  .attr("fill", function(d) { return d.fontcolor; });
 
-
+/*
 //Adding an image
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/Lion.png").attr("id", "Lion")
       .attr("width", 100)
       .attr("height", 100).attr("x", 0).attr("y",680);
-
+*/
 
 //Adding the cube
 svgContainer.append("svg:image")
@@ -517,20 +518,30 @@ Selection of the caracter
 
 <table class="selectiontable">
 <tr>
-	<td><image <image class="character" src="../images/caracterselection/elephant.png"/ width="200px" height="200px"></td>
-	<td><image <image class="character" src="../images/caracterselection/gorilla.png"/ width="200px" height="200px"></td>
-	<td><image <image class="character" src="../images/caracterselection/donkey.png"/ width="200px" height="200px"></td>
-	<td><image <image class="character" src="../images/caracterselection/lion.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character1" onclick="characterclicked($(this).attr('id'))" class="character" src="../images/caracterselection/elephant.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character2" onclick="characterclicked($(this).attr('id'))" class="character" src="../images/caracterselection/gorilla.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character3" onclick="characterclicked($(this).attr('id'))" class="character" src="../images/caracterselection/donkey.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character4" onclick="characterclicked($(this).attr('id'))" class="character" src="../images/caracterselection/lion.png"/ width="200px" height="200px"></td>
 </tr>
 </table>
 
 <div class="selectiondiv">
-<button id="selectioncontinuebutton">Continuar</button>
+<button id="selectioncontinuebutton" onclick="characterselectioncontinue()">Continuar</button>
 </div>
 
+
+
 </div>
 
+<!----==================================================================
+Dialogs 
+====================================================================-->
 
+<!-- Dialog for the selection screen -->
+
+<div id="startscreendialog" class="dialog" title="Ooops">
+  Por favor, elija un personaje
+</div>
 
 
 
@@ -561,6 +572,27 @@ $(function() {
     $( "#sortable" ).sortable();
     $( "#sortable" ).disableSelection();
 });
+
+//Function for the Dialogs
+$(function() {
+    $( "#startscreendialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      },
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
 
 var backgroundmusic = new Audio();
 backgroundmusic.src = "../sounds/Backgroundsound.mp3";

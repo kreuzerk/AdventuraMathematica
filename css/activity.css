@@ -9,10 +9,6 @@
   /*background-color:white;*/
 }
 
-body{
-  background-color:lightyellow;
-}
-
 /*================================================
 Styles for Shopactivities
 ================================================*/
@@ -361,4 +357,14 @@ Styles for the selection screen
   margin-top:50px;
 
 }
+
+
+/*================================================
+Styles for the dialogs
+===============================================*/
+.dialog{
+  background-color: white;
+  font-size: 20px;
+}
+
 
