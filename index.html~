@@ -507,6 +507,32 @@ Division game
     </div>
 </div>
 
+<!----==================================================================
+Selection of the caracter
+====================================================================-->
+<div id="caracterselection">
+<div class="selectiondiv">
+<h1>Elegir a tu personaje</h1>
+</div>
+
+<table class="selectiontable">
+<tr>
+	<td><image <image class="character" src="../images/caracterselection/elephant.png"/ width="200px" height="200px"></td>
+	<td><image <image class="character" src="../images/caracterselection/gorilla.png"/ width="200px" height="200px"></td>
+	<td><image <image class="character" src="../images/caracterselection/donkey.png"/ width="200px" height="200px"></td>
+	<td><image <image class="character" src="../images/caracterselection/lion.png"/ width="200px" height="200px"></td>
+</tr>
+</table>
+
+<div class="selectiondiv">
+<button id="slectioncontinuebutton">Continuar</button>
+</div>
+
+</div>
+
+
+
+
 
 </body>
 <script type="text/javascript">
@@ -535,6 +561,10 @@ $(function() {
     $( "#sortable" ).sortable();
     $( "#sortable" ).disableSelection();
 });
+
+var backgroundmusic = new Audio();
+backgroundmusic.src = "../sounds/Backgroundsound.mp3";
+backgroundmusic.play();
 
 </script>
 </html>

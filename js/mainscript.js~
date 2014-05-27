@@ -11,7 +11,7 @@ var entered;
 
 function hallo(){
 
-dicesound = new Audio();
+var dicesound = new Audio();
 dicesound.src = "../sounds/Diceroll.mp3";
 dicesound.play();
 
@@ -436,6 +436,27 @@ else{
 
 function hideskyblue(){
 $("#tengame").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function for mediumaquamarine fields
+===================================================================================*/
+function checkmediumaquamarinefields($is_correct){
+
+hidemediumaquamarine();
+
+if($is_correct){
+  drawimage(10,true);
+}
+else{
+  drawimage(10,false);
+}
+
+}
+
+function hidemediumaquamarine(){
+$("#divisiongame").hide();
 $("#maingamesvg").show();
 }
 

@@ -11,7 +11,7 @@ var entered;
 
 function hallo(){
 
-dicesound = new Audio();
+var dicesound = new Audio();
 dicesound.src = "../sounds/Diceroll.mp3";
 dicesound.play();
 
@@ -147,7 +147,7 @@ Hide function at the beginning of the game
 function hide(){
 
 $("#shoptable").hide();
-//$("#maingamesvg").hide();
+$("#maingamesvg").hide();
 $("#krokodiv").hide();
 $("#formgame").hide();
 $("#endresultgame").hide();
