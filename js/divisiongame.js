@@ -75,6 +75,5 @@ else
 {
 checkmediumaquamarinefields(false);
 }
-
 }
 
