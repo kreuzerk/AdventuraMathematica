@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="js/divisiongame.js"></script>
 	<script type="text/javascript" src="js/tennumber.js"></script>
 	<script type="text/javascript" src="js/selectionscreen.js"></script>
+	<script type="text/javascript" src="js/delivery.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
@@ -567,10 +568,9 @@ Give the bananas to the monkey
 ====================================================================-->
 <div id="bananadelivery">
 
-<div class="deliverydiv">
-<button class="deliverybuttons">Si</button>
-<button class="deliverybuttons">No</button>
-</div>
+<button id="deliverybutton1" class="deliverybuttons" onclick="deliverbananas()">Si</button>
+<button id="deliverybutton2" class="deliverybuttons">No</button>
+
 
 </div>
 

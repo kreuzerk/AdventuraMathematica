@@ -3,7 +3,8 @@ var i;
 var diceresult;
 var cx;
 var cy;
-var bananacounter = 0;
+var bananacounter = 50;
+var moneycounter = 0;
 var filename;
 var goldentered = false;
 
@@ -483,7 +484,25 @@ $("#maingamesvg").show();
 }
 
 /*=================================================================================
-Function for drawing an image
+Function for golden fields
+===================================================================================*/
+function checkgoldenfields($deliver){
+
+hidegold();
+
+if($deliver){
+  drawmoney(1,true);
+}
+
+}
+
+function hidegold(){
+$("#bananadelivery").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function for drawing the banana
 ===================================================================================*/
 function drawimage($amount, $positive){
 
@@ -530,7 +549,52 @@ bananaamount.textContent = "+ " + bananacounter;
 entered = true;
 }
 
+/*=================================================================================
+Function for drawing the money
+===================================================================================*/
+function drawmoney($amount, $positive){
+
+//Display banana
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/money.png").attr("id", "moneyimage")
+      .attr("width", 100)
+      .attr("height", 100).attr("x", 290).attr("y",30);
 
 
+if($positive){
+
+//Plus
+svgContainer.append("text").attr("id", "moneytext")
+      .attr("x", 160)
+      .attr("y", 100)
+      .text(" + " + $amount)
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+var moneyamount = document.getElementById("moneyamount");
+moneycounter = moneycounter + $amount;
+moneyamount.textContent = "+ " + moneycounter;
+}
+else{
+
+//Minus
+svgContainer.append("text").attr("id", "moneytext")
+      .attr("x", 160)
+      .attr("y", 100)
+      .text(" - " + $amount)
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "red");
+
+var moneyamount = document.getElementById("moneyamount");
+if(moneycounter > 0){
+moneycounter = moneycounter - $amount;
+	}
+}
+
+moneyamount.textContent = "+ " + moneycounter;
+entered = true;
+}
 
 
