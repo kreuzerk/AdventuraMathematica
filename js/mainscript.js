@@ -5,6 +5,7 @@ var cx;
 var cy;
 var bananacounter = 0;
 var filename;
+var goldentered = false;
 
 //boolean variables
 var entered;
@@ -60,8 +61,10 @@ move();
 
 function move(){
 
-  if(i<=(currentfield+diceresult)){
+  if(i<(currentfield+diceresult) && goldentered == false){
     window.setTimeout("move()",1000);
+
+    i++;
 
     cx = circleData[i-1].cx;
     cy = circleData[i-1].cy;
@@ -73,10 +76,19 @@ function move(){
     //Draw the lion
     drawlion(cx,cy);
 
-    i++;
+    if(circleData[i-1].color == "gold"){
+	goldentered = true;
+    }
+
+  }
+  else{
+  if(goldentered){
+  currentfield = i;
+  goldentered = false; //Because we are going to leave the gold field
   }
   else{
   currentfield = diceresult + currentfield;
+  }
   removedicedisplay();
   checkfield();
  }
@@ -224,6 +236,9 @@ case "mediumaquamarine":
 $("#maingamesvg").hide();
 initialisedivisiongame();
 $("#divisiongame").show();
+break;
+case "gold":
+alert("goldfield entered");
 break;
 }
 }
