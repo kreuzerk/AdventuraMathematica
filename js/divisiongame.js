@@ -42,6 +42,14 @@ li.innerHTML = divisor + " / " + divident;
 }
 
 /*====================================================================
+Function for reseting the arrays
+=====================================================================*/
+function resetdivisiongame(){
+resultarray.length = 0;
+}
+
+
+/*====================================================================
 Function for controlling the results
 =====================================================================*/
 function controldivisiongame(){
@@ -61,11 +69,11 @@ for (var i = 0; i < items.length; ++i) {
 }
 
 if(correct){
-alert("correct");
+checkmediumaquamarinefields(true);
 }
 else
 {
-alert("wrong");
+checkmediumaquamarinefields(false);
 }
 
 }

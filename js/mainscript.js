@@ -147,13 +147,14 @@ Hide function at the beginning of the game
 function hide(){
 
 $("#shoptable").hide();
-$("#maingamesvg").hide();
+//$("#maingamesvg").hide();
 $("#krokodiv").hide();
 $("#formgame").hide();
 $("#endresultgame").hide();
 $("#whatisnextgame").hide();
 $("#cheese").hide();
 $("#tengame").hide();
+$("#divisiongame").hide();
 }
 
 /*
@@ -213,6 +214,11 @@ case "skyblue":
 $("#maingamesvg").hide();
 initialisetennumber();
 $("#tengame").show();
+break;
+case "mediumaquamarine":
+$("#maingamesvg").hide();
+initialisedivisiongame();
+$("#divisiongame").show();
 break;
 }
 }
@@ -430,6 +436,27 @@ else{
 
 function hideskyblue(){
 $("#tengame").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function for mediumaquamarine fields
+===================================================================================*/
+function checkmediumaquamarinefields($is_correct){
+
+hidemediumaquamarine();
+
+if($is_correct){
+  drawimage(10,true);
+}
+else{
+  drawimage(10,false);
+}
+
+}
+
+function hidemediumaquamarine(){
+$("#divisiongame").hide();
 $("#maingamesvg").show();
 }
 

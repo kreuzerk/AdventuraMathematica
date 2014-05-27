@@ -154,6 +154,7 @@ $("#endresultgame").hide();
 $("#whatisnextgame").hide();
 $("#cheese").hide();
 $("#tengame").hide();
+$("#divisiongame").hide();
 }
 
 /*
@@ -213,6 +214,11 @@ case "skyblue":
 $("#maingamesvg").hide();
 initialisetennumber();
 $("#tengame").show();
+break;
+case "mediumaquamarine":
+$("#maingamesvg").hide();
+initialisedivisiongame();
+$("#divisiongame").show();
 break;
 }
 }
