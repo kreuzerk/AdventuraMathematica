@@ -159,13 +159,13 @@ svgContainer.append("text").attr("id", "bananaamount")
       .attr("fill", "black");
 
 //Adding the moneyimage
-svgContainer.append("svg:image").attr("id", "moneyamount")
+svgContainer.append("svg:image")
       .attr("xlink:href", "./images/money.png").attr("onclick","hallo()")
       .attr("width", 80)
       .attr("height", 80).attr("x", width-360).attr("y",height-120);
 
 //Adding the moneytext
-svgContainer.append("text")
+svgContainer.append("text").attr("id", "moneyamount")
       .attr("x", width-440)
       .attr("y", height-50)
       .text("0 x")
@@ -510,13 +510,13 @@ Division game
         <div id="divisionsidebar"> 
 	<table>
 		<tr>
-			<td><image class="animals" src="../images/divisionsort/Elephant.png"/></td>
+			<td><image class="animals" src="../images/divisionsort/Mouse.png"/></td>
 		</tr>
 		<tr>
 			<td><image src="../images/divisionsort/arrow.png"/ width="200px" height="300px"></td>
 		</tr>
 		<tr>
-			<td><image class="animals" src="../images/divisionsort/Mouse.png"/></td>
+			<td><image class="animals" src="../images/divisionsort/Elephant.png"/></td>
 		</tr>
 	</table>
         </div>

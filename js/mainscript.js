@@ -575,6 +575,13 @@ svgContainer.append("text").attr("id", "moneytext")
 var moneyamount = document.getElementById("moneyamount");
 moneycounter = moneycounter + $amount;
 moneyamount.textContent = "+ " + moneycounter;
+
+//Reduce the bananas
+
+var bananaamount = document.getElementById("bananaamount");
+bananacounter = bananacounter - 50;
+bananaamount.textContent = "+ " + bananacounter;
+
 }
 else{
 
