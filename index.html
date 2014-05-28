@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="js/tennumber.js"></script>
 	<script type="text/javascript" src="js/selectionscreen.js"></script>
 	<script type="text/javascript" src="js/delivery.js"></script>
+	<script type="text/javascript" src="js/slidergame.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
@@ -564,6 +565,31 @@ Selection of the caracter
 </div>
 
 <!----==================================================================
+Slider Game
+====================================================================-->
+<div id="slidergame">
+<h1 id="sliderh1">3/4</h1>
+<h2 id="valor1">Valor: 0</h2> 
+<input type="range" id="slider1" class="sliders" min="0" max="100" value="0" number="1" onchange="onsliderchange(this.value, $(this).attr('number'))"/>
+
+<h1 id="sliderh2">3/4</h1>
+<h2 id="valor2">Valor: 0</h2> 
+<input type="range" id="slider2" class="sliders" min="0" max="100" value="0" number="2" onchange="onsliderchange(this.value, $(this).attr('number'))"/>
+
+<h1 id="sliderh3">3/4</h1>
+<h2 id="valor3">Valor: 0</h2> 
+<input type="range" id="slider3" class="sliders" min="0" max="100" value="0" number="3" onchange="onsliderchange(this.value, $(this).attr('number'))"/>
+
+<h1 id="sliderh4">3/4</h1>
+<h2 id="valor4">Valor: 0</h2> 
+<input type="range" id="slider1" class="sliders" min="0" max="100" value="0" number="4" onchange="onsliderchange(this.value, $(this).attr('number'))"/>
+
+<br /><br /><br />
+<button onclick="controlslidergame()">Control</button>
+
+</div>
+
+<!----==================================================================
 Give the bananas to the monkey
 ====================================================================-->
 <div id="bananadelivery">
@@ -593,6 +619,8 @@ hide();
 createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
+
+initialiseslidergame();
 
 //Make some elements draggable
 $(function() {

@@ -174,6 +174,7 @@ $("#cheese").hide();
 $("#tengame").hide();
 $("#divisiongame").hide();
 $("#bananadelivery").hide();
+//$("#caracterselection").hide();
 }
 
 /*
