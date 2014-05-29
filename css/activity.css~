@@ -382,14 +382,29 @@ Styles for the banana delivery screen
 Styles for the sliders
 ===============================================*/
 #slidergame{
-  margin-left:100px;
+  background-color:aliceblue;
+  width:1200px;
+  height:820px;
+  margin-top:0px;
+}
+
+.sliderdiv{
+  margin-left:20px;
+  margin-top:20px;
 }
 
 .sliders{
 
   width:1000px;
   height:200px;
-  background-color: blue;
+  color: blue;
+
+}
+
+.slidergamebutton{
+  width:150px;
+  height:80px;
+  font-size: 20px;
 
 }
 

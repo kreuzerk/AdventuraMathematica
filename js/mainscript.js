@@ -174,7 +174,8 @@ $("#cheese").hide();
 $("#tengame").hide();
 $("#divisiongame").hide();
 $("#bananadelivery").hide();
-$("#caracterselection").hide();
+$("#slidergame").hide();
+//$("#caracterselection").hide();
 }
 
 /*
@@ -240,10 +241,16 @@ $("#maingamesvg").hide();
 initialisedivisiongame();
 $("#divisiongame").show();
 break;
-case "gold":
+case "gold":		//Gold - Dliver the bananas
 $("#maingamesvg").hide();
 $("#bananadelivery").show();
 break;
+case "khaki":	   	//Khaki - Slidergame
+$("#maingamesvg").hide();
+initialiseslidergame();
+$("#slidergame").show();
+break;
+
 }
 }
 
@@ -501,6 +508,30 @@ function hidegold(){
 $("#bananadelivery").hide();
 $("#maingamesvg").show();
 }
+
+
+/*=================================================================================
+Function for khaki fields
+===================================================================================*/
+function checkkhakifields($correct){
+
+hidekhaki();
+
+if($correct){
+  drawimage(10,true);
+}
+else{
+  drawimage(10,false);
+}
+
+}
+
+function hidekhaki(){
+$("#slidergame").hide();
+$("#maingamesvg").show();
+}
+
+
 
 /*=================================================================================
 Function for drawing the banana

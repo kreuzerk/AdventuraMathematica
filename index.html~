@@ -49,14 +49,14 @@ var circleData = [
   { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
   { "cx": 190, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 3},
   { "cx": 260, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 5},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "khaki", "fontcolor" : "white", "number" : 5},
   { "cx": 400, "cy": 720, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 6},
   { "cx": 470, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 700, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 8},
+  { "cx": 540, "cy": 700, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 8},
   { "cx": 610, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 9},
-  { "cx": 680, "cy": 700, "radius": 30, "color" : "pink", "fontcolor" : "white", "number" :10},
+  { "cx": 680, "cy": 700, "radius": 30, "color" : "khaki", "fontcolor" : "white", "number" :10},
   { "cx": 750, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 11},
-  { "cx": 820, "cy": 680, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 12},
+  { "cx": 820, "cy": 680, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 12},
   { "cx": 890, "cy": 660, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 13},
   { "cx": 880, "cy": 590, "radius": 30, "color" : "gold", "fontcolor" : "black", "number" : 14},
   { "cx": 810, "cy": 580, "radius": 30, "color" : "skyblue", "fontcolor" : "white", "number" : 15},
@@ -568,6 +568,7 @@ Selection of the caracter
 Slider Game
 ====================================================================-->
 <div id="slidergame">
+<div class="sliderdiv">
 <h1 id="sliderh1">3/4</h1>
 <h2 id="valor1">Valor: 0</h2> 
 <input type="range" id="slider1" class="sliders" min="0" max="100" value="0" number="1" onchange="onsliderchange(this.value, $(this).attr('number'))"/>
@@ -582,11 +583,11 @@ Slider Game
 
 <h1 id="sliderh4">3/4</h1>
 <h2 id="valor4">Valor: 0</h2> 
-<input type="range" id="slider1" class="sliders" min="0" max="100" value="0" number="4" onchange="onsliderchange(this.value, $(this).attr('number'))"/>
+<input type="range" id="slider4" class="sliders" min="0" max="100" value="0" number="4" onchange="onsliderchange(this.value, $(this).attr('number'))"/>
 
 <br /><br /><br />
-<button onclick="controlslidergame()">Control</button>
-
+<button class="slidergamebutton" onclick="controlslidergame()">Control</button>
+</div>
 </div>
 
 <!----==================================================================
@@ -620,7 +621,6 @@ createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
 
-initialiseslidergame();
 
 //Make some elements draggable
 $(function() {
