@@ -641,8 +641,6 @@ Wall Game
 	</td>
 </tr>
 </table>
-
-
 </div>
 
 <!----==================================================================
@@ -676,7 +674,7 @@ createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
 
-initialisewallgame();
+
 
 //Make some elements draggable
 $(function() {

@@ -412,18 +412,20 @@ Styles for the sliders
 Styles for the wall game
 ===============================================*/
 #wallgame{
-  background-color:white;
+  background-image: url(../images/selectiongame/Walls.png);
+  width: 1200px;
+  height: 800px;
 }
 
 .wallgameli{
   background-color:gainsboro;
-  width:500px;
+  width:300px;
 }
 
 .wallgametable{
-  width: 1000px;
+  width: 600px;
   height:800px;
-  margin-left: 50px;
+  margin-left: 400px;
 }
 
 

@@ -10,7 +10,7 @@ var numberoflis;
 
 function initialisewallgame(){
 
-numberoflis = 8;
+numberoflis = 9;
 var exerciserange = 50;
 wallgame_result = new Array(numberoflis);
 
