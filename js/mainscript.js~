@@ -111,6 +111,7 @@ function move(){
  }
 }
 
+
 function drawlion($cx, $cy){
 
 svgContainer.append("svg:image")
@@ -192,6 +193,7 @@ $("#divisiongame").hide();
 $("#bananadelivery").hide();
 $("#slidergame").hide();
 $("#wallgame").hide();
+$("#endofround").hide();
 //$("#caracterselection").hide();
 }
 
@@ -271,6 +273,10 @@ case "midnightblue":	//Midnightblue fields
 $("#maingamesvg").hide();
 initialisewallgame();
 $("#wallgame").show();
+break;
+case "snow":
+$("#maingamesvg").hide();
+$("#endofround").show();
 break;
 
 }
@@ -571,6 +577,13 @@ $("#wallgame").hide();
 $("#maingamesvg").show();
 }
 
+/*=================================================================================
+Function for snow fields
+===================================================================================*/
+function hidesnowfield(){
+$("#endofround").hide();
+$("#maingamesvg").show();
+}
 
 /*=================================================================================
 Function for drawing the banana

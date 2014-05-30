@@ -111,6 +111,7 @@ function move(){
  }
 }
 
+
 function drawlion($cx, $cy){
 
 svgContainer.append("svg:image")
@@ -192,6 +193,7 @@ $("#divisiongame").hide();
 $("#bananadelivery").hide();
 $("#slidergame").hide();
 $("#wallgame").hide();
+$("#endofround").hide();
 //$("#caracterselection").hide();
 }
 
@@ -271,6 +273,10 @@ case "midnightblue":	//Midnightblue fields
 $("#maingamesvg").hide();
 initialisewallgame();
 $("#wallgame").show();
+break;
+case "snow":
+$("#maingamesvg").hide();
+$("#endofround").show();
 break;
 
 }
@@ -571,6 +577,13 @@ $("#wallgame").hide();
 $("#maingamesvg").show();
 }
 
+/*=================================================================================
+Function for snow fields
+===================================================================================*/
+function hidesnowfield(){
+$("#endofround").hide();
+$("#maingamesvg").show();
+}
 
 /*=================================================================================
 Function for drawing the banana
@@ -627,7 +640,7 @@ function drawmoney($amount, $positive){
 
 //Display banana
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/money.png").attr("id", "moneyimage")
+      .attr("xlink:href", "./images/bananas.png").attr("id", "bananaimage")
       .attr("width", 100)
       .attr("height", 100).attr("x", 290).attr("y",30);
 
@@ -635,10 +648,10 @@ svgContainer.append("svg:image")
 if($positive){
 
 //Plus
-svgContainer.append("text").attr("id", "moneytext")
+svgContainer.append("text").attr("id", "bananatext")
       .attr("x", 160)
       .attr("y", 100)
-      .text(" + " + $amount)
+      .text(" - " + 50)
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
       .attr("fill", "black");

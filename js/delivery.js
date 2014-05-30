@@ -29,6 +29,10 @@ deliverybutton1.setAttribute("onclick", "deliveryokclicked()");
 
 }
 
+/*================================
+Function for not delivering bananas
+==================================*/
+
 function notdeliverbananas(){
 
 getdeliveryelements();
@@ -41,16 +45,11 @@ deliverybutton1.setAttribute("onclick", "deliveryokclicked()");
 
 //Hide the secon button
 $("#deliverybutton2").hide();
-
-//Revert the changes
-revertchanges();
-$("#bananadelivery").hide();
-
 }
 
 function deliveryokclicked(){
 
-revertchanges();
+delivery_revertchanges();
 
 if(deliver){
 checkgoldenfields(true);
@@ -58,14 +57,12 @@ checkgoldenfields(true);
 else{
 checkgoldenfields(false);
 }
+}
 
-function revertchanges(){
+function delivery_revertchanges(){
 //Revert all the changes
 deliverybutton1.innerHTML = "Si";
 $("#deliverybutton2").show();
 deliverybutton1.setAttribute("onclick", "deliverbananas()");
 deliverydiv.style.backgroundImage = 'url(../images/delivery/bananadelivery.png)';
-}
-
-
 }

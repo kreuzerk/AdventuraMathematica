@@ -426,7 +426,6 @@ Styles for the wall game
   width: 600px;
   height:800px;
   margin-left: 400px;
-  padding:100px;
 }
 
 
@@ -453,6 +452,22 @@ Styles for the wall game
   height: 18px; 
 }
 
+/*================================================
+Styles for the endround
+===============================================*/
+#endofround{
+  width: 1200px;
+  height:820px;
+  background-image: url(../images/endofround/Round.png);
+}
+
+.endofroundbutton{
+  margin-left:700px;
+  margin-top:500px;
+  width: 250px;
+  height: 150px;
+  font-size:50px;
+}
 
 /*================================================
 Styles for the dialogs
