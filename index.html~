@@ -728,7 +728,7 @@ $(function() {
         $( ".ui-selected", this ).each(function() {
           var index = $( "#selectable1 li" ).index( this );
 
-	  liselected(index);
+	  liselected(true, index);
         });
       }
     });

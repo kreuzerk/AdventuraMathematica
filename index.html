@@ -740,8 +740,7 @@ $(function() {
         var result = $( "#select-result" ).empty();
         $( ".ui-selected", this ).each(function() {
           var index = $( "#selectable2 li" ).index( this );
-          alert(" #" + (index+1));
-          //liselected();
+          liselected(false, index);
         });
       }
     });

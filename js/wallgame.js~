@@ -1,6 +1,8 @@
 var wallgame_result;
 var firstlivalue;
 var secondlivalue;
+var wallgame_firstliselected = false;
+var wallgame_secondliselected;
 
 function initialisewallgame(){
 
@@ -56,18 +58,36 @@ for(var i = 0; i<20; i++){
 //Function that is called if a li is selected
 function liselected($ulone, $index){
 
-
 if($ulone){
+
+wallgame_firstselected = true;
+
 var ul = document.getElementById("selectable1");
 var children = ul.getElementsByTagName("li");
 
-firstlivalue = children[0].getAttribute("result");
-
-}
+firstlivalue = children[$index].getAttribute("result");
+}//End first if
 else{
 
+wallgame_secondselected = true;
+
+var ul = document.getElementById("selectable2");
+var children = ul.getElementsByTagName("li");
+
+secondlivalue = children[$index].getAttribute("result");
 }
 
+//Check if both are selectd
+if(wallgame_firstselected == true && wallgame_secondselected == true){
+  if(firstlivalue == secondlivalue){
+    alert("correct");
+    wallgame_firstselected = false;
+    wallgame_secondselected = false;
+  }
+  else{
+    alert("false");
+  }
+}
 
 }
 
