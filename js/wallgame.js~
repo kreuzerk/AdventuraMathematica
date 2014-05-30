@@ -2,7 +2,9 @@ var wallgame_result;
 var firstlivalue;
 var secondlivalue;
 var wallgame_firstliselected = false;
-var wallgame_secondliselected;
+var wallgame_secondliselected = false;
+var id1;
+var id2;
 
 function initialisewallgame(){
 
@@ -60,29 +62,34 @@ function liselected($ulone, $index){
 
 if($ulone){
 
-wallgame_firstselected = true;
+wallgame_firstliselected = true;
 
-var ul = document.getElementById("selectable1");
-var children = ul.getElementsByTagName("li");
+var ul1 = document.getElementById("selectable1");
+child1 = ul1.getElementsByTagName("li")[$index];
 
-firstlivalue = children[$index].getAttribute("result");
+firstlivalue = child1.getAttribute("result");
+id1 = child1.getAttribute("id");
+
 }//End first if
 else{
 
-wallgame_secondselected = true;
+wallgame_secondliselected = true;
 
-var ul = document.getElementById("selectable2");
-var children = ul.getElementsByTagName("li");
+var ul2 = document.getElementById("selectable2");
+var child2 = ul2.getElementsByTagName("li")[$index];
+id2 = child2.getAttribute("id");
 
-secondlivalue = children[$index].getAttribute("result");
+secondlivalue = child2.getAttribute("result");
 }
 
 //Check if both are selectd
-if(wallgame_firstselected == true && wallgame_secondselected == true){
+if(wallgame_firstliselected == true && wallgame_secondliselected == true){
   if(firstlivalue == secondlivalue){
-    alert("correct");
-    wallgame_firstselected = false;
-    wallgame_secondselected = false;
+    wallgame_firstliselected = false;
+    wallgame_secondliselected = false;
+
+    $("#" + id1).hide();
+    $("#" + id2).hide();
   }
   else{
     alert("false");
