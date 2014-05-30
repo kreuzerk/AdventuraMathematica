@@ -175,7 +175,8 @@ $("#tengame").hide();
 $("#divisiongame").hide();
 $("#bananadelivery").hide();
 $("#slidergame").hide();
-$("#caracterselection").hide();
+$("#wallgame").hide();
+//$("#caracterselection").hide();
 }
 
 /*
@@ -249,6 +250,11 @@ case "khaki":	   	//Khaki - Slidergame
 $("#maingamesvg").hide();
 initialiseslidergame();
 $("#slidergame").show();
+break;
+case "midnightblue":	//Midnightblue fields
+$("#maingamesvg").hide();
+initialisewallgame();
+$("#wallgame").show();
 break;
 
 }
@@ -531,6 +537,23 @@ $("#slidergame").hide();
 $("#maingamesvg").show();
 }
 
+/*=================================================================================
+Function for midnightblue fields
+===================================================================================*/
+function checkmidnightbluefields($correct){
+
+hidekmidnightblue();
+
+if($correct){
+  drawimage(15,true);
+}
+
+}
+
+function hidekmidnightblue(){
+$("#wallgame").hide();
+$("#maingamesvg").show();
+}
 
 
 /*=================================================================================

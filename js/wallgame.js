@@ -5,13 +5,16 @@ var wallgame_firstliselected = false;
 var wallgame_secondliselected = false;
 var id1;
 var id2;
+var wallgame_counter;
+var numberoflis;
 
 function initialisewallgame(){
 
-var numberoflis = 8;
-var exerciserange = 80;
+numberoflis = 8;
+var exerciserange = 50;
 wallgame_result = new Array(numberoflis);
 
+wallgame_counter = 0;
 
 //For loop for the first elements
 
@@ -25,6 +28,8 @@ var li = document.getElementById("wallgameli1_" + i);
 li.innerHTML = number1 + " + " + number2;		//Create the exercise
 li.setAttribute("result", (number1 + number2));	//Set the result as attribute
 
+$("#" + li.getAttribute("id")).show();
+
 wallgame_result[i-1] = (number1 + number2);
 
  }//End for loop
@@ -36,6 +41,7 @@ for(var i = 1; i<=numberoflis; i++){
 var li = document.getElementById("wallgameli2_" + i);
 li.innerHTML = wallgame_result[i-1];
 li.setAttribute("result", wallgame_result[i-1]);
+$("#" + li.getAttribute("id")).show();
 
 }
 
@@ -90,9 +96,12 @@ if(wallgame_firstliselected == true && wallgame_secondliselected == true){
 
     $("#" + id1).hide();
     $("#" + id2).hide();
+
+    wallgame_counter++;
   }
-  else{
-    alert("false");
+
+  if(wallgame_counter == numberoflis){
+	checkmidnightbluefields(true);
   }
 }
 
