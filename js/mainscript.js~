@@ -518,7 +518,7 @@ function checkkhakifields($correct){
 hidekhaki();
 
 if($correct){
-  drawmimage(10,true);
+  drawimage(10,true);
 }
 else{
   drawimage(10,false);

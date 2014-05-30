@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/selectionscreen.js"></script>
 	<script type="text/javascript" src="js/delivery.js"></script>
 	<script type="text/javascript" src="js/slidergame.js"></script>
+	<script type="text/javascript" src="js/wallgame.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
@@ -107,7 +108,7 @@ var circleData = [
   { "cx": 220, "cy": 420, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 60},
   { "cx": 170, "cy": 490, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 61},
   { "cx": 130, "cy": 560, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 62},
-  { "cx": 1120, "cy": 60, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 90}];
+  { "cx": 140, "cy": 630, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 63}];
 
 //Create the SVG Viewport
 var svgContainer = d3.select("body").append("svg").attr("id","maingamesvg")
@@ -608,6 +609,43 @@ Slider Game
 </div>
 
 <!----==================================================================
+Wall Game
+====================================================================-->
+<div id="wallgame">
+
+<table class="wallgametable">
+<tr>
+	<td>
+	<ol id="selectable1">
+  		<li id="wallgameli1_1" class="wallgameli">Item 1</li>
+  		<li id="wallgameli1_2" class="wallgameli">Item 2</li>
+  		<li id="wallgameli1_3" class="wallgameli">Item 3</li>
+  		<li id="wallgameli1_4" class="wallgameli">Item 4</li>
+  		<li id="wallgameli1_5" class="wallgameli">Item 5</li>
+  		<li id="wallgameli1_6" class="wallgameli">Item 6</li>
+  		<li id="wallgameli1_7" class="wallgameli">Item 7</li>
+  		<li id="wallgameli1_8" class="wallgameli">Item 8</li>
+	</ol>
+	</td>
+	<td>
+	<ol id="selectable2">
+  		<li id="wallgameli2_1" class="wallgameli">Item 1</li>
+  		<li id="wallgameli2_2" class="wallgameli">Item 2</li>
+  		<li id="wallgameli2_3" class="wallgameli">Item 3</li>
+  		<li id="wallgameli2_4" class="wallgameli">Item 4</li>
+  		<li id="wallgameli2_5" class="wallgameli">Item 5</li>
+  		<li id="wallgameli2_6" class="wallgameli">Item 6</li>
+  		<li id="wallgameli2_7" class="wallgameli">Item 7</li>
+  		<li id="wallgameli2_8" class="wallgameli">Item 8</li>
+	</ol>
+	</td>
+</tr>
+</table>
+
+
+</div>
+
+<!----==================================================================
 Give the bananas to the monkey
 ====================================================================-->
 <div id="bananadelivery">
@@ -638,6 +676,7 @@ createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
 
+initialisewallgame();
 
 //Make some elements draggable
 $(function() {
@@ -677,6 +716,33 @@ $(function() {
         Ok: function() {
           $( this ).dialog( "close" );
         }
+      }
+    });
+  });
+
+//Make the elments selectable
+$(function() {
+    $( "#selectable1" ).selectable({
+      stop: function() {
+        var result = $( "#select-result" ).empty();
+        $( ".ui-selected", this ).each(function() {
+          var index = $( "#selectable1 li" ).index( this );
+
+	  liselected(index);
+        });
+      }
+    });
+  });
+
+$(function() {
+    $( "#selectable2" ).selectable({
+      stop: function() {
+        var result = $( "#select-result" ).empty();
+        $( ".ui-selected", this ).each(function() {
+          var index = $( "#selectable2 li" ).index( this );
+          alert(" #" + (index+1));
+          //liselected();
+        });
       }
     });
   });

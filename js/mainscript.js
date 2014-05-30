@@ -175,7 +175,7 @@ $("#tengame").hide();
 $("#divisiongame").hide();
 $("#bananadelivery").hide();
 $("#slidergame").hide();
-//$("#caracterselection").hide();
+$("#caracterselection").hide();
 }
 
 /*

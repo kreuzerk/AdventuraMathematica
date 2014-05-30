@@ -409,6 +409,49 @@ Styles for the sliders
 }
 
 /*================================================
+Styles for the wall game
+===============================================*/
+#wallgame{
+  background-color:white;
+}
+
+.wallgameli{
+  background-color:gainsboro;
+  width:500px;
+}
+
+.wallgametable{
+  width: 1000px;
+  height:800px;
+  margin-left: 50px;
+}
+
+
+#selectable1 .ui-selecting, #selectable2 .ui-selecting {
+  background: #FECA40; 
+}
+
+#selectable1 .ui-selected, #selectable2 .ui-selected { 
+  background: #F39814;
+  color: white; 
+}
+
+#selectable1, #selectable2 { 
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+  width: 60%; 
+}
+
+#selectable1 li, #selectable2 li { 
+  margin: 3px;
+  padding: 0.4em;
+  font-size: 1.4em;
+  height: 18px; 
+}
+
+
+/*================================================
 Styles for the dialogs
 ===============================================*/
 .dialog{
