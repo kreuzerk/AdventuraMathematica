@@ -1,11 +1,11 @@
 var divisionrange = 20;
-var numberoflis = 7;
-var resultarray = new Array(numberoflis);
+var divisionnumberoflis = 7;
+var resultarray = new Array(divisionnumberoflis);
 
 
 function initialisedivisiongame(){
 
-for(var i = 1; i<=numberoflis; i++){
+for(var z = 1; z<=divisionnumberoflis; z++){
 
 var moduloiszero = false;
 
@@ -28,18 +28,17 @@ for(var j = 0; j<resultarray.length; j++){
 if(!alreadyexists){
   moduloiszero = true;
 }
-}
-
+}//End if
 }while(moduloiszero == false);
 
-resultarray[i-1] = divisor / divident;
+resultarray[z-1] = divisor / divident;
 
-var li = document.getElementById("divisionli" + i);
-li.setAttribute("result", divisor / divident);
-li.innerHTML = divisor + " / " + divident;
+var divisionli = document.getElementById("divisionli" + z);
+divisionli.innerHTML = divisor + " / " + divident;
+divisionli.setAttribute("result", divisor/divident);
 
  }//End for loop
-}
+}//End function
 
 /*====================================================================
 Function for reseting the arrays

@@ -10,7 +10,7 @@ var numberoflis;
 
 function initialisewallgame(){
 
-numberoflis = 9;
+numberoflis = 8;
 var exerciserange = 50;
 wallgame_result = new Array(numberoflis);
 
@@ -70,8 +70,9 @@ if($ulone){
 
 wallgame_firstliselected = true;
 
-var ul1 = document.getElementById("selectable1");
-child1 = ul1.getElementsByTagName("li")[$index];
+var ol1 = document.getElementById("selectable1").children;
+
+child1 = ol1[$index];
 
 firstlivalue = child1.getAttribute("result");
 id1 = child1.getAttribute("id");
@@ -81,8 +82,8 @@ else{
 
 wallgame_secondliselected = true;
 
-var ul2 = document.getElementById("selectable2");
-var child2 = ul2.getElementsByTagName("li")[$index];
+var ol2 = document.getElementById("selectable2").children;
+var child2 = ol2[$index];
 id2 = child2.getAttribute("id");
 
 secondlivalue = child2.getAttribute("result");

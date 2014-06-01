@@ -1,5 +1,5 @@
 var currentfield = 1;
-var i;
+var movevalue;
 var diceresult;
 var cx;
 var cy;
@@ -58,7 +58,7 @@ break;
 
 drawcube(filename);
 
-i=currentfield;
+movevalue=currentfield;
 move();
 }
 
@@ -66,12 +66,12 @@ function move(){
 
 
 
-  if(i<(currentfield+diceresult) && goldentered == false && endofround == false){
+  if(movevalue<(currentfield+diceresult) && goldentered == false && endofround == false){
     window.setTimeout("move()",1000);
-    i++;
+    movevalue++;
 
-    cx = circleData[i-1].cx;
-    cy = circleData[i-1].cy;
+    cx = circleData[movevalue-1].cx;
+    cy = circleData[movevalue-1].cy;
 
     //Delete the lion
     deletelion();
@@ -80,11 +80,11 @@ function move(){
     //Draw the lion
     drawlion(cx,cy);
 
-    if(circleData[i-1].color == "gold"){
+    if(circleData[movevalue-1].color == "gold"){
 	goldentered = true;
     }
 
-    if(circleData[i-1].number >= 63){
+    if(circleData[movevalue-1].number >= 63){
 	endofround = true;
     }
 
@@ -102,7 +102,7 @@ function move(){
   }
 
   if(goldentered){
-  currentfield = i;
+  currentfield = movevalue;
   goldentered = false; //Because we are going to leave the gold field
   }
   
@@ -257,6 +257,7 @@ $("#tengame").show();
 break;
 case "mediumaquamarine":	//Mediumaquamarine == divisiongame
 $("#maingamesvg").hide();
+initialisewallgame();
 initialisedivisiongame();
 $("#divisiongame").show();
 break;
