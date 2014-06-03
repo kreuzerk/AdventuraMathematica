@@ -9,6 +9,7 @@ var filename;
 var goldentered = false;
 var endofround = false;
 var round = 1;
+var dicethrown = false;
 
 //boolean variables
 var entered;
@@ -23,6 +24,8 @@ function hallo(){
 var dicesound = new Audio();
 dicesound.src = "../sounds/Diceroll.mp3";
 dicesound.play();
+
+if(dicethrown = false){
 
 //Call Methods at the beginning of each dice throw
 if(entered){
@@ -60,11 +63,12 @@ drawcube(filename);
 
 movevalue=currentfield;
 move();
+}//End if
 }
 
 function move(){
 
-
+  dicethrown = true;
 
   if(movevalue<(currentfield+diceresult) && goldentered == false && endofround == false){
     window.setTimeout("move()",1000);
@@ -108,6 +112,7 @@ function move(){
   
   removedicedisplay();
   checkfield();
+  dicethrown = false;
  }
 }
 
@@ -694,6 +699,11 @@ Function that shows the sources
 function showsources(){
 $("#caracterselection").hide();
 $("#sourcediv").show();
+}
+
+function backfromsource(){
+$("#sourcediv").hide();
+$("#caracterselection").show();
 }
 
 
