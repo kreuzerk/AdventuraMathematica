@@ -3,7 +3,7 @@ var movevalue;
 var diceresult;
 var cx;
 var cy;
-var bananacounter = 50;
+var bananacounter = 0;
 var moneycounter = 0;
 var filename;
 var goldentered = false;

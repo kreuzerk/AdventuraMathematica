@@ -170,6 +170,12 @@ Styles for the Endresultgame
 /*================================================
 Styles for the Endresultgame
 ================================================*/
+#endresultgame{
+  width: 1200px;
+  height:820px;
+  background-color: lightsteelblue;
+  overflow:hidden;
+}
 
 #nextgamesvg{
   background-color:white;
@@ -358,6 +364,7 @@ Styles for the selection screen
  width:1200px;
  height:820px;
  background-color:lightyellow;
+ overflow:hidden;
 }
 
 #selectioncontinuebutton{
