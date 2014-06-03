@@ -270,7 +270,7 @@ $("#maingamesvg").hide();
 initialiseslidergame();
 $("#slidergame").show();
 break;
-case "midnightblue":	//Midnightblue fields
+case "midnightblue":	//Midnightblue fields - Wallgame
 $("#maingamesvg").hide();
 initialisewallgame();
 $("#wallgame").show();
@@ -323,13 +323,11 @@ Function for blue fields (Shopgame)
 function correctblue(){
 hideblue();
 drawimage(10, true);
-alert("Enhorabuena que la respuesta es correcta");
 }
 
 function wrongblue(){
 hideblue();
 drawimage(5, false);
-alert("Por desgracia, la respuesta es incorrecta");
 }
 
 function hideblue(){
@@ -687,6 +685,13 @@ moneycounter = moneycounter - $amount;
 
 moneyamount.textContent = "+ " + moneycounter;
 entered = true;
+}
+
+/*==================================================================
+Function that shows the sources
+=======================================================*/
+function showsources(){
+alert("hier");
 }
 
 

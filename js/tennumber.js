@@ -1,5 +1,8 @@
+var numberoftenbutton = 20;
 
 function initialisetennumber(){
+
+revertbuttoncolors();
 
 var firsttennumber = document.getElementById("firsttennumber");
 var secondtennumber = document.getElementById("secondtennumber");
@@ -24,6 +27,16 @@ seventhtennumber.innerHTML = randomnumber + " * 1";
 eighttennumber.innerHTML = "= " + randomnumber;
 ninthtennumber.innerHTML = randomnumber + " * 1";
 tenthtennumber.innerHTML = "= " + randomnumber;
+
+}
+
+function revertbuttoncolors(){
+
+for(var i = 1; i<=numberoftenbutton; i++){
+var button = document.getElementById("tenbutton" + i);
+button.style.backgroundColor='Grey';
+button.innerHTML = "?";
+}
 
 }
 

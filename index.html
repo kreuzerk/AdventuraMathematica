@@ -37,6 +37,7 @@
 
   <!-- Buttons with class="pull-right" will be right aligned -->
   <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+  <button class="toolbutton" id="sources-button" onclick="showsources()" title="Sources"></button>
 </div>
 
 <script type="text/javascript">
@@ -126,7 +127,7 @@ var circleAttributes = circles
                        .attr("cx", function (d) { return d.cx; })
                        .attr("cy", function (d) { return d.cy; })
                        .attr("r", function (d) { return d.radius; })
-                       .style("fill", function (d) { return d.color; });
+                       .style("fill", function (d) { return d.color; }).attr("stroke","black");
 
 //Add the SVG Text Element to the svgContainer
 var text = svgContainer.selectAll("text")
@@ -673,6 +674,30 @@ Dialogs
   Por favor, elija un personaje
 </div>
 
+<!----==================================================================
+Div that shows all the sources 
+====================================================================-->
+<div id="sourcediv">
+
+<p><h1>Sources</h1></p>
+
+<p>
+All images used in this application are free to use. But some of those require a backlink. In this section I list all the image sources I had.
+</p>
+
+<p>
+Images are downloaded from www.iconarchive.com during the perio of April to July 2014.
+The commercial use of the image is allowed but requires some backlinks. Here are those backlinks.
+<p>
+
+<ul>
+<li><a href="http://www.visualpharm.com/">Visual Pharm</a></li>
+<li><a href="http://www.designcontest.com">DesignContest</a></li>
+<li><a href="http://www.doublejdesign.co.uk">Double-J Design</a></li>
+<li><a href="http://artdesigner.lv">Art Designer</a></li>
+</ul>
+
+</div>
 
 
 </body>
