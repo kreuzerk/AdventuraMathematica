@@ -194,6 +194,7 @@ $("#bananadelivery").hide();
 $("#slidergame").hide();
 $("#wallgame").hide();
 $("#endofround").hide();
+$("#sourcediv").hide();
 //$("#caracterselection").hide();
 }
 
@@ -691,7 +692,13 @@ entered = true;
 Function that shows the sources
 =======================================================*/
 function showsources(){
-alert("hier");
+$("#caracterselection").hide();
+$("#sourcediv").show();
+}
+
+function backfromsource(){
+$("#sourcediv").hide();
+$("#caracterselection").show();
 }
 
 

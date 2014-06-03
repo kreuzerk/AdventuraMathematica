@@ -27,8 +27,9 @@ svgContainer.append("svg:image")
       .attr("width", 100)
       .attr("height", 100).attr("x", 0).attr("y",680);
 
-setfilename($file);
+setfilename(selectedcharacter.getAttribute("src"));
 $("#maingamesvg").show();
+$("#sources-button").hide();
 }
 
 }

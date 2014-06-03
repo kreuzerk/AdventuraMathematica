@@ -29,6 +29,7 @@ svgContainer.append("svg:image")
 
 setfilename(selectedcharacter.getAttribute("src"));
 $("#maingamesvg").show();
+$("#sources-button").hide();
 }
 
 }
