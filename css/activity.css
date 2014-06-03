@@ -25,7 +25,8 @@ Styles for Shopactivities
 
 #cartlist{
   width: 500px;
-  background-image: url(../images/Shop/zettel.jpg);
+  /*background-image: url(../images/Shop/zettel.jpg);*/
+  background-color: white;
   font-size: 20px;
 }
 
