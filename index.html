@@ -22,6 +22,7 @@
 	<script type="text/javascript" src="js/delivery.js"></script>
 	<script type="text/javascript" src="js/slidergame.js"></script>
 	<script type="text/javascript" src="js/wallgame.js"></script>
+	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
 	<link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
@@ -655,22 +656,22 @@ Div Circlegame
 <table class="circlegametable">
 <tr>
 	<td>
-		<h1>180°</h1>
-		<input type="text" data-min="0" data-max="360" value="0" class="dial">
+		<h1 id="circleh1_1">180°</h1>
+		<input id="kendocircle1" type="text" data-min="0" data-max="360" value="0" class="dial">
 	<td>
 	<td>
-		<h1>180°</h1>
-		<input type="text" data-min="0" data-max="360" value="0" class="dial">
+		<h1 id="circleh1_2">180°</h1>
+		<input id="kendocircle2" type="text" data-min="0" data-max="360" value="0" class="dial">
 	<td>
 </tr>
 <tr>
 	<td>
-		<h1>180°</h1>
-		<input type="text" data-min="0" data-max="360" value="0" class="dial">
+		<h1 id="circleh1_3">180°</h1>
+		<input id="kendocircle3" type="text" data-min="0" data-max="360" value="0" class="dial">
 	<td>
 	<td>
-		<h1>180°</h1>
-		<input type="text" data-min="0" data-max="360" value="0" class="dial">
+		<h1 id="circleh1_4">180°</h1>
+		<input id="kendocircle4" type="text" data-min="0" data-max="360" value="0" class="dial">
 	<td>
 </tr>
 </table>
@@ -753,6 +754,8 @@ hide();
 createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
+
+initialisecirclegame();
 
 //Make some elements draggable
 $(function() {
