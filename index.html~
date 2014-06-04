@@ -3,6 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>D3 Test</title>
+	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="jquery/plugin/knob/jquery.knob.js"></script>
+        <script type="text/javascript" src="d3/d3.v3.js"></script>
 	<script type="text/javascript" src="js/mainscript.js"></script>
 	<script type="text/javascript" src="js/shopgame.js"></script>
 	<script type="text/javascript" src="js/krokogame.js"></script>
@@ -16,11 +22,6 @@
 	<script type="text/javascript" src="js/delivery.js"></script>
 	<script type="text/javascript" src="js/slidergame.js"></script>
 	<script type="text/javascript" src="js/wallgame.js"></script>
-	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
-	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
-	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.min.js"></script>
-        <script type="text/javascript" src="d3/d3.v3.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
 	<link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
@@ -642,6 +643,21 @@ Wall Game
 	</td>
 </tr>
 </table>
+</div>
+
+<!----==================================================================
+Div Knob
+====================================================================-->
+<div id="knob">
+
+<input type="text" value="75" class="dial">
+
+<script>
+$(function() {
+    $(".dial").knob();
+});
+</script>
+
 </div>
 
 <!----==================================================================

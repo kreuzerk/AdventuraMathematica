@@ -200,7 +200,7 @@ $("#slidergame").hide();
 $("#wallgame").hide();
 $("#endofround").hide();
 $("#sourcediv").hide();
-//$("#caracterselection").hide();
+$("#caracterselection").hide();
 }
 
 /*
