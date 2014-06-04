@@ -20,6 +20,7 @@ Styles for Shopactivities
 .shopprice{
   font-size: 50px;
   font-family: "Chalkboard";
+  color:white;
 
 }
 
