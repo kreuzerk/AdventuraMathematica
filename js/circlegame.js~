@@ -8,7 +8,7 @@ function initialisecirclegame(){
 
 var exists;
 
-for(var i=0; i< used_corner_date.length; i++){
+for(var i=0; i < used_corner_date.length; i++){
 do{
 
 exists = false;
@@ -27,11 +27,36 @@ for(var j = 0; j< used_corner_date.length; j++){
 if(exists == false){
 used_corner_date[i] = corners_data[randomnumber];
 var kendocircle = document.getElementById("circleh1_" + (i+1));
-kendocircle.innerHTML = corners_data[randomnumber];
-alert(kendocircle.innerHTML);
+kendocircle.innerHTML = corners_data[randomnumber] + "°";
 }
 
 }while(exists == true);
 }//End first for
+
+}//End of the function
+
+
+/*==============================================================
+Function for checking the circlegame
+==============================================================*/
+function checkcirclegame(){
+
+var everything_correct = true;
+
+for(var i = 0; i< used_corner_date.length; i++){
+var value = document.getElementById("kendocircle" +(i+1)).value;
+
+if(value != used_corner_date[i]){
+everything_correct = false;
+break;
+}
+} //End for loop
+
+if(everything_correct){
+alert("richtig");
+}
+else{
+alert("falsch");
+}
 
 }
