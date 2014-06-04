@@ -646,11 +646,36 @@ Wall Game
 </div>
 
 <!----==================================================================
-Div Knob
+Div Circlegame
 ====================================================================-->
-<div id="knob">
-
-<input type="text" value="75" class="dial">
+<div id="circlegame">
+<p>
+</p>
+<table class="circlegametable">
+<tr>
+	<td>
+		<h1>180°</h1>
+		<input type="text" data-min="0" data-max="360" value="0" class="dial">
+	<td>
+	<td>
+		<h1>180°</h1>
+		<input type="text" data-min="0" data-max="360" value="0" class="dial">
+	<td>
+</tr>
+<tr>
+	<td>
+		<h1>180°</h1>
+		<input type="text" data-min="0" data-max="360" value="0" class="dial">
+	<td>
+	<td>
+		<h1>180°</h1>
+		<input type="text" data-min="0" data-max="360" value="0" class="dial">
+	<td>
+</tr>
+</table>
+<p>
+<button>test</button>
+</p>
 
 <script>
 $(function() {

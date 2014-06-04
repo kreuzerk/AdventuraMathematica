@@ -495,4 +495,21 @@ Styles for the dialogs
   font-size: 20px;
 }
 
+/*================================================
+Styles for the Cornergame
+===============================================*/
+.circlegametable{
+  width: 1000px;
+  height: 600px;
+  margin-left: 50px;
+  background-color: white;
+}
+
+#circlegame{
+  width: 1200px;
+  height:820px;
+  background-color: white;
+  overflow:hidden;
+}
+
 
