@@ -31,7 +31,13 @@ kendocircle.innerHTML = corners_data[randomnumber] + "°";
 }
 
 }while(exists == true);
+
 }//End first for
+
+//Reset the values to 0
+$('.dial')
+    .val(0)
+    .trigger('change');
 
 }//End of the function
 
@@ -52,11 +58,6 @@ break;
 }
 } //End for loop
 
-if(everything_correct){
-alert("richtig");
-}
-else{
-alert("falsch");
-}
+checkturquoisfields(everything_correct);
 
 }

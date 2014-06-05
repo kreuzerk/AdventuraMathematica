@@ -200,7 +200,8 @@ $("#slidergame").hide();
 $("#wallgame").hide();
 $("#endofround").hide();
 $("#sourcediv").hide();
-$("#caracterselection").hide();
+$("#circlegame").hide();
+//$("#caracterselection").hide();
 }
 
 /*
@@ -284,6 +285,11 @@ break;
 case "snow":
 $("#maingamesvg").hide();
 $("#endofround").show();
+break;
+case "turquoise":	//Turquoise fields - Circlegame
+$("#maingamesvg").hide();
+initialisecirclegame();
+$("#circlegame").show();
 break;
 
 }
@@ -587,6 +593,28 @@ Function for snow fields
 ===================================================================================*/
 function hidesnowfield(){
 $("#endofround").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function for turqois fields
+===================================================================================*/
+function checkturquoisfields($correct){
+
+hideturquois();
+
+if($correct){
+  drawimage(10,true);
+}
+else
+{
+  drawimage(10, false);
+}
+
+}
+
+function hideturquois(){
+$("#circlegame").hide();
 $("#maingamesvg").show();
 }
 

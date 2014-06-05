@@ -496,20 +496,35 @@ Styles for the dialogs
 }
 
 /*================================================
-Styles for the Cornergame
+Styles for the Circlegame
 ===============================================*/
 .circlegametable{
   width: 1000px;
   height: 600px;
   margin-left: 50px;
-  background-color: white;
+  background-image: url(../images/circlegame/background.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #circlegame{
   width: 1200px;
   height:820px;
-  background-color: white;
+  background-color: darkred;
   overflow:hidden;
 }
+
+.circlegamebutton{
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+.circlegameh1{
+  margin-left: 50px;
+}
+
+
 
 
