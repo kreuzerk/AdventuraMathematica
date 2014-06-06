@@ -565,15 +565,30 @@ Selection of the caracter
 ====================================================================-->
 <div id="caracterselection">
 <div class="selectiondiv">
-<h1 class="slectionh1">Elegir a tu personaje</h1>
+<h1>Elegir a tu personaje</h1>
 </div>
 
 <table class="selectiontable">
 <tr>
-	<td><image <image id="character1" onclick="characterclicked($(this).attr('id'))" class="character" src="../images/caracterselection/elephant.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character2" onclick="characterclicked($(this).attr('id'))" class="character" src="../images/caracterselection/gorilla.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character3" onclick="characterclicked($(this).attr('id'))" class="character" src="../images/caracterselection/donkey.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character4" onclick="characterclicked($(this).attr('id'))" class="character" src="../images/caracterselection/lion.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character1" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="../images/caracterselection/elephant.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character2" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="../images/caracterselection/gorilla.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character3" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="../images/caracterselection/donkey.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character4" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="../images/caracterselection/lion.png"/ width="200px" height="200px"></td>
+</tr>
+</table>
+
+<div class="selectiondiv">
+<h1>Elija el mundo</h1>
+</div>
+
+<table class="selectiontable">
+<tr>
+	<td><div id="levelimage1"></div></td>
+	<td><div id="levelimage2"></div></td>
+</tr>
+<tr>
+	<td class="leveltext">Isla Mathematicas</td>
+	<td class="leveltext">Mathematics Universo</td>
 </tr>
 </table>
 
@@ -747,13 +762,18 @@ The commercial use of the images downloaded from Iconarchive is allowed but requ
 
 </div>
 
-
 </body>
 <script type="text/javascript">
 hide();
 createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
+
+//var level = localStorage.getItem("level");
+
+var backgroundmusic = new Audio();
+backgroundmusic.src = "mario.ogg";
+backgroundmusic.play();
 
 //Make some elements draggable
 $(function() {
@@ -823,9 +843,6 @@ $(function() {
     });
   });
 
-var backgroundmusic = new Audio();
-backgroundmusic.src = "../sounds/Backgroundsound.mp3";
-backgroundmusic.play();
 
 </script>
 </html>
