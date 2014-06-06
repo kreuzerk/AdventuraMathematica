@@ -1,5 +1,6 @@
 
 var selectedcharacter = null;
+var imageclickedbefore = null;
 
 function characterclicked($id){
 
@@ -15,7 +16,7 @@ selectedcharacter.style.backgroundColor='lightskyblue';
 //Function that is called by the button
 function characterselectioncontinue(){
 
-if(selectedcharacter == null){
+if(selectedcharacter == null || imageclickedbefore == null){
 $( "#startscreendialog" ).dialog( "open" );
 }
 else{
@@ -31,5 +32,37 @@ setfilename(selectedcharacter.getAttribute("src"));
 $("#maingamesvg").show();
 $("#sources-button").hide();
 }
+}
+
+
+
+//Function that is called when a levelimage is clicked
+function levelimageclicked($id){
+
+if(imageclickedbefore != null){
+
+switch (imageclickedbefore){
+
+case "levelimage1":
+document.getElementById("levelimage1").style.backgroundImage = 'url(../images/Background_gray.png)';
+break;
+case "levelimage2":
+document.getElementById("levelimage2").style.backgroundImage = 'url(../images/Background-Level2_gray.png)';
+break;
+	}//End switch case
+   }//End if
+
+switch($id){
+
+case "levelimage1":
+document.getElementById("levelimage1").style.backgroundImage = 'url(../images/Background.png)';
+break;
+case "levelimage2":
+document.getElementById("levelimage2").style.backgroundImage = 'url(../images/Background-Level2.png)';
+break;
+
+}
+
+imageclickedbefore = $id;
 
 }
