@@ -11,6 +11,232 @@ var endofround = false;
 var round = 1;
 var dicethrown = false;
 
+var width = 1200;
+var height = 820;
+
+//Circle Data Set
+var circleData = [
+  { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 9},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 11},
+  { "cx": 820, "cy": 680, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 12},
+  { "cx": 890, "cy": 660, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 13},
+  { "cx": 880, "cy": 590, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 14},
+  { "cx": 810, "cy": 580, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 15},
+  { "cx": 740, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 16},
+  { "cx": 670, "cy": 580, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 17},
+  { "cx": 600, "cy": 580, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 18},
+  { "cx": 530, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 19},
+  { "cx": 460, "cy": 580, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 20},
+  { "cx": 390, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 21},
+  { "cx": 320, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 22},
+  { "cx": 320, "cy": 510, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 23},
+  { "cx": 390, "cy": 500, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 24},
+  { "cx": 460, "cy": 500, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 25},
+  { "cx": 520, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 26},
+  { "cx": 590, "cy": 500, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 27},
+  { "cx": 660, "cy": 500, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 28},
+  { "cx": 730, "cy": 500, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 29},
+  { "cx": 800, "cy": 500, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 30},
+  { "cx": 870, "cy": 500, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 31},
+  { "cx": 950, "cy": 480, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 32},
+  { "cx": 1020, "cy": 460, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 33},
+  { "cx": 1070, "cy": 390, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 34},
+  { "cx": 1090, "cy": 320, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 35},
+  { "cx": 1070, "cy": 250, "radius": 30, "color" : "gold", "fontcolor" : "black", "number" : 36},
+  { "cx": 1050, "cy": 180, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 37},
+  { "cx": 980, "cy": 140, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 38},
+  { "cx": 920, "cy": 110, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 39},
+  { "cx": 850, "cy": 100, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 40},
+  { "cx": 780, "cy": 100, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 41},
+  { "cx": 550, "cy": 170, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 42},
+  { "cx": 620, "cy": 170, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 43},
+  { "cx": 690, "cy": 170, "radius": 30, "color" : "blue", "fontcolor" : "black", "number" : 44},
+  { "cx": 760, "cy": 170, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 45},
+  { "cx": 830, "cy": 180, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 46},
+  { "cx": 900, "cy": 190, "radius": 30, "color" : "orange", "fontcolor" : "white", "number" : 47},
+  { "cx": 970, "cy": 220, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 48},
+  { "cx": 970, "cy": 290, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 49},
+  { "cx": 920, "cy": 340, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 50},
+  { "cx": 850, "cy": 340, "radius": 30, "color" : "blue", "fontcolor" : "black", "number" : 51},
+  { "cx": 780, "cy": 330, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 52},
+  { "cx": 710, "cy": 330, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 53},
+  { "cx": 640, "cy": 330, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 54},
+  { "cx": 570, "cy": 330, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 55},
+  { "cx": 500, "cy": 330, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 56},
+  { "cx": 430, "cy": 330, "radius": 30, "color" : "skyblue", "fontcolor" : "white", "number" : 57},
+  { "cx": 360, "cy": 330, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 58},
+  { "cx": 290, "cy": 350, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 59},
+  { "cx": 220, "cy": 420, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 60},
+  { "cx": 170, "cy": 490, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 61},
+  { "cx": 130, "cy": 560, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 62},
+  { "cx": 140, "cy": 630, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 63}];
+
+//Datas for the second level
+var level2 = [
+  { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
+  { "cx": 70, "cy": 660, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 70, "cy": 590, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
+  { "cx": 70, "cy": 520, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 4},
+  { "cx": 70, "cy": 450, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 5},
+  { "cx": 70, "cy": 380, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 6},
+  { "cx": 70, "cy": 310, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 7},
+  { "cx": 70, "cy": 240, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 8},
+  { "cx": 140, "cy": 210, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 9},
+  { "cx": 210, "cy": 210, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" :10},
+  { "cx": 230, "cy": 280, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 11},
+  { "cx": 240, "cy": 350, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 12},
+  { "cx": 240, "cy": 420, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 13},
+  { "cx": 240, "cy": 490, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 14},
+  { "cx": 240, "cy": 570, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 15},
+  { "cx": 240, "cy": 640, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 16},
+  { "cx": 310, "cy": 670, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 17},
+  { "cx": 380, "cy": 670, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 18},
+  { "cx": 450, "cy": 670, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 19},
+  { "cx": 520, "cy": 670, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 20},
+  { "cx": 590, "cy": 670, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 21},
+  { "cx": 660, "cy": 670, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 22},
+  { "cx": 730, "cy": 670, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 22},
+  { "cx": 800, "cy": 670, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 23},
+  { "cx": 870, "cy": 670, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 24},
+  { "cx": 950, "cy": 670, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 25},
+  { "cx": 950, "cy": 600, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 26},
+  { "cx": 950, "cy": 530, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 27},
+  { "cx": 880, "cy": 530, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 28},
+  { "cx": 810, "cy": 500, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 29},
+  { "cx": 860, "cy": 430, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 30},
+  { "cx": 930, "cy": 400, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 31},
+  { "cx": 1000, "cy": 350, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 32},
+  { "cx": 1070, "cy": 300, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 33},
+  { "cx": 1070, "cy": 230, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 34},
+  { "cx": 1000, "cy": 200, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 35},
+  { "cx": 930, "cy": 180, "radius": 30, "color" : "gold", "fontcolor" : "black", "number" : 36},
+  { "cx": 860, "cy": 180, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 37},
+  { "cx": 790, "cy": 160, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 38},
+  { "cx": 720, "cy": 180, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 39},
+  { "cx": 650, "cy": 220, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 40},
+  { "cx": 580, "cy": 240, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 41},
+  { "cx": 510, "cy": 260, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 42},
+  { "cx": 440, "cy": 280, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 43},
+  { "cx": 370, "cy": 270, "radius": 30, "color" : "blue", "fontcolor" : "black", "number" : 44},
+  { "cx": 370, "cy": 200, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 45},
+  { "cx": 440, "cy": 150, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 46},
+  { "cx": 530, "cy": 150, "radius": 30, "color" : "orange", "fontcolor" : "white", "number" : 47},
+  { "cx": 600, "cy": 150, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 48},
+  { "cx": 670, "cy": 120, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 49},
+  { "cx": 720, "cy": 50, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 50},];
+
+
+/*====================================================================================================
+/*====================================================================================================
+Code for drawing the gameboard*/
+
+function drawgameboard(){
+
+//Add circles to the svgContainer
+var circles = svgContainer.selectAll("circle")
+                           .data(circleData)
+                           .enter()
+                           .append("circle");
+
+//Add the circle attributes
+var circleAttributes = circles
+                       .attr("cx", function (d) { return d.cx; })
+                       .attr("cy", function (d) { return d.cy; })
+                       .attr("r", function (d) { return d.radius; })
+                       .style("fill", function (d) { return d.color; }).attr("stroke","black");
+
+//Add the SVG Text Element to the svgContainer
+var text = svgContainer.selectAll("text")
+                        .data(circleData)
+                        .enter()
+                        .append("text");
+
+//Add SVG Text Element Attributes
+var textLabels = text
+                 .attr("x", function(d) { return d.cx-5; })
+                 .attr("y", function(d) { return d.cy+5; })
+                 .text(function(d) { return d.number; })
+                 .attr("font-family", "Chalkboard")
+                 .attr("font-size", "20px")
+                 .attr("fill", function(d) { return d.fontcolor; });
+
+//Adding an image
+svgContainer.append("svg:image")
+      .attr("xlink:href", filename).attr("id", "Lion")	//Filename is specified in the mainscript
+      .attr("width", 100)
+      .attr("height", 100).attr("x", 0).attr("y",680);
+
+
+//Adding the cube
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/cube.png").attr("onclick","hallo()")
+      .attr("width", 100)
+      .attr("height", 100).attr("x", 20).attr("y",20);
+
+//=============================================
+//RIGHT BOTTOM
+//=============================================
+
+
+//Adding the bananaimage
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/bananas.png").attr("onclick","hallo()")
+      .attr("width", 80)
+      .attr("height", 80).attr("x", width-130).attr("y",height-120);
+
+//Adding the Bananatext
+svgContainer.append("text").attr("id", "bananaamount")
+      .attr("x", width-250)
+      .attr("y", height-50)
+      .text("0 x")
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+//Adding the moneyimage
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/money.png").attr("onclick","hallo()")
+      .attr("width", 80)
+      .attr("height", 80).attr("x", width-360).attr("y",height-120);
+
+//Adding the moneytext
+svgContainer.append("text").attr("id", "moneyamount")
+      .attr("x", width-440)
+      .attr("y", height-50)
+      .text("0 x")
+      .attr("font-family", "Chalkboard")
+      .attr("font-size", "50px")
+      .attr("fill", "black");
+
+/*
+//=============================================
+//Images on the map
+//=============================================
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/house.png")
+      .attr("width", 80)
+      .attr("height", 80).attr("x", 600).attr("y",420);
+
+svgContainer.append("svg:image")
+      .attr("xlink:href", "./images/Hippopotamus.png")
+      .attr("width", 150)
+      .attr("height", 150).attr("x", 190).attr("y",460);
+*/
+}
+
+
+/*====================================================================================================
+/*====================================================================================================*/
+
 //boolean variables
 var entered;
 
