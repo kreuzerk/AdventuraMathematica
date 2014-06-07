@@ -10,6 +10,8 @@ var randomcheese;
 var numberoftrys = 0;
 var lastdroppedid;
 var secondtext;
+var secondimage;
+var thirdimage;
 
 function initialisecheesegame(){
 
@@ -35,8 +37,6 @@ cheseresulttext.innerHTML = cheeseresulttexts[randomcheese-1];
 
 //Choose a second image that is different from the solution image
 var different = false;
-var secondimage;
-var thirdimage;
 
 do{
 
@@ -72,20 +72,29 @@ switch(randomsolution){
 case 1:
 cheesesolution = "cheeseimage1";
 cheese1.setAttribute("src", "../images/cheese/" + selectionimages[randomcheese-1] + ".png");
+cheese1.setAttribute("displaytext", textsecondimage[randomcheese-1]);
 cheese2.setAttribute("src", "../images/cheese/" + selectionimages[secondimage-1] + ".png");
+cheese2.setAttribute("displaytext", textsecondimage[secondimage-1]);
 cheese3.setAttribute("src", "../images/cheese/" + selectionimages[thirdimage-1] + ".png");
+cheese3.setAttribute("displaytext", textsecondimage[thirdimage-1]);
 break;
 case 2:
 cheesesolution = "cheeseimage2";
 cheese2.setAttribute("src", "../images/cheese/" + selectionimages[randomcheese-1] + ".png");
 cheese1.setAttribute("src", "../images/cheese/" + selectionimages[secondimage-1] + ".png");
 cheese3.setAttribute("src", "../images/cheese/" + selectionimages[thirdimage-1] + ".png");
+ceese2.setAttribute("displaytext", textsecondimage[randomcheese-1]);
+cheese1.setAttribute("displaytext", textsecondimage[secondimage-1]);
+cheese3.setAttribute("displaytext", textsecondimage[thirdimage-1]);
 break;
 case 3:
 cheesesolution = "cheeseimage3";
 cheese3.setAttribute("src", "../images/cheese/" + selectionimages[randomcheese-1] + ".png");
 cheese2.setAttribute("src", "../images/cheese/" + selectionimages[secondimage-1] + ".png");
 cheese1.setAttribute("src", "../images/cheese/" + selectionimages[thirdimage-1] + ".png");
+cheese3.setAttribute("displaytext", textsecondimage[randomcheese-1]);
+cheese2.setAttribute("displaytext", textsecondimage[secondimage-1]);
+cheese1.setAttribute("displaytext", textsecondimage[thirdimage-1]);
 break;
  }
 }
@@ -94,7 +103,8 @@ function dropped($id){
 
 $("#cheesebutton").show();
 
-secondtext.innerHTML = textsecondimage[randomcheese-1];
+
+secondtext.innerHTML = document.getElementById($id).getAttribute("displaytext");
 
 numberoftrys++;
 lastdroppedid = $id;
