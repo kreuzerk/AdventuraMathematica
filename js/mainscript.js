@@ -200,7 +200,7 @@ svgContainer.append("text").attr("id", "bananaamount")
       .text("0 x")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
-      .attr("fill", "black");
+      .attr("fill", item_display_color);
 
 //Adding the moneyimage
 svgContainer.append("svg:image")
@@ -215,7 +215,7 @@ svgContainer.append("text").attr("id", "moneyamount")
       .text("0 x")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
-      .attr("fill", "black");
+      .attr("fill", item_display_color);
 
 /*
 //=============================================
@@ -379,7 +379,7 @@ svgContainer.append("text").attr("id", "dicetextone")
       .text(currentfield + " + ")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
-      .attr("fill", "black");
+      .attr("fill", item_display_color);
 
 svgContainer.append("text").attr("id", "diceresult")
       .attr("x", 420)
@@ -387,7 +387,7 @@ svgContainer.append("text").attr("id", "diceresult")
       .text("= " + (currentfield+diceresult))
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
-      .attr("fill", "black");
+      .attr("fill", item_display_color);
 
 }
 
@@ -865,7 +865,7 @@ svgContainer.append("text").attr("id", "bananatext")
       .text(" + " + $amount)
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
-      .attr("fill", "black");
+      .attr("fill", item_display_color);
 
 var bananaamount = document.getElementById("bananaamount");
 bananacounter = bananacounter + $amount;
@@ -913,7 +913,7 @@ svgContainer.append("text").attr("id", "bananatext")
       .text(" - " + 50)
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
-      .attr("fill", "black");
+      .attr("fill", item_display_color);
 
 var moneyamount = document.getElementById("moneyamount");
 moneycounter = moneycounter + $amount;

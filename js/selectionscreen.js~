@@ -1,6 +1,8 @@
 
 var selectedcharacter = null;
 var imageclickedbefore = null;
+var item_display_color = "black";
+
 
 function characterclicked($id){
 

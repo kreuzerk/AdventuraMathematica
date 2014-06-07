@@ -1,6 +1,8 @@
 
 var selectedcharacter = null;
 var imageclickedbefore = null;
+var item_display_color = "black";
+
 
 function characterclicked($id){
 
@@ -67,6 +69,10 @@ case "levelimage2":
 document.getElementById("levelimage2").style.backgroundImage = 'url(../images/Background-Level2.png)';
 circleData = level2;
 document.getElementById("maingamesvg").style.backgroundImage = 'url(../images/Background-Level2.png)';
+
+//Choose the settings for the display
+item_display_color = "white";
+
 break;
 
 }
