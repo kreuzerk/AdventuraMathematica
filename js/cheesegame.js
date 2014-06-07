@@ -83,7 +83,7 @@ cheesesolution = "cheeseimage2";
 cheese2.setAttribute("src", "../images/cheese/" + selectionimages[randomcheese-1] + ".png");
 cheese1.setAttribute("src", "../images/cheese/" + selectionimages[secondimage-1] + ".png");
 cheese3.setAttribute("src", "../images/cheese/" + selectionimages[thirdimage-1] + ".png");
-ceese2.setAttribute("displaytext", textsecondimage[randomcheese-1]);
+cheese2.setAttribute("displaytext", textsecondimage[randomcheese-1]);
 cheese1.setAttribute("displaytext", textsecondimage[secondimage-1]);
 cheese3.setAttribute("displaytext", textsecondimage[thirdimage-1]);
 break;
@@ -113,6 +113,10 @@ lastdroppedid = $id;
 
 //Function that is clicked by the continue button
 function checkcheese(){
+
+$("#cheeseimage1").animate({left:0,top:0});
+$("#cheeseimage2").animate({left:0,top:0});
+$("#cheeseimage3").animate({left:0,top:0});
 
 if(lastdroppedid == cheesesolution)
 {
