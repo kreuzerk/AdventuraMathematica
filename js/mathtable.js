@@ -34,22 +34,25 @@ Function for controling the inputs
 ============================================================*/
 function control_math_table_inputs(){
 
-for(var i=1; i<=2; i++){
+var correct = true;
+
+for(var i=1; i<=10; i++){	//10 Because there are ten input elements
 
 var inputelement = document.getElementById("multi_table_input_" + i);
 
 var firstnumber = parseInt(document.getElementById("multi_table_col_header" + inputelement.getAttribute("column")).innerHTML);
 var secondnumber = parseInt(document.getElementById("multi_table_row_header" + inputelement.getAttribute("row")).innerHTML);
 
-if(parseInt(inputelement.value) == (firstnumber * secondnumber)){
-alert("korrekt");
-}
-else
-{
-alert("falsch");
+if(parseInt(inputelement.value) != (firstnumber * secondnumber)){
+correct = false;
+break;
 }
 
 }//End for loop
+
+//Create the function for checking everything
+
+alert(correct);
 
 }
 

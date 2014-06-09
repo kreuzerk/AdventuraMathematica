@@ -427,8 +427,8 @@ $("#wallgame").hide();
 $("#endofround").hide();
 $("#sourcediv").hide();
 $("#circlegame").hide();
-$("#multiplikationtablediv").hide();
-//$("#caracterselection").hide();
+//$("#multiplikationtablediv").hide();
+$("#caracterselection").hide();
 
 }
 
