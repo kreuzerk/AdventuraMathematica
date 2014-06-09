@@ -22,6 +22,7 @@
 	<script type="text/javascript" src="js/delivery.js"></script>
 	<script type="text/javascript" src="js/slidergame.js"></script>
 	<script type="text/javascript" src="js/wallgame.js"></script>
+	<script type="text/javascript" src="js/mathtable.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
@@ -603,12 +604,56 @@ The commercial use of the images downloaded from Iconarchive is allowed but requ
 
 </div>
 
+<!-- =================================================================
+Multiplikationtable Game
+=============================================================== -->
+<div id="multiplikationtablediv">
+
+<table id="multiplikationtable">
+	<tr>
+		<td class="multiplikation_table_data" style="background-color: honeydew">*</td>
+		<td id="multi_table_col_header1" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
+		<td id="multi_table_col_header2" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
+		<td id="multi_table_col_header3" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
+		<td id="multi_table_col_header4" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
+	</tr>
+	<tr>
+		<td id="multi_table_row_header1" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
+		<td id="multi_table_td_1" class="multiplikation_table_data" style="background-color: aliceblue" row="1" column="1">+</td>
+		<td id="multi_table_td_2" class="multiplikation_table_data" style="background-color: aliceblue" row="1" column="2">+</td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input input="multi_table_input_1" row="1" column="3" type="text" class="math_table_input"/></td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input input="multi_table_input_2" row="1" column="4" type="text" class="math_table_input"/></td>
+	</tr>
+	<tr>
+		<td id="multi_table_row_header2" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input type="text" class="math_table_input"/></td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input type="text" class="math_table_input"/></td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input type="text" class="math_table_input"/></td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input type="text" class="math_table_input"/></td>
+	</tr>
+	<tr>
+		<td id="multi_table_row_header3" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input type="text" class="math_table_input"/></td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input type="text" class="math_table_input"/></td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input type="text" class="math_table_input"/></td>
+		<td class="multiplikation_table_data" style="background-color: aliceblue"><input type="text" class="math_table_input"/></td>
+	</tr>
+</table>
+
+<p>
+<button onclick="control_math_table_inputs()">Control</button>
+</p>
+
+</div>
+
 </body>
 <script type="text/javascript">
 hide();
 createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
+
+initialise_math_table();
 
 //var level = localStorage.getItem("level");
 
