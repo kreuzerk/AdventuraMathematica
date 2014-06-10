@@ -611,3 +611,18 @@ Styles for the Grid additiontable game
   margin-right: auto;
 }
 
+#gridadibutton{
+  width: 300px;
+  height: 100px;
+  font-size: 30px;
+  margin-left: 450px;
+  margin-top: 100px;
+}
+
+#gridaddition{
+  width: 1200px;
+  height: 820px;
+  background-color:lemonchiffon;
+  overflow: hidden;
+}
+

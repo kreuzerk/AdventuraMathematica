@@ -676,11 +676,15 @@ GridMultiplkation Game
 <tr>
 <td id="adi_text_first" class="gridaditext">65</td>
 <td class="gridaditext">+</td>
-<td id="adi_text_secon" class="gridaditext">_ _</td>
+<td id="adi_text_second" class="gridaditext">_ _</td>
 <td class="gridaditext">=</td>
 <td class="gridaditext">100</td>
 </tr>
 </table>
+
+
+<button id="gridadibutton" onclick="gridadi_continue()">Continuar</button>
+
 
 </div>
 

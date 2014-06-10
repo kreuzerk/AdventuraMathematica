@@ -1,6 +1,11 @@
 var gridadi_solutiontable;
+var gridadi_correct = 0;
 
 function initialise_grid_adi_game(){
+
+//Hide the continuebutton
+
+$("#gridadibutton").hide();
 
 //Code for the creation of the exercise
 var number1 = Math.floor(Math.random() * 100) + 1;
@@ -8,6 +13,12 @@ var number1 = Math.floor(Math.random() * 100) + 1;
 var number2 = 100 - 1;
 
 document.getElementById("adi_text_first").innerHTML = number1;
+
+//Remove all the elements from the Grid table
+$('#gridaditable1 tr').remove();
+$('#gridaditable2 tr').remove();
+$('#gridaditable3 tr').remove();
+
 
 
 //Code for the creation of the tr's and td's
@@ -126,11 +137,23 @@ function gridadi_table_clicked($id, $blues){
 
 document.getElementById("adi_text_second").innerHTML = 100-$blues;
 
+
+
 if($id.indexOf(gridadi_solutiontable) > -1){
-alert("correct");
+$( "#" + $id ).effect( "highlight" );
 }
 else{
-alert("false");
+$( "#" + $id ).effect( "shake" );
+gridadi_correct++;
 }
+
+$("#gridadibutton").show();
+
+}
+
+function gridadi_continue(){
+
+//Call the function from the main script
+checkgreenyellowfields(gridadi_correct);
 
 }
