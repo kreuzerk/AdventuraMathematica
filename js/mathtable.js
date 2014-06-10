@@ -1,11 +1,15 @@
 var math_table_range = 12;
 
+
 function initialise_math_table(){
 
 //Reset the input fields
 for(var i=1; i<=10; i++){
 document.getElementById("multi_table_input_" + i).innerHTML = "";
 }
+
+//Initialise the first td of the table
+document.getElementById("mathtable_operator").innerHTML = level_operator;
 
 //Initialise the for Headers of each Column
 for(var i = 1; i<=4; i++){
@@ -28,7 +32,7 @@ var secondnumber = parseInt(document.getElementById("multi_table_row_header" + r
 
 //alert(firstnumber + " " + secondnumber);
 
-result.innerHTML = firstnumber * secondnumber;
+result.innerHTML = operators[level_operator](firstnumber, secondnumber);		//The level_operator variable is set in the selectionscreen.js
 } // End for
 
 }
@@ -48,7 +52,7 @@ var inputelement = document.getElementById("multi_table_input_" + i);
 var firstnumber = parseInt(document.getElementById("multi_table_col_header" + inputelement.getAttribute("column")).innerHTML);
 var secondnumber = parseInt(document.getElementById("multi_table_row_header" + inputelement.getAttribute("row")).innerHTML);
 
-if(parseInt(inputelement.value) != (firstnumber * secondnumber)){
+if(parseInt(inputelement.value) != (operators[level_operator](firstnumber,secondnumber))){		//The level_operator variable is set in the selectionscreen.js
 correct = false;
 break;
 }

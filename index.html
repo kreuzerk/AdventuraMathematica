@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="js/nextgame.js"></script>
 	<script type="text/javascript" src="js/cheesegame.js"></script>
 	<script type="text/javascript" src="js/forms.js"></script>
-	<script type="text/javascript" src="js/divisiongame.js"></script>
+	<script type="text/javascript" src="js/sortgame.js"></script>
 	<script type="text/javascript" src="js/tennumber.js"></script>
 	<script type="text/javascript" src="js/selectionscreen.js"></script>
 	<script type="text/javascript" src="js/delivery.js"></script>
@@ -259,11 +259,11 @@ Cheese Game
             <div class="centered">
 		<table>
 		<tr>
-		<td class="cheeseexercise"><image id="firstcheese" src="../images/cheese/2outof3.png" class="cheeseimages"/></td>
+		<td class="cheeseexercise"><image id="firstcheese" src="./images/cheese/2outof3.png" class="cheeseimages"/></td>
 		<td class="cheeseexercise, cheesetext">+</td>
 		<td id="dropcheese" class="cheeseexercise"></td>
 		<td class="cheeseexercise, cheesetext">=</td>
-		<td class="cheeseexercise"><image src="../images/cheese/fullcheese.png" class="cheeseimages"/></td>
+		<td class="cheeseexercise"><image src="./images/cheese/fullcheese.png" class="cheeseimages"/></td>
 		<tr>
 		<!--- Table row with the text for the images -->
 		<tr>
@@ -283,13 +283,13 @@ Cheese Game
             <div class="sidebar">
                 <table>
 		<tr>
-		<td><image id="cheeseimage1" src="../images/cheese/1:3.png" class="cheeseimages"/></td>
+		<td><image id="cheeseimage1" src="./images/cheese/1:3.png" class="cheeseimages"/></td>
 		</tr>
 		<tr>
-		<td><image id="cheeseimage2" src="../images/cheese/1outof3.png" class="cheeseimages"/></td>
+		<td><image id="cheeseimage2" src="./images/cheese/1outof3.png" class="cheeseimages"/></td>
 		</tr>
 		<tr>
-		<td><image id="cheeseimage3" src="../images/cheese/1outof3.png" class="cheeseimages"/></td>
+		<td><image id="cheeseimage3" src="./images/cheese/1outof3.png" class="cheeseimages"/></td>
 		</tr>
 		</table>
             </div>
@@ -374,13 +374,13 @@ Division game
         <div id="divisionsidebar"> 
 	<table>
 		<tr>
-			<td><image class="animals" src="../images/divisionsort/Mouse.png"/></td>
+			<td><image class="animals" src="./images/divisionsort/Mouse.png"/></td>
 		</tr>
 		<tr>
-			<td><image src="../images/divisionsort/arrow.png"/ width="200px" height="300px"></td>
+			<td><image src="./images/divisionsort/arrow.png"/ width="200px" height="300px"></td>
 		</tr>
 		<tr>
-			<td><image class="animals" src="../images/divisionsort/Elephant.png"/></td>
+			<td><image class="animals" src="./images/divisionsort/Elephant.png"/></td>
 		</tr>
 	</table>
         </div>
@@ -412,10 +412,10 @@ Selection of the caracter
 
 <table class="selectiontable">
 <tr>
-	<td><image <image id="character1" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="../images/caracterselection/elephant.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character2" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="../images/caracterselection/gorilla.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character3" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="../images/caracterselection/donkey.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character4" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="../images/caracterselection/lion.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character1" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/elephant.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character2" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/gorilla.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character3" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/donkey.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character4" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/lion.png"/ width="200px" height="200px"></td>
 </tr>
 </table>
 
@@ -611,7 +611,7 @@ Multiplikationtable Game
 
 <table id="multiplikationtable">
 	<tr>
-		<td class="multiplikation_table_data" style="background-color: honeydew">*</td>
+		<td id="mathtable_operator" class="multiplikation_table_data" style="background-color: honeydew">*</td>
 		<td id="multi_table_col_header1" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
 		<td id="multi_table_col_header2" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
 		<td id="multi_table_col_header3" class="multiplikation_table_data" style="background-color: mediumturquoise">+</td>
@@ -653,12 +653,12 @@ createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
 
-initialise_math_table();
-
 //var level = localStorage.getItem("level");
 
-var backgroundmusic = new Audio();
-backgroundmusic.src = "mario.ogg";
+var backgroundmusic = new Audio("");
+document.body.appendChild(backgroundmusic);
+backgroundmusic.src = "mario.ogg"
+backgroundmusic.volume = 1;
 backgroundmusic.play();
 
 //Make some elements draggable
