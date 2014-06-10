@@ -10,6 +10,7 @@ var goldentered = false;
 var endofround = false;
 var round = 1;
 var dicethrown = false;
+var deletearrow = true;
 
 var width = 1200;
 var height = 820;
@@ -182,6 +183,12 @@ svgContainer.append("svg:image")
       .attr("width", 100)
       .attr("height", 100).attr("x", 20).attr("y",20);
 
+//Adding the arrow that shows that you need to click on the dice
+svgContainer.append("svg:image").attr("id", "click_arrow")
+      .attr("xlink:href", "./images/arrow.png")
+      .attr("width", 200)
+      .attr("height", 200).attr("x", 150).attr("y",0);
+
 //=============================================
 //RIGHT BOTTOM
 //=============================================
@@ -246,6 +253,12 @@ function setfilename($file){
 
 
 function hallo(){
+
+if(deletearrow){
+var arrow = document.getElementById("click_arrow");
+arrow.parentNode.removeChild(arrow);
+deletearrow = false;
+}
 
 var dicesound = new Audio();
 dicesound.src = "../sounds/Diceroll.mp3";
