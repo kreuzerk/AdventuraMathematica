@@ -2,6 +2,11 @@ var math_table_range = 12;
 
 function initialise_math_table(){
 
+//Reset the input fields
+for(var i=1; i<=10; i++){
+document.getElementById("multi_table_input_" + i).innerHTML = "";
+}
+
 //Initialise the for Headers of each Column
 for(var i = 1; i<=4; i++){
 var columnheader = document.getElementById("multi_table_col_header" + i);
@@ -49,6 +54,10 @@ break;
 }
 
 }//End for loop
+
+//Create the function for checking everything
+
+alert(correct);
 
 }
 
