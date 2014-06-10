@@ -577,4 +577,37 @@ Styles for the MultiplikationTable Game
 }
 
 
+/*================================================
+Styles for the Grid additiontable game
+===============================================*/$
+.gridaditable{
+  width:200px;
+  height:200px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.gridaditcontainertable{
+  margin-left: 50px;
+}
+
+.gridaditdcontainer{
+  width:400px;
+  height: 400px;
+}
+
+.gridaditd{
+  width: 20px;
+  height: 20px;
+  border-style: solid;
+}
+
+.gridaditext{
+  font-size: 50px;
+}
+
+.gridaditexttable{
+  margin-left: auto;
+  margin-right: auto;
+}
 

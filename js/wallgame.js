@@ -25,12 +25,12 @@ var number2 = Math.floor(Math.random() * exerciserange) + 1;
 
 var li = document.getElementById("wallgameli1_" + i);
 
-li.innerHTML = number1 + " + " + number2;		//Create the exercise
-li.setAttribute("result", (number1 + number2));	//Set the result as attribute
+li.innerHTML = number1 + " " + level_operator + " " + number2;		//Create the exercise
+li.setAttribute("result", operators[level_operator](number1,number2));	//Set the result as attribute
 
 $("#" + li.getAttribute("id")).show();
 
-wallgame_result[i-1] = (number1 + number2);
+wallgame_result[i-1] = operators[level_operator](number1,number2);
 
  }//End for loop
 

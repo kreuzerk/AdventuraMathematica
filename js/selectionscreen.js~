@@ -74,7 +74,7 @@ document.getElementById("levelimage1").style.backgroundImage = 'url(./images/Bac
 document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Background.png)';	//Change the Background of the level
 
 //Choose the operator for level1
-level_operator = "/";
+level_operator = "+";
 
 break;
 case "levelimage2":
@@ -87,7 +87,7 @@ item_display_color = "white";
 
 
 //Set the difficulty of the level
-level_operator = "*";
+level_operator = "-";
 
 break;
 
