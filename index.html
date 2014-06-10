@@ -658,15 +658,15 @@ GridMultiplkation Game
 <table class="gridaditcontainertable">
 <tr>
 <td class="gridaditdcontainer">
-<table id="gridaditable1" class="gridadditable">
+<table id="gridaditable1" class="gridadditable" onclick="gridadi_table_clicked($(this).attr('id'), $(this).attr('blues'))">
 </table>
 </td>
 <td class="gridaditdcontainer">
-<table id="gridaditable2" class="gridadditable">
+<table id="gridaditable2" class="gridadditable" onclick="gridadi_table_clicked($(this).attr('id'), $(this).attr('blues'))">
 </table>
 </td>
 <td class="gridaditdcontainer">
-<table id="gridaditable3" class="gridadditable">
+<table id="gridaditable3" class="gridadditable" onclick="gridadi_table_clicked($(this).attr('id'), $(this).attr('blues'))">
 </table>
 </td>
 </tr>
@@ -674,9 +674,9 @@ GridMultiplkation Game
 
 <table class="gridaditexttable">
 <tr>
-<td class="gridaditext">65</td>
+<td id="adi_text_first" class="gridaditext">65</td>
 <td class="gridaditext">+</td>
-<td class="gridaditext">35</td>
+<td id="adi_text_second" class="gridaditext">_ _</td>
 <td class="gridaditext">=</td>
 <td class="gridaditext">100</td>
 </tr>
