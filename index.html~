@@ -24,6 +24,7 @@
 	<script type="text/javascript" src="js/gridadigame.js"></script>
 	<script type="text/javascript" src="js/wallgame.js"></script>
 	<script type="text/javascript" src="js/sharinggame.js"></script>
+	<script type="text/javascript" src="js/memorygame.js"></script>
 	<script type="text/javascript" src="js/mathtable.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
@@ -724,7 +725,7 @@ Sharing Game
 </tr>
 </table>
 
-<table>
+<table class="share_button_table">
 <tr>
 <td>
 <button onclick="control_sharing_game()" class="sharegamebuttons">Control</button>
@@ -737,6 +738,40 @@ Sharing Game
 
 </div>
 
+<!----==================================================================
+Memory Game
+====================================================================-->
+<div id="memorygame">
+
+<table id="memorygametable">
+	<tr>
+		<td id="memorygame_td1" order="1" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td2" order="2" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td3" order="3" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td4" order="4" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+	</tr>
+	<tr>
+		<td id="memorygame_td5" order="5" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td6" order="6" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td7" order="7" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td8" order="8" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+	</tr>
+	<tr>
+		<td id="memorygame_td9" order="9" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td10" order="10" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td11" order="11" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td12" order="12" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+	</tr>
+	<tr>
+		<td id="memorygame_td13" order="13" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))"">?</td>
+		<td id="memorygame_td14" order="14" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))"">?</td>
+		<td id="memorygame_td15" order="15" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+		<td id="memorygame_td16" order="16" class="memorygame_td" onclick="memorycard_clicked($(this).attr('order'))">?</td>
+	</tr>
+</table>
+
+</div>
+
 </body>
 <script type="text/javascript">
 hide();
@@ -744,6 +779,8 @@ createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
 initialise_sharinggame();
+
+initialise_memory_game();
 
 //var level = localStorage.getItem("level");
 

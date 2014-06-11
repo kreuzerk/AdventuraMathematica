@@ -3,7 +3,7 @@ var selectedcharacter = null;
 var imageclickedbefore = null;
 var item_display_color = "black";
 
-var level_operator;
+var level_operator = "+";
 //Global variable for the operators
 var operators = {
     '+': function(a, b) { return a + b },

@@ -439,7 +439,8 @@ $("#circlegame").hide();
 $("#multiplikationtablediv").hide();
 $("#gridaddition").hide();
 $("#sharinggame").hide();
-//$("#caracterselection").hide();
+//$("#memorygame").hide();
+$("#caracterselection").hide();
 
 }
 
@@ -540,7 +541,7 @@ $("#maingamesvg").hide();
 initialise_grid_adi_game();
 $("#gridaddition").show();
 break;
-case "dodgerblue":
+case "dodgerblue":		//Dodgerblue fields => Share game
 $("#maingamesvg").hide();
 initialise_sharinggame();
 $("#sharinggame").show();
