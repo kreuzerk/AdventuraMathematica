@@ -7,6 +7,9 @@ var numberofplates;
 
 function initialise_sharinggame(){
 
+//Call the reset function
+reset_apples();
+
 do{
 numberofapples = Math.floor(Math.random() * 12) + 1;
 }while(numberofapples <= 4);
@@ -46,7 +49,7 @@ correct = false;
 break;
 }
 
-alert(correct);
+checkdodgerblue(correct);
 
 }
 

@@ -19,19 +19,19 @@ var height = 820;
 var circleData = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
   { "cx": 120, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 7},
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "black", "number" : 7},
   { "cx": 540, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 8},
   { "cx": 610, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 9},
-  { "cx": 680, "cy": 720, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 11},
-  { "cx": 820, "cy": 680, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 12},
-  { "cx": 890, "cy": 660, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 13},
-  { "cx": 880, "cy": 590, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 14},
-  { "cx": 810, "cy": 580, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 15},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 11},
+  { "cx": 820, "cy": 680, "radius": 30, "color" : "dodgerblue", "fontcolor" : "black", "number" : 12},
+  { "cx": 890, "cy": 660, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 13},
+  { "cx": 880, "cy": 590, "radius": 30, "color" : "dodgerblue", "fontcolor" : "black", "number" : 14},
+  { "cx": 810, "cy": 580, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 15},
   { "cx": 740, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 16},
   { "cx": 670, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 17},
   { "cx": 600, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 18},
@@ -438,8 +438,8 @@ $("#sourcediv").hide();
 $("#circlegame").hide();
 $("#multiplikationtablediv").hide();
 $("#gridaddition").hide();
-$("#caracterselection").hide();
-
+$("#sharinggame").hide();
+//$("#caracterselection").hide();
 
 }
 
@@ -539,6 +539,11 @@ case "greenyellow":		//Greenyellow fields => Grid addition
 $("#maingamesvg").hide();
 initialise_grid_adi_game();
 $("#gridaddition").show();
+break;
+case "dodgerblue":
+$("#maingamesvg").hide();
+initialise_sharinggame();
+$("#sharinggame").show();
 break;
 
 }
@@ -913,6 +918,28 @@ if($numberoftries > 1){
 
 function hidegreenyellow(){
 $("#gridaddition").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function to check the dodgerblue fields
+===================================================================================*/
+function checkdodgerblue($correct){
+
+hidedodgerblue();
+
+if($correct){
+  drawimage(10,true);
+}
+else
+{
+  drawimage(10, false);
+}
+
+}
+
+function hidedodgerblue(){
+$("#sharinggame").hide();
 $("#maingamesvg").show();
 }
 
