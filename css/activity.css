@@ -579,7 +579,7 @@ Styles for the MultiplikationTable Game
 
 /*================================================
 Styles for the Grid additiontable game
-===============================================*/$
+===============================================*/
 .gridaditable{
   width:200px;
   height:200px;
@@ -624,5 +624,53 @@ Styles for the Grid additiontable game
   height: 820px;
   background-color:lemonchiffon;
   overflow: hidden;
+}
+
+/*================================================
+Styles for the sharing game
+===============================================*/
+#sharinggame{
+  width: 1200px;
+  height: 820px;
+  overflow: hidden;
+  background-color: lightgreen;
+}
+
+.share_item_table{
+  width: 1200px;
+  height: 300px;
+}
+
+.appleimages{
+  width: 100px;
+  height: 100px;
+}
+
+.drop_apples{
+  width: 200px;
+  height: 200px;
+  margin-left: 50px;
+  background-image: url(../images/sharegame/plate.png);
+  background-repeat: no-repeat;
+}
+
+.drop_apples_table{
+  width: 1200px;
+  height: 300px;
+  background-color: white;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.sharegamebuttons{
+  width: 200px;
+  height: 80px;
+  font-size: 30px;
+}
+
+.share_button_table{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
 

@@ -438,7 +438,7 @@ $("#sourcediv").hide();
 $("#circlegame").hide();
 $("#multiplikationtablediv").hide();
 $("#gridaddition").hide();
-//$("#caracterselection").hide();
+$("#caracterselection").hide();
 
 
 }
@@ -535,7 +535,7 @@ $("#maingamesvg").hide();
 initialise_math_table();
 $("#multiplikationtablediv").show();
 break;
-case "greenyellow":
+case "greenyellow":		//Greenyellow fields => Grid addition
 $("#maingamesvg").hide();
 initialise_grid_adi_game();
 $("#gridaddition").show();

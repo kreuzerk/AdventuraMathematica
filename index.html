@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="js/slidergame.js"></script>
 	<script type="text/javascript" src="js/gridadigame.js"></script>
 	<script type="text/javascript" src="js/wallgame.js"></script>
+	<script type="text/javascript" src="js/sharinggame.js"></script>
 	<script type="text/javascript" src="js/mathtable.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
@@ -688,7 +689,53 @@ GridMultiplkation Game
 
 </div>
 
+<!----==================================================================
+Sharing Game
+====================================================================-->
+<div id="sharinggame">
 
+<h1>Parte de las manzanas en la justicia. Dibuja una manzana en el plato.</h1>
+
+<table class="share_item_table">
+	<tr>
+		<td class="share_item_td"><image id="appleimage1" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage2" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage3" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage4" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage5" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage6" src="./images/sharegame/apple.png" class="appleimages"/></td>
+	</tr>
+	<tr>
+		<td class="share_item_td"><image id="appleimage7" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage8" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage9" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage10" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage11" src="./images/sharegame/apple.png" class="appleimages"/></td>
+		<td class="share_item_td"><image id="appleimage12" src="./images/sharegame/apple.png" class="appleimages"/></td>
+	</tr>
+</table>
+
+<table class="drop_apples_table">
+<tr>
+	<td id="dropapples1" class="drop_apples"></td>
+	<td id="dropapples2" class="drop_apples"></td>
+	<td id="dropapples3" class="drop_apples"></td>
+	<td id="dropapples4" class="drop_apples"></td>
+</tr>
+</table>
+
+<table class="share_button_table">
+<tr>
+<td>
+<button onclick="control_sharing_game()" class="sharegamebuttons">Control</button>
+</td>
+<td>
+<button onclick="reset_apples()" class="sharegamebuttons">Reset</button>
+</td>
+</tr>
+</table>
+
+</div>
 
 </body>
 <script type="text/javascript">
@@ -696,6 +743,7 @@ hide();
 createkrokogame();
 nextsvg_drawselections();
 nextsvg_drawexercise();
+initialise_sharinggame();
 
 //var level = localStorage.getItem("level");
 
@@ -706,11 +754,59 @@ backgroundmusic.volume = 1;
 backgroundmusic.play();
 
 //Make some elements draggable
+
 $(function() {
     $( "#cheeseimage1" ).draggable();
     $( "#cheeseimage2" ).draggable();
     $( "#cheeseimage3" ).draggable();
+    $( ".appleimages" ).draggable();
 
+
+$(".appleimages").draggable({
+        revert : function(event, ui) {
+            $(this).data("uiDraggable").originalPosition = {
+                top : 0,
+                left : 0
+            };
+            // return boolean
+            return !event;
+        }
+    });
+
+//-------------------------------------------
+$( "#dropapples1" ).droppable({
+      drop: function( event, ui ) {
+	var draggable = ui.draggable;
+    	var id = draggable.attr("id");
+        apple_on_plate1();
+      }
+    });
+
+$( "#dropapples2" ).droppable({
+      drop: function( event, ui ) {
+	var draggable = ui.draggable;
+    	var id = draggable.attr("id");
+        apple_on_plate2();
+      }
+    });
+
+$( "#dropapples3" ).droppable({
+      drop: function( event, ui ) {
+	var draggable = ui.draggable;
+    	var id = draggable.attr("id");
+        apple_on_plate3();
+      }
+    });
+
+$( "#dropapples4" ).droppable({
+      drop: function( event, ui ) {
+	var draggable = ui.draggable;
+    	var id = draggable.attr("id");
+        apple_on_plate4();
+      }
+    });
+
+//Function that sets the element where you can drop the cheese
 $( "#dropcheese" ).droppable({
       drop: function( event, ui ) {
 	var draggable = ui.draggable;
