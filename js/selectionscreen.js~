@@ -73,6 +73,8 @@ case "levelimage1":
 document.getElementById("levelimage1").style.backgroundImage = 'url(./images/Background.png)';
 document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Background.png)';	//Change the Background of the level
 
+circleData = level1;
+
 //Choose the operator for level1
 level_operator = "+";
 

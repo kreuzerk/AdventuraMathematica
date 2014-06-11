@@ -15,8 +15,10 @@ var deletearrow = true;
 var width = 1200;
 var height = 820;
 
+var circleData;
+
 //Circle Data Set
-var circleData = [
+var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
   { "cx": 120, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 2}, 
   { "cx": 190, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 3},
@@ -439,8 +441,8 @@ $("#circlegame").hide();
 $("#multiplikationtablediv").hide();
 $("#gridaddition").hide();
 $("#sharinggame").hide();
-//$("#memorygame").hide();
-$("#caracterselection").hide();
+$("#memorygame").hide();
+//$("#caracterselection").hide();
 
 }
 
