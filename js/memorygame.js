@@ -121,12 +121,17 @@ memorygame_result_array[randomposition2] = temp;
 
 }
 
-
-
 function memorycard_clicked($order, $id){
+
+
+$( "#" + $id ).hide();
+
+$( "#" + $id ).show( "slide");
 
 document.getElementById($id).style.backgroundImage = 'url(./images/memorygame/memorycard_backside.png)';
 document.getElementById($id).innerHTML = memorygame_display_array[$order-1];
+
+
 
 //Check if the first and the secon were clicked
 if(memorygame_firstclicked != null && memorygame_secondclicked_id != null){
@@ -138,6 +143,10 @@ document.getElementById(memorygame_secondclicked_id).innerHTML = "";
 //Reset the images to the front card_side
 document.getElementById(memorygame_firstclicked_id).style.backgroundImage = 'url(./images/memorygame/memorycard_frontside.png)';
 document.getElementById(memorygame_secondclicked_id).style.backgroundImage = 'url(./images/memorygame/memorycard_frontside.png)';
+
+document.getElementById(memorygame_firstclicked_id).setAttribute("onclick", "memorycard_clicked($(this).attr('order'), $(this).attr('id'))");
+document.getElementById(memorygame_secondclicked_id).setAttribute("onclick", "memorycard_clicked($(this).attr('order'), $(this).attr('id'))");
+
 }
 memorygame_firstclicked = null; 	//Reset the first clicked element to null
 memorygame_secondclicked_id = null;     //Reset the second element to null
@@ -176,12 +185,7 @@ memorygame_secondclicked_id = $id;
 else{
 memorygame_firstclicked = $order;
 memorygame_firstclicked_id = $id;
+document.getElementById($id).setAttribute("onclick", "");
 }
-
-
-/*
-$( "#" + $id ).hide( "blind");
-$( "#" + $id ).show( "blind");
-*/
 
 }
