@@ -688,8 +688,10 @@ Styles for the memory game
 .memorygame_td{
   border-style: solid;
   background-color: mintcream;
-  font-size: 50px;
+  font-size: 25px;
   text-align: center;
   overflow: hidden;
+  background-image: url(../images/memorygame/memorycard_frontside.png);
+  background-repeat: no-repeat;
 }
 

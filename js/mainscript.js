@@ -441,8 +441,8 @@ $("#circlegame").hide();
 $("#multiplikationtablediv").hide();
 $("#gridaddition").hide();
 $("#sharinggame").hide();
-$("#memorygame").hide();
-//$("#caracterselection").hide();
+//$("#memorygame").hide();
+$("#caracterselection").hide();
 
 }
 

@@ -9,6 +9,8 @@ var memorygame_firstclicked = null;
 var memorygame_firstclicked_id;
 var memorygame_secondclicked_id = null;
 var memorygame_previous_correct;
+var previous_correct = false;
+var memorygame_found_counter = 0;
 
 function initialise_memory_game(){
 
@@ -123,14 +125,20 @@ memorygame_result_array[randomposition2] = temp;
 
 function memorycard_clicked($order, $id){
 
+document.getElementById($id).style.backgroundImage = 'url(./images/memorygame/memorycard_backside.png)';
 document.getElementById($id).innerHTML = memorygame_display_array[$order-1];
 
 //Check if the first and the secon were clicked
 if(memorygame_firstclicked != null && memorygame_secondclicked_id != null){
 
-document.getElementById(memorygame_firstclicked_id).innerHTML = "?";
-document.getElementById(memorygame_secondclicked_id).innerHTML = "?";
+if(previous_correct == false){
+document.getElementById(memorygame_firstclicked_id).innerHTML = "";
+document.getElementById(memorygame_secondclicked_id).innerHTML = "";
 
+//Reset the images to the front card_side
+document.getElementById(memorygame_firstclicked_id).style.backgroundImage = 'url(./images/memorygame/memorycard_frontside.png)';
+document.getElementById(memorygame_secondclicked_id).style.backgroundImage = 'url(./images/memorygame/memorycard_frontside.png)';
+}
 memorygame_firstclicked = null; 	//Reset the first clicked element to null
 memorygame_secondclicked_id = null;     //Reset the second element to null
 
@@ -140,10 +148,28 @@ memorygame_secondclicked_id = null;     //Reset the second element to null
 //Needs to be before the second if statement otherwise it does not work
 if(memorygame_firstclicked != null){
 
+//This if is executed if the code is correct
 if(memorygame_result_array[memorygame_firstclicked-1] == memorygame_result_array[$order-1]){
-alert("correct");
+memorygame_found_counter++;
+
+if(memorygame_found_counter < 8){
+document.getElementById(memorygame_firstclicked_id).style.backgroundImage = 'url(./images/memorygame/Imageok.png)';
+document.getElementById($id).style.backgroundImage = 'url(./images/memorygame/Imageok.png)';
+document.getElementById(memorygame_firstclicked_id).setAttribute("onclick", "");
+document.getElementById($id).setAttribute("onclick", "");
+
+previous_correct = true;
+}
+else
+{
+alert("Gratulation");
 }
 
+}
+else
+{
+previous_correct = false;
+}
 memorygame_secondclicked_id = $id;
 
 }
