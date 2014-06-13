@@ -45,10 +45,6 @@ deliverybutton1.setAttribute("onclick", "deliveryokclicked()");
 
 //Hide the secon button
 $("#deliverybutton2").hide();
-
-
-//Revert the changes
-delivery_revertchanges();
 }
 
 function deliveryokclicked(){

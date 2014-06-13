@@ -23,7 +23,7 @@ var level1 = [
   { "cx": 120, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 2}, 
   { "cx": 190, "cy": 700, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 3},
   { "cx": 260, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 5},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "gold", "fontcolor" : "white", "number" : 5},
   { "cx": 400, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 6},
   { "cx": 470, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 7},
   { "cx": 540, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 8},
@@ -91,7 +91,7 @@ var level2 = [
   { "cx": 70, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 4},
   { "cx": 70, "cy": 450, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 5},
   { "cx": 70, "cy": 380, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 6},
-  { "cx": 70, "cy": 310, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 7},
+  { "cx": 70, "cy": 310, "radius": 30, "color" : "gold", "fontcolor" : "black", "number" : 7},
   { "cx": 70, "cy": 240, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 8},
   { "cx": 140, "cy": 210, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 9},
   { "cx": 210, "cy": 210, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" :10},
@@ -512,6 +512,7 @@ $("#divisiongame").show();
 break;
 case "gold":		//Gold - Dliver the bananas
 $("#maingamesvg").hide();
+initialise_delivery_screen();
 $("#bananadelivery").show();
 break;
 case "khaki":	   	//Khaki - Slidergame

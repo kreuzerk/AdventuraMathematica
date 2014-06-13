@@ -7,16 +7,23 @@ deliverydiv = document.getElementById("bananadelivery");
 deliverybutton1 = document.getElementById("deliverybutton1");
 }
 
-function deliverbananas(){
+function initialise_delivery_screen(){
 
 getdeliveryelements();
 
+deliverydiv.style.backgroundImage = imagepath_bananadelivery;
+
+}
+
+function deliverbananas(){
+
+
 if(bananacounter >= 50){
-deliverydiv.style.backgroundImage = 'url(../images/delivery/deliveryok.png)';
+deliverydiv.style.backgroundImage = imagepath_deliveryok;
 deliver = true;
 }
 else{
-deliverydiv.style.backgroundImage = 'url(../images/delivery/deliveryfailure.png)';
+deliverydiv.style.backgroundImage = imagepath_deliveryfailure;
 deliver = false;
 }
 
@@ -37,7 +44,7 @@ function notdeliverbananas(){
 
 getdeliveryelements();
 
-deliverydiv.style.backgroundImage = 'url(../images/delivery/nodelivery.png)';
+deliverydiv.style.backgroundImage = imagepath_nodelivery;
 
 //Change the first button
 deliverybutton1.innerHTML = "Ok";
@@ -64,5 +71,5 @@ function delivery_revertchanges(){
 deliverybutton1.innerHTML = "Si";
 $("#deliverybutton2").show();
 deliverybutton1.setAttribute("onclick", "deliverbananas()");
-deliverydiv.style.backgroundImage = 'url(../images/delivery/bananadelivery.png)';
+deliverydiv.style.backgroundImage = imagepath_bananadelivery;
 }
