@@ -10,6 +10,8 @@ var numberoflis;
 
 function initialisewallgame(){
 
+document.getElementById("wallgame").style.backgroundImage = imagepath_wallgame;
+
 numberoflis = 8;
 var exerciserange = 50;
 wallgame_result = new Array(numberoflis);
