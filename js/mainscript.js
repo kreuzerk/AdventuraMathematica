@@ -20,16 +20,16 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 9},
-  { "cx": 680, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 11},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 9},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 12},
   { "cx": 890, "cy": 660, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 13},
   { "cx": 880, "cy": 590, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 14},
@@ -295,6 +295,25 @@ case 6:
 	filename = "Six";
 break;
 }
+
+//Change the level_operator
+switch(level_operator){
+
+case "+":
+level_operator = "-";
+break;
+case "-":
+level_operator = "+";
+break;
+case "*":
+level_operator = "/";
+break;
+case "/":
+level_operator = "*";
+break;
+
+}
+
 
 drawcube(filename);
 
@@ -1049,6 +1068,10 @@ svgContainer.append("text").attr("id", "bananatext")
 var moneyamount = document.getElementById("moneyamount");
 moneycounter = moneycounter + $amount;
 moneyamount.textContent = "+ " + moneycounter;
+
+if(moneycounter >= 5){
+localStorage.setItem("level", 2);	//Set the amount of levels
+}
 
 //Reduce the bananas
 

@@ -25,6 +25,35 @@ var operators = {
 };
 
 
+//Function that is responsible for initialising the levels
+function initialise_levels_selectionsscreen(){
+
+var level = localStorage.getItem("level");
+
+if(level == null){
+localStorage.setItem("level", 1);
+level = 1;
+}
+
+switch(level){
+
+case "1":
+
+//Make the second element unclickable
+document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Level2_locked.png)';
+document.getElementById("levelimage2").setAttribute("onclick","alert_locked()");
+break;
+
+
+}
+
+}
+
+//Function that alerts that an element is locked
+function alert_locked(){
+alert("Lo sentimos, este artículo está bloqueado. Primer nivel 1 juegos de desbloqueo a la misma");
+}
+
 function characterclicked($id){
 
 if(selectedcharacter != null){
