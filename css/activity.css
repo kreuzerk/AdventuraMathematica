@@ -677,6 +677,12 @@ Styles for the sharing game
 /*================================================
 Styles for the memory game
 ===============================================*/
+#memorygame{
+  width: 1200px;
+  height: 820px;
+  background-color: mintcream;
+}
+
 #memorygametable{
   width: 800px;
   height: 800px;

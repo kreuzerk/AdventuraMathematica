@@ -14,6 +14,8 @@ var memorygame_found_counter = 0;
 
 function initialise_memory_game(){
 
+memorygame_reset();
+
 if(level_operator == "+" || level_operator == "-"){
 numberrange = 50;
 }
@@ -56,6 +58,21 @@ initialise_display_result_array();
 
 }
 
+//Function that resets the whole application
+//====================================================================
+function memorygame_reset(){
+
+//Reset the image and the onclick function
+
+for(var i = 1; i<=16; i++){
+document.getElementById("memorygame_td" + i).style.backgroundImage = 'url(./images/memorygame/memorycard_frontside.png)';
+document.getElementById("memorygame_td" + i).setAttribute("onclick", "memorycard_clicked($(this).attr('order'), $(this).attr('id'))");
+document.getElementById("memorygame_td" + i).innerHTML = "";
+memorygame_found_counter = 0;
+}
+
+}
+
 //Function that initialises and creates the memorgame_display_array
 //and the memorygame_result_array
 //================================================================================
@@ -80,19 +97,6 @@ memorygame_result_array[(i*8)+j] = memorygame_results[j];
 }//End first for
 
 } //End second for
-
-////==================Test alert to se the content of the array
-
-var string1;
-var string2;
-
-for(var i = 0; i< memorygame_display_array.length; i++){
-string1 += " " + memorygame_display_array[i];
-}
-
-for(var i = 0; i< memorygame_result_array.length; i++){
-string2 += " " + memorygame_result_array[i];
-}
 
 randomize_memorygame_arrays();
 
@@ -171,7 +175,7 @@ previous_correct = true;
 }
 else
 {
-alert("Gratulation");
+checkchocolate(true);		//Call the function that is responsible for checking this fields
 }
 
 }
