@@ -264,6 +264,7 @@ Cheese Game
 
 <div id="cheese">
             <div class="centered">
+		<h1>Dibuja la pieza que falta en el medio</h1>
 		<table>
 		<tr>
 		<td class="cheeseexercise"><image id="firstcheese" src="./images/cheese/2outof3.png" class="cheeseimages"/></td>
