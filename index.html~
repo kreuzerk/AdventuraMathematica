@@ -652,7 +652,7 @@ Multiplikationtable Game
 </table>
 
 <p>
-<button onclick="control_math_table_inputs()">Control</button>
+<button class="multiplikationtablebutton" onclick="control_math_table_inputs()">Control</button>
 </p>
 
 </div>
