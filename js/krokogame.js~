@@ -17,19 +17,20 @@ continuebutton.innerHTML = "Continuar o jogo";
 continuebutton.setAttribute("onclick", "finishkrokogame()");
 }
 
+
 kroksvg.append("rect")
                             .attr("x", 150)
                             .attr("y", 10)
                             .attr("width", 250)
-                            .attr("height", 550)
-			    .attr("fill", "lightblue");
+                            .attr("height", 550).attr("fill","lightblue").attr("fill-opacity", "0.5").attr("stroke","black");
 
 		kroksvg.append("rect")
                             .attr("x", 800)
                             .attr("y", 10)
                             .attr("width", 250)
-                            .attr("height", 550)
-			    .attr("fill", "lightblue");
+                            .attr("height", 550).attr("fill","lightblue").attr("fill-opacity", "0.5").attr("stroke","black");
+
+
 
 		//Adding the Text for the multiplikations
 		kroksvg.append("text").attr("id", "multiplier1")
@@ -121,8 +122,8 @@ createkrokogame();
 kroko_buttonclicked = false;
 
 var continuebutton = document.getElementById("krokocontinue");
-continuebutton.innerHTML = "Continuar o jogo";
-continuebutton.setAttribute("onclick", "finishkrokogame()");
+continuebutton.innerHTML = "Siguiente Pergunta";
+continuebutton.setAttribute("onclick", "nextquestion()");
 
 kroko_correctanswered = 0;
 }
@@ -136,25 +137,25 @@ switch ($sign){
 case ">":
 kroksvg.append("svg:image")
       .attr("xlink:href", "./images/Krokogame/crocoleft.png").attr("id", "crocoleft")
-      .attr("width", 300)
-      .attr("height", 200).attr("x", 450).attr("y",250);
+      .attr("width", 200)
+      .attr("height", 150).attr("x", 490).attr("y",250);
 break;
 case "<":
 kroksvg.append("svg:image")
       .attr("xlink:href", "./images/Krokogame/crocoright.png").attr("id", "crocoleft")
-      .attr("width", 300)
-      .attr("height", 200).attr("x", 450).attr("y",250);
+      .attr("width", 200)
+      .attr("height", 150).attr("x", 490).attr("y",250);
 break;
 case "=":
 kroksvg.append("svg:image")
       .attr("xlink:href", "./images/Krokogame/crocoleft.png").attr("id", "crocoleft")
-      .attr("width", 300)
-      .attr("height", 200).attr("x", 450).attr("y",150);
+      .attr("width", 200)
+      .attr("height", 150).attr("x", 490).attr("y",150);
 
 kroksvg.append("svg:image")
       .attr("xlink:href", "./images/Krokogame/crocoright.png").attr("id", "crocoleft")
-      .attr("width", 300)
-      .attr("height", 200).attr("x", 450).attr("y",300);
+      .attr("width", 200)
+      .attr("height", 150).attr("x", 490).attr("y",300);
 break;
  }
 kroko_buttonclicked = true;

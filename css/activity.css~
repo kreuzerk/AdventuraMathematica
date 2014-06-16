@@ -16,6 +16,10 @@
 /*================================================
 Styles for Shopactivities
 ================================================*/
+#shopdiv{
+  background-color:white;
+  overflow:hidden;
+}
 
 .shopprice{
   font-size: 50px;
@@ -45,7 +49,7 @@ Styles for Shopactivities
 
 #shoptable{  
   width:1200px;
-  height:820px;
+  height:750px;
   background-image: url(../images/Shop/background.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -80,38 +84,70 @@ Styles for Kroko Game
 ================================================*/
 .krokobuttons{
   width:380px;
-  height:100px;
+  height:80px;
   font-size:30px;
-  color:white;
+  
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #010b12 2px;
+  text-decoration: none;
 
 }
 
 .krokbuttonrow{
   width:1200px;
-  height:110px;
+  height:90px;
 
 }
 
 #krokotable{
   width:1200px;
-  height:120px;
+  height:100px;
 }
 
 #krokodiv{
   background-image: url(../images/Krokogame/background.jpg);
   background-repeat:no-repeat;
   background-size:100%;
-  height:810px;
+  height:820px;
+  overflow:hidden;
 }
 
 .continuerow{
-  height:50px;
+  height:80px;
 }
 
 #krokocontinue{
   margin-left:490px;
   width:200px;
   height:40px;
+  background-color:lightgreen;
+
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #010b12 2px;
+  text-decoration: none;
 }
 
 /*================================================
@@ -250,6 +286,7 @@ Styles for the ten game
  background-image: url(../images/tengame/background.jpg);
  background-repeat:no-repeat;
  background-size:100%;
+ overflow:hidden;
 }
 
 
@@ -294,7 +331,7 @@ Styles for the Division game
 
 #divisionheader {
  background-color:lightcyan; 
- font-size:50px; 
+ font-size:40px; 
  text-align:center; 
 }
 
@@ -681,11 +718,12 @@ Styles for the memory game
   width: 1200px;
   height: 820px;
   background-color: mintcream;
+  overflow:hidden;
 }
 
 #memorygametable{
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   border-style: solid;
   table-layout:fixed;
   margin-left: 200px;
@@ -693,7 +731,7 @@ Styles for the memory game
 }
 
 .memorygame_table_row{
-  height: 200px;
+  height: 175px;
 }
 
 .memorygame_td{

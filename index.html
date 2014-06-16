@@ -65,7 +65,8 @@ var svgContainer = d3.select("body").append("svg").attr("id","maingamesvg")
 <!-- ==========================================================================================
 Code for the Shop Mini Game
 =============================================================================================-->
-
+<div id="shopdiv">
+<h1>Comprar a través de un clic para que llegue a la total.</h1>
 <table id="shoptable">
 <tr>
 <td>
@@ -127,11 +128,13 @@ Code for the Shop Mini Game
 </td>
 </tr>
 </table>
+</div>
 
 <!---- ================================================================
 Krokogame
 ====================================================================-->
 <div id="krokodiv">
+<h1>De qué lado es mayor?</h1>
 <table id="krokotable">
 <tr class="krokbuttonrow">
   <td><button class="krokobuttons" sign=">" onclick="drawcroco($(this).attr('sign'))">></button></td>
@@ -302,7 +305,7 @@ Cheese Game
 Multiplikation by Ten game
 ====================================================================-->
 <div id="tengame">
-
+<h1>Añadir el número correcto de ceros añadidos a cada resultado.</h1>
 <table>
 
 <tr>
@@ -372,7 +375,7 @@ Multiplikation by Ten game
 Sort game
 ====================================================================-->
 <div id="divisiongame">
-    <div id="divisionheader"> Division </div>
+    <div id="divisionheader"> Clasificar los elementos arrastrando el tamaño después </div>
     <div>
         <div id="divisionsidebar"> 
 	<table>
@@ -742,6 +745,8 @@ Sharing Game
 Memory Game
 ====================================================================-->
 <div id="memorygame">
+
+<h1>Encontrar los mismos resultados</h1>
 
 <table id="memorygametable">
 	<tr class="memorygame_table_row">
