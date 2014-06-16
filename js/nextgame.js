@@ -36,6 +36,23 @@ cleannextgamesvg();
 //Choose the pattern
 var patternnumber = Math.floor(Math.random() * numberofpatterns) + 1;
 
+//Draw the text
+nextsvg.append("text").
+      			attr("x", 20)
+      			.attr("y", 40)
+      			.text("Completa el patrón")
+      			.attr("font-family", "Chalkboard")
+      			.attr("font-size", "30px")
+      			.attr("fill", "black");
+
+selectsvg.append("text").
+      			attr("x", 20)
+      			.attr("y", 40)
+      			.text("Haga clic para añadir un formulario para que usted")
+      			.attr("font-family", "Chalkboard")
+      			.attr("font-size", "30px")
+      			.attr("fill", "black");
+
 
 switch(patternnumber){
 case 1:
