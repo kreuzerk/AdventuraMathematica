@@ -62,6 +62,32 @@ Styles for Shopactivities
   color:black;
   font-size: 40px;
   padding:20px;
+
+  background: #dbe82c;
+  background-image: -webkit-linear-gradient(top, #dbe82c, #c3cf1f);
+  background-image: -moz-linear-gradient(top, #dbe82c, #c3cf1f);
+  background-image: -ms-linear-gradient(top, #dbe82c, #c3cf1f);
+  background-image: -o-linear-gradient(top, #dbe82c, #c3cf1f);
+  background-image: linear-gradient(to bottom, #dbe82c, #c3cf1f);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #010b12 2px;
+  text-decoration: none;
+}
+
+.shopbuttons:hover{
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
 
 .shopitems{
@@ -153,13 +179,17 @@ Styles for Kroko Game
 /*================================================
 Styles for Form Game
 ================================================*/
+#formgame{
+  overflow: hidden; 
+}
+
 #formssvg{
   background-color:white;
 }
 
 #formentries{
   width:600px;
-  height:820px;
+  height:750px;
 }
 
 .formtd1{
@@ -172,9 +202,34 @@ Styles for Form Game
 }
 
 .formbutton{
-  height:40px;
+  height:80px;
   font-size:20px;
   width:200px;
+
+  background: #adbab5;
+  background-image: -webkit-linear-gradient(top, #adbab5, #e6e6df);
+  background-image: -moz-linear-gradient(top, #adbab5, #e6e6df);
+  background-image: -ms-linear-gradient(top, #adbab5, #e6e6df);
+  background-image: -o-linear-gradient(top, #adbab5, #e6e6df);
+  background-image: linear-gradient(to bottom, #adbab5, #e6e6df);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #000000;
+  padding: 10px 20px 10px 20px;
+  border: solid #010b12 2px;
+  text-decoration: none;
+}
+
+.formbutton:hover{
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
 
 
