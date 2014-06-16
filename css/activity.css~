@@ -973,6 +973,33 @@ Styles for the sharing game
   width: 200px;
   height: 80px;
   font-size: 30px;
+  color:black;
+
+  background: #6af573;
+  background-image: -webkit-linear-gradient(top, #6af573, #3cf075);
+  background-image: -moz-linear-gradient(top, #6af573, #3cf075);
+  background-image: -ms-linear-gradient(top, #6af573, #3cf075);
+  background-image: -o-linear-gradient(top, #6af573, #3cf075);
+  background-image: linear-gradient(to bottom, #6af573, #3cf075);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  padding: 10px 20px 10px 20px;
+  border: solid #01080d 2px;
+  text-decoration: none;
+}
+
+.sharegamebuttons:hover{
+
+  background: #f7feff;
+  background-image: -webkit-linear-gradient(top, #f7feff, #f7fffe);
+  background-image: -moz-linear-gradient(top, #f7feff, #f7fffe);
+  background-image: -ms-linear-gradient(top, #f7feff, #f7fffe);
+  background-image: -o-linear-gradient(top, #f7feff, #f7fffe);
+  background-image: linear-gradient(to bottom, #f7feff, #f7fffe);
+  text-decoration: none;
+
 }
 
 .share_button_table{
