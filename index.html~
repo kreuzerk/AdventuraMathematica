@@ -454,6 +454,9 @@ Selection of the caracter
 Slider Game
 ====================================================================-->
 <div id="slidergame">
+
+<h1></h1>
+
 <div class="sliderdiv">
 <h1 id="sliderh1">3/4</h1>
 <h2 id="valor1">Valor: 0</h2> 
