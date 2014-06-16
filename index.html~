@@ -455,7 +455,7 @@ Slider Game
 ====================================================================-->
 <div id="slidergame">
 
-<h1></h1>
+<h1>Punto de muestra representa la fracción</h1>
 
 <div class="sliderdiv">
 <h1 id="sliderh1">3/4</h1>
@@ -482,7 +482,7 @@ Slider Game
 <!----==================================================================
 Wall Game
 ====================================================================-->
-<div id="wallgame">
+<div id="wallgame" style="overflow:hidden">
 
 <table class="wallgametable">
 <tr>

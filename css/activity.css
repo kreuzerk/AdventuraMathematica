@@ -766,6 +766,32 @@ Styles for the Circlegame
   height: 50px;
   font-size: 30px;
   margin-left: 50px;
+  color:black;
+
+  background: #6af573;
+  background-image: -webkit-linear-gradient(top, #6af573, #3cf075);
+  background-image: -moz-linear-gradient(top, #6af573, #3cf075);
+  background-image: -ms-linear-gradient(top, #6af573, #3cf075);
+  background-image: -o-linear-gradient(top, #6af573, #3cf075);
+  background-image: linear-gradient(to bottom, #6af573, #3cf075);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  padding: 10px 20px 10px 20px;
+  border: solid #01080d 2px;
+  text-decoration: none;
+}
+
+.circlegamebutton:hover{
+  background: #b7f03c;
+  background-image: -webkit-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -moz-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -ms-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -o-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: linear-gradient(to bottom, #b7f03c, #d1f266);
+  text-decoration: none;
+  color:black;
 }
 
 .circlegameh1{
