@@ -13,3 +13,6 @@ $( ".fireball" ).animate({ "left": "+=500px", "top": "+=500px" }, "slow", functi
    $(".fireball").hide();
 });
 }
+
+
+

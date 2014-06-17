@@ -26,7 +26,7 @@
 	<script type="text/javascript" src="js/sharinggame.js"></script>
 	<script type="text/javascript" src="js/memorygame.js"></script>
 	<script type="text/javascript" src="js/mathtable.js"></script>
-	<script type="text/javascript" src="js/bossgame.js"></script>
+	<script type="text/javascript" src="js/castlegame.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
@@ -784,9 +784,9 @@ Memory Game
 </div>
 
 <!----==================================================================
-Boss Game
+Castle Game
 ====================================================================-->
-<div>
+<div id="castlegame">
 
 <!--
 <div id="bossgameimage1">
@@ -794,26 +794,26 @@ Boss Game
 </div>
 -->
 
-<div class="bossgame_result_paper"><h1 class="paperh1">10</h1></div>
+<div class="castle_result_paper"><h1 class="paperh1">10</h1></div>
 
 <div class="fireball"><image src="./images/bossgame/frieball.png"/></div>
 
-<div class="bossgametablediv">
-<table class="bossgame_table">
+<div class="castlegametablediv">
+<table class="casltegame_table">
 
 <tr>
-	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
-	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
-	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
-	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
-	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
+	<td class="castlegame_table_data"><image src="./images/castlegame/bomb.png"/></td>
+	<td class="castlegame_table_data"><image src="./images/castlegame/bomb.png"/></td>
+	<td class="castlegame_table_data"><image src="./images/castlegame/bomb.png"/></td>
+	<td class="castlegame_table_data"></td>
+	<td class="castlegame_table_data"></td>
 <tr>
 <tr>
-	<td class="bossgame_table_data">12 + 5</td>
-	<td class="bossgame_table_data">8 + 6</td>
-	<td class="bossgame_table_data">9 + 3</td>
-	<td class="bossgame_table_data">10 + 2</td>
-	<td class="bossgame_table_data">5 + 7</td>
+	<td class="castlegame_table_data">12 + 5</td>
+	<td class="castlegame_table_data">8 + 6</td>
+	<td class="castlegame_table_data">9 + 3</td>
+	<td class="castlegame_table_data"></td>
+	<td class="castlegame_table_data"></td>
 </tr>
 
 </table>
@@ -821,10 +821,10 @@ Boss Game
 
 <div class="block"><image src="./images/caracterselection/donkey.png" width="100px" height="100px"/></div>
 
-<div class="bossgame_buttondiv">
-<input type="image" onclick="bossgame_go_left()" src="./images/bossgame/arrow_left.png" width="50px" height="50px"></input>
-<input type="image" src="./images/bossgame/shoot.png" width="150px" height="80px"></input>
-<input type="image" onclick="bossgame_go_right()" src="./images/bossgame/arrow_right.png" width="50px" height="50px"></input>
+<div class="castlegame_buttondiv">
+<input type="image" onclick="castlegame_go_left()" src="./images/castlegame/arrow_left.png" width="50px" height="50px"></input>
+<input type="image" src="./images/castlegame/shoot.png" width="150px" height="80px"></input>
+<input type="image" onclick="castlegame_go_right()" src="./images/castlegame/arrow_right.png" width="50px" height="50px"></input>
 </div>
 
 </div>

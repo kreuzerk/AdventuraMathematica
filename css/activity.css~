@@ -1048,7 +1048,7 @@ Styles for the boss game
 
 .block{
   position: absolute;
-  left: 550px;
+  left: 310px;
   top: 650px;
   width: 100px;
   height: 100px;
@@ -1065,13 +1065,13 @@ Styles for the boss game
   margin: 5px;
 }
 
-.bossgame_result_paper{
+.castle_result_paper{
   position: absolute;
   left: 575px;
   top: 100px;
   width: 150px;
   height: 100px;
-  background-image: url(../images/bossgame/paper.png);
+  background-image: url(../images/castlegame/paper.png);
   background-size:80%;
   background-repeat: no-repeat;
 }
@@ -1081,26 +1081,34 @@ Styles for the boss game
   margin-top:40px;
 }
 
-.bossgametablediv{
+.castlegametablediv{
   position:absolute;
   top:450px;
 }
 
-.bossgametable{
+.castlegametable{
   width: 1200px;
 }
 
-.bossgame_table_data{
+.castlegame_table_data{
   width: 240px;
   text-align:center;
   font-size: 30px;
 }
 
-.bossgame_buttondiv{
+.castlegame_buttondiv{
 
   position:absolute;
   left: 480px;
-  top: 750px;
+  top: 770px;
+}
+
+#castlegame{
+  width: 1200px;
+  height: 820px;
+  background-image: url(../images/castlegame/castle_background.png);
+  background-size:100%;
+  background-repeat: no-repeat;
 }
 
 
