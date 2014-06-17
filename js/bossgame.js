@@ -1,11 +1,11 @@
 
 
 function bossgame_go_left($id){
-$( ".block" ).animate({ "left": "-=500px" }, "slow" );
+$( ".block" ).animate({ "left": "-=240px" }, "slow" );
 }
 
 function bossgame_go_right(){
-$( ".block" ).animate({ "left": "+=500px" }, "slow" );
+$( ".block" ).animate({ "left": "+=240px" }, "slow" );
 }
 
 function testfireballmovement(){

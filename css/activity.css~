@@ -1048,11 +1048,10 @@ Styles for the boss game
 
 .block{
   position: absolute;
-  background-color: #abc;
-  left: 50px;
-  top: 700px;
-  width: 120px;
-  height: 120px;
+  left: 550px;
+  top: 650px;
+  width: 100px;
+  height: 100px;
   margin: 5px;
 }
 
@@ -1084,7 +1083,7 @@ Styles for the boss game
 
 .bossgametablediv{
   position:absolute;
-  top:500px;
+  top:450px;
 }
 
 .bossgametable{
@@ -1094,6 +1093,14 @@ Styles for the boss game
 .bossgame_table_data{
   width: 240px;
   text-align:center;
+  font-size: 30px;
+}
+
+.bossgame_buttondiv{
+
+  position:absolute;
+  left: 480px;
+  top: 750px;
 }
 
 
