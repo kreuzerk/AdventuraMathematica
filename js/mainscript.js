@@ -461,7 +461,7 @@ $("#multiplikationtablediv").hide();
 $("#gridaddition").hide();
 $("#sharinggame").hide();
 $("#memorygame").hide();
-//$("#caracterselection").hide();
+$("#caracterselection").hide();
 
 }
 
@@ -523,9 +523,8 @@ $("#maingamesvg").hide();
 initialisetennumber();
 $("#tengame").show();
 break;
-case "mediumaquamarine":	//Mediumaquamarine == divisiongame
+case "mediumaquamarine":	//Mediumaquamarine == Sharegame
 $("#maingamesvg").hide();
-initialisewallgame();
 initialisedivisiongame();
 $("#divisiongame").show();
 break;

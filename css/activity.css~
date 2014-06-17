@@ -1041,3 +1041,59 @@ Styles for the memory game
   background-size: 100%;
 }
 
+/*================================================
+Styles for the boss game
+===============================================*/
+
+
+.block{
+  position: absolute;
+  background-color: #abc;
+  left: 50px;
+  top: 700px;
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+}
+
+.fireball{
+  position: absolute;
+  background-color: #abc;
+  left: 50px;
+  top: 100px;
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+}
+
+.bossgame_result_paper{
+  position: absolute;
+  left: 575px;
+  top: 100px;
+  width: 150px;
+  height: 100px;
+  background-image: url(../images/bossgame/paper.png);
+  background-size:80%;
+  background-repeat: no-repeat;
+}
+
+.paperh1{
+  margin-left:40px;
+  margin-top:40px;
+}
+
+.bossgametablediv{
+  position:absolute;
+  top:500px;
+}
+
+.bossgametable{
+  width: 1200px;
+}
+
+.bossgame_table_data{
+  width: 240px;
+  text-align:center;
+}
+
+

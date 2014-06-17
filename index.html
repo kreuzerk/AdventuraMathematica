@@ -26,6 +26,7 @@
 	<script type="text/javascript" src="js/sharinggame.js"></script>
 	<script type="text/javascript" src="js/memorygame.js"></script>
 	<script type="text/javascript" src="js/mathtable.js"></script>
+	<script type="text/javascript" src="js/bossgame.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
@@ -781,6 +782,44 @@ Memory Game
 </table>
 
 </div>
+
+<!----==================================================================
+Boss Game
+====================================================================-->
+<div>
+
+<!--
+<div id="bossgameimage1">
+<image src="./images/caracterselection/donkey.png"/>
+</div>
+-->
+
+<div class="bossgame_result_paper"><h1 class="paperh1">10</h1></div>
+
+<div class="fireball"><image src="./images/bossgame/frieball.png"/></div>
+
+<div class="bossgametablediv">
+<table class="bossgame_table">
+
+<tr>
+	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
+	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
+	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
+	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
+	<td class="bossgame_table_data"><image src="./images/bossgame/bomb.png"/></td>
+<tr>
+
+</table>
+</div>
+
+<div class="block"><image src="./images/caracterselection/donkey.png"/></div>
+
+<button onclick="bossgame_go_left()">left</button>
+<button onclick="bossgame_go_right()">right</buton>
+<button onclick="testfireballmovement()">Test fireball movement</button>
+
+</div>
+
 
 </body>
 <script type="text/javascript">
