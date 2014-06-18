@@ -139,7 +139,11 @@ document.getElementById("liveplayer").innerHTML = "Usted: " + castlegame_livepla
 if(castlegame_liveplayer == 0){
 alert("0");
 }
+else{
+castlegame_initialise();
+}
 });
+
 
 }
 
@@ -175,6 +179,9 @@ document.getElementById("livecastle").innerHTML = "Castillo: " + castlegame_live
 
 if(castlegame_livecastle == 0){
 alert("0");
+}
+else{
+castlegame_initialise();
 }
 });
 

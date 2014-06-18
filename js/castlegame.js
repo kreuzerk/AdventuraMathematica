@@ -3,15 +3,17 @@ var castlegame_result = new Array(3); //Here we store the three results
 var castlegame_liveplayer;
 var castlegame_livecastle;
 
+function castlegame_resetlives(){
+castlegame_liveplayer = 3;
+castlegame_livecastle = 3;
+}
+
 function castlegame_initialise(){
 
 $( ".fireball" ).hide();
 $( ".fireball_player1" ).hide();
 $( ".fireball_player2" ).hide();
 $( ".fireball_player3" ).hide();
-
-castlegame_liveplayer = 3;
-castlegame_livecastle = 3;
 
 create_castleexercise();
 
@@ -139,7 +141,11 @@ document.getElementById("liveplayer").innerHTML = "Usted: " + castlegame_livepla
 if(castlegame_liveplayer == 0){
 alert("0");
 }
+else{
+castlegame_initialise();
+}
 });
+
 
 }
 
@@ -175,6 +181,9 @@ document.getElementById("livecastle").innerHTML = "Castillo: " + castlegame_live
 
 if(castlegame_livecastle == 0){
 alert("0");
+}
+else{
+castlegame_initialise();
 }
 });
 

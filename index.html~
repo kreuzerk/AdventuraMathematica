@@ -870,6 +870,7 @@ initialise_sharinggame();
 
 initialise_levels_selectionsscreen();
 
+ castlegame_resetlives();
 castlegame_initialise();
 
 //var level = localStorage.getItem("level");
