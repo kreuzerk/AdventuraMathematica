@@ -847,6 +847,8 @@ initialise_sharinggame();
 
 initialise_levels_selectionsscreen();
 
+castlegame_initialise();
+
 //var level = localStorage.getItem("level");
 
 var backgroundmusic = new Audio("");
@@ -854,6 +856,7 @@ document.body.appendChild(backgroundmusic);
 backgroundmusic.src = "mario.ogg"
 backgroundmusic.volume = 1;
 backgroundmusic.play();
+
 
 //Make some elements draggable
 
