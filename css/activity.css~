@@ -1057,11 +1057,8 @@ Styles for the boss game
 
 .fireball{
   position: absolute;
-  background-color: #abc;
-  left: 50px;
+  left: 950px;
   top: 100px;
-  width: 120px;
-  height: 120px;
   margin: 5px;
 }
 

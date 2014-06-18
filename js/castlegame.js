@@ -25,10 +25,29 @@ castlegame_characterposition = 1;	//Provend that the character goes to far
 }
 }
 
-function testfireballmovement(){
-$( ".fireball" ).animate({ "left": "+=500px", "top": "+=500px" }, "slow", function(){
+function castlegame_castle_fire(){
+
+//Fire depending on the position of the caracter
+switch(castlegame_characterposition){
+
+case -1:
+$( ".fireball" ).animate({ "left": "-=900px", "top": "+=500px" }, "slow", function(){
+  // $(".fireball").hide();
+});
+break;
+
+case 0:
+$( ".fireball" ).animate({ "left": "-=660px", "top": "+=500px" }, "slow", function(){
    $(".fireball").hide();
 });
+break;
+
+case 1:
+$( ".fireball" ).animate({ "left": "-=420px", "top": "+=500px" }, "slow", function(){
+   $(".fireball").hide();
+});
+break;
+}
 }
 
 
@@ -39,23 +58,26 @@ switch(castlegame_characterposition){
 case -1:
 $( ".fireball_player1" ).animate({ "left": "+=850px", "top": "-=300px" }, "slow", function(){
    $(".fireball_player1").hide();
+   $( "#castleimage" ).effect( "pulsate" );
 });
 break;
 case 0:
 $( ".fireball_player2" ).animate({ "left": "+=610px", "top": "-=300px" }, "slow", function(){
    $(".fireball_player2").hide();
+   $( "#castleimage" ).effect( "pulsate" );
 });
 break;
 case 1:
 $( ".fireball_player3" ).animate({ "left": "+=370px", "top": "-=300px" }, "slow", function(){
    $(".fireball_player3").hide();
+   $( "#castleimage" ).effect( "pulsate" );
 });
 break;
 }
 
 
 //Effect for the castle
-//$( "#" + $id ).effect( "shake" );
+
 
 
 }
