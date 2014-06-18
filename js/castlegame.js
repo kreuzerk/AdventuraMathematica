@@ -139,7 +139,7 @@ document.getElementById("liveplayer").innerHTML = "Usted: " + castlegame_livepla
     $( ".fireball" ).animate({ "left": "+=" + left + "px", "top": "-=500px" });	//Reset the fireball to the original position
     $( ".block" ).effect( "pulsate" );
 if(castlegame_liveplayer == 0){
-alert("0");
+checksilver(false);
 }
 else{
 castlegame_initialise();
@@ -180,7 +180,7 @@ document.getElementById("livecastle").innerHTML = "Castillo: " + castlegame_live
    $( "#castleimage" ).effect( "pulsate" );
 
 if(castlegame_livecastle == 0){
-alert("0");
+checksilver(true);
 }
 else{
 castlegame_initialise();

@@ -1001,6 +1001,27 @@ $("#maingamesvg").show();
 }
 
 /*=================================================================================
+Function for silver fields
+===================================================================================*/
+function checksilver($is_correct){
+
+hidesilver();
+
+if($is_correct){
+  drawimage(10,true);
+}
+else{
+  drawimage(10,false);
+}
+
+}
+
+function hidesilver(){
+$("#castlegame").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
 Function for drawing the banana
 ===================================================================================*/
 function drawimage($amount, $positive){
