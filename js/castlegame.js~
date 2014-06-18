@@ -114,84 +114,68 @@ function castlegame_castle_fire(){
 
 $( ".fireball" ).show();
 
+var left;
+
 //Fire depending on the position of the caracter
 switch(castlegame_characterposition){
 
 case -1:
-$( ".fireball" ).animate({ "left": "-=900px", "top": "+=500px" }, "slow", function(){
-    $(".fireball").hide();
-castlegame_liveplayer--;	//Dekrement the life of the player
-    $( ".fireball" ).animate({ "left": "+=900px", "top": "-=500px" });	//Reset the fireball to the original position
-    $( ".block" ).effect( "pulsate" );
-});
+left = "900";
 break;
-
 case 0:
-$( ".fireball" ).animate({ "left": "-=660px", "top": "+=500px" }, "slow", function(){
-    $(".fireball").hide();
-castlegame_liveplayer--;	//Dekrement the life of the player
-    $( ".fireball" ).animate({ "left": "+=660px", "top": "-=500px" });	//Reset the fireball to the original position
-    $( ".block" ).effect( "pulsate" );
-});
+left = "660";
 break;
-
 case 1:
-$( ".fireball" ).animate({ "left": "-=420px", "top": "+=500px" }, "slow", function(){
-    $(".fireball").hide();
-castlegame_liveplayer--;	//Dekrement the life of the player
-    $( ".fireball" ).animate({ "left": "+=420px", "top": "-=500px" });	//Reset the fireball to the original position
-    $( ".block" ).effect( "pulsate" );
-});
+left = "420";
 break;
 }
 
-
+$( ".fireball" ).animate({ "left": "-=" + left + "px", "top": "+=500px" }, "slow", function(){
+    $(".fireball").hide();
+castlegame_liveplayer--;	//Dekrement the life of the player
 document.getElementById("liveplayer").innerHTML = "Usted: " + castlegame_liveplayer;
-
+    $( ".fireball" ).animate({ "left": "+=" + left + "px", "top": "-=500px" });	//Reset the fireball to the original position
+    $( ".block" ).effect( "pulsate" );
 if(castlegame_liveplayer == 0){
 alert("0");
 }
+});
+
 }
 
 
 function castlegame_fire(){
 
-switch(castlegame_characterposition){
+var left;
+var id;
 
+
+switch(castlegame_characterposition){
 case -1:
-$(".fireball_player1").show();
-$( ".fireball_player1" ).animate({ "left": "+=850px", "top": "-=300px" }, "slow", function(){
-   $(".fireball_player1").hide();
-castlegame_livecastle--;
-   $( ".fireball_player1" ).animate({ "left": "-=850px", "top": "+=300px" });	//Reset the fireball to the original position
-   $( "#castleimage" ).effect( "pulsate" );
-});
+left = "850";
+id="fireball_player1";
 break;
 case 0:
-$(".fireball_player2").show();
-$( ".fireball_player2" ).animate({ "left": "+=610px", "top": "-=300px" }, "slow", function(){
-   $(".fireball_player2").hide();
-castlegame_livecastle--;
-   $( ".fireball_player1" ).animate({ "left": "-=610px", "top": "+=300px" });	//Reset the fireball to the original position
-   $( "#castleimage" ).effect( "pulsate" );
-});
+left = "610";
+id="fireball_player2";
 break;
 case 1:
-$(".fireball_player3").show();
-$( ".fireball_player3" ).animate({ "left": "+=370px", "top": "-=300px" }, "slow", function(){
-   $(".fireball_player3").hide();
-castlegame_livecastle--;
-   $( ".fireball_player1" ).animate({ "left": "-=370px", "top": "+=300px" });	//Reset the fireball to the original position
-   $( "#castleimage" ).effect( "pulsate" );
-});
+left = "370";
+id="fireball_player3";
 break;
 }
 
-//Reduce the lives of the castle
+$("." + id).show();
+$( "." + id ).animate({ "left": "+=" + left + "px", "top": "-=300px" }, "slow", function(){
+   $("." + id).hide();
+castlegame_livecastle--;
 document.getElementById("livecastle").innerHTML = "Castillo: " + castlegame_livecastle;
+   $( "." + id ).animate({ "left": "-=" + left + "px", "top": "+=300px" });	//Reset the fireball to the original position
+   $( "#castleimage" ).effect( "pulsate" );
 
 if(castlegame_livecastle == 0){
 alert("0");
 }
+});
 
 }
