@@ -1142,4 +1142,8 @@ Styles for the boss game
   margin: 5px;
 }
 
+.castlegame_livedisplay{
+  margin-left: 20px;
+}
+
 

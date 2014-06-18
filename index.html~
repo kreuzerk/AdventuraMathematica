@@ -794,7 +794,30 @@ Castle Game
 </div>
 -->
 
-<button onclick="castlegame_castle_fire()">Castle shoot</button>
+<div class="castlegame_livedisplay">
+
+<table>
+<tr>
+<td>
+<image src="./images/castlegame/heart.png" width="60px" height="50px"/>
+</td>
+<td>
+<h1 id="livecastle">Castillo: 3</h1>
+</td>
+</tr>
+<tr>
+<td>
+<image src="./images/castlegame/heart.png" width="60px" height="50px"/>
+</td>
+<td>
+<h1 id="liveplayer">Usted: 3</h1>
+</td>
+</tr>
+</table>
+
+<h2>Elija la respuesta correcta y disparar la cerradura</h2>
+
+</div>
 
 <div class="castle_result_paper"><h1 class="paperh1">10</h1></div>
 
@@ -816,9 +839,9 @@ Castle Game
 	<td class="castlegame_table_data"></td>
 <tr>
 <tr>
-	<td class="castlegame_table_data">12 + 5</td>
-	<td class="castlegame_table_data">8 + 6</td>
-	<td class="castlegame_table_data">9 + 3</td>
+	<td id="castlegame_choice1" class="castlegame_table_data">12 + 5</td>
+	<td id="castlegame_choice2" class="castlegame_table_data">8 + 6</td>
+	<td id="castlegame_choice3" class="castlegame_table_data">9 + 3</td>
 	<td class="castlegame_table_data"></td>
 	<td class="castlegame_table_data"></td>
 </tr>

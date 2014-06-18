@@ -7,6 +7,51 @@ $( ".fireball_player1" ).hide();
 $( ".fireball_player2" ).hide();
 $( ".fireball_player3" ).hide();
 
+create_castleexercise();
+
+}
+
+function create_castleexercise(){
+
+var result = new Array(3); //Here we store the three results
+
+for(var i = 0; i<3; i++){
+
+do{
+var number1 = Math.floor(Math.random() * 20) + 1;
+var number2 = Math.floor(Math.random() * 20) + 1;
+
+var ok = true;
+
+if(number1 % number2 != 0)
+ok = false;
+
+for(var j=0; j<result.length; j++){
+if(result[j] == operators[level_operator](number1,number2)){
+ok = false;
+break;
+}
+}
+
+
+}
+while(!ok);
+
+result[i] = operators[level_operator](number1,number2);
+document.getElementById("castlegame_choice" + (i+1)).innerHTML = number1 + " " + level_operator + " " + number2;
+
+}
+
+//Set the result to the paper at the top
+document.getElementById("paperh1").innerHTML = result[Math.floor(Math.random() * 3)];
+
+}//End of method create_castleexercise
+
+
+function castlegame_controller(){
+
+
+
 }
 
 
@@ -46,6 +91,7 @@ case -1:
 $( ".fireball" ).animate({ "left": "-=900px", "top": "+=500px" }, "slow", function(){
     $(".fireball").hide();
     $( ".fireball" ).animate({ "left": "+=900px", "top": "-=500px" });	//Reset the fireball to the original position
+    $( ".block" ).effect( "pulsate" );
 });
 break;
 
@@ -53,6 +99,7 @@ case 0:
 $( ".fireball" ).animate({ "left": "-=660px", "top": "+=500px" }, "slow", function(){
     $(".fireball").hide();
     $( ".fireball" ).animate({ "left": "+=660px", "top": "-=500px" });	//Reset the fireball to the original position
+    $( ".block" ).effect( "pulsate" );
 });
 break;
 
@@ -60,9 +107,13 @@ case 1:
 $( ".fireball" ).animate({ "left": "-=420px", "top": "+=500px" }, "slow", function(){
     $(".fireball").hide();
     $( ".fireball" ).animate({ "left": "+=420px", "top": "-=500px" });	//Reset the fireball to the original position
+    $( ".block" ).effect( "pulsate" );
 });
 break;
 }
+
+
+
 }
 
 
