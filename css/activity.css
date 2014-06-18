@@ -1138,4 +1138,11 @@ Styles for the boss game
   background-repeat: no-repeat;
 }
 
+#castlediv{
+  position: absolute;
+  left: 950px;
+  top: 100px;
+  margin: 5px;
+}
+
 

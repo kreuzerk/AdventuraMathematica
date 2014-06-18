@@ -1065,7 +1065,7 @@ Styles for the boss game
   margin: 5px;
 }
 
-.fireball_player-1{
+.fireball_player1{
   position: absolute;
   left: 170px;
   top: 450px;
@@ -1074,7 +1074,7 @@ Styles for the boss game
   margin: 5px;
 }
 
-.fireball_player0{
+.fireball_player2{
   position: absolute;
   left: 410px;
   top: 450px;
@@ -1083,7 +1083,7 @@ Styles for the boss game
   margin: 5px;
 }
 
-.fireball_player1{
+.fireball_player3{
   position: absolute;
   left: 650px;
   top: 450px;
@@ -1136,6 +1136,13 @@ Styles for the boss game
   background-image: url(../images/castlegame/castle_background.png);
   background-size:100%;
   background-repeat: no-repeat;
+}
+
+#castlediv{
+  position: absolute;
+  left: 950px;
+  top: 100px;
+  margin: 5px;
 }
 
 
