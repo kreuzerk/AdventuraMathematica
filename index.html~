@@ -27,6 +27,7 @@
 	<script type="text/javascript" src="js/memorygame.js"></script>
 	<script type="text/javascript" src="js/mathtable.js"></script>
 	<script type="text/javascript" src="js/castlegame.js"></script>
+	<script type="text/javascript" src="js/quizgame.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
@@ -860,18 +861,23 @@ Boss Quiz
 <div id="bossquiz">
 
 <div class="quiz_exercise">
-<h1 class="quiz_exercise_h1">6+12</h1>
+<h1 id="quiz_exercise_h1">6+12</h1>
 </div>
 
 <div class="quiz_answerdiv">
 
-<input class="quiz_input" type="text"></input>
-<button class="quiz_ok_button">Ok</button>
+<input id="quiz_input" type="text"></input>
+<button class="quiz_ok_button" onclick="quizgame_ok_clicked()">Ok</button>
 
 </div>
 
 
 <div id="quizgame_tigeranswer">
+<h1 id="quizgame_tigeranswer_h1" class="quizgame_answer_h1">13</h1>
+</div>
+
+<div id="quizgame_tuanswer">
+<h1 class="quizgame_answer_h1">10</h1>
 </div>
 
 
@@ -887,6 +893,8 @@ nextsvg_drawexercise();
 initialise_sharinggame();
 
 initialise_levels_selectionsscreen();
+
+initialise_quizgame();
 
 //var level = localStorage.getItem("level");
 
