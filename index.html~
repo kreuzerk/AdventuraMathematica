@@ -788,12 +788,6 @@ Castle Game
 ====================================================================-->
 <div id="castlegame">
 
-<!--
-<div id="bossgameimage1">
-<image src="./images/caracterselection/donkey.png"/>
-</div>
--->
-
 <div class="castlegame_livedisplay">
 
 <table>
@@ -859,6 +853,26 @@ Castle Game
 
 </div>
 
+<!----==================================================================
+Boss Quiz
+====================================================================-->
+
+<div id="bossquiz">
+
+<div class="quiz_exercise">
+<h1 class="quiz_exercise_h1">6+12</h1>
+</div>
+
+<div class="quiz_answerdiv">
+
+<input type="text"></input>
+<button class="quiz_ok_button">Ok</button>
+
+</div>
+
+
+</div>
+
 
 </body>
 <script type="text/javascript">
@@ -869,9 +883,6 @@ nextsvg_drawexercise();
 initialise_sharinggame();
 
 initialise_levels_selectionsscreen();
-
- castlegame_resetlives();
-castlegame_initialise();
 
 //var level = localStorage.getItem("level");
 

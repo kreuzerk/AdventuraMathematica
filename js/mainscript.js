@@ -462,7 +462,8 @@ $("#gridaddition").hide();
 $("#sharinggame").hide();
 $("#memorygame").hide();
 $("#castlegame").hide();
-//$("#caracterselection").hide();
+//$("#bossquiz").hide();
+$("#caracterselection").hide();
 
 }
 
