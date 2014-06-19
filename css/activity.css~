@@ -1210,7 +1210,6 @@ Styles for the boss game
   width: 50px;
   font-size: 30px;
   text-align: center;
-  background-color: blue;
 }
 
 .quiz_answerdiv{
@@ -1221,6 +1220,33 @@ Styles for the boss game
   height: 200px;
   margin: 5px;
 }
+
+#quizgame_tigeranswer{
+
+  position:absolute;
+  left: 50px;
+  top: 240px;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  background-image: url(../images/quizgame/speech_tiger.png);
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+
+#quizgame_tuanswer{
+
+  position:absolute;
+  left: 950px;
+  top: 240px;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  background-image: url(../images/quizgame/speech_tiger.png);
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+
 
 
 

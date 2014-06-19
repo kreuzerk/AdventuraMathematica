@@ -865,9 +865,13 @@ Boss Quiz
 
 <div class="quiz_answerdiv">
 
-<input type="text"></input>
+<input class="quiz_input" type="text"></input>
 <button class="quiz_ok_button">Ok</button>
 
+</div>
+
+
+<div id="quizgame_tigeranswer">
 </div>
 
 

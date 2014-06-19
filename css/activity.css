@@ -1221,5 +1221,32 @@ Styles for the boss game
   margin: 5px;
 }
 
+#quizgame_tigeranswer{
+
+  position:absolute;
+  left: 50px;
+  top: 240px;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  background-image: url(../images/quizgame/speech_tiger.png);
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+
+#quizgame_tuanswer{
+
+  position:absolute;
+  left: 950px;
+  top: 240px;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  background-image: url(../images/quizgame/speech_tu.png);
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+
+
 
 
