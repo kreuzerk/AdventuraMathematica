@@ -883,12 +883,12 @@ Boss Quiz
 
 <!-- This div displays the number of points the tiger has -->
 <div id="quizgame_tigerpoints">
-<h1 id="quizgame_tiger_pointdisplay" class="quizgame_frametext">Tiger: 0<h1>
+<h1 id="quizgame_tiger_pointdisplay" class="quizgame_frametext">Tigre: 0<h1>
 </div>
 
 <!-- This div displays the number of points the player has -->
 <div id="quizgame_playerpoints">
-<h1 class="quizgame_frametext">Tu: 0<h1>
+<h1 id="quizgame_tu_pointsdisplay" class="quizgame_frametext">Tu: 0<h1>
 </div>
 
 </div>

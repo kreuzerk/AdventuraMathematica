@@ -2,14 +2,20 @@ var quizgame_result;
 var quizgame_tigerpoints;
 var quizgame_tupoints;
 
-function initialise_quizgame(){
-
+function quizgame_reset_points(){
 //Set the points at the beginning of the game to zero
 quizgame_tigerpoints = 0;
 quizgame_tupoints = 0;
+}
+
+function initialise_quizgame(){
 
 $("#quizgame_tigeranswer").hide();
 $("#quizgame_tuanswer").hide();
+
+//Show the input field and the ok button
+$(".quiz_answerdiv").show();
+document.getElementById("quiz_input").value = "";
 
 quizgame_createexercise();
 }
@@ -48,14 +54,14 @@ var tigernumber = tiger_is_calculating();
 document.getElementById("quizgame_tuanswer_h1").innerHTML = number;
 document.getElementById("quizgame_tigeranswer_h1").innerHTML = tigernumber;
 
-document.getElementById("quiz_exercise_responsa_correcta").innerHTML = "La respuesta correcta es";
+document.getElementById("quiz_exercise_responsa_correcta").innerHTML = "";
 document.getElementById("quiz_exercise_h1").innerHTML = "";
 
 $("#quizgame_tigeranswer").show();
 $("#quizgame_tuanswer").show();
 
 
-window.setTimeout(quizgame_display_correct_answer,1000);
+window.setTimeout(quizgame_display_correct_answer,2000);
 
 }
 
@@ -91,6 +97,7 @@ return number;
 //=====================================
 function quizgame_display_correct_answer(){
 
+document.getElementById("quiz_exercise_responsa_correcta").innerHTML = "La respuesta correcta es";
 document.getElementById("quiz_exercise_h1").innerHTML = quizgame_result;
 
 //Display the number of received points inside of the bubble
@@ -100,7 +107,8 @@ var tigeranswer = document.getElementById("quizgame_tigeranswer_h1").innerHTML;
 if(tigeranswer == quizgame_result){
 
 document.getElementById("quizgame_tigeranswer_h1").innerHTML = "+ 1";
-document.getElementById();
+quizgame_tigerpoints++;
+document.getElementById("quizgame_tiger_pointdisplay").innerHTML = "Tigre: " + quizgame_tigerpoints;
 }
 else{
 document.getElementById("quizgame_tigeranswer_h1").innerHTML = "Mal";
@@ -110,12 +118,21 @@ var tuanswer = document.getElementById("quizgame_tuanswer_h1").innerHTML;
 
 if(tuanswer == quizgame_result){
 document.getElementById("quizgame_tuanswer_h1").innerHTML = "+ 1";
+quizgame_tupoints++;
+document.getElementById("quizgame_tu_pointsdisplay").innerHTML = "Tu: " + quizgame_tupoints;
 }
 else{
 document.getElementById("quizgame_tuanswer_h1").innerHTML = "Mal";
 }
 
-
+//Reinitialise the quizgame
+if(quizgame_tigerpoints < 6 && quizgame_tupoints < 6){
+window.setTimeout(initialise_quizgame,3000);
+}
+else
+{
+alert("Window disapears");
+}
 
 }
 
