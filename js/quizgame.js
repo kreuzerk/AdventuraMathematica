@@ -131,7 +131,17 @@ window.setTimeout(initialise_quizgame,3000);
 }
 else
 {
-alert("Window disapears");
+
+if(quizgame_tigerpoints == 6 && quizgame_tupoints == 6){
+quizgame_finished(0); //0 = Draw
+}
+else if(quizgame_tigerpoints == 6){
+	quizgame_finished(-1); //-1 = Tiger wins
+}
+else{
+	quizgame_finished(1); // 1 = Player wins
+}
+
 }
 
 }

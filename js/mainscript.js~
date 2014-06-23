@@ -7,6 +7,7 @@ var bananacounter = 0;
 var moneycounter = 0;
 var filename;
 var goldentered = false;
+var blackentered = false;
 var endofround = false;
 var round = 1;
 var dicethrown = false;
@@ -26,8 +27,8 @@ var level1 = [
   { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 5},
   { "cx": 400, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 6},
   { "cx": 470, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 9},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "black", "fontcolor" : "black", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "black", "fontcolor" : "white", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" :10},
   { "cx": 750, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
@@ -326,7 +327,7 @@ function move(){
 
   dicethrown = true;
 
-  if(movevalue<(currentfield+diceresult) && goldentered == false && endofround == false){
+  if(movevalue<(currentfield+diceresult) && goldentered == false && endofround == false && blackentered == false){
     window.setTimeout("move()",1000);
     movevalue++;
 
@@ -344,17 +345,29 @@ function move(){
 	goldentered = true;
     }
 
+    if(circleData[movevalue-1].color == "black"){
+	blackentered = true;
+    }
+
     if(circleData[movevalue-1].number >= circleData.length){
 	endofround = true;
     }
+
+
 
   }
   else{
   
   //Needs to be the first ifStatement otherwise it will not work
-  if(!goldentered && !endofround){
+  if(!goldentered && !endofround && !blackentered){
   currentfield = diceresult + currentfield;
   }
+
+  if(blackentered){
+  currentfield = movevalue;
+  blackentered = false; //Because we are going to leave the gold field
+  }
+  
 
   if(endofround == true){
   currentfield = 1;
@@ -462,8 +475,9 @@ $("#gridaddition").hide();
 $("#sharinggame").hide();
 $("#memorygame").hide();
 $("#castlegame").hide();
-//$("#bossquiz").hide();
-$("#caracterselection").hide();
+$("#bossquiz").hide();
+$("#tigerdiv").hide();
+//$("#caracterselection").hide();
 
 }
 
@@ -580,6 +594,11 @@ $("#maingamesvg").hide();
  castlegame_resetlives();
 castlegame_initialise();
 $("#castlegame").show();
+break;
+case "black":			//Check the black fields
+$("#maingamesvg").hide();
+initialise_tiger_div();
+$("#tigerdiv").show();
 break;
 
 }
@@ -1019,6 +1038,33 @@ else{
 
 function hidesilver(){
 $("#castlegame").hide();
+$("#maingamesvg").show();
+}
+
+/*=================================================================================
+Function for tiger game	/ Black fields
+===================================================================================*/
+function checkblackfields($result){
+
+hideblack();
+
+switch($result){
+
+case -1:
+drawimage(30, false);
+break;
+case 0:
+drawimage(10, false);
+break;
+case 1:
+drawimage(0, true);
+break;
+
+}
+}
+
+function hideblack(){
+$("#tigerdiv").hide();
 $("#maingamesvg").show();
 }
 

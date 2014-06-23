@@ -27,6 +27,7 @@
 	<script type="text/javascript" src="js/memorygame.js"></script>
 	<script type="text/javascript" src="js/mathtable.js"></script>
 	<script type="text/javascript" src="js/castlegame.js"></script>
+	<script type="text/javascript" src="js/tigerdiv.js"></script>
 	<script type="text/javascript" src="js/quizgame.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
@@ -893,6 +894,21 @@ Boss Quiz
 
 </div>
 
+<!-- ===================================================================
+Tiger div
+====================================================================-->
+<div id="tigerdiv">
+
+<div id="tigerdiv_elements">
+
+<p id="tigerdiv_speechbubble">HaHaHaHa!!! <br /> Usted está jugando contra mí. <br/> El primer jugador en ganar seis proyectos de ley contestó correctamente.</p>
+<p>
+<button id="tigerdiv_okbutton" onclick="tiger_okclicked()">Ok</button>
+</p>
+</div>
+
+
+</div>
 
 </body>
 <script type="text/javascript">
@@ -903,8 +919,6 @@ nextsvg_drawexercise();
 initialise_sharinggame();
 
 initialise_levels_selectionsscreen();
-
-initialise_quizgame();
 
 //var level = localStorage.getItem("level");
 

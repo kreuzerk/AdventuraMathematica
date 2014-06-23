@@ -9,6 +9,9 @@ var imagepath_deliveryfailure;
 var imagepath_deliveryok;
 var imagepath_nodelivery;
 
+//Variable that stores the imagepath of the tigerimage
+var imagepath_tiger = "url(./images/quizgame/Tiger_Level1.png)";
+
 //Variable for the wallgame background
 var imagepath_wallgame;
 
@@ -133,6 +136,8 @@ imagepath_wallgame = "url(./images/selectiongame/Walls.png)";
 //Variable for the end of the round
 imagepath_endofround = "url(./images/endofround/Round.png)";
 
+//Path for the tigergame
+imagepath_tiger = "url(./images/quizgame/Tiger_Level1.png)";
 
 
 //Choose the operator for level1
@@ -160,6 +165,9 @@ imagepath_wallgame = "url(./images/selectiongame/Walls_level2.png)";
 
 //Variable for the end of the round
 imagepath_endofround = "url(./images/endofround/Round_level2.png)";
+
+//Path for the tigergame
+imagepath_tiger = "url(./images/quizgame/Tiger_Level2.png)";
 
 //Choose the settings for the display
 item_display_color = "white";
