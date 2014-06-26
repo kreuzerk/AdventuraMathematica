@@ -62,6 +62,8 @@ result.innerHTML = endgame_result;
 //Function for cleaning the inputs
 function cleaninputs(){
 
+sound_buttonclicked.play();
+
 var input1 = document.getElementById("input1");
 var input2 = document.getElementById("input2");
 var input3 = document.getElementById("input3");
@@ -74,6 +76,8 @@ input3.value = "";
 
 //Function for checking the results
 function endgame_checkresults(){
+
+sound_buttonclicked.play();
 
 var inputs = [document.getElementById("input1"), document.getElementById("input2"), document.getElementById("input3")];
 
