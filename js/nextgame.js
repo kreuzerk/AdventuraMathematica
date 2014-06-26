@@ -93,7 +93,7 @@ break;
 //Drawing the exercise part
 //=======================================================================================
 
-next_x = -80;
+next_x = -60;
 next_y = 120;
 
 var drawingcolor;
@@ -247,6 +247,8 @@ if(drawncounter == 9){		//9 because it begins with zero at the first iteration
 Function for handling the click on an element
 ==========================================================*/
 function drawfigure($form, $color){
+
+sound_pencil.play();
 
 if($form == "rect"){
   drawnextelement($color, true);

@@ -93,7 +93,7 @@ break;
 //Drawing the exercise part
 //=======================================================================================
 
-next_x = -80;
+next_x = -60;
 next_y = 120;
 
 var drawingcolor;
