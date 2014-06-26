@@ -534,6 +534,7 @@ case "orange":		//Orange == formgame
 break;
 case "purple":		//Purple == Endresultgame
   $("#maingamesvg").hide();
+  sound_background1.play();
   createendresultgame();
   $("#endresultgame").show();
 break;
@@ -730,6 +731,7 @@ hideorange();
 
 function hideorange(){
 $("#formgame").hide();
+  sound_background1.pause();
 $("#maingamesvg").show();
 }
 
@@ -757,6 +759,7 @@ hidepurple();
 
 function hidepurple(){
 $("#endresultgame").hide();
+  sound_background1.pause();
 $("#maingamesvg").show();
 }
 
