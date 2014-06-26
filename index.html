@@ -939,6 +939,7 @@ var sound_bananaup;
 var sound_bananalost;
 var sound_background_krokogame;
 var sound_fishbutton;
+var sound_background1;
 
 //===============================================
 //Setting the sources of the audio
@@ -955,6 +956,7 @@ sound_bananaup = new Audio('./sounds/bananup.ogg');
 sound_bananalost = new Audio('./sounds/bananalost.ogg');
 sound_background_krokogame = new Audio('./sounds/background_krokogame.ogg');
 sound_fishbutton = new Audio('./sounds/fish_button.ogg');
+sound_background1 = new Audio('./sounds/background1.ogg');
 
 //=======================================================
 //Adding the event listener to the different sounds
@@ -981,6 +983,10 @@ sound_background_krokogame.addEventListener('ended', function() {
     this.play();
 }, false);
 
+sound_background1.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
 
 
 //Make some elements draggable
