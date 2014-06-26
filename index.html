@@ -922,11 +922,55 @@ initialise_levels_selectionsscreen();
 
 //var level = localStorage.getItem("level");
 
-var backgroundmusic = new Audio("");
-document.body.appendChild(backgroundmusic);
-backgroundmusic.src = "mario.ogg"
-backgroundmusic.volume = 1;
-backgroundmusic.play();
+//===============================================
+//Variables for the music
+//===============================================
+var sound_intromusic;
+var sound_backgroundmusic_level1;
+var sound_buttonclicked;
+var sound_diceroll;
+var sound_blop;
+var sound_zip;
+var sound_shopbackground;
+var sound_golfsound;
+var sound_bananaup;
+var sound_bananalost;
+
+//===============================================
+//Setting the sources of the audio
+//===============================================
+sound_intromusic = new Audio('./sounds/introsound.ogg'); 
+sound_backgroundmusic_level1 = new Audio('./sounds/mario.ogg');
+sound_buttonclicked = new Audio('./sounds/button_click.ogg');
+sound_diceroll = new Audio('./sounds/rolldice.ogg');
+sound_blop = new Audio('./sounds/blop.ogg');
+sound_zip = new Audio('./sounds/zip.ogg');
+sound_shopbackground = new Audio('./sounds/shopbackground.ogg');
+sound_golfsound = new Audio('./sounds/golf.ogg');
+sound_bananaup = new Audio('./sounds/bananup.ogg');
+sound_bananalost = new Audio('./sounds/bananalost.ogg');
+
+//=======================================================
+//Adding the event listener to the different sounds
+//=======================================================
+
+sound_intromusic.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+sound_intromusic.play();
+
+sound_backgroundmusic_level1.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+sound_shopbackground.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+
 
 
 //Make some elements draggable

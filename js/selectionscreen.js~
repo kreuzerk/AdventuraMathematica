@@ -10,7 +10,7 @@ var imagepath_deliveryok;
 var imagepath_nodelivery;
 
 //Variable that stores the imagepath of the tigerimage
-var imagepath_tiger;
+var imagepath_tiger = "url(./images/quizgame/Tiger_Level1.png)";
 
 //Variable for the wallgame background
 var imagepath_wallgame;
@@ -37,6 +37,7 @@ if(level == null){
 localStorage.setItem("level", 1);
 level = 1;
 }
+
 
 switch(level){
 
@@ -88,6 +89,10 @@ svgContainer.append("svg:image")
 
 setfilename(selectedcharacter.getAttribute("src"));
 drawgameboard();	//Function that draws the gameboard
+sound_intromusic.pause();
+sound_buttonclicked.play();
+sound_backgroundmusic_level1.play();
+
 $("#maingamesvg").show();
 $("#sources-button").hide();
 }

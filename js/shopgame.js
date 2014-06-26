@@ -47,6 +47,8 @@ addelementtolist($number);
 
 function addelementtolist($number){
 
+//Play the golf sound when an elment is added
+sound_golfsound.play();
 
 var itemtd = document.getElementById("item" + counter);
 var pricetd = document.getElementById("price" + counter);
@@ -72,6 +74,8 @@ for(var i = 1; i <= 20; i++){
   tdprice.innerHTML = "";
 }
 
+//Play the button clicked sound
+sound_buttonclicked.play();
 
 //Clear all images
 $("#shopsvg").empty();
@@ -92,6 +96,9 @@ counter = 1;
 
 //This function is called by the Pagar button
 function pagar(){
+
+//Play the button clicked sound
+sound_buttonclicked.play();
 
 if(actualtotal == total){
   correctblue();

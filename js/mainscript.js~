@@ -21,29 +21,29 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "black", "fontcolor" : "black", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "black", "fontcolor" : "white", "number" : 9},
-  { "cx": 680, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 11},
-  { "cx": 820, "cy": 680, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
-  { "cx": 890, "cy": 660, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 13},
-  { "cx": 880, "cy": 590, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 14},
-  { "cx": 810, "cy": 580, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 15},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "blue", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "blue", "fontcolor" : "black", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 11},
+  { "cx": 820, "cy": 680, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 12},
+  { "cx": 890, "cy": 660, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 13},
+  { "cx": 880, "cy": 590, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 14},
+  { "cx": 810, "cy": 580, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 15},
   { "cx": 740, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 16},
-  { "cx": 670, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 17},
-  { "cx": 600, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 18},
+  { "cx": 670, "cy": 580, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 17},
+  { "cx": 600, "cy": 580, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 18},
   { "cx": 530, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 19},
-  { "cx": 460, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 20},
+  { "cx": 460, "cy": 580, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 20},
   { "cx": 390, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 21},
-  { "cx": 320, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 22},
-  { "cx": 320, "cy": 510, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 23},
-  { "cx": 390, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 24},
+  { "cx": 320, "cy": 580, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 22},
+  { "cx": 320, "cy": 510, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 23},
+  { "cx": 390, "cy": 500, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 24},
   { "cx": 460, "cy": 500, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 25},
   { "cx": 520, "cy": 500, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 26},
   { "cx": 590, "cy": 500, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 27},
@@ -88,20 +88,20 @@ var level1 = [
 var level2 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
   { "cx": 70, "cy": 660, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 70, "cy": 590, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
-  { "cx": 70, "cy": 520, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 4},
-  { "cx": 70, "cy": 450, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 5},
-  { "cx": 70, "cy": 380, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 6},
-  { "cx": 70, "cy": 310, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 7},
-  { "cx": 70, "cy": 240, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 8},
-  { "cx": 140, "cy": 210, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 9},
-  { "cx": 210, "cy": 210, "radius": 30, "color" : "green", "fontcolor" : "white", "number" :10},
-  { "cx": 230, "cy": 280, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 11},
-  { "cx": 240, "cy": 350, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 12},
-  { "cx": 240, "cy": 420, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 13},
-  { "cx": 240, "cy": 490, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 14},
-  { "cx": 240, "cy": 570, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 15},
-  { "cx": 240, "cy": 640, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 16},
+  { "cx": 70, "cy": 590, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 3},
+  { "cx": 70, "cy": 520, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 4},
+  { "cx": 70, "cy": 450, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 70, "cy": 380, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 6},
+  { "cx": 70, "cy": 310, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 7},
+  { "cx": 70, "cy": 240, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 8},
+  { "cx": 140, "cy": 210, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
+  { "cx": 210, "cy": 210, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
+  { "cx": 230, "cy": 280, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 11},
+  { "cx": 240, "cy": 350, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
+  { "cx": 240, "cy": 420, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 13},
+  { "cx": 240, "cy": 490, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 14},
+  { "cx": 240, "cy": 570, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 15},
+  { "cx": 240, "cy": 640, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 16},
   { "cx": 310, "cy": 670, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 17},
   { "cx": 380, "cy": 670, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 18},
   { "cx": 450, "cy": 670, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 19},
@@ -257,6 +257,9 @@ function setfilename($file){
 
 function hallo(){
 
+//Play the sound for the diceroll
+sound_diceroll.play();
+
 if(deletearrow){
 var arrow = document.getElementById("click_arrow");
 arrow.parentNode.removeChild(arrow);
@@ -388,6 +391,9 @@ function move(){
 
 function drawlion($cx, $cy){
 
+//Play the move sound
+sound_blop.play();
+
 svgContainer.append("svg:image")
       .attr("xlink:href", filename).attr("id", "Lion")
       .attr("width", 100)
@@ -496,6 +502,10 @@ function checkfield(){
 
 var currentcolor = circleData[currentfield-1].color;
 
+//Play the zip sound and pause the background music
+sound_zip.play();
+sound_backgroundmusic_level1.pause();
+
 //Say which method needs to be called. Corresponding to the color the caracter is standing on.
 switch(currentcolor){
 case "green":
@@ -507,7 +517,8 @@ break;
 case "blue":		//Blue = Shop Game
   //Hide the main game
   $("#maingamesvg").hide();
-  $("#shopdiv").show();
+  sound_shopbackground.play();	//Play the background music for the shopgame
+  $("#shopdiv").show("Clip");
 createexercise();
 break;
 case "yellow":		//Yellow = Krokogame
@@ -653,6 +664,7 @@ drawimage(5, false);
 
 function hideblue(){
 $("#shopdiv").hide();
+sound_shopbackground.pause();
 $("#maingamesvg").show();
 }
 
@@ -1073,6 +1085,8 @@ Function for drawing the banana
 ===================================================================================*/
 function drawimage($amount, $positive){
 
+sound_backgroundmusic_level1.play();
+
 //Display banana
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/bananas.png").attr("id", "bananaimage")
@@ -1081,6 +1095,9 @@ svgContainer.append("svg:image")
 
 
 if($positive){
+
+//Play the banana up sound
+sound_bananaup.play();
 
 //Plus
 svgContainer.append("text").attr("id", "bananatext")
@@ -1096,6 +1113,9 @@ bananacounter = bananacounter + $amount;
 bananaamount.textContent = "+ " + bananacounter;
 }
 else{
+
+sound_bananalost.play(); //Play the lost banana sound
+alert("Hier");
 
 //Minus
 svgContainer.append("text").attr("id", "bananatext")

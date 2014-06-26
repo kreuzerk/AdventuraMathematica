@@ -19,6 +19,7 @@ Styles for Shopactivities
 #shopdiv{
   background-color:white;
   overflow:hidden;
+  width: 1200px;
 }
 
 .shopprice{
@@ -823,6 +824,7 @@ Styles for the MultiplikationTable Game
   height: 100px;
   width: 100px;
   font-size: 30px;
+  text-align:center;
 }
 
 .multiplikationtablebutton{

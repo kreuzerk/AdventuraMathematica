@@ -38,6 +38,7 @@ localStorage.setItem("level", 1);
 level = 1;
 }
 
+
 switch(level){
 
 case "1":
@@ -88,6 +89,10 @@ svgContainer.append("svg:image")
 
 setfilename(selectedcharacter.getAttribute("src"));
 drawgameboard();	//Function that draws the gameboard
+sound_intromusic.pause();
+sound_buttonclicked.play();
+sound_backgroundmusic_level1.play();
+
 $("#maingamesvg").show();
 $("#sources-button").hide();
 }
