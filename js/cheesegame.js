@@ -101,6 +101,8 @@ break;
 
 function dropped($id){
 
+sound_blop.play();		//Play the blop sound if a chees is dropped
+
 $("#cheesebutton").show();
 
 
@@ -113,6 +115,8 @@ lastdroppedid = $id;
 
 //Function that is clicked by the continue button
 function checkcheese(){
+
+sound_buttonclicked.play();
 
 $("#cheeseimage1").animate({left:0,top:0});
 $("#cheeseimage2").animate({left:0,top:0});
