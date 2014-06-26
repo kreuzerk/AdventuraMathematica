@@ -523,6 +523,7 @@ createexercise();
 break;
 case "yellow":		//Yellow = Krokogame
   $("#maingamesvg").hide();
+  sound_background_krokogame.play();
   $("#krokodiv").show();
 break;
 case "orange":		//Orange == formgame

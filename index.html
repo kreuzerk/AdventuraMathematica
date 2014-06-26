@@ -937,6 +937,8 @@ var sound_shopbackground;
 var sound_golfsound;
 var sound_bananaup;
 var sound_bananalost;
+var sound_background_krokogame;
+var sound_fishbutton;
 
 //===============================================
 //Setting the sources of the audio
@@ -951,6 +953,8 @@ sound_shopbackground = new Audio('./sounds/shopbackground.ogg');
 sound_golfsound = new Audio('./sounds/golf.ogg');
 sound_bananaup = new Audio('./sounds/bananup.ogg');
 sound_bananalost = new Audio('./sounds/bananalost.ogg');
+sound_background_krokogame = new Audio('./sounds/background_krokogame.ogg');
+sound_fishbutton = new Audio('./sounds/fish_button.ogg');
 
 //=======================================================
 //Adding the event listener to the different sounds
@@ -972,6 +976,10 @@ sound_shopbackground.addEventListener('ended', function() {
     this.play();
 }, false);
 
+sound_background_krokogame.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
 
 
 
