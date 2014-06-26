@@ -73,6 +73,8 @@ break;
 
 function clearelements(){
 
+sound_buttonclicked.play();
+
 var input1 = document.getElementById("forminput1");
 var input2 = document.getElementById("forminput2");
 var input3 = document.getElementById("forminput3");
@@ -89,6 +91,8 @@ $("#formssvg").empty();
 }
 
 function checkformresults(){
+
+sound_buttonclicked.play();
 
 var input1 = document.getElementById("forminput1");
 var input2 = document.getElementById("forminput2");

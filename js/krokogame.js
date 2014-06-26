@@ -116,6 +116,9 @@ kroksvg.append("svg:image")
 
 //Function for finishing the Krokogame
 function finishkrokogame(){
+
+sound_buttonclicked.play();
+
 checkkrokoanswers(kroko_correctanswered);
 $("#krokosvg").empty();
 createkrokogame();
@@ -132,6 +135,9 @@ function drawcroco($sign){
 
 
 if(kroko_buttonclicked == false){
+
+sound_fishbutton.play(); //Play the croco sound
+
 switch ($sign){
 
 case ">":
@@ -235,6 +241,8 @@ kroksvg.append("text")
 }
 
 function nextquestion(){
+
+sound_buttonclicked.play();
 
 //Clear everything from the svg
 $("#krokosvg").empty();
