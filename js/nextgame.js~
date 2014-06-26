@@ -23,7 +23,7 @@ var pattern7_drawn = 4;
 var pattern8_drawn = 5;
 
 var next_x = -80;
-var next_y = 120;
+var next_y = 140;
 var aftercircle = false;
 var drawncounter = -1;
 var colors = ["blue","yellow","green"];
