@@ -983,6 +983,11 @@ sound_background_krokogame.addEventListener('ended', function() {
     this.play();
 }, false);
 
+sound_background1.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
 
 
 //Make some elements draggable
