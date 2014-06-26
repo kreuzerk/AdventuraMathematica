@@ -112,7 +112,8 @@ Styles for Kroko Game
 .krokobuttons{
   width:380px;
   height:80px;
-  font-size:30px;
+  font-size:50px;
+  font-style: bold;
   
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
@@ -125,7 +126,6 @@ Styles for Kroko Game
   border-radius: 30px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 20px;
   padding: 10px 20px 10px 20px;
   border: solid #010b12 2px;
   text-decoration: none;
@@ -136,6 +136,12 @@ Styles for Kroko Game
   width:1200px;
   height:90px;
 
+}
+
+.continuediv{
+  position:absolute;
+  left:10px;
+  top: 700px;
 }
 
 #krokotable{
@@ -151,14 +157,12 @@ Styles for Kroko Game
   overflow:hidden;
 }
 
-.continuerow{
-  height:80px;
-}
 
 #krokocontinue{
   margin-left:490px;
+  margin-top: 0px;
   width:200px;
-  height:40px;
+  height:60px;
   background-color:lightgreen;
 
   background: #3498db;
@@ -175,6 +179,7 @@ Styles for Kroko Game
   padding: 10px 20px 10px 20px;
   border: solid #010b12 2px;
   text-decoration: none;
+  text-align:center;
 }
 
 /*================================================
@@ -609,7 +614,13 @@ Styles for the selection screen
 }
 
 #selectioncontinuebutton:hover{
-
+  background: #3cfc53;
+  background-image: -webkit-linear-gradient(top, #3cfc53, #34d96e);
+  background-image: -moz-linear-gradient(top, #3cfc53, #34d96e);
+  background-image: -ms-linear-gradient(top, #3cfc53, #34d96e);
+  background-image: -o-linear-gradient(top, #3cfc53, #34d96e);
+  background-image: linear-gradient(to bottom, #3cfc53, #34d96e);
+  text-decoration: none;
 }
 
 .leveltext{

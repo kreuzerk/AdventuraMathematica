@@ -157,10 +157,12 @@ Krokogame
 </tr>
 </table>
 </tr>
-<tr class="continuerow">
-<button id="krokocontinue" onclick="nextquestion()">Siguiente Pergunta</button>
-</tr>
 </table>
+
+<div class="continuediv">
+<button id="krokocontinue" onclick="nextquestion()">Siguiente Pergunta</button>
+</div>
+
 </div>
 
 <!----==================================================================
