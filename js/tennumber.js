@@ -43,6 +43,8 @@ button.innerHTML = "?";
 
 function tenbuttonclicked($id, $sign){
 
+sound_blop.play();
+
 var button = document.getElementById($id);
 
 if($sign == "0"){
@@ -60,6 +62,8 @@ button.setAttribute("sign","0");
 
 
 function tencontinuebuttonclicked(){
+
+sound_buttonclicked.play();
 
 var correct = true;
 
