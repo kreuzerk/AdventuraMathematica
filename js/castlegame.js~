@@ -93,6 +93,7 @@ function castlegame_go_left($id){
 castlegame_characterposition--;	//Dekrement the castlegame_characterposition
 
 if(castlegame_characterposition == -1 || castlegame_characterposition == 0){
+sound_woosh.play();
 $( ".block" ).animate({ "left": "-=240px" }, "slow" );
 }
 else{
@@ -105,6 +106,7 @@ function castlegame_go_right(){
 castlegame_characterposition++; 	//Inkrement the castlegame_characterposition
 
 if(castlegame_characterposition == 1 || castlegame_characterposition == 0){
+sound_woosh.play();
 $( ".block" ).animate({ "left": "+=240px" }, "slow" );
 }
 else{
@@ -114,6 +116,7 @@ castlegame_characterposition = 1;	//Provend that the character goes to far
 
 function castlegame_castle_fire(){
 
+sound_gunshoot.play();
 $( ".fireball" ).show();
 
 var left;
@@ -137,6 +140,7 @@ $( ".fireball" ).animate({ "left": "-=" + left + "px", "top": "+=500px" }, "slow
 castlegame_liveplayer--;	//Dekrement the life of the player
 document.getElementById("liveplayer").innerHTML = "Usted: " + castlegame_liveplayer;
     $( ".fireball" ).animate({ "left": "+=" + left + "px", "top": "-=500px" });	//Reset the fireball to the original position
+    sound_bomb.play();
     $( ".block" ).effect( "pulsate" );
 if(castlegame_liveplayer == 0){
 checksilver(false);
@@ -155,6 +159,7 @@ function castlegame_fire(){
 var left;
 var id;
 
+sound_gunshoot.play();
 
 switch(castlegame_characterposition){
 case -1:
@@ -177,6 +182,7 @@ $( "." + id ).animate({ "left": "+=" + left + "px", "top": "-=300px" }, "slow", 
 castlegame_livecastle--;
 document.getElementById("livecastle").innerHTML = "Castillo: " + castlegame_livecastle;
    $( "." + id ).animate({ "left": "-=" + left + "px", "top": "+=300px" });	//Reset the fireball to the original position
+   sound_bomb.play();
    $( "#castleimage" ).effect( "pulsate" );
 
 if(castlegame_livecastle == 0){

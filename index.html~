@@ -947,6 +947,10 @@ var sound_woosh;
 var sound_background4;
 var sound_error;
 var sound_ok;
+var sound_pageturn;
+var sound_castlebackground;
+var sound_bomb;
+var sound_gunshoot;
 
 //===============================================
 //Setting the sources of the audio
@@ -971,6 +975,10 @@ sound_woosh = new Audio('./sounds/woosh.ogg');
 sound_background4 = new Audio('./sounds/background4.ogg');
 sound_error = new Audio('./sounds/error.ogg');
 sound_ok = new Audio('./sounds/ok.ogg');
+sound_pageturn = new Audio('./sounds/pageturn.ogg');
+sound_castlebackground = new Audio('./sounds/castlebackground.ogg');
+sound_bomb = new Audio('./sounds/bomb.ogg');
+sound_gunshoot = new Audio('./sounds/gunshoot.ogg');
 
 //=======================================================
 //Adding the event listener to the different sounds
@@ -1008,6 +1016,11 @@ sound_background2.addEventListener('ended', function() {
 }, false);
 
 sound_background4.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+sound_castlebackground.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
