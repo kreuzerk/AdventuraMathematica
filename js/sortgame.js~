@@ -52,6 +52,8 @@ Function for controlling the results
 =====================================================================*/
 function controldivisiongame(){
 
+
+
 //Sort the numbers
 resultarray.sort(function(a, b){return a-b});
 
