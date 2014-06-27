@@ -47,6 +47,8 @@ Function for checking the circlegame
 ==============================================================*/
 function checkcirclegame(){
 
+sound_buttonclicked.play();
+
 var everything_correct = true;
 
 for(var i = 0; i< used_corner_date.length; i++){

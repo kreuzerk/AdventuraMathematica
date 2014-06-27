@@ -5,7 +5,7 @@ function initialise_math_table(){
 
 //Reset the input fields
 for(var i=1; i<=10; i++){
-document.getElementById("multi_table_input_" + i).innerHTML = "";
+document.getElementById("multi_table_input_" + i).value = "";
 }
 
 //Initialise the first td of the table
@@ -43,6 +43,8 @@ Function for controling the inputs
 ============================================================*/
 function control_math_table_inputs(){
 
+sound_buttonclicked.play();
+
 var correct = true;
 
 for(var i=1; i<=10; i++){	//10 Because there are ten input elements
@@ -62,6 +64,10 @@ break;
 //Call the Function that is responsible for drawing the bananas 
 checksalmonfields(correct);
 
+}
+
+function mathtable_inputonclick(){
+sound_golfsound.play();
 }
 
 
