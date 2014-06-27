@@ -27,6 +27,8 @@ value.innerHTML = "Valor : " + $value;
 
 function controlslidergame(){
 
+sound_buttonclicked.play();
+
 var iscorrect = true;
 
 
