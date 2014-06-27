@@ -944,6 +944,7 @@ var sound_background2;
 var sound_pencil;
 var sound_background3;
 var sound_woosh;
+var sound_background4;
 
 //===============================================
 //Setting the sources of the audio
@@ -965,6 +966,7 @@ sound_background2 = new Audio('./sounds/background2.ogg');
 sound_pencil = new Audio('./sounds/pencil.ogg');
 sound_background3 = new Audio('./sounds/background3.ogg');
 sound_woosh = new Audio('./sounds/woosh.ogg');
+sound_background4 = new Audio('./sounds/background4.ogg');
 
 //=======================================================
 //Adding the event listener to the different sounds
@@ -997,6 +999,11 @@ sound_background1.addEventListener('ended', function() {
 }, false);
 
 sound_background2.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+sound_background4.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);

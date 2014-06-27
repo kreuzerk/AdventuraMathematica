@@ -97,6 +97,8 @@ if(wallgame_firstliselected == true && wallgame_secondliselected == true){
     wallgame_firstliselected = false;
     wallgame_secondliselected = false;
 
+    sound_blop.play();
+
     $("#" + id1).hide();
     $("#" + id2).hide();
 
