@@ -21,18 +21,18 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "black", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 9},
-  { "cx": 680, "cy": 720, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "dodgerblue", "fontcolor" : "black", "number" : 11},
-  { "cx": 820, "cy": 680, "radius": 30, "color" : "dodgerblue", "fontcolor" : "black", "number" : 12},
-  { "cx": 890, "cy": 660, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 13},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 9},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 11},
+  { "cx": 820, "cy": 680, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 12},
+  { "cx": 890, "cy": 660, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 13},
   { "cx": 880, "cy": 590, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 14},
   { "cx": 810, "cy": 580, "radius": 30, "color" : "greenyellow", "fontcolor" : "white", "number" : 15},
   { "cx": 740, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 16},
@@ -609,9 +609,10 @@ case "dodgerblue":		//Dodgerblue fields => Share game
   $("#sharinggame").show();
 break;
 case "chocolate":		//Chocolate fields => Memorygame
-$("#maingamesvg").hide();
-initialise_memory_game();
-$("#memorygame").show();
+  $("#maingamesvg").hide();
+  sound_background1.play();
+  initialise_memory_game();
+  $("#memorygame").show();
 break;
 case "silver":			//Silver fields => Castlegame
 $("#maingamesvg").hide();
@@ -1055,6 +1056,7 @@ else
 
 function hidechocolate(){
 $("#memorygame").hide();
+sound_background1.pause();
 $("#maingamesvg").show();
 }
 
