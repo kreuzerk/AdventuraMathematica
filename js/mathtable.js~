@@ -5,8 +5,7 @@ function initialise_math_table(){
 
 //Reset the input fields
 for(var i=1; i<=10; i++){
-alert(document.getElementById("multi_table_input_" + i).innerHTML);
-document.getElementById("multi_table_input_" + i).innerHTML = "";
+document.getElementById("multi_table_input_" + i).value = "";
 }
 
 //Initialise the first td of the table
