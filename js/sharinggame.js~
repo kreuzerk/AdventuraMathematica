@@ -31,6 +31,8 @@ $("#dropapples" + (i+1)).hide();
 
 function control_sharing_game(){
 
+sound_buttonclicked.play();
+
 var correct = true;
 var result = parseInt(numberofapples / numberofplates);
 
@@ -68,17 +70,21 @@ applenumber_plate4 = 0;
 
 //Functions for inkrementing the variables if an element is dropped
 function apple_on_plate1(){
+sound_blop.play();
 applenumber_plate1++;
 }
 
 function apple_on_plate2(){
+sound_blop.play();
 applenumber_plate2++;
 }
 
 function apple_on_plate3(){
+sound_blop.play();
 applenumber_plate3++;
 }
 
 function apple_on_plate4(){
+sound_blop.play();
 applenumber_plate4++;
 }

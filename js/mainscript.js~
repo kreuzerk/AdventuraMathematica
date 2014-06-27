@@ -603,9 +603,10 @@ case "greenyellow":		//Greenyellow fields => Grid addition
   $("#gridaddition").show();
 break;
 case "dodgerblue":		//Dodgerblue fields => Share game
-$("#maingamesvg").hide();
-initialise_sharinggame();
-$("#sharinggame").show();
+  $("#maingamesvg").hide();
+  initialise_sharinggame();
+  sound_background2.play();
+  $("#sharinggame").show();
 break;
 case "chocolate":		//Chocolate fields => Memorygame
 $("#maingamesvg").hide();
@@ -1031,6 +1032,7 @@ else
 
 function hidedodgerblue(){
 $("#sharinggame").hide();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 
