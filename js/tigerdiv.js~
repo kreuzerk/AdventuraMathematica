@@ -6,12 +6,18 @@ function initialise_tiger_div(){
 document.getElementById("tigerdiv").style.backgroundImage = imagepath_tiger;
 
 //Reset the attributes
-
+document.getElementById("tigerdiv_speechbubble").innerHTML = "HaHaHaHa!!! <br /> Usted está jugando contra mí. <br/> El primer jugador en ganar seis proyectos de ley contestó correctamente.";
 document.getElementById("tigerdiv_okbutton").setAttribute("onclick","tiger_okclicked()");
 }
 
 function tiger_okclicked(){
   $("#tigerdiv").hide();
+
+  //Stop tigersound1 and play laugh and tigersound 2
+  sound_tigerbackground1.pause();
+  sound_tigerlaugh.play();
+  sound_tigerbackground2.play();
+
   quizgame_reset_points();
   initialise_quizgame();
   $("#bossquiz").show();

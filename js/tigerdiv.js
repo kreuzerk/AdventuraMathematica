@@ -12,6 +12,12 @@ document.getElementById("tigerdiv_okbutton").setAttribute("onclick","tiger_okcli
 
 function tiger_okclicked(){
   $("#tigerdiv").hide();
+
+  //Stop tigersound1 and play laugh and tigersound 2
+  sound_tigerbackground1.pause();
+  sound_tigerlaugh.play();
+  sound_tigerbackground2.play();
+
   quizgame_reset_points();
   initialise_quizgame();
   $("#bossquiz").show();
@@ -43,5 +49,6 @@ $("#tigerdiv").show();
 }
 
 function tiger_finish(){
+sound_tigerlaugh.play();
 checkblackfields(tiger_quizgame_result);
 }

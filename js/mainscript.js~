@@ -24,7 +24,7 @@ var level1 = [
   { "cx": 120, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 2}, 
   { "cx": 190, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 3},
   { "cx": 260, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 5},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "black", "fontcolor" : "white", "number" : 5},
   { "cx": 400, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 6},
   { "cx": 470, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 7},
   { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 8},
@@ -563,9 +563,11 @@ case "mediumaquamarine":	//Mediumaquamarine == Sortgame
   $("#divisiongame").show();
 break;
 case "gold":		//Gold - Dliver the bananas
-$("#maingamesvg").hide();
-initialise_delivery_screen();
-$("#bananadelivery").show();
+  $("#maingamesvg").hide();
+  sound_monkey.play();
+  sound_monkeybackground.play();
+  initialise_delivery_screen();
+  $("#bananadelivery").show();
 break;
 case "khaki":	   	//Khaki - Slidergame
   $("#maingamesvg").hide();
@@ -622,9 +624,11 @@ case "silver":			//Silver fields => Castlegame
   $("#castlegame").show();
 break;
 case "black":			//Check the black fields
-$("#maingamesvg").hide();
-initialise_tiger_div();
-$("#tigerdiv").show();
+  $("#maingamesvg").hide();
+  sound_introtiger.play();
+  sound_tigerbackground1.play();
+  initialise_tiger_div();
+  $("#tigerdiv").show();
 break;
 
 }
@@ -888,6 +892,7 @@ if($deliver){
 
 function hidegold(){
 $("#bananadelivery").hide();
+sound_monkeybackground.pause();
 $("#maingamesvg").show();
 }
 
@@ -1107,6 +1112,7 @@ break;
 
 function hideblack(){
 $("#tigerdiv").hide();
+sound_tigerbackground1.pause();
 $("#maingamesvg").show();
 }
 

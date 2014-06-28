@@ -17,6 +17,8 @@ deliverydiv.style.backgroundImage = imagepath_bananadelivery;
 
 function deliverbananas(){
 
+sound_buttonclicked.play();
+sound_monkey.play();
 
 if(bananacounter >= 50){
 deliverydiv.style.backgroundImage = imagepath_deliveryok;
@@ -42,6 +44,9 @@ Function for not delivering bananas
 
 function notdeliverbananas(){
 
+sound_buttonclicked.play();
+sound_monkey.play();
+
 getdeliveryelements();
 
 deliverydiv.style.backgroundImage = imagepath_nodelivery;
@@ -55,6 +60,8 @@ $("#deliverybutton2").hide();
 }
 
 function deliveryokclicked(){
+
+sound_buttonclicked.play();
 
 delivery_revertchanges();
 

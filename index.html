@@ -951,6 +951,12 @@ var sound_pageturn;
 var sound_castlebackground;
 var sound_bomb;
 var sound_gunshoot;
+var sound_monkey;
+var sound_monkeybackground;
+var sound_introtiger;
+var sound_tigerbackground1;
+var sound_tigerbackground2;
+var sound_tigerlaugh;
 
 //===============================================
 //Setting the sources of the audio
@@ -979,6 +985,13 @@ sound_pageturn = new Audio('./sounds/pageturn.ogg');
 sound_castlebackground = new Audio('./sounds/castlebackground.ogg');
 sound_bomb = new Audio('./sounds/bomb.ogg');
 sound_gunshoot = new Audio('./sounds/gunshoot.ogg');
+sound_monkey = new Audio('./sounds/monkey.ogg');
+sound_monkeybackground = new Audio('./sounds/monkeybackground.ogg');
+sound_introtiger = new Audio('./sounds/introtiger.ogg');
+sound_tigerbackground1 = new Audio('./sounds/tigerbackground1.ogg');
+sound_tigerbackground2 = new Audio('./sounds/tigerbackground2.ogg');
+sound_tigerlaugh = new Audio('./sounds/tigerlaugh.ogg');
+
 
 //=======================================================
 //Adding the event listener to the different sounds
@@ -1020,7 +1033,22 @@ sound_background4.addEventListener('ended', function() {
     this.play();
 }, false);
 
+sound_monkeybackground.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
 sound_castlebackground.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+sound_tigerbackground1.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+sound_tigerbackground2.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);

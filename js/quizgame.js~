@@ -41,6 +41,8 @@ quizgame_result =  operators[level_operator](number1,number2);
 
 function quizgame_ok_clicked(){
 
+sound_blop.play();
+
 $(".quiz_answerdiv").hide();
 window.setTimeout(quizgame_showresults,1000);
 
@@ -107,6 +109,7 @@ var tigeranswer = document.getElementById("quizgame_tigeranswer_h1").innerHTML;
 if(tigeranswer == quizgame_result){
 
 document.getElementById("quizgame_tigeranswer_h1").innerHTML = "+ 1";
+sound_tigerlaugh.play();
 quizgame_tigerpoints++;
 document.getElementById("quizgame_tiger_pointdisplay").innerHTML = "Tigre: " + quizgame_tigerpoints;
 }
@@ -118,6 +121,7 @@ var tuanswer = document.getElementById("quizgame_tuanswer_h1").innerHTML;
 
 if(tuanswer == quizgame_result){
 document.getElementById("quizgame_tuanswer_h1").innerHTML = "+ 1";
+sound_bananaup.play();
 quizgame_tupoints++;
 document.getElementById("quizgame_tu_pointsdisplay").innerHTML = "Tu: " + quizgame_tupoints;
 }
@@ -133,14 +137,19 @@ else
 {
 
 if(quizgame_tigerpoints == 6 && quizgame_tupoints == 6){
-alert("Both win");
+quizgame_finished(0); //0 = Draw
 }
 else if(quizgame_tigerpoints == 6){
-	alert("Tiger wins")
+	quizgame_finished(-1); //-1 = Tiger wins
 }
 else{
-	alert("Player wins");
+	quizgame_finished(1); // 1 = Player wins
 }
+
+sound_tigerbackground2.pause();
+sound_tigerbackground1.play();
+sound_zip.play();
+sound_tigerlaugh.play();
 
 }
 
