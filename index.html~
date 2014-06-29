@@ -916,7 +916,7 @@ Startscreen div
 ====================================================================-->
 <div id="startscreendiv">
 
-<div id="progressbar"><div class="progress-label">Loading...</div></div>
+<div id="progressbar"><div class="progress-label">Cargar</div></div>
 
 <div id="progress_buttondiv">
 <button id="progress_button" onclick="selectionscreen_continueclicked()">Comienzo</button>
@@ -970,6 +970,7 @@ var sound_tigerbackground1;
 var sound_tigerbackground2;
 var sound_tigerlaugh;
 var sound_introeffect;
+var sound_startscreensound;
 
 //===============================================
 //Setting the sources of the audio
@@ -1005,6 +1006,7 @@ sound_tigerbackground1 = new Audio('./sounds/tigerbackground1.ogg');
 sound_tigerbackground2 = new Audio('./sounds/tigerbackground2.ogg');
 sound_tigerlaugh = new Audio('./sounds/tigerlaugh.ogg');
 sound_introeffect = new Audio('./sounds/introeffect.ogg');
+sound_startscreensound = new Audio('./sounds/startscreen_sound.ogg');
 
 
 //=======================================================
@@ -1066,6 +1068,15 @@ sound_tigerbackground2.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
+
+sound_startscreensound.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+
+//Start with the startscreen sound
+sound_startscreensound.play();
 
 //Make some elements draggable
 //JQuery code

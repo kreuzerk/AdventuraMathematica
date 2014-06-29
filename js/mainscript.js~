@@ -258,6 +258,8 @@ function selectionscreen_continueclicked(){
 
 $("#startscreendiv").hide();
 sound_introeffect.play();
+sound_startscreensound.pause();
+sound_intromusic.play();
 $("#caracterselection").show();
 
 

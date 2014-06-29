@@ -1387,12 +1387,13 @@ Styles for the start screen
 
 .progress-label {
   position: absolute;
-  left: 585px;
-  top: 50%;
+  left: 540px;
+  top: 70%;
   font-size: 50px;
   font-weight: bold;
   text-align: center;
   text-shadow: 1px 1px 0 #fff;
+  color: white;
 }
 
 #startscreendiv{
@@ -1403,8 +1404,8 @@ Styles for the start screen
 
 #progress_buttondiv{
   position: absolute;
-  left: 500px;
-  top: 70%;
+  left: 455px;
+  top: 80%;
   font-size: 50px;
 }
 
@@ -1428,13 +1429,23 @@ Styles for the start screen
 }
 
 #progress_button:hover{
-  background: #fc3c6c;
-  background-image: -webkit-linear-gradient(top, #fc3c6c, #d9344a);
-  background-image: -moz-linear-gradient(top, #fc3c6c, #d9344a);
-  background-image: -ms-linear-gradient(top, #fc3c6c, #d9344a);
-  background-image: -o-linear-gradient(top, #fc3c6c, #d9344a);
-  background-image: linear-gradient(to bottom, #fc3c6c, #d9344a);
+  background: #b7f03c;
+  background-image: -webkit-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -moz-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -ms-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -o-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: linear-gradient(to bottom, #b7f03c, #d1f266);
   text-decoration: none;
+  color:black;
+}
+
+#startscreendiv{
+
+  width:1200px;
+  height: 820px;
+  background-image: url(../images/Startscreen.png);
+  background-size:100%;
+  background-repeat: no-repeat;
 }
 
   
