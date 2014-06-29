@@ -909,6 +909,18 @@ Tiger div
 </p>
 </div>
 
+</div>
+
+<!-- ===================================================================
+Startscreen div
+====================================================================-->
+<div id="startscreendiv">
+
+<div id="progressbar"><div class="progress-label">Loading...</div></div>
+
+<div id="progress_buttondiv">
+<button id="progress_button" onclick="selectionscreen_continueclicked()">Comienzo</button>
+</div>
 
 </div>
 
@@ -957,6 +969,7 @@ var sound_introtiger;
 var sound_tigerbackground1;
 var sound_tigerbackground2;
 var sound_tigerlaugh;
+var sound_introeffect;
 
 //===============================================
 //Setting the sources of the audio
@@ -991,6 +1004,7 @@ sound_introtiger = new Audio('./sounds/introtiger.ogg');
 sound_tigerbackground1 = new Audio('./sounds/tigerbackground1.ogg');
 sound_tigerbackground2 = new Audio('./sounds/tigerbackground2.ogg');
 sound_tigerlaugh = new Audio('./sounds/tigerlaugh.ogg');
+sound_introeffect = new Audio('./sounds/introeffect.ogg');
 
 
 //=======================================================
@@ -1224,6 +1238,34 @@ $(function() {
     });
   });
 
+//Code for the progress bar
+$(function() {
+    var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+ 
+    progressbar.progressbar({
+      value: false,
+      change: function() {
+        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+      },
+      complete: function() {
+        //progressLabel.text( "Complete!" );
+	$("#progress_buttondiv").show();
+      }
+    });
+ 
+    function progress() {
+      var val = progressbar.progressbar( "value" ) || 0;
+ 
+      progressbar.progressbar( "value", val + 2 );
+ 
+      if ( val < 99 ) {
+        setTimeout( progress, 80 );
+      }
+    }
+ 
+    setTimeout( progress, 2000 );
+  });
 
 </script>
 </html>

@@ -254,6 +254,15 @@ function setfilename($file){
  filename = $file;
 }
 
+function selectionscreen_continueclicked(){
+
+$("#startscreendiv").hide();
+sound_introeffect.play();
+$("#caracterselection").show();
+
+
+}
+
 
 function hallo(){
 
@@ -483,7 +492,9 @@ $("#memorygame").hide();
 $("#castlegame").hide();
 $("#bossquiz").hide();
 $("#tigerdiv").hide();
-//$("#caracterselection").hide();
+$("#progress_buttondiv").hide();
+$("#caracterselection").hide();
+
 
 }
 
