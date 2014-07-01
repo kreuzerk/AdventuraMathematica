@@ -573,6 +573,13 @@ Styles for the selection screen
  background-size:100%;
 }
 
+#levelimage3{
+ background-image: url(../images/Background-Level3_gray.png);
+ width:300px;
+ height:200px;
+ background-size:100%;
+}
+
 #levelimage1:hover{
  background-image: url(../images/Background.png);
  width:300px;
@@ -581,6 +588,12 @@ Styles for the selection screen
 
 #levelimage2:hover{
  background-image: url(../images/Background-Level2.png);
+ width:300px;
+ height: 200px;
+}
+
+#levelimage3:hover{
+ background-image: url(../images/Background-Level3.png);
  width:300px;
  height: 200px;
 }

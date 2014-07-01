@@ -138,6 +138,64 @@ var level2 = [
   { "cx": 670, "cy": 120, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 50},
   { "cx": 720, "cy": 50, "radius": 30, "color" : "snow", "fontcolor" : "white", "number" : 51},];
 
+//Datas for the third level
+var level3 = [
+  { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
+  { "cx": 120, "cy": 770, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 190, "cy": 770, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 3},
+  { "cx": 280, "cy": 770, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 4},
+  { "cx": 350, "cy": 770, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 420, "cy": 770, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 6},
+  { "cx": 490, "cy": 770, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 7},
+  { "cx": 520, "cy": 700, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 8},
+  { "cx": 530, "cy": 630, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
+  { "cx": 520, "cy": 560, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
+  { "cx": 450, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 11},
+  { "cx": 380, "cy": 520, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
+  { "cx": 310, "cy": 520, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 13},
+  { "cx": 240, "cy": 520, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 14},
+  { "cx": 170, "cy": 520, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 15},
+  { "cx": 120, "cy": 450, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 16},
+  { "cx": 120, "cy": 380, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 17},
+  { "cx": 120, "cy": 310, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 18},
+  { "cx": 120, "cy": 240, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 19},
+  { "cx": 190, "cy": 240, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 20},
+  { "cx": 260, "cy": 240, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 21},
+  { "cx": 330, "cy": 240, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 22},
+  { "cx": 400, "cy": 240, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 23},
+  { "cx": 470, "cy": 240, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 24},
+  { "cx": 540, "cy": 210, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 25},
+  { "cx": 610, "cy": 180, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 26},
+  { "cx": 680, "cy": 150, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 27},
+  { "cx": 700, "cy": 80, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 28},
+  { "cx": 770, "cy": 60, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 29},
+  { "cx": 840, "cy": 60, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 30},
+  { "cx": 910, "cy": 60, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 31},
+  { "cx": 1070, "cy": 150, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 32},
+  { "cx": 1000, "cy": 200, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 33},
+  { "cx": 930, "cy": 190, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 34},
+  { "cx": 860, "cy": 190, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 35},
+  { "cx": 820, "cy": 260, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 36},
+  { "cx": 820, "cy": 350, "radius": 30, "color" : "gold", "fontcolor" : "black", "number" : 37},
+  { "cx": 890, "cy": 350, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 38},
+  { "cx": 960, "cy": 350, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 39},
+  { "cx": 1030, "cy": 350, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 40},
+  { "cx": 1080, "cy": 400, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 41},
+  { "cx": 1080, "cy": 470, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 42},
+  { "cx": 1080, "cy": 540, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 43},
+  { "cx": 1080, "cy": 610, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 44},
+  { "cx": 1010, "cy": 650, "radius": 30, "color" : "blue", "fontcolor" : "black", "number" : 45},
+  { "cx": 940, "cy": 640, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 46},
+  { "cx": 870, "cy": 630, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 47},
+  { "cx": 800, "cy": 630, "radius": 30, "color" : "orange", "fontcolor" : "white", "number" : 48},
+  { "cx": 780, "cy": 560, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 49},
+  { "cx": 710, "cy": 540, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 50},
+  { "cx": 640, "cy": 540, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 51},
+{ "cx": 640, "cy": 610, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 52},
+{ "cx": 640, "cy": 680, "radius": 30, "color" : "yellow", "fontcolor" : "white", "number" : 53},
+{ "cx": 640, "cy": 750, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 54}];
+
+
 
 /*====================================================================================================
 /*====================================================================================================
@@ -311,6 +369,15 @@ case 6:
 break;
 }
 
+var mainscript_operators = ["+","-","*","/"];
+
+if(selected_level == "level3"){
+
+var randomposition = Math.floor(Math.random() * mainscript_operators.length);
+level_operator = mainscript_operators[randomposition];
+
+}
+else{
 //Change the level_operator
 switch(level_operator){
 
@@ -327,6 +394,7 @@ case "/":
 level_operator = "*";
 break;
 
+}
 }
 
 
@@ -517,7 +585,21 @@ var currentcolor = circleData[currentfield-1].color;
 
 //Play the zip sound and pause the background music
 sound_zip.play();
+
+//Stop the sound corresponding to the level
+switch(selected_level){
+
+case "level1":
 sound_backgroundmusic_level1.pause();
+break;
+case "level2":
+sound_level2.pause();
+break;
+case "level3":
+sound_level3.pause();
+break;
+
+}
 
 //Say which method needs to be called. Corresponding to the color the caracter is standing on.
 switch(currentcolor){
@@ -1134,7 +1216,20 @@ Function for drawing the banana
 ===================================================================================*/
 function drawimage($amount, $positive){
 
+//Play the sound corresponding to the level
+switch(selected_level){
+
+case "level1":
 sound_backgroundmusic_level1.play();
+break;
+case "level2":
+sound_level2.play();
+break;
+case "level3":
+sound_level3.play();
+break;
+
+}
 
 //Display banana
 svgContainer.append("svg:image")
@@ -1212,7 +1307,18 @@ moneycounter = moneycounter + $amount;
 moneyamount.textContent = "+ " + moneycounter;
 
 if(moneycounter >= 5){
+
+switch(selected_level){
+
+case "level1":
 localStorage.setItem("level", 2);	//Set the amount of levels
+break;
+case "level2":
+localStorage.setItem("level", 3);
+break;
+
+}
+
 }
 
 //Reduce the bananas

@@ -2,6 +2,7 @@
 var selectedcharacter = null;
 var imageclickedbefore = null;
 var item_display_color = "black";
+var selected_level;
 
 //Variables for the bananadelivery images
 var imagepath_bananadelivery;
@@ -38,19 +39,33 @@ localStorage.setItem("level", 1);
 level = 1;
 }
 
-
+/*
 switch(level){
 
 case "1":
 
-//Make the second element unclickable
+//Make the second element uncklickable
 document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Level2_locked.png)';
 document.getElementById("levelimage2").setAttribute("onclick","alert_locked()");
+
+
+//Make the third element uncklickable
+document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Level3_locked.png)';
+document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
+
+break;
+
+case "2":		//Only the third level is locked
+
+//Make the third element uncklickable
+document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Level3_locked.png)';
+document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
+
 break;
 
 
 }
-
+*/
 }
 
 //Function that alerts that an element is locked
@@ -91,7 +106,20 @@ setfilename(selectedcharacter.getAttribute("src"));
 drawgameboard();	//Function that draws the gameboard
 sound_intromusic.pause();
 sound_buttonclicked.play();
+
+switch(selected_level){
+
+case "level1":
 sound_backgroundmusic_level1.play();
+break;
+case "level2":
+sound_level2.play();
+break;
+case "level3":
+sound_level3.play();
+break;
+
+}
 
 $("#maingamesvg").show();
 $("#sources-button").hide();
@@ -113,6 +141,10 @@ break;
 case "levelimage2":
 document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Background-Level2_gray.png)';
 break;
+case "levelimage3":
+document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Background-Level3_gray.png)';
+break;
+
  }//End switch case
 }//End if
 
@@ -124,6 +156,9 @@ case "levelimage1":
 //Set all the properties for level 1
 
 //=============================================================================================
+
+selected_level = "level1";
+
 document.getElementById("levelimage1").style.backgroundImage = 'url(./images/Background.png)';
 document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Background.png)';	//Change the Background of the level
 
@@ -155,6 +190,9 @@ break;
 
 //=============================================================================================
 case "levelimage2":
+
+selected_level = "level2";
+
 document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Background-Level2.png)';
 circleData = level2;
 document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Background-Level2.png)';
@@ -176,6 +214,43 @@ imagepath_tiger = "url(./images/quizgame/Tiger_Level2.png)";
 
 //Choose the settings for the display
 item_display_color = "white";
+
+
+//Set the difficulty of the level
+level_operator = "-";
+
+break;
+
+//=======================================================================================
+
+//Set all the properties for level 3
+
+//=============================================================================================
+case "levelimage3":
+
+selected_level = "level3";
+
+document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Background-Level3.png)';
+circleData = level3;
+document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Background-Level3.png)';
+
+//Paths for the bananadelivery images
+imagepath_bananadelivery = "url(./images/delivery/level3/bananadelivery.png)";
+imagepath_deliveryfailure = "url(./images/delivery/level3/deliveryfailure.png)";
+imagepath_deliveryok = "url(./images/delivery/level3/deliveryok.png)";
+imagepath_nodelivery = "url(./images/delivery/level3/nodelivery.png)";
+
+//Variable for the wallgame background
+imagepath_wallgame = "url(./images/selectiongame/Walls_level3.png)";
+
+//Variable for the end of the round
+imagepath_endofround = "url(./images/endofround/Round_level3.png)";
+
+//Path for the tigergame
+imagepath_tiger = "url(./images/quizgame/Tiger_Level3.png)";
+
+//Choose the settings for the display
+item_display_color = "black";
 
 
 //Set the difficulty of the level

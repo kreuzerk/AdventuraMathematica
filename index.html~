@@ -440,6 +440,7 @@ Selection of the caracter
 <tr>
 	<td><div id="levelimage1" onclick="levelimageclicked($(this).attr('id'))"></div></td>
 	<td><div id="levelimage2" onclick="levelimageclicked($(this).attr('id'))"></div></td>
+	<td><div id="levelimage3" onclick="levelimageclicked($(this).attr('id'))"></div></td>
 </tr>
 <tr>
 	<td class="leveltext">Isla Mathematicas</td>
@@ -971,6 +972,7 @@ var sound_tigerbackground2;
 var sound_tigerlaugh;
 var sound_introeffect;
 var sound_startscreensound;
+var sound_level3;
 
 //===============================================
 //Setting the sources of the audio
@@ -1007,6 +1009,7 @@ sound_tigerbackground2 = new Audio('./sounds/tigerbackground2.ogg');
 sound_tigerlaugh = new Audio('./sounds/tigerlaugh.ogg');
 sound_introeffect = new Audio('./sounds/introeffect.ogg');
 sound_startscreensound = new Audio('./sounds/startscreen_sound.ogg');
+sound_level3 = new Audio('./sounds/background_level3.ogg');
 
 
 //=======================================================
@@ -1017,7 +1020,6 @@ sound_intromusic.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
-sound_intromusic.play();
 
 sound_backgroundmusic_level1.addEventListener('ended', function() {
     this.currentTime = 0;
@@ -1070,6 +1072,11 @@ sound_tigerbackground2.addEventListener('ended', function() {
 }, false);
 
 sound_startscreensound.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+sound_level3.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
