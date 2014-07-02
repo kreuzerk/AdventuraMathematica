@@ -932,7 +932,11 @@ Div that pops up when a new world is playable
 
 <div id="newleveldiv">
 
+<h1>Felicitaciones usted ha recibido una clave</h1>
 
+<image src="./images/key.png"></image>
+
+<h1 id="unlockedtext"></h1>
 
 </div>
 
@@ -986,6 +990,7 @@ var sound_introeffect;
 var sound_startscreensound;
 var sound_level3;
 var sound_level2;
+var sound_moneysound;
 
 //===============================================
 //Setting the sources of the audiobackgroundsound_level2
@@ -1024,6 +1029,7 @@ sound_introeffect = new Audio('./sounds/introeffect.ogg');
 sound_startscreensound = new Audio('./sounds/startscreen_sound.ogg');
 sound_level3 = new Audio('./sounds/background_level3.ogg');
 sound_level2 = new Audio('./sounds/backgroundsound_level2.ogg');
+sound_moneysound = new Audio('./sounds/moneysound.ogg');
 
 
 //=======================================================
@@ -1238,6 +1244,26 @@ $(function() {
       },
       hide: {
         effect: "explode",
+        duration: 1000
+      },
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+
+$(function() {
+    $( "#newleveldiv" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "blind",
         duration: 1000
       },
       modal: true,

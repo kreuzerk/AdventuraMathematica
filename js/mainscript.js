@@ -21,12 +21,12 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 5},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 5},
   { "cx": 400, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 7},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 7},
   { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 8},
   { "cx": 610, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
@@ -369,7 +369,7 @@ case 6:
 break;
 }
 
-var mainscript_operators = ["+","-","*","/"];
+var mainscript_operators = ['+','-','*','/'];
 
 if(selected_level == "level3"){
 
@@ -564,6 +564,7 @@ $("#bossquiz").hide();
 $("#tigerdiv").hide();
 $("#progress_buttondiv").hide();
 $("#caracterselection").hide();
+$("#newleveldiv").hide();
 
 
 }
@@ -1302,18 +1303,20 @@ function drawmoney($amount, $positive){
 
 //Display banana
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/bananas.png").attr("id", "bananaimage")
+      .attr("xlink:href", "./images/money.png").attr("id", "bananaimage")
       .attr("width", 100)
       .attr("height", 100).attr("x", 290).attr("y",30);
 
 
 if($positive){
 
+sound_moneysound.play();
+
 //Plus
 svgContainer.append("text").attr("id", "bananatext")
       .attr("x", 160)
       .attr("y", 100)
-      .text(" - " + 50)
+      .text(" + " + 1)
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
       .attr("fill", item_display_color);
@@ -1328,12 +1331,16 @@ switch(selected_level){
 
 case "level1":
 localStorage.setItem("level", 2);	//Set the amount of levels
+document.getElementById("unlockedtext").innerHTML = "Universo Mathematicas ha sido liberado";
 break;
 case "level2":
 localStorage.setItem("level", 3);
+document.getElementById("unlockedtext").innerHTML = "Sheriff Mathematicas ha sido liberado";
 break;
 
 }
+
+$( "#newleveldiv" ).dialog( "open" );
 
 }
 

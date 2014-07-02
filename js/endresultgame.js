@@ -1,7 +1,7 @@
 var endgame_operators = ["+","-"];
 var endgame_colors = ["blue", "green", "red", "yellow", "orange"];
 var endgame_result = 0;
-var operators;
+var endresultgame_operators;
 
 function createendresultgame(){
 
@@ -10,13 +10,13 @@ cleaninputs();
 var elements = [document.getElementById("number1"),document.getElementById("number2"),document.getElementById("number3"),document.getElementById("number4")];
 
 //Variable to store the operators
-operators = new Array(3);
+endresultgame_operators = new Array(3);
 var numbers = [0,0,0,0];
 
 //Set the operators
-for(var i = 0; i<operators.length; i++){
+for(var i = 0; i<endresultgame_operators.length; i++){
   var randomoperator = Math.floor(Math.random()* endgame_operators.length) + 1;
-  operators[i] = endgame_operators[randomoperator-1];
+  endresultgame_operators[i] = endgame_operators[randomoperator-1];
 }
 
 //Set the values
@@ -36,9 +36,9 @@ numbers[i] = number;
 
 endgame_result = numbers[0];
 
-for(var i = 0; i<operators.length; i++){
+for(var i = 0; i<endresultgame_operators.length; i++){
   
-switch(operators[i]){
+switch(endresultgame_operators[i]){
 
 case "+":
  endgame_result = endgame_result + numbers[i+1];
@@ -83,9 +83,9 @@ var inputs = [document.getElementById("input1"), document.getElementById("input2
 
 var correct = 0;
 
-for(var i = 0; i < operators.length; i++){
+for(var i = 0; i < endresultgame_operators.length; i++){
 
-  if(inputs[i].value == operators[i]){
+  if(inputs[i].value == endresultgame_operators[i]){
 	correct++;
   }
 }

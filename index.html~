@@ -926,6 +926,21 @@ Startscreen div
 
 </div>
 
+<!-- ================================================================
+Div that pops up when a new world is playable
+=================================================================-->
+
+<div id="newleveldiv">
+
+<h1>Felicitaciones usted ha recibido una clave</h1>
+
+<image src="./images/key.png"></image>
+
+<h1 id="unlockedtext"></h1>
+
+</div>
+
+
 </body>
 <script type="text/javascript">
 hide();
@@ -1227,6 +1242,26 @@ $(function() {
       },
       hide: {
         effect: "explode",
+        duration: 1000
+      },
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+
+$(function() {
+    $( "#newleveldiv" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "blind",
         duration: 1000
       },
       modal: true,
