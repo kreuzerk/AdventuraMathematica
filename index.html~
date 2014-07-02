@@ -74,8 +74,8 @@ Code for the Shop Mini Game
 <tr>
 <td>
 	<table class="shopitems">
-	<tr><td class="shopimage"><img number=0 border="0" src="./images/Shop/ball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">10.00</td></tr>
-	<tr><td class="shopimage"><img number=1 border="0" src="./images/Shop/soap.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">5.00</td></tr>
+	<tr><td class="shopimage"><img number=0 border="0" src="./images/Shop/ball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">5.00</td></tr>
+	<tr><td class="shopimage"><img number=1 border="0" src="./images/Shop/soap.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">10.00</td></tr>
 	<tr><td class="shopimage"><img number=2 border="0" src="./images/Shop/guitar.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">20.00</td></tr>
 	<tr><td class="shopimage"><img number=3 border="0" src="./images/Shop/waterball.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">50.00</td></tr>
 	<tr><td class="shopimage"><img number=4 border="0" src="./images/Shop/bear.png" width="100" height="100" onclick="addelement($(this).attr('src'),$(this).attr('number'))"></td><td class="shopprice">100.00</td></tr>
@@ -445,6 +445,7 @@ Selection of the caracter
 <tr>
 	<td class="leveltext">Isla Mathematicas</td>
 	<td class="leveltext">Mathematics Universo</td>
+	<td class="leveltext">Sheriff Mathematicas</td>
 </tr>
 </table>
 
@@ -973,9 +974,10 @@ var sound_tigerlaugh;
 var sound_introeffect;
 var sound_startscreensound;
 var sound_level3;
+var sound_level2;
 
 //===============================================
-//Setting the sources of the audio
+//Setting the sources of the audiobackgroundsound_level2
 //===============================================
 sound_intromusic = new Audio('./sounds/introsound.ogg'); 
 sound_backgroundmusic_level1 = new Audio('./sounds/mario.ogg');
@@ -1010,6 +1012,7 @@ sound_tigerlaugh = new Audio('./sounds/tigerlaugh.ogg');
 sound_introeffect = new Audio('./sounds/introeffect.ogg');
 sound_startscreensound = new Audio('./sounds/startscreen_sound.ogg');
 sound_level3 = new Audio('./sounds/background_level3.ogg');
+sound_level2 = new Audio('./sounds/backgroundsound_level2.ogg');
 
 
 //=======================================================
@@ -1077,6 +1080,11 @@ sound_startscreensound.addEventListener('ended', function() {
 }, false);
 
 sound_level3.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+sound_level2.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);

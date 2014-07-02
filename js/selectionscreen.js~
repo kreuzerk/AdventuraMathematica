@@ -39,7 +39,7 @@ localStorage.setItem("level", 1);
 level = 1;
 }
 
-/*
+
 switch(level){
 
 case "1":
@@ -65,7 +65,7 @@ break;
 
 
 }
-*/
+
 }
 
 //Function that alerts that an element is locked
