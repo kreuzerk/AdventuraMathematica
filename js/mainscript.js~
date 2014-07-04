@@ -21,13 +21,13 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 8},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 8},
   { "cx": 610, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
   { "cx": 750, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 11},
@@ -624,13 +624,13 @@ case "yellow":		//Yellow = Krokogame
 break;
 case "orange":		//Orange == formgame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   createformsgame();
   $("#formgame").show();
 break;
 case "purple":		//Purple == Endresultgame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   createendresultgame();
   $("#endresultgame").show();
 break;
@@ -648,7 +648,7 @@ case "lavender":	//Lavender == Cheesegame
 break;
 case "skyblue":		//Skyblue == Tengame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   initialisetennumber();
   $("#tengame").show();
 break;
@@ -667,7 +667,7 @@ case "gold":		//Gold - Dliver the bananas
 break;
 case "khaki":	   	//Khaki - Slidergame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   initialiseslidergame();
   $("#slidergame").show();
 break;
@@ -708,7 +708,7 @@ case "dodgerblue":		//Dodgerblue fields => Share game
 break;
 case "chocolate":		//Chocolate fields => Memorygame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   initialise_memory_game();
   $("#memorygame").show();
 break;
@@ -843,7 +843,7 @@ hideorange();
 
 function hideorange(){
 $("#formgame").hide();
-  sound_background1.pause();
+  sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -871,7 +871,7 @@ hidepurple();
 
 function hidepurple(){
 $("#endresultgame").hide();
-  sound_background1.pause();
+  sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -947,7 +947,7 @@ else{
 
 function hideskyblue(){
 $("#tengame").hide();
-sound_background1.pause();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -1027,7 +1027,7 @@ else{
 
 function hidekhaki(){
 $("#slidergame").hide();
-sound_background1.pause();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -1175,7 +1175,7 @@ else
 
 function hidechocolate(){
 $("#memorygame").hide();
-sound_background1.pause();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 

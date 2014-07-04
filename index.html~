@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>D3 Test</title>
+        <title>Adventura Matemática</title>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
@@ -970,10 +970,8 @@ var sound_bananaup;
 var sound_bananalost;
 var sound_background_krokogame;
 var sound_fishbutton;
-var sound_background1;
 var sound_background2;
 var sound_pencil;
-var sound_background3;
 var sound_woosh;
 var sound_background4;
 var sound_error;
@@ -998,7 +996,6 @@ var sound_moneysound;
 //Setting the sources of the audiobackgroundsound_level2
 //===============================================
 sound_intromusic = new Audio('./sounds/introsound.ogg'); 
-sound_backgroundmusic_level1 = new Audio('./sounds/mario.ogg');
 sound_buttonclicked = new Audio('./sounds/button_click.ogg');
 sound_diceroll = new Audio('./sounds/rolldice.ogg');
 sound_blop = new Audio('./sounds/blop.ogg');
@@ -1009,10 +1006,8 @@ sound_bananaup = new Audio('./sounds/bananup.ogg');
 sound_bananalost = new Audio('./sounds/bananalost.ogg');
 sound_background_krokogame = new Audio('./sounds/background_krokogame.ogg');
 sound_fishbutton = new Audio('./sounds/fish_button.ogg');
-sound_background1 = new Audio('./sounds/background1.ogg');
 sound_background2 = new Audio('./sounds/background2.ogg');
 sound_pencil = new Audio('./sounds/pencil.ogg');
-sound_background3 = new Audio('./sounds/background3.ogg');
 sound_woosh = new Audio('./sounds/woosh.ogg');
 sound_background4 = new Audio('./sounds/background4.ogg');
 sound_error = new Audio('./sounds/error.ogg');
@@ -1029,9 +1024,40 @@ sound_tigerbackground2 = new Audio('./sounds/tigerbackground2.ogg');
 sound_tigerlaugh = new Audio('./sounds/tigerlaugh.ogg');
 sound_introeffect = new Audio('./sounds/introeffect.ogg');
 sound_startscreensound = new Audio('./sounds/startscreen_sound.ogg');
-sound_level3 = new Audio('./sounds/background_level3.ogg');
-sound_level2 = new Audio('./sounds/backgroundsound_level2.ogg');
 sound_moneysound = new Audio('./sounds/moneysound.ogg');
+
+//Only load media when needed - Kind of lazy loading - Performance reasons on the OLPC
+//====================================================
+
+function load_sound_level1(){
+sound_backgroundmusic_level1 = new Audio('./sounds/mario.ogg');
+
+sound_backgroundmusic_level1.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+}
+
+function load_sound_level2(){
+sound_level2 = new Audio('./sounds/backgroundsound_level2.ogg');
+
+sound_level2.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+}
+
+function load_sound_level3(){
+sound_level3 = new Audio('./sounds/background_level3.ogg');
+
+sound_level3.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+}
 
 
 //=======================================================
@@ -1043,22 +1069,12 @@ sound_intromusic.addEventListener('ended', function() {
     this.play();
 }, false);
 
-sound_backgroundmusic_level1.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
 sound_shopbackground.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
 
 sound_background_krokogame.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
-sound_background1.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
@@ -1094,16 +1110,6 @@ sound_tigerbackground2.addEventListener('ended', function() {
 }, false);
 
 sound_startscreensound.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
-sound_level3.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
-sound_level2.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);

@@ -624,13 +624,13 @@ case "yellow":		//Yellow = Krokogame
 break;
 case "orange":		//Orange == formgame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   createformsgame();
   $("#formgame").show();
 break;
 case "purple":		//Purple == Endresultgame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   createendresultgame();
   $("#endresultgame").show();
 break;
@@ -642,13 +642,13 @@ case "pink":		//Pink == whatisnextgame
 break;
 case "lavender":	//Lavender == Cheesegame
   $("#maingamesvg").hide();
-  sound_background3.play();
+  sound_background2.play();
   initialisecheesegame();
   $("#cheese").show();
 break;
 case "skyblue":		//Skyblue == Tengame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   initialisetennumber();
   $("#tengame").show();
 break;
@@ -667,7 +667,7 @@ case "gold":		//Gold - Dliver the bananas
 break;
 case "khaki":	   	//Khaki - Slidergame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   initialiseslidergame();
   $("#slidergame").show();
 break;
@@ -708,7 +708,7 @@ case "dodgerblue":		//Dodgerblue fields => Share game
 break;
 case "chocolate":		//Chocolate fields => Memorygame
   $("#maingamesvg").hide();
-  sound_background1.play();
+  sound_background2.play();
   initialise_memory_game();
   $("#memorygame").show();
 break;
@@ -843,7 +843,7 @@ hideorange();
 
 function hideorange(){
 $("#formgame").hide();
-  sound_background1.pause();
+  sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -871,7 +871,7 @@ hidepurple();
 
 function hidepurple(){
 $("#endresultgame").hide();
-  sound_background1.pause();
+  sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -924,7 +924,7 @@ break;
 
 function hidelavender(){
 $("#cheese").hide();
-sound_background3.pause();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -947,7 +947,7 @@ else{
 
 function hideskyblue(){
 $("#tengame").hide();
-sound_background1.pause();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -1027,7 +1027,7 @@ else{
 
 function hidekhaki(){
 $("#slidergame").hide();
-sound_background1.pause();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 
@@ -1175,7 +1175,7 @@ else
 
 function hidechocolate(){
 $("#memorygame").hide();
-sound_background1.pause();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 

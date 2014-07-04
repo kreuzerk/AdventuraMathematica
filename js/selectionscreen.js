@@ -39,7 +39,7 @@ localStorage.setItem("level", 1);
 level = 1;
 }
 
-
+/*
 switch(level){
 
 case "1":
@@ -65,7 +65,7 @@ break;
 
 
 }
-
+*/
 
 }
 
@@ -111,12 +111,15 @@ sound_buttonclicked.play();
 switch(selected_level){
 
 case "level1":
+load_sound_level1();
 sound_backgroundmusic_level1.play();
 break;
 case "level2":
+load_sound_level2();
 sound_level2.play();
 break;
 case "level3":
+load_sound_level3();
 sound_level3.play();
 break;
 
