@@ -21,13 +21,13 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 8},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 8},
   { "cx": 610, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
   { "cx": 750, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 11},
@@ -1055,6 +1055,7 @@ Function for snow fields
 ===================================================================================*/
 function hidesnowfield(){
 $("#endofround").hide();
+drawimage(10,true);
 $("#maingamesvg").show();
 }
 
@@ -1376,7 +1377,7 @@ entered = true;
 Function that shows the sources
 =======================================================*/
 function showsources(){
-$("#caracterselection").hide();
+$("#startscreendiv").hide();
 $("#sourcediv").show();
 }
 

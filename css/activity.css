@@ -1138,7 +1138,7 @@ Styles for the castle game
 .castle_result_paper{
   position: absolute;
   left: 575px;
-  top: 100px;
+  top: 50px;
   width: 150px;
   height: 100px;
   background-image: url(../images/castlegame/paper.png);
@@ -1170,7 +1170,7 @@ Styles for the castle game
 
   position:absolute;
   left: 480px;
-  top: 770px;
+  top: 700px;
 }
 
 #castlegame{
@@ -1271,7 +1271,7 @@ Styles for the boss game
 
   position:absolute;
   left: 50px;
-  top: 240px;
+  top: 200px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1284,7 +1284,7 @@ Styles for the boss game
 
   position:absolute;
   left: 950px;
-  top: 240px;
+  top: 200px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1308,7 +1308,7 @@ Styles for the boss game
 #quizgame_tigerpoints{
   position:absolute;
   left: 50px;
-  top: 80px;
+  top: 20px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1320,7 +1320,7 @@ Styles for the boss game
 #quizgame_playerpoints{
   position:absolute;
   left: 950px;
-  top: 80px;
+  top: 20px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1418,7 +1418,7 @@ Styles for the start screen
 #progress_buttondiv{
   position: absolute;
   left: 455px;
-  top: 80%;
+  top: 600px;
   font-size: 50px;
 }
 
