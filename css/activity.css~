@@ -1271,7 +1271,7 @@ Styles for the boss game
 
   position:absolute;
   left: 50px;
-  top: 240px;
+  top: 200px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1284,7 +1284,7 @@ Styles for the boss game
 
   position:absolute;
   left: 950px;
-  top: 240px;
+  top: 200px;
   width: 200px;
   height: 200px;
   margin: 5px;
