@@ -551,6 +551,20 @@ Styles for the selection screen
   margin-left:480px;
 }
 
+.sourcelink_div{
+  position: absolute;
+  left: 1000px;
+  top: 750px;
+}
+
+.sourcelink{
+  font-size: 20px;
+}
+
+.sourcelink:hover{
+  color:black;
+}
+
 .selectionitem{
   background-color:white;
 }

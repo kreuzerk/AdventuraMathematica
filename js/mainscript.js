@@ -1377,7 +1377,7 @@ entered = true;
 Function that shows the sources
 =======================================================*/
 function showsources(){
-$("#startscreendiv").hide();
+$("#caracterselection").hide();
 $("#sourcediv").show();
 }
 

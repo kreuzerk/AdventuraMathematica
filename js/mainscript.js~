@@ -642,7 +642,7 @@ case "pink":		//Pink == whatisnextgame
 break;
 case "lavender":	//Lavender == Cheesegame
   $("#maingamesvg").hide();
-  sound_background3.play();
+  sound_background2.play();
   initialisecheesegame();
   $("#cheese").show();
 break;
@@ -924,7 +924,7 @@ break;
 
 function hidelavender(){
 $("#cheese").hide();
-sound_background3.pause();
+sound_background2.pause();
 $("#maingamesvg").show();
 }
 
