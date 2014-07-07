@@ -141,22 +141,22 @@ var level2 = [
 //Datas for the third level
 var level3 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 190, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 3},
-  { "cx": 280, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 4},
-  { "cx": 350, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 5},
-  { "cx": 420, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 6},
-  { "cx": 490, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 7},
-  { "cx": 520, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 8},
-  { "cx": 530, "cy": 630, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 9},
-  { "cx": 520, "cy": 560, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" :10},
+  { "cx": 120, "cy": 770, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 190, "cy": 770, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 3},
+  { "cx": 280, "cy": 770, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 4},
+  { "cx": 350, "cy": 770, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 420, "cy": 770, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 6},
+  { "cx": 490, "cy": 770, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 7},
+  { "cx": 520, "cy": 700, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 8},
+  { "cx": 530, "cy": 630, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
+  { "cx": 520, "cy": 560, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
   { "cx": 450, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 11},
-  { "cx": 380, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 12},
-  { "cx": 310, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 13},
-  { "cx": 240, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 14},
-  { "cx": 170, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 15},
-  { "cx": 120, "cy": 450, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 16},
-  { "cx": 120, "cy": 380, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 17},
+  { "cx": 380, "cy": 520, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
+  { "cx": 310, "cy": 520, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 13},
+  { "cx": 240, "cy": 520, "radius": 30, "color" : "gold", "fontcolor" : "black", "number" : 14},
+  { "cx": 170, "cy": 520, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 15},
+  { "cx": 120, "cy": 450, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 16},
+  { "cx": 120, "cy": 380, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 17},
   { "cx": 120, "cy": 310, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 18},
   { "cx": 120, "cy": 240, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 19},
   { "cx": 190, "cy": 240, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 20},
@@ -224,7 +224,7 @@ var text = svgContainer.selectAll("text")
 
 //Add SVG Text Element Attributes
 var textLabels = text
-                 .attr("x", function(d) { return d.cx-5; })
+                 .attr("x", function(d) { if(d.number < 10){return d.cx-5;}else{ return d.cx-10;} })
                  .attr("y", function(d) { return d.cy+5; })
                  .text(function(d) { return d.number; })
                  .attr("font-family", "Chalkboard")
