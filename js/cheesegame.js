@@ -7,7 +7,7 @@ var cheeseresulttexts = ["2/2","3/3","4/4","6/6","8/8","10/10","20/20"];
 
 var cheese_solution;
 var randomcheese;
-var numberoftrys = 0;
+var numberoftrys;
 var lastdroppedid;
 var secondtext;
 var secondimage;
@@ -17,6 +17,8 @@ function initialisecheesegame(){
 
 //Hide the cheesebutton
 $("#cheesebutton").hide();
+
+numberoftrys = 0;
 
 
 var firstcheese = document.getElementById("firstcheese");
