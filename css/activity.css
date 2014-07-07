@@ -553,8 +553,8 @@ Styles for the selection screen
 
 .sourcelink_div{
   position: absolute;
-  left: 1000px;
-  top: 750px;
+  left: 800px;
+  top: 650px;
 }
 
 .sourcelink{
@@ -1501,6 +1501,25 @@ Styles for the new level div
 #newleveldiv{
  background-color:white;
 }
+/*================================================
+Styles for the game rules
+=================================================*/
 
+#gamerules{
+  overflow:hidden;
+  width: 1200px;
+  height: 820px;
+  background-color: white;
+}
+
+.gamerulesli{
+  font-size:30px;
+  color: gray;
+}
+
+#gamerulesinnerdiv{
+  margin-left: 50px;
+  margin-top: 50px;
+}
 
   
