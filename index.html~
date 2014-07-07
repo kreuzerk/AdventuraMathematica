@@ -496,6 +496,7 @@ Wall Game
 ====================================================================-->
 <div id="wallgame" style="overflow:hidden">
 
+<div class="wallgametablediv">
 <table class="wallgametable">
 <tr>
 	<td>
@@ -524,6 +525,8 @@ Wall Game
 	</td>
 </tr>
 </table>
+</div>
+
 </div>
 
 <!----==================================================================
