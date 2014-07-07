@@ -11,6 +11,7 @@ var memorygame_secondclicked_id = null;
 var memorygame_previous_correct;
 var previous_correct = false;
 var memorygame_found_counter = 0;
+var memorygame_numberoftries = 0;
 
 function initialise_memory_game(){
 
@@ -69,6 +70,8 @@ document.getElementById("memorygame_td" + i).style.backgroundImage = 'url(./imag
 document.getElementById("memorygame_td" + i).setAttribute("onclick", "memorycard_clicked($(this).attr('order'), $(this).attr('id'))");
 document.getElementById("memorygame_td" + i).innerHTML = "";
 memorygame_found_counter = 0;
+memorygame_numberoftries = 0;
+document.getElementById("memorygame_intentos").innerHTML = "Intiendos: " + memorygame_numberoftries;
 }
 
 }
@@ -161,6 +164,9 @@ memorygame_secondclicked_id = null;     //Reset the second element to null
 
 //Needs to be before the second if statement otherwise it does not work
 if(memorygame_firstclicked != null){
+
+memorygame_numberoftries++;
+document.getElementById("memorygame_intentos").innerHTML = "Intiendos: " + memorygame_numberoftries;
 
 //This if is executed if the code is correct
 if(memorygame_result_array[memorygame_firstclicked-1] == memorygame_result_array[$order-1]){

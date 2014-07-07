@@ -1090,7 +1090,7 @@ Styles for the memory game
   height: 700px;
   border-style: solid;
   table-layout:fixed;
-  margin-left: 200px;
+  margin-left: 50px;
   overflow:hidden;
 }
 
@@ -1106,6 +1106,18 @@ Styles for the memory game
   background-image: url(../images/memorygame/memorycard_frontside.png);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+#memorygame_display{
+  position:absolute;
+  left: 785px;
+  top: 50px;
+}
+
+.memorygame_display_p{
+  border-style: solid;
+  border-color: gray;
+  padding: 10px;
 }
 
 /*================================================
