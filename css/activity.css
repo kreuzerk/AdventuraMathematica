@@ -1482,4 +1482,13 @@ Styles for the start screen
   background-repeat: no-repeat;
 }
 
+/*==================================================
+Styles for the new level div
+==================================================*/
+
+#newleveldiv{
+ background-color:white;
+}
+
+
   

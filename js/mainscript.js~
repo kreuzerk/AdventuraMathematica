@@ -21,19 +21,19 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 7},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 7},
   { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 9},
-  { "cx": 680, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 11},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 9},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
-  { "cx": 890, "cy": 660, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 13},
-  { "cx": 880, "cy": 590, "radius": 30, "color" : "turquoise", "fontcolor" : "white", "number" : 14},
+  { "cx": 890, "cy": 660, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 13},
+  { "cx": 880, "cy": 590, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 14},
   { "cx": 810, "cy": 580, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 15},
   { "cx": 740, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 16},
   { "cx": 670, "cy": 580, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 17},
@@ -224,7 +224,7 @@ var text = svgContainer.selectAll("text")
 
 //Add SVG Text Element Attributes
 var textLabels = text
-                 .attr("x", function(d) { return d.cx-5; })
+                 .attr("x", function(d) { if(d.number < 10){return d.cx-5;}else{ return d.cx-10;} })
                  .attr("y", function(d) { return d.cy+5; })
                  .text(function(d) { return d.number; })
                  .attr("font-family", "Chalkboard")
@@ -1291,9 +1291,12 @@ svgContainer.append("text").attr("id", "bananatext")
       .attr("fill", "red");
 
 var bananaamount = document.getElementById("bananaamount");
-if(bananacounter > 0){
+if(bananacounter -$amount < 0){
+bananacounter = 0;
+}
+else{
 bananacounter = bananacounter - $amount;
-	}
+}
 }
 
 bananaamount.textContent = "+ " + bananacounter;
@@ -1316,6 +1319,22 @@ if($positive){
 
 sound_moneysound.play();
 
+//Play the sound corresponding to the level
+switch(selected_level){
+
+case "level1":
+sound_backgroundmusic_level1.play();
+break;
+case "level2":
+sound_level2.play();
+break;
+case "level3":
+sound_level3.play();
+break;
+
+}
+
+
 //Plus
 svgContainer.append("text").attr("id", "bananatext")
       .attr("x", 160)
@@ -1329,7 +1348,7 @@ var moneyamount = document.getElementById("moneyamount");
 moneycounter = moneycounter + $amount;
 moneyamount.textContent = "+ " + moneycounter;
 
-if(moneycounter >= 2){
+if(moneycounter >= 1){
 
 switch(selected_level){
 
