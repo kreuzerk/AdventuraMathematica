@@ -913,9 +913,6 @@ break;
 case 2:
   drawimage(0, true);
 break;
-case 3:
-  drawimage(10, false);
-break;
 default:
   drawimage(10, false);
 break;

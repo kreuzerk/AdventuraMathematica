@@ -917,7 +917,7 @@ case 3:
   drawimage(10, false);
 break;
 default:
-  drawimage(20, false);
+  drawimage(10, false);
 break;
 }
 
