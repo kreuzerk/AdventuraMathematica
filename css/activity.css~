@@ -561,6 +561,10 @@ Styles for the selection screen
   font-size: 20px;
 }
 
+.sourcelink:hover{
+  color:black;
+}
+
 .selectionitem{
   background-color:white;
 }
@@ -1179,8 +1183,8 @@ Styles for the castle game
 .castlegame_buttondiv{
 
   position:absolute;
-  left: 480px;
-  top: 700px;
+  left: 780px;
+  top: 650px;
 }
 
 #castlegame{

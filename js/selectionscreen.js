@@ -62,8 +62,6 @@ document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Lev
 document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
 
 break;
-
-
 }
 */
 

@@ -7,13 +7,14 @@ function initialisedivisiongame(){
 
 for(var z = 1; z<=sortgame_numberoflis; z++){
 
+do{		//We want only division with whole number results
+
 var moduloiszero = false;
 
-do{		//We want only division with whole number results
 var number1 = Math.floor(Math.random() * sortgame_range) + 1;
 var number2 = Math.floor(Math.random() * sortgame_range) + 1;
 
-if(number1 % number2 == 0){
+if(number1 % number2 == 0 && number1 - number2 > 0){
 var alreadyexists = false;
 
 //Make sure that the result of this devision does not already exists

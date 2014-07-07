@@ -13,17 +13,41 @@ function initialisewallgame(){
 document.getElementById("wallgame").style.backgroundImage = imagepath_wallgame;
 
 numberoflis = 8;
-var exerciserange = 50;
+var exerciserange = 12;
 wallgame_result = new Array(numberoflis);
 
 wallgame_counter = 0;
+
+switch(level_operator){
+
+case "*","/":
+exerciserange = 12;
+break;
+case "+", "-":
+exerciserange = 50;
+break;
+
+}
 
 //For loop for the first elements
 
 for(var i=1; i<=numberoflis; i++){
 
+do{		//We want only division with whole number results
+
+var moduloiszero = false;
+
 var number1 = Math.floor(Math.random() * exerciserange) + 1;
 var number2 = Math.floor(Math.random() * exerciserange) + 1;
+
+if(number1 % number2 == 0 && number1 - number2 > 0){
+moduloiszero = true;
+}
+
+}
+while(moduloiszero == false);
+
+
 
 var li = document.getElementById("wallgameli1_" + i);
 

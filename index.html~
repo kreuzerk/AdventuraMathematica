@@ -162,7 +162,7 @@ Krokogame
 </table>
 
 <div class="continuediv">
-<button id="krokocontinue" onclick="nextquestion()">Siguiente Pergunta</button>
+<button id="krokocontinue" onclick="nextquestion()">Continuar</button>
 </div>
 
 </div>
