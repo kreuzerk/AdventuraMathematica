@@ -1162,16 +1162,16 @@ $("#maingamesvg").show();
 /*=================================================================================
 Function to check the chocolate fields
 ===================================================================================*/
-function checkchocolate($correct){
+function checkchocolate($correct, $number){
 
 hidechocolate();
 
 if($correct){
-  drawimage(10,true);
+  drawimage($number,true);
 }
 else
 {
-  drawimage(10, false);
+  drawimage($number, false);
 }
 
 }

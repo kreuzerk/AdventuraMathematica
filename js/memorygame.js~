@@ -71,6 +71,7 @@ document.getElementById("memorygame_td" + i).setAttribute("onclick", "memorycard
 document.getElementById("memorygame_td" + i).innerHTML = "";
 memorygame_found_counter = 0;
 memorygame_numberoftries = 0;
+document.getElementById("memorygame_intentos").innerHTML = "Intiendos: " + memorygame_numberoftries;
 }
 
 }
@@ -185,6 +186,20 @@ previous_correct = true;
 else
 {
 checkchocolate(true);		//Call the function that is responsible for checking this fields
+
+if(memorygame_numberoftries <= 20){
+  checkchocolate(true, 10);
+}
+else{
+	if(memorygame_numberoftries <= 40){
+		checkchocolate(true, 0);	
+	}
+	else
+	{
+		checkchocolate(false,10);
+	}
+}
+
 }
 
 }

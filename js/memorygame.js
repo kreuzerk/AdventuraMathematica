@@ -185,7 +185,21 @@ previous_correct = true;
 }
 else
 {
-checkchocolate(true);		//Call the function that is responsible for checking this fields
+//Call the function that is responsible for checking this fields
+
+if(memorygame_numberoftries <= 20){
+  checkchocolate(true, 10);
+}
+else{
+	if(memorygame_numberoftries <= 40){
+		checkchocolate(true, 0);	
+	}
+	else
+	{
+		checkchocolate(false,10);
+	}
+}
+
 }
 
 }
