@@ -1494,6 +1494,17 @@ Styles for the start screen
   background-repeat: no-repeat;
 }
 
+.startscreen_gamegoal{
+  position: absolute;
+  top: 450px;
+  left: 350px;
+}
+
+.startscreen_gamegoal_h1{
+  color:white;
+  text-align:center;
+}
+
 /*==================================================
 Styles for the new level div
 ==================================================*/
