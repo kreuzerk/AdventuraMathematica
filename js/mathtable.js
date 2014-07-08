@@ -58,7 +58,7 @@ var exists = false;
 var ok = true;
 
 for(var j = 0; j< mathtable_columnvalues.length; j++){
-  if(mathtable_columnvalues[i] == columnvalue){
+  if(mathtable_columnvalues[j] == columnvalue){
   	exists = true;
 	break;
   }

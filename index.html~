@@ -961,6 +961,7 @@ Div that explains the rules of the game
 ===================================================================-->
 <div id="gamerules">
 
+<div id="gamerulesinnerdiv">
 <h1>Game rules </h1>
 
 <p>
@@ -981,6 +982,7 @@ Div that explains the rules of the game
 <p>
 <button onclick="backfromgamerules()">Espalda</button>
 </p>
+</div>
 
 </div>
 
@@ -1033,6 +1035,7 @@ var sound_startscreensound;
 var sound_level3;
 var sound_level2;
 var sound_moneysound;
+var sound_newlevel;
 
 //===============================================
 //Setting the sources of the audiobackgroundsound_level2
@@ -1067,6 +1070,7 @@ sound_tigerlaugh = new Audio('./sounds/tigerlaugh.ogg');
 sound_introeffect = new Audio('./sounds/introeffect.ogg');
 sound_startscreensound = new Audio('./sounds/startscreen_sound.ogg');
 sound_moneysound = new Audio('./sounds/moneysound.ogg');
+sound_newlevel = new Audio('./sounds/newlevel.ogg');
 
 //Only load media when needed - Kind of lazy loading - Performance reasons on the OLPC
 //====================================================

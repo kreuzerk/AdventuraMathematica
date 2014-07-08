@@ -1368,6 +1368,7 @@ break;
 
 }
 
+sound_newlevel.play();
 $( "#newleveldiv" ).dialog( "open" );
 
 }

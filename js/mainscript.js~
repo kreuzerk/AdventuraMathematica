@@ -87,15 +87,15 @@ var level1 = [
 //Datas for the second level
 var level2 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 70, "cy": 660, "radius": 30, "color" : "salmon", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 70, "cy": 590, "radius": 30, "color" : "salmon", "fontcolor" : "white", "number" : 3},
-  { "cx": 70, "cy": 520, "radius": 30, "color" : "salmon", "fontcolor" : "black", "number" : 4},
-  { "cx": 70, "cy": 450, "radius": 30, "color" : "salmon", "fontcolor" : "white", "number" : 5},
-  { "cx": 70, "cy": 380, "radius": 30, "color" : "salmon", "fontcolor" : "black", "number" : 6},
-  { "cx": 70, "cy": 310, "radius": 30, "color" : "salmon", "fontcolor" : "black", "number" : 7},
-  { "cx": 70, "cy": 240, "radius": 30, "color" : "salmon", "fontcolor" : "black", "number" : 8},
-  { "cx": 140, "cy": 210, "radius": 30, "color" : "salmon", "fontcolor" : "white", "number" : 9},
-  { "cx": 210, "cy": 210, "radius": 30, "color" : "salmon", "fontcolor" : "white", "number" :10},
+  { "cx": 70, "cy": 660, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 70, "cy": 590, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 3},
+  { "cx": 70, "cy": 520, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 4},
+  { "cx": 70, "cy": 450, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 70, "cy": 380, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 6},
+  { "cx": 70, "cy": 310, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 7},
+  { "cx": 70, "cy": 240, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 8},
+  { "cx": 140, "cy": 210, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
+  { "cx": 210, "cy": 210, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
   { "cx": 230, "cy": 280, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 11},
   { "cx": 240, "cy": 350, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
   { "cx": 240, "cy": 420, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 13},
@@ -1368,6 +1368,7 @@ break;
 
 }
 
+sound_newlevel.play();
 $( "#newleveldiv" ).dialog( "open" );
 
 }
