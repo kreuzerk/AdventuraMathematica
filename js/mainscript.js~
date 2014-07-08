@@ -21,13 +21,13 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 8},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "salmon", "fontcolor" : "white", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 8},
   { "cx": 610, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" :10},
   { "cx": 750, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 11},
@@ -236,6 +236,13 @@ svgContainer.append("svg:image")
       .attr("xlink:href", filename).attr("id", "Lion")	//Filename is specified in the mainscript
       .attr("width", 100)
       .attr("height", 100).attr("x", 0).attr("y",680);
+
+//Adding the image in the top right cornert - imgae to go back to the main game
+svgContainer.append("svg:image")
+      .attr("onclick","espalda_clicked()")
+      .attr("xlink:href", "./images/paper_corner.png")
+      .attr("width", 260)
+      .attr("height", 120).attr("x", 1000).attr("y",0);
 
 
 //Adding the cube
@@ -1413,6 +1420,62 @@ function showgamerules(){
 $("#caracterselection").hide();
 $("#gamerules").show();
 }
+
+function backfromgamerules(){
+$("#gamerules").hide();
+$("#caracterselection").show();
+}
+
+/*=============================================================
+Function that is called by the Espalda Button
+=================================================*/
+function espalda_clicked(){
+if (confirm('De verdad quieres volver a la pantalla de inicio?')) {
+    $("#maingamesvg").hide();
+    $("#caracterselection").show();
+
+//Play the sound corresponding to the level
+switch(selected_level){
+
+case "level1":
+sound_backgroundmusic_level1.pause();
+//sound_backgroundmusic.currentTime = 0;
+break;
+case "level2":
+sound_level2.pause();
+//sound_level2.currentTime = 0;
+break;
+case "level3":
+sound_level3.pause();
+//sound_level3.currentTime = 0;
+break;
+
+} // End Switch Case
+
+sound_intromusic.play();
+
+reset_maingamesvg();
+
+}
+
+}
+
+function reset_maingamesvg(){
+
+//Clear all images from maingamesvg
+$("#maingamesvg").empty();
+
+//Reset the necessary variables
+banacounter = 0;
+moneycounter = 0;
+currentfield = 1;
+entered = false;
+deletearrow = true;
+
+}
+
+
+
 
 
 

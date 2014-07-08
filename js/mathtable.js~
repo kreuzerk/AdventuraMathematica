@@ -1,4 +1,6 @@
 var math_table_range = 12;
+var mathtable_columnvalues = new Array(4);
+var mathtable_rowvalues = new Array(4);
 
 
 function initialise_math_table(){
@@ -13,13 +15,41 @@ document.getElementById("mathtable_operator").innerHTML = level_operator;
 
 //Initialise the for Headers of each Column
 for(var i = 1; i<=4; i++){
+
+do{
 var columnheader = document.getElementById("multi_table_col_header" + i);
+
+var exists = false;
+
+for(var j = 0; j< mathtable_columnvalues.length; j++){
+  if(mathtable_columnvalues[i] == columnheader){
+  	exists = true;
+	break;
+  }
+}
+
+}
+while(exists);
+
+mathtable_columnvalues[i] = columnheader;
 columnheader.innerHTML = Math.floor(Math.random() * math_table_range) + 1;
 }
 
 //Initialise the row "headers"
 for(var i = 1; i<=3; i++){
+do{
 var rowheader = document.getElementById("multi_table_row_header" + i);
+var exists = false;
+
+for(var j=0; j<mathtable_rowvalues.length; j++){
+  if(mathtable_rowvalues[j] == rowheader){
+  	exists = true;
+	break;
+  }
+}
+}
+while(columnheader - rowheader < 0 && exists == true);
+
 rowheader.innerHTML = Math.floor(Math.random() * math_table_range) + 1;
 }
 

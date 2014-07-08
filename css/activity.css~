@@ -1506,6 +1506,7 @@ Styles for the game rules
 =================================================*/
 
 #gamerules{
+  overflow:hidden;
   width: 1200px;
   height: 820px;
   background-color: white;
@@ -1518,6 +1519,7 @@ Styles for the game rules
 
 #gamerulesinnerdiv{
   margin-left: 50px;
+  margin-top: 50px;
 }
 
   
