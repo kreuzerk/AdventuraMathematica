@@ -40,7 +40,7 @@ var patternnumber = Math.floor(Math.random() * numberofpatterns) + 1;
 nextsvg.append("text").
       			attr("x", 20)
       			.attr("y", 40)
-      			.text("Completa el patrón")
+      			.text("Completa el patrón a 10")
       			.attr("font-family", "Chalkboard")
       			.attr("font-size", "30px")
       			.attr("fill", "black");

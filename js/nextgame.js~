@@ -248,6 +248,8 @@ Function for handling the click on an element
 ==========================================================*/
 function drawfigure($form, $color){
 
+sound_pencil.play();
+
 if($form == "rect"){
   drawnextelement($color, true);
 }

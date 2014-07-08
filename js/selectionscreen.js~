@@ -182,6 +182,9 @@ imagepath_endofround = "url(./images/endofround/Round.png)";
 imagepath_tiger = "url(./images/quizgame/Tiger_Level1.png)";
 
 
+//Choose the settings for the display
+item_display_color = "black";
+
 //Choose the operator for level1
 level_operator = "+";
 
@@ -219,7 +222,7 @@ item_display_color = "white";
 
 
 //Set the difficulty of the level
-level_operator = "-";
+level_operator = "*";
 
 break;
 

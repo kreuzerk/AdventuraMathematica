@@ -222,7 +222,7 @@ item_display_color = "white";
 
 
 //Set the difficulty of the level
-level_operator = "-";
+level_operator = "*";
 
 break;
 
