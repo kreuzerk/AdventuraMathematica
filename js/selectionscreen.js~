@@ -39,7 +39,7 @@ localStorage.setItem("level", 1);
 level = 1;
 }
 
-
+/*
 switch(level){
 
 case "1":
@@ -63,7 +63,7 @@ document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
 
 break;
 }
-
+*/
 
 }
 

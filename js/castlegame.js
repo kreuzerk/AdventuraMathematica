@@ -10,6 +10,8 @@ castlegame_livecastle = 3;
 
 function castlegame_initialise(){
 
+document.getElementById("castlegame_maincaracter").setAttribute("src", filename);
+
 $( ".fireball" ).hide();
 $( ".fireball_player1" ).hide();
 $( ".fireball_player2" ).hide();

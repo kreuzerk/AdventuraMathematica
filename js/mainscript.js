@@ -87,27 +87,27 @@ var level1 = [
 //Datas for the second level
 var level2 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 70, "cy": 660, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 70, "cy": 590, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 3},
-  { "cx": 70, "cy": 520, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 4},
-  { "cx": 70, "cy": 450, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 70, "cy": 660, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 70, "cy": 590, "radius": 30, "color" : "pink", "fontcolor" : "white", "number" : 3},
+  { "cx": 70, "cy": 520, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 4},
+  { "cx": 70, "cy": 450, "radius": 30, "color" : "pink", "fontcolor" : "white", "number" : 5},
   { "cx": 70, "cy": 380, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 6},
-  { "cx": 70, "cy": 310, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 7},
-  { "cx": 70, "cy": 240, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 8},
-  { "cx": 140, "cy": 210, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
-  { "cx": 210, "cy": 210, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
-  { "cx": 230, "cy": 280, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 11},
-  { "cx": 240, "cy": 350, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
-  { "cx": 240, "cy": 420, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 13},
-  { "cx": 240, "cy": 490, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 14},
-  { "cx": 240, "cy": 570, "radius": 30, "color" : "turqoise", "fontcolor" : "white", "number" : 15},
-  { "cx": 240, "cy": 640, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 16},
-  { "cx": 310, "cy": 670, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 17},
-  { "cx": 380, "cy": 670, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 18},
-  { "cx": 450, "cy": 670, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 19},
-  { "cx": 520, "cy": 670, "radius": 30, "color" : "salmon", "fontcolor" : "black", "number" : 20},
-  { "cx": 590, "cy": 670, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 21},
-  { "cx": 660, "cy": 670, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 22},
+  { "cx": 70, "cy": 310, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 7},
+  { "cx": 70, "cy": 240, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 8},
+  { "cx": 140, "cy": 210, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 9},
+  { "cx": 210, "cy": 210, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" :10},
+  { "cx": 230, "cy": 280, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 11},
+  { "cx": 240, "cy": 350, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 12},
+  { "cx": 240, "cy": 420, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 13},
+  { "cx": 240, "cy": 490, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 14},
+  { "cx": 240, "cy": 570, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 15},
+  { "cx": 240, "cy": 640, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 16},
+  { "cx": 310, "cy": 670, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 17},
+  { "cx": 380, "cy": 670, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 18},
+  { "cx": 450, "cy": 670, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 19},
+  { "cx": 520, "cy": 670, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 20},
+  { "cx": 590, "cy": 670, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 21},
+  { "cx": 660, "cy": 670, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 22},
   { "cx": 730, "cy": 670, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 23},
   { "cx": 800, "cy": 670, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 24},
   { "cx": 870, "cy": 670, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 25},
@@ -546,6 +546,7 @@ Hide function at the beginning of the game
 ===================================================================================*/
 
 function hide(){
+
 
 $("#shopdiv").hide();
 $("#maingamesvg").hide();
