@@ -3,7 +3,7 @@ var movevalue;
 var diceresult;
 var cx;
 var cy;
-var bananacounter = 0;
+var bananacounter = 200;
 var moneycounter = 0;
 var filename;
 var goldentered = false;
@@ -21,16 +21,16 @@ var circleData;
 //Circle Data Set
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 3},
   { "cx": 260, "cy": 700, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "salmon", "fontcolor" : "white", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 9},
-  { "cx": 680, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 11},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 9},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 12},
   { "cx": 890, "cy": 660, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 13},
   { "cx": 880, "cy": 590, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 14},
@@ -247,7 +247,7 @@ svgContainer.append("svg:image")
 
 //Adding the cube
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/cube.png").attr("onclick","hallo()")
+      .attr("xlink:href", "./images/cube.png").attr("onclick","hallo()").attr("id", "maingame_cube")
       .attr("width", 100)
       .attr("height", 100).attr("x", 20).attr("y",20);
 
@@ -330,11 +330,12 @@ $("#caracterselection").show();
 
 }
 
-
 function hallo(){
 
 //Play the sound for the diceroll
 sound_diceroll.play();
+    
+
 
 if(deletearrow){
 var arrow = document.getElementById("click_arrow");
@@ -574,7 +575,7 @@ $("#progress_buttondiv").hide();
 $("#caracterselection").hide();
 $("#newleveldiv").hide();
 $("#gamerules").hide();
-
+$("#minigameresultdiv").hide();
 
 }
 
@@ -745,7 +746,23 @@ break;
 Function for green fields
 ===================================================================================*/
 function green(){
-drawimage(3, true);
+minigameresult_greenfields(3, true);
+
+switch(selected_level){
+case "level1":
+sound_backgroundmusic_level1.pause();
+break;
+case "level2":
+sound_level2.pause();
+break;
+case "level3":
+sound_level3.pause();
+break;
+}
+
+$("#maingamesvg").hide();
+$("#minigameresultdiv").show();
+
 }
 
 /*=================================================================================
@@ -770,7 +787,22 @@ Function for red fields
 
 //Display function
 function red(){
-drawimage(3, false);
+minigameresult_redfields(3, false);
+
+switch(selected_level){
+case "level1":
+sound_backgroundmusic_level1.pause();
+break;
+case "level2":
+sound_level2.pause();
+break;
+case "level3":
+sound_level3.pause();
+break;
+}
+
+$("#maingamesvg").hide();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -778,19 +810,19 @@ Function for blue fields (Shopgame)
 ===================================================================================*/
 
 function correctblue(){
+initialiseminigameresultscreen(10, true);
 hideblue();
-drawimage(10, true);
 }
 
 function wrongblue(){
+initialiseminigameresultscreen(10, false);
 hideblue();
-drawimage(5, false);
 }
 
 function hideblue(){
 $("#shopdiv").hide();
 sound_shopbackground.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -802,16 +834,16 @@ function checkkrokoanswers($number_correct){
 switch($number_correct){
 
 case 0:
-  drawimage(10, false);
+  initialiseminigameresultscreen(10, false);
 break;
 case 1:
-  drawimage(5, true);
+  initialiseminigameresultscreen(5, true);
 break;
 case 2:
-  drawimage(10, true);
+  initialiseminigameresultscreen(10, true);
 break;
 case 3:
-  drawimage(15, true);
+  initialiseminigameresultscreen(15, true);
 break;
 }
 
@@ -822,29 +854,20 @@ hideyellow();
 function hideyellow(){
   $("#krokodiv").hide();
   sound_background_krokogame.pause();
-  $("#maingamesvg").show();
+  $("#minigameresultdiv").show();
 }
 
 /*=================================================================================
 Function for orange fields
 ===================================================================================*/
 
-function checkorangefields($number_correct){
+function checkorangefields($correct){
 
-switch($number_correct){
-
-case 0:
-  drawimage(10, false);
-break;
-case 1:
-  drawimage(5, true);
-break;
-case 2:
-  drawimage(10, true);
-break;
-case 3:
-  drawimage(15, true);
-break;
+if($correct){
+  initialiseminigameresultscreen(10, true);
+}
+else{
+  initialiseminigameresultscreen(10, false);
 }
 
 hideorange();
@@ -854,7 +877,7 @@ hideorange();
 function hideorange(){
 $("#formgame").hide();
   sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -868,10 +891,10 @@ switch($number_correct){
 case 0:
 case 1:
 case 2:
-  drawimage(10, false);
+  initialiseminigameresultscreen(5, false);
 break;
 case 3:
-  drawimage(15, true);
+  initialiseminigameresultscreen(20, true);
 break;
 }
 
@@ -882,7 +905,7 @@ hidepurple();
 function hidepurple(){
 $("#endresultgame").hide();
   sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 
@@ -894,10 +917,10 @@ function checkpinkfields($is_correct){
 hidepink();
 
 if($is_correct){
-  drawimage(10,true);
+  initialiseminigameresultscreen(10,true);
 }
 else{
-  drawimage(10,false);
+  initialiseminigameresultscreen(10,false);
 }
 
 }
@@ -905,34 +928,29 @@ else{
 function hidepink(){
 $("#whatisnextgame").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
 Function for lavender fields
 ===================================================================================*/
-function checklavenderfields($numberoftrys){
+function checklavenderfields($correct){
+
+if($correct){
+  initialiseminigameresultscreen(10,true);
+}
+else{
+  initialiseminigameresultscreen(10,false);
+}
 
 hidelavender();
-
-switch($numberoftrys){
-case 1:
-  drawimage(10, true);
-break;
-case 2:
-  drawimage(0, true);
-break;
-default:
-  drawimage(10, false);
-break;
-}
 
 }
 
 function hidelavender(){
 $("#cheese").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 
@@ -944,10 +962,10 @@ function checkskybluefields($is_correct){
 hideskyblue();
 
 if($is_correct){
-  drawimage(10,true);
+  initialiseminigameresultscreen(10,true);
 }
 else{
-  drawimage(10,false);
+  initialiseminigameresultscreen(10,false);
 }
 
 }
@@ -955,7 +973,7 @@ else{
 function hideskyblue(){
 $("#tengame").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -966,10 +984,10 @@ function checkmediumaquamarinefields($is_correct){
 hidemediumaquamarine();
 
 if($is_correct){
-  drawimage(10,true);
+  initialiseminigameresultscreen(10,true);
 }
 else{
-  drawimage(10,false);
+  initialiseminigameresultscreen(10,false);
 }
 
 }
@@ -977,7 +995,7 @@ else{
 function hidemediumaquamarine(){
 $("#divisiongame").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -985,34 +1003,23 @@ Function for golden fields
 ===================================================================================*/
 function checkgoldenfields($deliver){
 
-hidegold();
-
 if($deliver){
-  drawmoney(1,true);
+   initialiseminigame_money_recived(true);
 }
+else
+{
+   initialiseminigame_money_recived(false);
+}
+
+hidegold();
 
 }
 
 function hidegold(){
 $("#bananadelivery").hide();
 sound_monkeybackground.pause();
+$("#minigameresultdiv").show();
 
-//Play the sound corresponding to the level
-switch(selected_level){
-
-case "level1":
-sound_backgroundmusic_level1.play();
-break;
-case "level2":
-sound_level2.play();
-break;
-case "level3":
-sound_level3.play();
-break;
-
-}
-
-$("#maingamesvg").show();
 }
 
 
@@ -1021,21 +1028,21 @@ Function for khaki fields
 ===================================================================================*/
 function checkkhakifields($correct){
 
-hidekhaki();
-
 if($correct){
-  drawimage(10,true);
+  initialiseminigameresultscreen(10,true);
 }
 else{
-  drawimage(10,false);
+  initialiseminigameresultscreen(10,false);
 }
+
+hidekhaki();
 
 }
 
 function hidekhaki(){
 $("#slidergame").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1043,18 +1050,18 @@ Function for midnightblue fields
 ===================================================================================*/
 function checkmidnightbluefields($correct){
 
-hidekmidnightblue();
-
 if($correct){
-  drawimage(15,true);
+  initialiseminigameresultscreen(15,true);
 }
+
+hidekmidnightblue();
 
 }
 
 function hidekmidnightblue(){
 $("#wallgame").hide();
 sound_background4.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1062,10 +1069,10 @@ Function for snow fields
 ===================================================================================*/
 function hidesnowfield(){
 $("#endofround").hide();
-drawimage(10,true);
+initialiseminigameresultscreen(10,true);
 sound_buttonclicked.play();
 sound_startscreensound.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1073,22 +1080,22 @@ Function for turqois fields
 ===================================================================================*/
 function checkturquoisfields($correct){
 
-hideturquois();
-
 if($correct){
-  drawimage(10,true);
+  initialiseminigameresultscreen(10,true);
 }
 else
 {
-  drawimage(10, false);
+  initialiseminigameresultscreen(10, false);
 }
+
+hideturquois();
 
 }
 
 function hideturquois(){
 $("#circlegame").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1096,50 +1103,44 @@ Function to check the salmon fields
 ===================================================================================*/
 function checksalmonfields($correct){
 
-hidesalmon();
-
 if($correct){
-  drawimage(10,true);
+  initialiseminigameresultscreen(10,true);
 }
 else
 {
-  drawimage(10, false);
+  initialiseminigameresultscreen(10, false);
 }
+
+hidesalmon();
 
 }
 
 function hidesalmon(){
 $("#multiplikationtablediv").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
 Function to check the greenyellow fields
 ===================================================================================*/
-function checkgreenyellowfields($numberoftries){
+function checkgreenyellowfields($correct){
+
+if($correct){
+  initialiseminigameresultscreen(10,true);
+}
+else{
+  initialiseminigameresultscreen(10,false);
+}
 
 hidegreenyellow();
-
-if($numberoftries == 0){
-  drawimage(10,true);
-}
-
-if($numberoftries == 1){
-  drawimage(5,true);
-}
-
-if($numberoftries > 1){
-  drawimage(10,false);
-}
-
 
 }
 
 function hidegreenyellow(){
 $("#gridaddition").hide();
 sound_background4.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1147,22 +1148,22 @@ Function to check the dodgerblue fields
 ===================================================================================*/
 function checkdodgerblue($correct){
 
-hidedodgerblue();
-
 if($correct){
-  drawimage(10,true);
+  initialiseminigameresultscreen(10,true);
 }
 else
 {
-  drawimage(10, false);
+  initialiseminigameresultscreen(10, false);
 }
+
+hidedodgerblue();
 
 }
 
 function hidedodgerblue(){
 $("#sharinggame").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1170,22 +1171,22 @@ Function to check the chocolate fields
 ===================================================================================*/
 function checkchocolate($correct, $number){
 
-hidechocolate();
-
 if($correct){
-  drawimage($number,true);
+  initialiseminigameresultscreen($number,true);
 }
 else
 {
-  drawimage($number, false);
+  initialiseminigameresultscreen($number, false);
 }
+
+hidechocolate();
 
 }
 
 function hidechocolate(){
 $("#memorygame").hide();
 sound_background2.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1193,21 +1194,21 @@ Function for silver fields
 ===================================================================================*/
 function checksilver($is_correct){
 
-hidesilver();
-
 if($is_correct){
-  drawimage(10,true);
+  initialiseminigameresultscreen(10,true);
 }
 else{
-  drawimage(10,false);
+  initialiseminigameresultscreen(10,false);
 }
+
+hidesilver();
 
 }
 
 function hidesilver(){
 $("#castlegame").hide();
 sound_castlebackground.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1215,27 +1216,28 @@ Function for tiger game	/ Black fields
 ===================================================================================*/
 function checkblackfields($result){
 
-hideblack();
-
 switch($result){
 
 case -1:
-drawimage(30, false);
+initialiseminigameresultscreen(30, false);
 break;
 case 0:
-drawimage(10, false);
+initialiseminigameresultscreen(10, false);
 break;
 case 1:
-drawimage(0, true);
+initialiseminigameresultscreen(0, true);
 break;
 
 }
+
+hideblack();
+
 }
 
 function hideblack(){
 $("#tigerdiv").hide();
 sound_tigerbackground1.pause();
-$("#maingamesvg").show();
+$("#minigameresultdiv").show();
 }
 
 /*=================================================================================
@@ -1267,8 +1269,6 @@ svgContainer.append("svg:image")
 
 if($positive){
 
-//Play the banana up sound
-sound_bananaup.play();
 
 //Plus
 svgContainer.append("text").attr("id", "bananatext")
@@ -1285,7 +1285,6 @@ bananaamount.textContent = "+ " + bananacounter;
 }
 else{
 
-sound_bananalost.play(); //Play the lost banana sound
 
 //Minus
 svgContainer.append("text").attr("id", "bananatext")
@@ -1322,23 +1321,6 @@ svgContainer.append("svg:image")
 
 
 if($positive){
-
-sound_moneysound.play();
-
-//Play the sound corresponding to the level
-switch(selected_level){
-
-case "level1":
-sound_backgroundmusic_level1.play();
-break;
-case "level2":
-sound_level2.play();
-break;
-case "level3":
-sound_level3.play();
-break;
-
-}
 
 
 //Plus

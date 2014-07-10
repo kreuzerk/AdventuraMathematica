@@ -51,6 +51,7 @@ correct = false;
 break;
 }
 
+alert(correct);
 checkdodgerblue(correct);
 
 }

@@ -1533,4 +1533,76 @@ Styles for the game rules
   margin-top: 50px;
 }
 
-  
+/*==================================================
+Styles for the gameresult div
+==================================================*/
+#minigameresultdiv{
+  background-color: white;
+  height: 820px;
+  width: 1200px;
+}
+
+.minigameresult_header{
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  left: 400px;
+  top: 100px;
+  border-style: solid;
+  border-color: gray;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 55px; 
+}
+
+.minigameresult_body{
+  width: 600px;
+  height: 500px;  
+  position: absolute;
+  left: 300px;
+  top: 250px;
+  border-style: solid;
+  border-color: gray;
+  text-align: center;
+
+}
+
+#minigameresult_header_h1{
+  font-size: 30px;
+}
+
+.minigameresultdiv_button{
+  width:150px;
+  height:80px;
+  font-size:20px;
+
+  background: #9e4b03;
+  background-image: -webkit-linear-gradient(top, #9e4b03, #523509);
+  background-image: -moz-linear-gradient(top, #9e4b03, #523509);
+  background-image: -ms-linear-gradient(top, #9e4b03, #523509);
+  background-image: -o-linear-gradient(top, #9e4b03, #523509);
+  background-image: linear-gradient(to bottom, #9e4b03, #523509);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #010b12 2px;
+  text-decoration: none;
+}
+
+.minigameresultdiv_button:hover{
+  background: #b7f03c;
+  background-image: -webkit-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -moz-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -ms-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -o-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: linear-gradient(to bottom, #b7f03c, #d1f266);
+  text-decoration: none;
+  color:black;
+}
+
+#maingameresultdiv_bananatext{
+  font-size: 50px;
+}

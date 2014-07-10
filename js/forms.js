@@ -1,14 +1,18 @@
 var picturenames = ["baseball.png","basketball.png","billiardball.png",
 "book.png","chocolate.png","football.png","geotriangle.png","gift.png","musictriangle.png",
 "rectangle.png","redball.png","square.png","television.png","triangle.png","triangle2.png"];
-var numberofrects = 0;
-var numberofcircles = 0;
-var numberoftriangles = 0;
+var forms_numberofrects = 0;
+var forms_numberofcircles = 0;
+var forms_numberoftriangles = 0;
 
 function createformsgame(){
 
 removeformelements();
 clearelements();
+
+forms_numberofrects = 0;
+forms_numberofcircles = 0;
+forms_numberoftriangles = 0;
 
 var x = 40;
 var y = -100;
@@ -27,23 +31,17 @@ x = x + 140;
 }
 
 formsvg.append("svg:image")
-      .attr("xlink:href", "./images/Forms/" + picturenames[number])
+      .attr("xlink:href", "./images/Forms/" + picturenames[number-1])
       .attr("width", 100)
       .attr("height", 100).attr("x", x).attr("y",y);
 
-countforms(picturenames[number]);
+forms_countforms(picturenames[number-1]);
 
 }
 
-/*
-alert("rects " + numberofrects);
-alert("circles " + numberofcircles);
-alert("triangles " + numberoftriangles);
-*/
-
 }//End of the method
 
-function countforms($name){
+function forms_countforms($name){
 
 switch($name){
 
@@ -53,20 +51,20 @@ case "billiardball.png":
 case "chocolate.png":
 case "football.png":
 case "redball.png":
-numberofcircles++;
+forms_numberofcircles++;
 break;
 case "book.png":
 case "gift.png":
 case "rectangle.png":
 case "square.png":
-case "telvision.png":
-numberofrects++;
+case "television.png":
+forms_numberofrects++;
 break;
 case "geotriangle.png":
 case "musictriangle.png":
 case "triangle.png":
 case "triangle2.png":
-numberoftriangles++;
+forms_numberoftriangles++;
 break;
  }
 }
@@ -98,28 +96,26 @@ var input1 = document.getElementById("forminput1");
 var input2 = document.getElementById("forminput2");
 var input3 = document.getElementById("forminput3");
 
-//input1.setAttribute("value", numberofrects);
-input2.setAttribute("value", numberofcircles);
-input3.setAttribute("value", numberoftriangles);
+/*
+input1.setAttribute("value", forms_numberofrects);
+input2.setAttribute("value", forms_numberofcircles);
+input3.setAttribute("value", forms_numberoftriangles);
+*/
 
-var answer1 = input1.value;
-var answer2 = input2.value;
-var answer3 = input3.value;
+var answer1 = parseInt(input1.value);
+var answer2 = parseInt(input2.value);
+var answer3 = parseInt(input3.value);
 
-var correctanswers = 0;
 
-if(answer1 == numberofrects){
-correctanswers++;
+
+if(answer1 == forms_numberofrects && answer2 == forms_numberofcircles && answer3 == forms_numberoftriangles){
+checkorangefields(true);
+}
+else{
+checkorangefields(false);
 }
 
-if(answer2 == numberofcircles){
-correctanswers++;
-}
 
-if(answer3 == numberoftriangles){
-correctanswers++;
-}
 
-checkorangefields(correctanswers);
 
 }

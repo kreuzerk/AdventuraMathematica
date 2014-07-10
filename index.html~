@@ -28,6 +28,7 @@
 	<script type="text/javascript" src="js/mathtable.js"></script>
 	<script type="text/javascript" src="js/castlegame.js"></script>
 	<script type="text/javascript" src="js/tigerdiv.js"></script>
+	<script type="text/javascript" src="js/minigameresult.js"></script>
 	<script type="text/javascript" src="js/quizgame.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
@@ -865,7 +866,7 @@ Castle Game
 </table>
 </div>
 
-<div class="block"><image src="./images/caracterselection/donkey.png" width="100px" height="100px"/></div>
+<div class="block"><image id="castlegame_maincaracter" src="./images/caracterselection/donkey.png" width="100px" height="100px"/></div>
 
 <div class="castlegame_buttondiv">
 <input type="image" onclick="castlegame_go_left()" src="./images/castlegame/arrow_left.png" width="50px" height="50px"></input>
@@ -984,6 +985,34 @@ Div that explains the rules of the game
 <p>
 <button onclick="backfromgamerules()">Espalda</button>
 </p>
+</div>
+
+</div>
+
+<!--=========================================
+Div that displays the results
+===========================================-->
+<div id="minigameresultdiv">
+
+<div class="minigameresult_header">
+<h1 id="minigameresult_header_h1">Gratulation</h1>
+</div>
+
+<div class="minigameresult_body">
+
+<h2 id="minigameresult_exercisetext">Die Aufgabe war korrekt</h2>
+
+<br />
+
+<h1 id="maingameresultdiv_bananatext">+ 10</h1>
+<img id="minigame" src="./images/bananas.png" width="80px" height="80px"></img>
+
+<br />
+<br />
+<br />
+
+<button class="minigameresultdiv_button" onclick="minigameresult_button_ok_clicked()">Ok</button>
+
 </div>
 
 </div>

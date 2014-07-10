@@ -7,7 +7,6 @@ var cheeseresulttexts = ["2/2","3/3","4/4","6/6","8/8","10/10","20/20"];
 
 var cheese_solution;
 var randomcheese;
-var numberoftrys;
 var lastdroppedid;
 var secondtext;
 var secondimage;
@@ -110,7 +109,6 @@ $("#cheesebutton").show();
 
 secondtext.innerHTML = document.getElementById($id).getAttribute("displaytext");
 
-numberoftrys++;
 lastdroppedid = $id;
 }
 
@@ -126,11 +124,11 @@ $("#cheeseimage3").animate({left:0,top:0});
 
 if(lastdroppedid == cheesesolution)
 {
-checklavenderfields(numberoftrys)
+checklavenderfields(true);
 }
 else
 {
-alert("Nao e correcta");
+checklavenderfields(false);
 }
 }
 
