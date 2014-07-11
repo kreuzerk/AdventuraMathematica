@@ -4,6 +4,9 @@ var imageclickedbefore = null;
 var item_display_color = "black";
 var selected_level;
 
+var lastclicked_round_button;
+var adventuregame_number_of_rounds;
+
 //Variables for the bananadelivery images
 var imagepath_bananadelivery;
 var imagepath_deliveryfailure;
@@ -27,6 +30,53 @@ var operators = {
     '/': function(a, b) { return a / b },
     '*': function(a, b) { return a * b }
 };
+
+
+function round_button_clicked($id){
+
+if(lastclicked_round_button == null){
+
+lastclicked_round_button = $id;
+document.getElementById($id).style.background = "yellow";
+document.getElementById($id).style.color = "black";
+assignround($id);
+}
+else{
+if(lastclicked_round_button != $id){
+
+document.getElementById(lastclicked_round_button).style.background = "#3498db";
+document.getElementById(lastclicked_round_button).style.color = "white";
+
+lastclicked_round_button = $id;
+document.getElementById($id).style.background = "yellow";
+document.getElementById($id).style.color = "black";
+
+assignround($id);
+
+}
+
+}
+
+}
+
+function assignround($id){
+
+switch($id){
+
+case "roundbutton1":
+adventuregame_number_of_rounds = 5;
+break;
+case "roundbutton2":
+adventuregame_number_of_rounds = 10;
+break;
+case "roundbutton3":
+adventuregame_number_of_rounds = 15;
+break;
+
+}
+
+}
+
 
 
 //Function that is responsible for initialising the levels
@@ -86,7 +136,7 @@ selectedcharacter.style.backgroundColor='lightskyblue';
 //Function that is called by the button
 function characterselectioncontinue(){
 
-if(selectedcharacter == null || imageclickedbefore == null){
+if(selectedcharacter == null || imageclickedbefore == null || adventuregame_number_of_rounds == null){
 $( "#startscreendialog" ).dialog( "open" );
 }
 else{

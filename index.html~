@@ -423,15 +423,27 @@ Selection of the caracter
 ====================================================================-->
 <div id="caracterselection">
 <div class="selectiondiv">
+<h1>Cuántas rondas que desea jogar</h1>
+</div>
+
+<table class="selectiontable">
+<tr>
+    <td><button id="roundbutton1" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">5</button></td>
+    <td><button id="roundbutton2" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">10</button></td>
+    <td><button id="roundbutton3" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">15</button></td>
+</tr>
+</table>
+
+<div class="selectiondiv">
 <h1>Elegir a tu personaje</h1>
 </div>
 
 <table class="selectiontable">
 <tr>
-	<td><image <image id="character1" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/elephant.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character2" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/gorilla.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character3" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/donkey.png"/ width="200px" height="200px"></td>
-	<td><image <image id="character4" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/lion.png"/ width="200px" height="200px"></td>
+	<td><image <image id="character1" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/elephant.png"/ width="150px" height="150px"></td>
+	<td><image <image id="character2" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/gorilla.png"/ width="150px" height="150px"></td>
+	<td><image <image id="character3" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/donkey.png"/ width="150px" height="150px"></td>
+	<td><image <image id="character4" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/lion.png"/ width="150px" height="150px"></td>
 </tr>
 </table>
 
@@ -869,9 +881,9 @@ Castle Game
 <div class="block"><image id="castlegame_maincaracter" src="./images/caracterselection/donkey.png" width="100px" height="100px"/></div>
 
 <div class="castlegame_buttondiv">
-<input type="image" onclick="castlegame_go_left()" src="./images/castlegame/arrow_left.png" width="200px" height="100px"></input>
+<input type="image" onclick="castlegame_go_left()" src="./images/castlegame/arrow_left.png" width="150px" height="100px"></input>
 <input type="image" onclick="castlegame_controll()" src="./images/castlegame/shoot.png" width="150px" height="80px"></input>
-<input type="image" onclick="castlegame_go_right()" src="./images/castlegame/arrow_right.png" width="200px" height="100px"></input>
+<input type="image" onclick="castlegame_go_right()" src="./images/castlegame/arrow_right.png" width="150px" height="100px"></input>
 </div>
 
 </div>
@@ -1414,6 +1426,7 @@ $(function() {
  
     setTimeout( progress, 2000 );
   });
+
 
 </script>
 </html>

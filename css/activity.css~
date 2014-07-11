@@ -551,10 +551,40 @@ Styles for the selection screen
   margin-left:480px;
 }
 
+.roundbutton {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-style: solid;
+  border-color: black;
+}
+
+.roundbutton:hover {
+  background: #f6fc3c;
+  background-image: -webkit-linear-gradient(top, #f6fc3c, #c0d934);
+  background-image: -moz-linear-gradient(top, #f6fc3c, #c0d934);
+  background-image: -ms-linear-gradient(top, #f6fc3c, #c0d934);
+  background-image: -o-linear-gradient(top, #f6fc3c, #c0d934);
+  background-image: linear-gradient(to bottom, #f6fc3c, #c0d934);
+  text-decoration: none;
+  color: black;
+}
+
 .sourcelink_div{
   position: absolute;
   left: 800px;
-  top: 650px;
+  top: 720px;
 }
 
 .sourcelink{
@@ -621,7 +651,7 @@ Styles for the selection screen
 
 #selectioncontinuebutton{
   width:250px;
-  height:100px;
+  height:80px;
   font-size:30px;
   margin-top:50px;
 
