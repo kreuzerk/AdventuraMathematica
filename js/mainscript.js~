@@ -1,10 +1,11 @@
-var currentfield = 1;
+//Declaration of the variables
+var currentfield = 1;	//Field at the beginning
 var movevalue;
 var diceresult;
 var cx;
 var cy;
-var bananacounter = 200;
-var moneycounter = 0;
+var bananacounter = 0;	//Bananamount at the beginning
+var moneycounter = 0;   //Moneyamount at the beginning
 var filename;
 var goldentered = false;
 var blackentered = false;
@@ -18,19 +19,19 @@ var height = 820;
 
 var circleData;
 
-//Circle Data Set
+//Circle Data Set for the first level
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "black", "number" : 7},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 7},
   { "cx": 540, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 9},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 11},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 12},
   { "cx": 890, "cy": 660, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 13},
   { "cx": 880, "cy": 590, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 14},
@@ -247,7 +248,7 @@ svgContainer.append("svg:image")
 
 //Adding the cube
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/cube.png").attr("onclick","hallo()").attr("id", "maingame_cube")
+      .attr("xlink:href", "./images/cube.png").attr("onclick","throwdice()").attr("id", "maingame_cube")
       .attr("width", 100)
       .attr("height", 100).attr("x", 20).attr("y",20);
 
@@ -258,7 +259,7 @@ svgContainer.append("svg:image").attr("id", "click_arrow")
       .attr("height", 200).attr("x", 150).attr("y",0);
 
 //=============================================
-//RIGHT BOTTOM
+//Section at the RIGHT BOTTOM
 //=============================================
 
 
@@ -270,9 +271,9 @@ svgContainer.append("svg:image")
 
 //Adding the Bananatext
 svgContainer.append("text").attr("id", "bananaamount")
-      .attr("x", width-250)
+      .attr("x", width-220)
       .attr("y", height-50)
-      .text("0 x")
+      .text("0 :")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
       .attr("fill", item_display_color);
@@ -287,25 +288,11 @@ svgContainer.append("svg:image")
 svgContainer.append("text").attr("id", "moneyamount")
       .attr("x", width-440)
       .attr("y", height-50)
-      .text("0 x")
+      .text("0 :")
       .attr("font-family", "Chalkboard")
       .attr("font-size", "50px")
       .attr("fill", item_display_color);
 
-/*
-//=============================================
-//Images on the map
-//=============================================
-svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/house.png")
-      .attr("width", 80)
-      .attr("height", 80).attr("x", 600).attr("y",420);
-
-svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/Hippopotamus.png")
-      .attr("width", 150)
-      .attr("height", 150).attr("x", 190).attr("y",460);
-*/
 }
 
 
@@ -313,12 +300,14 @@ svgContainer.append("svg:image")
 /*====================================================================================================*/
 
 //boolean variables
-var entered;
+var entered;		//Used to specify if the caracter has entered a field
 
 function setfilename($file){
- filename = $file;
+ filename = $file;		//Set the filepath of the character
 }
 
+
+//Function that is called when continuebutton on the startscreendiv is clicked
 function selectionscreen_continueclicked(){
 
 $("#startscreendiv").hide();
@@ -330,14 +319,16 @@ $("#caracterselection").show();
 
 }
 
-function hallo(){
+/*======================================
+Throw the dice
+=======================================*/
+
+function throwdice(){
 
 //Play the sound for the diceroll
 sound_diceroll.play();
-    
 
-
-if(deletearrow){
+if(deletearrow){		//Defines if the arrow at the begining needs to be deleted
 var arrow = document.getElementById("click_arrow");
 arrow.parentNode.removeChild(arrow);
 deletearrow = false;
@@ -350,8 +341,7 @@ if(entered){
 remove();
 }
 
-
-
+//Simulates the dice throw
 diceresult = Math.floor(Math.random() * 6) + 1;
 
 var filename;
@@ -431,15 +421,15 @@ function move(){
     //Draw the lion
     drawlion(cx,cy);
 
-    if(circleData[movevalue-1].color == "gold"){
+    if(circleData[movevalue-1].color == "gold"){	//Detect if we entered a gold field
 	goldentered = true;
     }
 
-    if(circleData[movevalue-1].color == "black"){
+    if(circleData[movevalue-1].color == "black"){	//Detect if we entered a black field
 	blackentered = true;
     }
 
-    if(circleData[movevalue-1].number >= circleData.length){
+    if(circleData[movevalue-1].number >= circleData.length){	//Detect if we are at the End of the round
 	endofround = true;
     }
 
@@ -495,14 +485,7 @@ lion.parentNode.removeChild(lion);
 
 function drawcube($filename){
 
-/* evtl. noch ein Rechteck dazu zeichnen
-svgContainer.append("rect")
-                            .attr("x", (width/2)-300)
-                            .attr("y", (height/2)-100)
-                            .attr("width", 500)
-			    .attr("fill", "white")
-                            .attr("height", 150);
-*/
+//Draw the texts and the cube according to the currentfield and the thrown number
 
 svgContainer.append("svg:image")
       .attr("xlink:href", "./images/" + $filename +".png").attr("id", "diceimage")
@@ -543,7 +526,7 @@ diceresult.parentNode.removeChild(diceresult);
 
 
 /*=================================================================================
-Hide function at the beginning of the game
+Hide function at the beginning of the game - Hide the not used elements
 ===================================================================================*/
 
 function hide(){
@@ -578,12 +561,6 @@ $("#gamerules").hide();
 $("#minigameresultdiv").hide();
 
 }
-
-/*
-function show(){
-$("svg").show();
-}
-*/
 
 
 /*=================================================================================
@@ -1304,7 +1281,7 @@ bananacounter = bananacounter - $amount;
 }
 }
 
-bananaamount.textContent = "+ " + bananacounter;
+bananaamount.textContent = bananacounter + " :";
 entered = true;
 }
 
@@ -1380,7 +1357,7 @@ moneycounter = moneycounter - $amount;
 	}
 }
 
-moneyamount.textContent = "+ " + moneycounter;
+moneyamount.textContent = moneycounter + " :";
 entered = true;
 }
 

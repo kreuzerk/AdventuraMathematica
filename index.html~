@@ -869,9 +869,9 @@ Castle Game
 <div class="block"><image id="castlegame_maincaracter" src="./images/caracterselection/donkey.png" width="100px" height="100px"/></div>
 
 <div class="castlegame_buttondiv">
-<input type="image" onclick="castlegame_go_left()" src="./images/castlegame/arrow_left.png" width="50px" height="50px"></input>
+<input type="image" onclick="castlegame_go_left()" src="./images/castlegame/arrow_left.png" width="200px" height="100px"></input>
 <input type="image" onclick="castlegame_controll()" src="./images/castlegame/shoot.png" width="150px" height="80px"></input>
-<input type="image" onclick="castlegame_go_right()" src="./images/castlegame/arrow_right.png" width="50px" height="50px"></input>
+<input type="image" onclick="castlegame_go_right()" src="./images/castlegame/arrow_right.png" width="200px" height="100px"></input>
 </div>
 
 </div>
@@ -1005,7 +1005,7 @@ Div that displays the results
 <br />
 
 <h1 id="maingameresultdiv_bananatext">+ 10</h1>
-<img id="minigame" src="./images/bananas.png" width="80px" height="80px"></img>
+<img id="minigameresultdiv_image" src="./images/bananas.png" width="80px" height="80px"></img>
 
 <br />
 <br />

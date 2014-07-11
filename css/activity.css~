@@ -1202,7 +1202,7 @@ Styles for the castle game
 .castlegame_buttondiv{
 
   position:absolute;
-  left: 780px;
+  left: 710px;
   top: 650px;
 }
 
@@ -1567,7 +1567,7 @@ Styles for the gameresult div
 
 }
 
-.minigameresult_header_h1{
+#minigameresult_header_h1{
   font-size: 30px;
 }
 

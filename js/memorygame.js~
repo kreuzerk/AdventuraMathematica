@@ -15,7 +15,7 @@ var memorygame_numberoftries = 0;
 
 function initialise_memory_game(){
 
-memorygame_reset();
+memorygame_reset();	//Reset the memorygame to create a new exercise
 
 if(level_operator == "+" || level_operator == "-"){
 numberrange = 50;
@@ -64,7 +64,6 @@ initialise_display_result_array();
 function memorygame_reset(){
 
 //Reset the image and the onclick function
-
 for(var i = 1; i<=16; i++){
 document.getElementById("memorygame_td" + i).style.backgroundImage = 'url(./images/memorygame/memorycard_frontside.png)';
 document.getElementById("memorygame_td" + i).setAttribute("onclick", "memorycard_clicked($(this).attr('order'), $(this).attr('id'))");
@@ -185,7 +184,7 @@ previous_correct = true;
 }
 else
 {
-checkchocolate(true);		//Call the function that is responsible for checking this fields
+//Call the function that is responsible for checking this fields
 
 if(memorygame_numberoftries <= 20){
   checkchocolate(true, 10);
