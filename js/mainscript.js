@@ -13,6 +13,14 @@ var endofround = false;
 var round = 1;
 var dicethrown = false;
 var deletearrow = true;
+var rounds_played = 1;
+
+//Variables that are neeeded at the end of the game
+
+var number_correct_answered = 0;
+var number_wrong_answered = 0;
+
+//==========================================
 
 var width = 1200;
 var height = 820;
@@ -265,7 +273,7 @@ svgContainer.append("svg:image").attr("id", "click_arrow")
 
 //Adding the bananaimage
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/bananas.png").attr("onclick","hallo()")
+      .attr("xlink:href", "./images/bananas.png")
       .attr("width", 80)
       .attr("height", 80).attr("x", width-130).attr("y",height-120);
 
@@ -280,7 +288,7 @@ svgContainer.append("text").attr("id", "bananaamount")
 
 //Adding the moneyimage
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/money.png").attr("onclick","hallo()")
+      .attr("xlink:href", "./images/money.png")
       .attr("width", 80)
       .attr("height", 80).attr("x", width-360).attr("y",height-120);
 
@@ -559,7 +567,7 @@ $("#caracterselection").hide();
 $("#newleveldiv").hide();
 $("#gamerules").hide();
 $("#minigameresultdiv").hide();
-
+$("#adventuregame_endresultdiv").hide();
 }
 
 
@@ -665,10 +673,18 @@ case "midnightblue":	//Midnightblue fields - Wallgame
   $("#wallgame").show();
 break;
 case "snow":
+  if(rounds_played == adventuregame_number_of_rounds){		//The game is finished
+	$("#maingamesvg").hide();
+	initialise_endresultscreen();
+	$("#adventuregame_endresultdiv").show();	  
+  }
+  else{
+  rounds_played++;
   $("#maingamesvg").hide();
   document.getElementById("endofround").style.backgroundImage = imagepath_endofround;
   sound_startscreensound.play();
   $("#endofround").show();
+  }
 break;
 case "turquoise":	//Turquoise fields - Circlegame
   $("#maingamesvg").hide();
@@ -1432,6 +1448,9 @@ moneycounter = 0;
 currentfield = 1;
 entered = false;
 deletearrow = true;
+rounds_played = 1;
+number_correct_answered = 0;
+number_wrong_answered = 0;
 
 }
 

@@ -31,6 +31,7 @@
 	<script type="text/javascript" src="js/minigameresult.js"></script>
 	<script type="text/javascript" src="js/quizgame.js"></script>
 	<script type="text/javascript" src="js/circlegame.js"></script>
+	<script type="text/javascript" src="js/endresultscreen.js"></script>
 	<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
       href="lib/sugar-web/graphics/css/sugar-96dpi.css">
 	<link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
@@ -1029,6 +1030,57 @@ Div that displays the results
 
 </div>
 
+<!--===========================================================================
+Div that shows the result at the end
+==========================================================================-->
+<div id="adventuregame_endresultdiv">
+
+<div class="adventuregame_endresultdiv_header">
+<h1 class="adventuregame_endresultdiv_header_h1">El juego ha terminado</h1>
+</div>
+
+<div id="endresultdiv_newrecorddiv">
+<h1>Nuevo Record</h1>
+</div>
+
+<div class="adventuregame_endresultdiv_body">
+
+<table class="adventuregame_endresultdiv_table">
+
+<tr>
+<td class="adventuregame_tr_title"><h1>Estanda Ronda</h1>
+</td>
+
+<td class="adventuregame_tr_title"><h1>Record</h1>
+</td>
+
+</tr>
+
+<tr>
+
+<td class="adventuregame_endresultdiv_table_td">
+	<h1 id="adventuregame_endresultdiv_actual_correct">Respuestas correctas: 1</h1>
+	<h1 id="adventuregame_endresultdiv_actual_false">Respuestas incorrectas : 2</h1>
+	<h1 id="adventuregame_endresultdiv_actual_total">Total = + 2</h1>
+</td>
+<td class="adventuregame_endresultdiv_table_td">
+	<h1 id="adventuregame_endresultdiv_record_correct">Record correctas: 1</h1>
+	<h1 id="adventuregame_endresultdiv_record_false">Record incorrectas : 2</h1>
+	<h1 id="adventuregame_endresultdiv_record_total">Total = + 2</h1>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="adventuregame_endresultdiv_button">
+
+<button class="adventuregame_endresultbutton" onclick="endresultscreen_continue_clicked()">Continuar</button>
+
+</div>
+
+</div>
 
 </body>
 <script type="text/javascript">

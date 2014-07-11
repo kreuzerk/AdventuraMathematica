@@ -15,6 +15,8 @@ document.getElementById("minigameresultdiv_image").setAttribute("src", "./images
 
 if($correct){
 
+number_correct_answered++;
+
 //Play the banana up sound
 sound_bananaup.play();
 
@@ -26,6 +28,8 @@ document.getElementById("maingameresultdiv_bananatext").innerHTML = "+ " + $amou
 document.getElementById("maingameresultdiv_bananatext").style.color = "black";
 }
 else{
+
+number_wrong_answered++;
 
 sound_bananalost.play(); //Play the lost banana sound
 

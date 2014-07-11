@@ -13,6 +13,14 @@ var endofround = false;
 var round = 1;
 var dicethrown = false;
 var deletearrow = true;
+var rounds_played = 1;
+
+//Variables that are neeeded at the end of the game
+
+var number_correct_answered = 0;
+var number_wrong_answered = 0;
+
+//==========================================
 
 var width = 1200;
 var height = 820;
@@ -22,16 +30,16 @@ var circleData;
 //Circle Data Set for the first level
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 6},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 6},
   { "cx": 470, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 9},
-  { "cx": 680, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 11},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 9},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 12},
   { "cx": 890, "cy": 660, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 13},
   { "cx": 880, "cy": 590, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 14},
@@ -559,7 +567,7 @@ $("#caracterselection").hide();
 $("#newleveldiv").hide();
 $("#gamerules").hide();
 $("#minigameresultdiv").hide();
-
+$("#adventuregame_endresultdiv").hide();
 }
 
 
@@ -665,10 +673,18 @@ case "midnightblue":	//Midnightblue fields - Wallgame
   $("#wallgame").show();
 break;
 case "snow":
+  if(rounds_played == adventuregame_number_of_rounds){		//The game is finished
+	$("#maingamesvg").hide();
+	initialise_endresultscreen();
+	$("#adventuregame_endresultdiv").show();	  
+  }
+  else{
+  rounds_played++;
   $("#maingamesvg").hide();
   document.getElementById("endofround").style.backgroundImage = imagepath_endofround;
   sound_startscreensound.play();
   $("#endofround").show();
+  }
 break;
 case "turquoise":	//Turquoise fields - Circlegame
   $("#maingamesvg").hide();
@@ -1432,6 +1448,9 @@ moneycounter = 0;
 currentfield = 1;
 entered = false;
 deletearrow = true;
+rounds_played = 1;
+number_correct_answered = 0;
+number_wrong_answered = 0;
 
 }
 

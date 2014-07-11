@@ -136,6 +136,8 @@ selectedcharacter.style.backgroundColor='lightskyblue';
 //Function that is called by the button
 function characterselectioncontinue(){
 
+adventuregame_number_of_rounds = 1;
+
 if(selectedcharacter == null || imageclickedbefore == null || adventuregame_number_of_rounds == null){
 $( "#startscreendialog" ).dialog( "open" );
 }
