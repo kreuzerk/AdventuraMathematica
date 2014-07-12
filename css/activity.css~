@@ -790,6 +790,16 @@ Styles for the wall game
   top: 200px;
 }
 
+#wallgame_display{
+  position:absolute;
+  left: 700px;
+  top: 20px;
+  background-color:white;
+  border-style:solid;
+  border-color: gray;
+  padding: 10px;
+}
+
 
 #selectable1 .ui-selecting, #selectable2 .ui-selecting {
   background: #FECA40; 

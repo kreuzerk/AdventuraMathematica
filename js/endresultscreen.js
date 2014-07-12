@@ -109,6 +109,7 @@ break;
 function endresultscreen_continue_clicked(){
 
 $("#adventuregame_endresultdiv").hide();
+sound_intromusic.play();
 $("#caracterselection").show();
 
 reset_maingamesvg(); //Reset the maingamediv

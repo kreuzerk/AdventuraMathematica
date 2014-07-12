@@ -7,10 +7,13 @@ var id1;
 var id2;
 var wallgame_counter;
 var numberoflis;
+var wallgame_intentos;
 
 function initialisewallgame(){
 
 document.getElementById("wallgame").style.backgroundImage = imagepath_wallgame;
+wallgame_intentos = 0;
+document.getElementById("wallgame_intentos").innerHTML = "Intentos: " +  wallgame_intentos;
 
 numberoflis = 6;
 var exerciserange = 12;
@@ -117,6 +120,10 @@ secondlivalue = child2.getAttribute("result");
 
 //Check if both are selectd
 if(wallgame_firstliselected == true && wallgame_secondliselected == true){
+
+wallgame_intentos++;
+document.getElementById("wallgame_intentos").innerHTML = "Intentos: " +  wallgame_intentos;
+
   if(firstlivalue == secondlivalue){
     wallgame_firstliselected = false;
     wallgame_secondliselected = false;
@@ -130,7 +137,12 @@ if(wallgame_firstliselected == true && wallgame_secondliselected == true){
   }
 
   if(wallgame_counter == numberoflis){
+ 	if(wallgame_intentos <= 8){
 	checkmidnightbluefields(true);
+	}
+	else{
+	checkmidnightbluefields(false);
+	}
   }
 }
 

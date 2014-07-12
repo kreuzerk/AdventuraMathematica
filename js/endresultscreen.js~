@@ -12,7 +12,7 @@ document.getElementById("adventuregame_endresultdiv_actual_false").innerHTML = "
 var total = number_correct_answered - number_wrong_answered;
 
 if(total > 0){
-document.getElementById("adventuregame_endresultdiv_actual_total").innerHTML = "Resultado: + " + total;
+document.getElementById("adventuregame_endresultdiv_actual_total").innerHTML = "Resultado: " + total;
 }
 else{
 document.getElementById("adventuregame_endresultdiv_actual_total").innerHTML = "Resultado: " + total;
@@ -109,6 +109,7 @@ break;
 function endresultscreen_continue_clicked(){
 
 $("#adventuregame_endresultdiv").hide();
+sound_intromusic.play();
 $("#caracterselection").show();
 
 reset_maingamesvg(); //Reset the maingamediv

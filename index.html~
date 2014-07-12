@@ -539,6 +539,15 @@ Wall Game
 </table>
 </div>
 
+<div id="wallgame_display">
+<h1 id="wallgame_intentos">Intentos: 0</h1>
+</br>
+<div class="wallgame_display_p">
+<h2><=20 Intentos = 10 Plátanos</h2>
+<h2>>20 Intentos = -10 Plátanos</h2>
+</div>
+</div>
+
 </div>
 
 <!----==================================================================
@@ -1040,7 +1049,7 @@ Div that shows the result at the end
 </div>
 
 <div id="endresultdiv_newrecorddiv">
-<h1>Nuevo Record</h1>
+<h1 id="endresultdiv_newrecord">Nuevo Record</h1>
 </div>
 
 <div class="adventuregame_endresultdiv_body">

@@ -30,16 +30,16 @@ var circleData;
 //Circle Data Set for the first level
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 9},
-  { "cx": 680, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 11},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 9},
+  { "cx": 680, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" :10},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 12},
   { "cx": 890, "cy": 660, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 13},
   { "cx": 880, "cy": 590, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 14},
@@ -96,13 +96,13 @@ var level1 = [
 //Datas for the second level
 var level2 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 70, "cy": 660, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 70, "cy": 590, "radius": 30, "color" : "pink", "fontcolor" : "white", "number" : 3},
-  { "cx": 70, "cy": 520, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 4},
-  { "cx": 70, "cy": 450, "radius": 30, "color" : "pink", "fontcolor" : "white", "number" : 5},
-  { "cx": 70, "cy": 380, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 6},
-  { "cx": 70, "cy": 310, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 7},
-  { "cx": 70, "cy": 240, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 8},
+  { "cx": 70, "cy": 660, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 70, "cy": 590, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 3},
+  { "cx": 70, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 4},
+  { "cx": 70, "cy": 450, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 70, "cy": 380, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 6},
+  { "cx": 70, "cy": 310, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 7},
+  { "cx": 70, "cy": 240, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 8},
   { "cx": 140, "cy": 210, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 9},
   { "cx": 210, "cy": 210, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" :10},
   { "cx": 230, "cy": 280, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 11},
@@ -150,13 +150,13 @@ var level2 = [
 //Datas for the third level
 var level3 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 770, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 2}, 
-  { "cx": 190, "cy": 770, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 3},
-  { "cx": 280, "cy": 770, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 4},
-  { "cx": 350, "cy": 770, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 5},
-  { "cx": 420, "cy": 770, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 6},
-  { "cx": 490, "cy": 770, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 7},
-  { "cx": 520, "cy": 700, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 8},
+  { "cx": 120, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 2}, 
+  { "cx": 190, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 3},
+  { "cx": 280, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 4},
+  { "cx": 350, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 420, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 6},
+  { "cx": 490, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 7},
+  { "cx": 520, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 8},
   { "cx": 530, "cy": 630, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 9},
   { "cx": 520, "cy": 560, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
   { "cx": 450, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 11},
@@ -273,7 +273,7 @@ svgContainer.append("svg:image").attr("id", "click_arrow")
 
 //Adding the bananaimage
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/bananas.png").attr("onclick","hallo()")
+      .attr("xlink:href", "./images/bananas.png")
       .attr("width", 80)
       .attr("height", 80).attr("x", width-130).attr("y",height-120);
 
@@ -288,7 +288,7 @@ svgContainer.append("text").attr("id", "bananaamount")
 
 //Adding the moneyimage
 svgContainer.append("svg:image")
-      .attr("xlink:href", "./images/money.png").attr("onclick","hallo()")
+      .attr("xlink:href", "./images/money.png")
       .attr("width", 80)
       .attr("height", 80).attr("x", width-360).attr("y",height-120);
 
