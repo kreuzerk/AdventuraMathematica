@@ -89,7 +89,7 @@ localStorage.setItem("level", 1);
 level = 1;
 }
 
-/*
+
 switch(level){
 
 case "1":
@@ -113,7 +113,7 @@ document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
 
 break;
 }
-*/
+
 
 }
 
@@ -135,6 +135,8 @@ selectedcharacter.style.backgroundColor='lightskyblue';
 
 //Function that is called by the button
 function characterselectioncontinue(){
+
+adventuregame_number_of_rounds = 1;
 
 if(selectedcharacter == null || imageclickedbefore == null || adventuregame_number_of_rounds == null){
 alert("Por favor, seleccione el número de rondas, un personaje y un mundo");

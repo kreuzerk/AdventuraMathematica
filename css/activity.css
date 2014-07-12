@@ -584,7 +584,7 @@ Styles for the selection screen
 .sourcelink_div{
   position: absolute;
   left: 800px;
-  top: 720px;
+  top: 700px;
 }
 
 .sourcelink{
@@ -776,6 +776,8 @@ Styles for the wall game
   background-color:gainsboro;
   width:300px;
   height: 200px;
+  text-align: center;
+  font-size: 30px;
 }
 
 .wallgametable{

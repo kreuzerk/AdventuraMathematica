@@ -473,6 +473,8 @@ Selection of the caracter
 <a class="sourcelink" onclick="showgamerules()">Acerca del juego</a>
 <br />
 <a class="sourcelink" onclick="showsources()">Fuente</a>
+<br />
+<a class="sourcelink">Borrar Partituras</a>
 </div>
 
 
@@ -609,16 +611,6 @@ The round is finished
 
 <button class="endofroundbutton" onclick="hidesnowfield()">Gracias</button>
 
-</div>
-
-<!----==================================================================
-Dialogs 
-====================================================================-->
-
-<!-- Dialog for the selection screen -->
-
-<div id="startscreendialog" class="dialog" title="Ooops">
-  Por favor, elija un personaje
 </div>
 
 <!----==================================================================

@@ -1333,7 +1333,7 @@ var moneyamount = document.getElementById("moneyamount");
 moneycounter = moneycounter + $amount;
 moneyamount.textContent = "+ " + moneycounter;
 
-if(moneycounter >= 1){
+if(moneycounter >= 5){
 
 switch(selected_level){
 
@@ -1457,6 +1457,33 @@ number_correct_answered = 0;
 number_wrong_answered = 0;
 
 }
+
+
+/*=======================================
+Function that resets the saved values
+========================================*/
+function reset_saved_score(){
+
+if (confirm('Tu desea restablecer las puntuaciones')) {
+
+localStorage.removeItem("level");
+
+localStorage.removeItem("correct_level1");
+localStorage.removeItem("wrong_level1");
+
+localStorage.removeItem("correct_level2");
+localStorage.removeItem("wrong_level2");
+
+localStorage.removeItem("correct_level3");
+localStorage.removeItem("wrong_level3");
+
+initialise_levels_selectionsscreen();
+
+}
+
+
+}
+
 
 
 
