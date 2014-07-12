@@ -543,8 +543,8 @@ Wall Game
 <h1 id="wallgame_intentos">Intentos: 0</h1>
 </br>
 <div class="wallgame_display_p">
-<h2><=20 Intentos = 10 Plátanos</h2>
-<h2>>20 Intentos = -10 Plátanos</h2>
+<h2><= 8 Intentos = 10 Plátanos</h2>
+<h2>> 8 Intentos = -10 Plátanos</h2>
 </div>
 </div>
 

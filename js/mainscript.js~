@@ -1044,7 +1044,11 @@ Function for midnightblue fields
 function checkmidnightbluefields($correct){
 
 if($correct){
-  initialiseminigameresultscreen(15,true);
+  initialiseminigameresultscreen(10,true);
+}
+else
+{
+  initialiseminigameresultscreen(10,false);
 }
 
 hidekmidnightblue();
