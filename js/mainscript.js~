@@ -1411,6 +1411,7 @@ $("#caracterselection").show();
 Function that is called by the Espalda Button
 =================================================*/
 function espalda_clicked(){
+if(dicethrown == false){
 if (confirm('De verdad quieres volver a la pantalla de inicio?')) {
     $("#maingamesvg").hide();
     $("#caracterselection").show();
@@ -1437,8 +1438,8 @@ sound_intromusic.play();
 
 reset_maingamesvg();
 
-}
-
+  }
+ }
 }
 
 function reset_maingamesvg(){
