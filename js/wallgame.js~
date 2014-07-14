@@ -17,6 +17,7 @@ document.getElementById("wallgame_intentos").innerHTML = "Intentos: " +  wallgam
 
 numberoflis = 6;
 var exerciserange = 12;
+
 wallgame_result = new Array(numberoflis);
 
 wallgame_counter = 0;
@@ -25,9 +26,19 @@ switch(level_operator){
 
 case "*","/":
 exerciserange = 12;
+
+if(selected_level == "level3"){
+exerciserange = 20;
+}
+
 break;
 case "+", "-":
 exerciserange = 50;
+
+if(selected_level == "level3"){
+exerciserange = 100;
+}
+
 break;
 
 }
@@ -137,7 +148,12 @@ document.getElementById("wallgame_intentos").innerHTML = "Intentos: " +  wallgam
   }
 
   if(wallgame_counter == numberoflis){
+ 	if(wallgame_intentos <= 8){
 	checkmidnightbluefields(true);
+	}
+	else{
+	checkmidnightbluefields(false);
+	}
   }
 }
 

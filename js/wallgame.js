@@ -17,6 +17,7 @@ document.getElementById("wallgame_intentos").innerHTML = "Intentos: " +  wallgam
 
 numberoflis = 6;
 var exerciserange = 12;
+
 wallgame_result = new Array(numberoflis);
 
 wallgame_counter = 0;

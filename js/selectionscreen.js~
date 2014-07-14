@@ -136,8 +136,6 @@ selectedcharacter.style.backgroundColor='lightskyblue';
 //Function that is called by the button
 function characterselectioncontinue(){
 
-adventuregame_number_of_rounds = 1;
-
 if(selectedcharacter == null || imageclickedbefore == null || adventuregame_number_of_rounds == null){
 alert("Por favor, seleccione el número de rondas, un personaje y un mundo");
 }
@@ -158,6 +156,7 @@ drawgameboard();	//Function that draws the gameboard
 sound_intromusic.pause();
 sound_buttonclicked.play();
 
+
 switch(selected_level){
 
 case "level1":
@@ -175,11 +174,12 @@ break;
 
 }
 
+
+
 $("#maingamesvg").show();
 $("#sources-button").hide();
 }
 }
-
 
 
 //Function that is called when a levelimage is clicked

@@ -264,6 +264,9 @@ What is next? Game
    </script>
 </table>
 
+<div class="whatisnext_correct_div">
+<button class="whatisnext_correct_button" onclick="correct_nextgame()">Correcto</button>
+</div>
 
 </div>
 
@@ -474,7 +477,7 @@ Selection of the caracter
 <br />
 <a class="sourcelink" onclick="showsources()">Fuente</a>
 <br />
-<a class="sourcelink">Borrar Partituras</a>
+<a class="sourcelink" onclick="reset_saved_score()">Borrar Partituras</a>
 </div>
 
 

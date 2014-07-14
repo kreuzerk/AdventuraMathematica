@@ -22,6 +22,8 @@ var pattern6_drawn = 5;
 var pattern7_drawn = 4;
 var pattern8_drawn = 5;
 
+var patternnumber;
+
 var next_x = -80;
 var next_y = 140;
 var aftercircle = false;
@@ -34,7 +36,11 @@ function nextsvg_drawexercise(){
 cleannextgamesvg();
 
 //Choose the pattern
-var patternnumber = Math.floor(Math.random() * numberofpatterns) + 1;
+patternnumber = Math.floor(Math.random() * numberofpatterns) + 1;
+nextsvg_drawelements();
+}
+
+function nextsvg_drawelements(){
 
 //Draw the text
 nextsvg.append("text").
@@ -267,6 +273,13 @@ Function to remove everything from the first svg
 function cleannextgamesvg(){
 drawncounter = -1;
 $("#nextgamesvg").empty();
+}
+
+/*============================================
+Function that is called if the reset button is clicked
+=============================================*/
+function correct_nextgame(){
+alert("hier");
 }
 
 
