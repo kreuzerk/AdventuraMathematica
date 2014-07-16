@@ -1,18 +1,18 @@
 var deliverydiv;
 var deliverybutton1;
 var deliver;	//Boolean
+var bananadelivery_speechbuble;
 
 function getdeliveryelements(){
 deliverydiv = document.getElementById("bananadelivery");
 deliverybutton1 = document.getElementById("deliverybutton1");
+ bananadelivery_speechbuble = document.getElementById("bananadelivery_speechbubble");
 }
 
 function initialise_delivery_screen(){
 
 getdeliveryelements();
-
-deliverydiv.style.backgroundImage = imagepath_bananadelivery;
-
+bananadelivery_speechbubble.innerHTML = "Me encantan los plátanos <br /> Me da 50?";
 }
 
 function deliverbananas(){
@@ -21,11 +21,11 @@ sound_buttonclicked.play();
 sound_monkey.play();
 
 if(bananacounter >= 50){
-deliverydiv.style.backgroundImage = imagepath_deliveryok;
+bananadelivery_speechbubble.innerHTML = "Gracias. <br /> Toma este dineiro.";
 deliver = true;
 }
 else{
-deliverydiv.style.backgroundImage = imagepath_deliveryfailure;
+bananadelivery_speechbubble.innerHTML = "Lo siento. <br /> Tu no tiene suficientes plátanos. <br /> Inténtelo de nuevo más tarde.";
 deliver = false;
 }
 
@@ -49,7 +49,7 @@ sound_monkey.play();
 
 getdeliveryelements();
 
-deliverydiv.style.backgroundImage = imagepath_nodelivery;
+bananadelivery_speechbubble.innerHTML = "Okay. <br /> Nos vemos más tarde.";
 
 //Change the first button
 deliverybutton1.innerHTML = "Ok";

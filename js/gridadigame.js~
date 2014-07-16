@@ -140,12 +140,10 @@ document.getElementById("adi_text_second").innerHTML = 100-$blues;
 
 
 if($id.indexOf(gridadi_solutiontable) > -1){
-sound_ok.play();
 $( "#" + $id ).effect( "highlight" );
 gridadi_correct = true;
 }
 else{
-sound_error.play();
 $( "#" + $id ).effect( "shake" );
 gridadi_correct = false;
 }

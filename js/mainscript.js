@@ -37,12 +37,12 @@ var level1 = [
   { "cx": 400, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 6},
   { "cx": 470, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 7},
   { "cx": 540, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "chocolate", "fontcolor" : "black", "number" : 9},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 11},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 12},
   { "cx": 890, "cy": 660, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 13},
-  { "cx": 880, "cy": 590, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 14},
+  { "cx": 880, "cy": 590, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 14},
   { "cx": 810, "cy": 580, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 15},
   { "cx": 740, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 16},
   { "cx": 670, "cy": 580, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 17},
@@ -320,7 +320,6 @@ function selectionscreen_continueclicked(){
 
 $("#startscreendiv").hide();
 sound_introeffect.play();
-sound_startscreensound.pause();
 sound_intromusic.play();
 $("#caracterselection").show();
 
@@ -579,8 +578,6 @@ function checkfield(){
 
 var currentcolor = circleData[currentfield-1].color;
 
-//Play the zip sound and pause the background music
-sound_zip.play();
 
 //Stop the sound corresponding to the level
 switch(selected_level){
@@ -608,12 +605,13 @@ break;
 case "blue":		//Blue = Shop Game
   //Hide the main game
   $("#maingamesvg").hide();
-  sound_shopbackground.play();	//Play the background music for the shopgame
-  $("#shopdiv").show("Clip");
+  sound_background2.play();	//Play the background music for the shopgame
+  $("#shopdiv").show();
 createexercise();
 break;
 case "yellow":		//Yellow = Krokogame
   $("#maingamesvg").hide();
+  createkrokogame();
   sound_background_krokogame.play();
   $("#krokodiv").show();
 break;
@@ -668,7 +666,7 @@ case "khaki":	   	//Khaki - Slidergame
 break;
 case "midnightblue":	//Midnightblue fields - Wallgame
   $("#maingamesvg").hide();
-  sound_background4.play();
+  sound_background2.play();
   initialisewallgame();
   $("#wallgame").show();
 break;
@@ -682,7 +680,6 @@ case "snow":
   rounds_played++;
   $("#maingamesvg").hide();
   document.getElementById("endofround").style.backgroundImage = imagepath_endofround;
-  sound_startscreensound.play();
   $("#endofround").show();
   }
 break;
@@ -700,7 +697,7 @@ case "salmon":	//Salmon fields - Mathtable
 break;
 case "greenyellow":		//Greenyellow fields => Grid addition
   $("#maingamesvg").hide();
-  sound_background4.play();
+  sound_background2.play();
   initialise_grid_adi_game();
   $("#gridaddition").show();
 break;
@@ -725,7 +722,6 @@ case "silver":			//Silver fields => Castlegame
 break;
 case "black":			//Check the black fields
   $("#maingamesvg").hide();
-  sound_introtiger.play();
   sound_tigerbackground1.play();
   initialise_tiger_div();
   $("#tigerdiv").show();
@@ -814,7 +810,7 @@ hideblue();
 
 function hideblue(){
 $("#shopdiv").hide();
-sound_shopbackground.pause();
+sound_background2.pause();
 $("#minigameresultdiv").show();
 }
 
@@ -1057,7 +1053,7 @@ hidekmidnightblue();
 
 function hidekmidnightblue(){
 $("#wallgame").hide();
-sound_background4.pause();
+sound_background2.pause();
 $("#minigameresultdiv").show();
 }
 
@@ -1068,7 +1064,6 @@ function hidesnowfield(){
 $("#endofround").hide();
 initialiseminigameresultscreen(10,true);
 sound_buttonclicked.play();
-sound_startscreensound.pause();
 $("#minigameresultdiv").show();
 }
 
@@ -1136,7 +1131,7 @@ hidegreenyellow();
 
 function hidegreenyellow(){
 $("#gridaddition").hide();
-sound_background4.pause();
+sound_background2.pause();
 $("#minigameresultdiv").show();
 }
 
@@ -1338,12 +1333,16 @@ if(moneycounter >= 5){
 switch(selected_level){
 
 case "level1":
+if(level != 2 || level != 3){
 localStorage.setItem("level", 2);	//Set the amount of levels
 document.getElementById("unlockedtext").innerHTML = "Universo Mathematicas ha sido liberado";
+}
 break;
 case "level2":
+if(level != 3){
 localStorage.setItem("level", 3);
 document.getElementById("unlockedtext").innerHTML = "Sheriff Mathematicas ha sido liberado";
+}
 break;
 
 }

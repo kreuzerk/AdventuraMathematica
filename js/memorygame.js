@@ -129,8 +129,6 @@ memorygame_result_array[randomposition2] = temp;
 
 function memorycard_clicked($order, $id){
 
-sound_pageturn.play();
-
 $( "#" + $id ).hide();
 
 $( "#" + $id ).show( "slide");
@@ -172,8 +170,6 @@ if(memorygame_result_array[memorygame_firstclicked-1] == memorygame_result_array
 memorygame_found_counter++;
 
 if(memorygame_found_counter < 8){
-
-sound_ok.play();
 
 document.getElementById(memorygame_firstclicked_id).style.backgroundImage = 'url(./images/memorygame/Imageok.png)';
 document.getElementById($id).style.backgroundImage = 'url(./images/memorygame/Imageok.png)';

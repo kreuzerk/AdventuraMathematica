@@ -1,3 +1,6 @@
+/* Those styles are only used if the toolbar is displayed*/
+
+/*
 #main-toolbar #activity-button {
   background-image: url(../activity/activity-icon.svg);
 }
@@ -5,13 +8,7 @@
 #main-toolbar #sources-button {
   background-image: url(../activity/activity-icon.svg);
 }
-
-#maingamesvg{
-  background-image: url(../images/Background-Level2.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  /*background-color:white;*/
-}
+*/
 
 /*================================================
 Styles for Shopactivities
@@ -31,7 +28,6 @@ Styles for Shopactivities
 
 #cartlist{
   width: 500px;
-  /*background-image: url(../images/Shop/zettel.jpg);*/
   background-color: white;
   font-size: 20px;
 }
@@ -51,9 +47,7 @@ Styles for Shopactivities
 #shoptable{  
   width:1200px;
   height:750px;
-  background-image: url(../images/Shop/background.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-image: linear-gradient(to bottom right, #FFFFFF 0%, #EF8E0E 100%);
 }
 
 .shopbuttons{
@@ -105,7 +99,6 @@ Styles for Shopactivities
   background:transparent;
 }
 
-
 /*================================================
 Styles for Kroko Game
 ================================================*/
@@ -150,9 +143,9 @@ Styles for Kroko Game
 }
 
 #krokodiv{
-  background-image: url(../images/Krokogame/background.jpg);
-  background-repeat:no-repeat;
-  background-size:100%;
+  
+  width: 1200px;
+  background-color: aqua;
   height:820px;
   overflow:hidden;
 }
@@ -354,21 +347,25 @@ Styles for the cheesegame
     height:820px;
 }
 
+.cheese_h1{
+  color: white;
+}
+
 .centered {
-    background-image: url(../images/cheese/background.jpg);
-    border: dashed;
-    float:left;
-    height: 820px;
-    width:900px;
-    /*background-color: yellow;*/
+
+  border: solid;
+  float:left;
+  height: 820px;
+  width:900px;
+  background-color: brown;
 }
 
 .sidebar {
-    float:left;
-    width:280px;
-    height:820px;
-    margin-right:-100px;
-    background-color:yellow;
+  float:left;
+  width:280px;
+  height:820px;
+  margin-right:-100px;
+  background-color: yellow;
 }
 
 .cheeseimages{
@@ -434,9 +431,7 @@ Styles for the ten game
 #tengame{
  width:1200px;
  height:820px;
- background-image: url(../images/tengame/background.jpg);
- background-repeat:no-repeat;
- background-size:100%;
+ background-color: white;
  overflow:hidden;
 }
 
@@ -731,15 +726,48 @@ Styles for the banana delivery screen
   background-image: url(../images/delivery/bananadelivery.png);
 }
 
+#bananadelivery_elements{
+  position:absolute;
+  left: 100px;
+  top: 80px;
+  width: 450px;
+  height: 500px;
+  margin: 5px;
+  background-image: url(../images/bubble.png);
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+
+
+#bananadelivery_speechbubble{
+  margin-left: 80px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
 .deliverybuttons{
   width: 200px;
   height:150px;
   font-size: 50px;
-  margin-top: 500px;
-  margin-left:40px;
-  background-color:ghostwhite;
-  color: black;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  margin-top: 280px;
+  margin-left: 10px;
+}
 
+.deliverybuttons:hover{
+  background: #b7f03c;
+  background-image: -webkit-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -moz-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -ms-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: -o-linear-gradient(top, #b7f03c, #d1f266);
+  background-image: linear-gradient(to bottom, #b7f03c, #d1f266);
+  text-decoration: none;
+  color:black;
 }
 
 /*================================================
@@ -900,9 +928,7 @@ Styles for the Circlegame
 #circlegame{
   width: 1200px;
   height:820px;
-  background-image: url(../images/circlegame/background.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color: darkturquoise;
   overflow:hidden;
 }
 

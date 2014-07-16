@@ -121,7 +121,6 @@ sound_buttonclicked.play();
 
 checkkrokoanswers(kroko_correctanswered);
 $("#krokosvg").empty();
-createkrokogame();
 kroko_buttonclicked = false;
 
 var continuebutton = document.getElementById("krokocontinue");

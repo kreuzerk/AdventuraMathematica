@@ -3,15 +3,13 @@ var selectedcharacter = null;
 var imageclickedbefore = null;
 var item_display_color = "black";
 var selected_level;
+var level;
 
 var lastclicked_round_button;
 var adventuregame_number_of_rounds;
 
 //Variables for the bananadelivery images
 var imagepath_bananadelivery;
-var imagepath_deliveryfailure;
-var imagepath_deliveryok;
-var imagepath_nodelivery;
 
 //Variable that stores the imagepath of the tigerimage
 var imagepath_tiger = "url(./images/quizgame/Tiger_Level1.png)";
@@ -82,7 +80,7 @@ break;
 //Function that is responsible for initialising the levels
 function initialise_levels_selectionsscreen(){
 
-var level = localStorage.getItem("level");
+level = localStorage.getItem("level");
 
 if(level == null){
 localStorage.setItem("level", 1);
@@ -220,9 +218,6 @@ circleData = level1;
 
 //Paths for the bananadelivery images
 imagepath_bananadelivery = "url(./images/delivery/level1/bananadelivery.png)";
-imagepath_deliveryfailure = "url(./images/delivery/level1/deliveryfailure.png)";
-imagepath_deliveryok = "url(./images/delivery/level1/deliveryok.png)";
-imagepath_nodelivery = "url(./images/delivery/level1/nodelivery.png)";
 
 //Variable for the wallgame background
 imagepath_wallgame = "url(./images/selectiongame/Walls.png)";
@@ -256,9 +251,6 @@ document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Bac
 
 //Paths for the bananadelivery images
 imagepath_bananadelivery = "url(./images/delivery/level2/bananadelivery.png)";
-imagepath_deliveryfailure = "url(./images/delivery/level2/deliveryfailure.png)";
-imagepath_deliveryok = "url(./images/delivery/level2/deliveryok.png)";
-imagepath_nodelivery = "url(./images/delivery/level2/nodelivery.png)";
 
 //Variable for the wallgame background
 imagepath_wallgame = "url(./images/selectiongame/Walls_level2.png)";
@@ -293,9 +285,6 @@ document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Bac
 
 //Paths for the bananadelivery images
 imagepath_bananadelivery = "url(./images/delivery/level3/bananadelivery.png)";
-imagepath_deliveryfailure = "url(./images/delivery/level3/deliveryfailure.png)";
-imagepath_deliveryok = "url(./images/delivery/level3/deliveryok.png)";
-imagepath_nodelivery = "url(./images/delivery/level3/nodelivery.png)";
 
 //Variable for the wallgame background
 imagepath_wallgame = "url(./images/selectiongame/Walls_level3.png)";

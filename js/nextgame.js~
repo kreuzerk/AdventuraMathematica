@@ -279,7 +279,10 @@ $("#nextgamesvg").empty();
 Function that is called if the reset button is clicked
 =============================================*/
 function correct_nextgame(){
-alert("hier");
+
+cleannextgamesvg();	//Clean the elements
+nextsvg_drawelements(); //Redraw the exercise
+
 }
 
 
