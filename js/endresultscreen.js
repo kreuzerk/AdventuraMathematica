@@ -1,28 +1,24 @@
-
-
+/*=========================================
+     Initialise the endresultscreen
+=========================================*/
 function initialise_endresultscreen(){
 
 $("#endresultdiv_newrecord").hide();
 
 //Initialise the elements for the played round
-//================================================================================
 document.getElementById("adventuregame_endresultdiv_actual_correct").innerHTML = "Respuestas correctas: " + number_correct_answered;
 document.getElementById("adventuregame_endresultdiv_actual_false").innerHTML = "Respuestas incorrectas: " + number_wrong_answered;
 
-var total = number_correct_answered - number_wrong_answered;
+var total = number_correct_answered - number_wrong_answered;	//Calculate the total
+document.getElementById("adventuregame_endresultdiv_actual_total").innerHTML = "Resultado: " + total;
 
-if(total > 0){
-document.getElementById("adventuregame_endresultdiv_actual_total").innerHTML = "Resultado: " + total;
-}
-else{
-document.getElementById("adventuregame_endresultdiv_actual_total").innerHTML = "Resultado: " + total;
-}
 //================================================================================
 
+//Initialise the elements from the record round
 var record_correct_answered;
 var record_wrong_answered;
 
-//Read the records corresponding to the level
+//Read the stored score corresponding to the level
 switch(selected_level){
 case "level1":
 record_correct_answered = localStorage.getItem("correct_level1");
@@ -39,8 +35,9 @@ break;
 }
 
 
-//Create the display for the record value
-if(record_correct_answered == null && record_wrong_answered == null){
+//-----------------Create the display for the record value----------------------
+
+if(record_correct_answered == null && record_wrong_answered == null){	//Check if it is the first time the player plays the round
 
 document.getElementById("adventuregame_endresultdiv_record_correct").innerHTML = "Respuestas correcta: - ";
 document.getElementById("adventuregame_endresultdiv_record_false").innerHTML = "Respuestas incorrecta: - ";
@@ -69,7 +66,7 @@ else{
 
 var record_result = record_correct_answered - record_wrong_answered;
 
-if(record_result >= total){
+if(record_result >= total){	//Check if the record is bigger than your total
 document.getElementById("adventuregame_endresultdiv_record_correct").innerHTML = "Respuestas correcta: " + record_correct_answered;
 document.getElementById("adventuregame_endresultdiv_record_false").innerHTML = "Respuestas incorrecta: " + record_wrong_answered;
 document.getElementById("adventuregame_endresultdiv_record_total").innerHTML = "Resultado: " + record_result;
@@ -105,6 +102,10 @@ break;
 }
 
 }
+
+/*====================================
+	Continue Button clicked
+=====================================*/
 
 function endresultscreen_continue_clicked(){
 

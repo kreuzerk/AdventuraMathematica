@@ -30,6 +30,9 @@ var aftercircle = false;
 var drawncounter = -1;
 var colors = ["blue","yellow","green"];
 
+/*================================================
+Function that draws the nextsvg exercise
+================================================*/
 function nextsvg_drawexercise(){
 
 //Clean the svg element
@@ -104,6 +107,7 @@ next_y = 120;
 
 var drawingcolor;
 
+//Go through all the elements of the selected pattern and get its color and draw the elements with the color
 for(var i = 0; i < pattern_drawn; i++){
 
 if(pattern[i].indexOf("blue") >= 0){
@@ -130,8 +134,9 @@ else
 
 }
 
-//Drawing the Selection part
-//========================================================================================
+/*================================================================
+ Drawing the Selection part
+================================================================*/
 function nextsvg_drawselections(){
 var x = 85;
 var y = 150;
@@ -156,7 +161,6 @@ y = 200
 //Draw the circles
 for(var i = 0; i < colors.length; i++){
 
-
   selectsvg.append("circle").attr("onclick", "drawfigure($(this).attr('form'),$(this).attr('fill'))")
                          .attr("cx", x)
                          .attr("cy", y)
@@ -170,23 +174,22 @@ for(var i = 0; i < colors.length; i++){
 /*================================================================================================
 Function for drawing the next element
 ==============================================================================================*/
-
 function drawnextelement($drawingcolor, $rect){
 
-drawncounter++;
-
+drawncounter++;	//Checks how many elements are drawn
 
 if($rect){
-next_y = 120;
+next_y = 120;	//If it is a rect we need another y coordinate
 
 if(aftercircle == false){
-next_x = next_x + 116;
+next_x = next_x + 116;	//If the next elements comes after a rect we need another x coordinate
 }
 else
 {
 next_x = next_x + 76;
 }
 
+//Draw the rect
 nextsvg.append("rect")
                             .attr("x", next_x)
                             .attr("y", next_y)
@@ -207,12 +210,13 @@ else
 next_y = 160;
 
 if(aftercircle == false){
-next_x = next_x + 156;
+next_x = next_x + 156;		//If it is after a rectangle we need another x coordinate
 }
 else{
 next_x = next_x + 116;
 }
 
+//Draw the circle
 nextsvg.append("circle")
                          .attr("cx", next_x)
                          .attr("cy", next_y)
@@ -247,7 +251,6 @@ if(drawncounter == 9){		//9 because it begins with zero at the first iteration
 }
 
 }
-
 
 /*========================================================
 Function for handling the click on an element

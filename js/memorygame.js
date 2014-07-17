@@ -13,10 +13,14 @@ var previous_correct = false;
 var memorygame_found_counter = 0;
 var memorygame_numberoftries = 0;
 
+/*=========================================================
+Function that initialises the memorygame
+=========================================================*/
 function initialise_memory_game(){
 
 memorygame_reset();	//Reset the memorygame to create a new exercise
 
+//Set a different numberrange depending on the leveloperator
 if(level_operator == "+" || level_operator == "-"){
 numberrange = 50;
 }
@@ -41,8 +45,7 @@ numberisok = true;
 }
 }//End for loop
 
-
-if(number1 % number2 != 0){
+if(number1 % number2 != 0){	//Garante that the result of the division of the two numbers is zero
 numberisok = false;
 }
 else{
@@ -52,32 +55,33 @@ numberisok = true;
 while(!numberisok);
 
 memorygame_exercises[i] = number1 + " " + level_operator + " " + number2;
-memorygame_results[i] = operators[level_operator](number1, number2);
+memorygame_results[i] = operators[level_operator](number1, number2);		//Store the result
 }//End for loop
 
 initialise_display_result_array();
-
 }
 
-//Function that resets the whole application
-//====================================================================
+/*==================================================================
+Function that resets the whole application
+==================================================================*/
 function memorygame_reset(){
 
 //Reset the image and the onclick function
 for(var i = 1; i<=16; i++){
 document.getElementById("memorygame_td" + i).style.backgroundImage = 'url(./images/memorygame/memorycard_frontside.png)';
+//Set the onclick method
 document.getElementById("memorygame_td" + i).setAttribute("onclick", "memorycard_clicked($(this).attr('order'), $(this).attr('id'))");
 document.getElementById("memorygame_td" + i).innerHTML = "";
-memorygame_found_counter = 0;
-memorygame_numberoftries = 0;
+memorygame_found_counter = 0;	
+memorygame_numberoftries = 0;	
 document.getElementById("memorygame_intentos").innerHTML = "Intiendos: " + memorygame_numberoftries;
 }
 
 }
 
-//Function that initialises and creates the memorgame_display_array
-//and the memorygame_result_array
-//================================================================================
+/*===============================================================================
+Function that initialises and creates the memorygame_display_array and the memorygame_result_array
+================================================================================*/
 function initialise_display_result_array(){
 
 //Fill the memorygame_display_array
@@ -104,7 +108,9 @@ randomize_memorygame_arrays();
 
 }
 
-//Function that randomizes the memory_display and the memory_result_array
+/*======================================================================
+Function that randomizes the memory_display and the memory_result_array
+=======================================================================*/
 function randomize_memorygame_arrays(){
 
 for(var i = 0; i<50; i++){
@@ -127,18 +133,18 @@ memorygame_result_array[randomposition2] = temp;
 
 }
 
+/*==========================================================
+Function that is called if a memorycard is clicked
+===========================================================*/
 function memorycard_clicked($order, $id){
 
 $( "#" + $id ).hide();
-
 $( "#" + $id ).show( "slide");
 
 document.getElementById($id).style.backgroundImage = 'url(./images/memorygame/memorycard_backside.png)';
 document.getElementById($id).innerHTML = memorygame_display_array[$order-1];
 
-
-
-//Check if the first and the secon were clicked
+//Check if the first and a second element were clicked
 if(memorygame_firstclicked != null && memorygame_secondclicked_id != null){
 
 if(previous_correct == false){
@@ -158,11 +164,10 @@ memorygame_secondclicked_id = null;     //Reset the second element to null
 
 }
 
-
 //Needs to be before the second if statement otherwise it does not work
 if(memorygame_firstclicked != null){
 
-memorygame_numberoftries++;
+memorygame_numberoftries++;	//Inkrement the number of trys
 document.getElementById("memorygame_intentos").innerHTML = "Intiendos: " + memorygame_numberoftries;
 
 //This if is executed if the code is correct
@@ -187,11 +192,11 @@ if(memorygame_numberoftries <= 20){
 }
 else{
 	if(memorygame_numberoftries <= 40){
-		checkchocolate(true, 0);	
+		checkchocolate(true, 0);	//Call the checkchocolate located in the mainscript.js 
 	}
 	else
 	{
-		checkchocolate(false,10);
+		checkchocolate(false,10);	//Call the checkchocolate located in the mainscript.js
 	}
 }
 

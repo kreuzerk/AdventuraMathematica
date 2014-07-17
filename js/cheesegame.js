@@ -5,13 +5,16 @@ var textfirstimage = ["1/2","2/3","3/4","5/6","7/8","9/10","19/20"];
 var textsecondimage = ["1/2","1/3","1/4","1/6","1/8","1/10","1/20"];
 var cheeseresulttexts = ["2/2","3/3","4/4","6/6","8/8","10/10","20/20"];
 
-var cheese_solution;
+var cheese_solution;	//This variable stores the solution
 var randomcheese;
-var lastdroppedid;
+var lastdroppedid;	//This variable stores the value of the cheese that has been dropped
 var secondtext;
 var secondimage;
 var thirdimage;
 
+/*==============================
+       Initialise cheesegame
+===============================*/
 function initialisecheesegame(){
 
 //Hide the cheesebutton
@@ -100,6 +103,9 @@ break;
  }
 }
 
+/*==============================
+       A cheese is dropped
+===============================*/
 function dropped($id){
 
 sound_blop.play();		//Play the blop sound if a chees is dropped
@@ -112,23 +118,28 @@ secondtext.innerHTML = document.getElementById($id).getAttribute("displaytext");
 lastdroppedid = $id;
 }
 
-
+/*==============================
+       Check the results
+===============================*/
 //Function that is clicked by the continue button
 function checkcheese(){
 
 sound_buttonclicked.play();
 
+//Reset the cheeseimages back to the original position
 $("#cheeseimage1").animate({left:0,top:0});
 $("#cheeseimage2").animate({left:0,top:0});
 $("#cheeseimage3").animate({left:0,top:0});
 
 if(lastdroppedid == cheesesolution)
 {
-checklavenderfields(true);
+//The answer is correct
+checklavenderfields(true);	//Call the checklavenderfields with true (correct). This method is located in the mainscript.js
 }
 else
 {
-checklavenderfields(false);
+//The answer is wrong
+checklavenderfields(false);	//Call the checklavenderfields with false (wrong). This method is located in the mainscript.js
 }
 }
 

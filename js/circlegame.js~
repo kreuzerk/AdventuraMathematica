@@ -1,12 +1,11 @@
-var corners_data = [90, 45, 180, 200, 220, 10, 20, 50, 60, 75, 90, 15, 25, 90, 180, 45];
-//45, 90, 180 occur multiple times because they are more important than oder corners
+var corners_data = [90, 45, 180, 200, 220, 10, 20, 50, 60, 75, 90, 15, 25, 90, 180, 45];  //45, 90, 180 occur multiple times because they are more important than oder corners
 var used_corner_date = new Array(4); //In this array we will store all the Numbers that are already used
 
-//Important to make sure that each one is only used once
+//Attention!!! Important to make sure that each one is only used once
 
 function initialisecirclegame(){
 
-var exists;
+var exists;	//With the help of this boolean we make sure that each number is only once displayed
 
 for(var i=0; i < used_corner_date.length; i++){
 do{
@@ -25,9 +24,9 @@ for(var j = 0; j< used_corner_date.length; j++){
 }//End second for
 
 if(exists == false){
-used_corner_date[i] = corners_data[randomnumber];
+used_corner_date[i] = corners_data[randomnumber];	//Add the actual used value to the already used values
 var kendocircle = document.getElementById("circleh1_" + (i+1));
-kendocircle.innerHTML = corners_data[randomnumber] + "°";
+kendocircle.innerHTML = corners_data[randomnumber] + "°";	//Set the text to the kendocircle
 }
 
 }while(exists == true);
@@ -51,15 +50,15 @@ sound_buttonclicked.play();
 
 var everything_correct = true;
 
-for(var i = 0; i< used_corner_date.length; i++){
+for(var i = 0; i< used_corner_date.length; i++){	//Check for each circle if the values are correct
 var value = document.getElementById("kendocircle" +(i+1)).value;
 
-if(value != used_corner_date[i]){
+if(value != used_corner_date[i]){	//If only one is false the whole exercise is wrong
 everything_correct = false;
 break;
 }
 } //End for loop
 
-checkturquoisfields(everything_correct);
+checkturquoisfields(everything_correct);	//Call the check method. This method is located in the mainscript.js
 
 }

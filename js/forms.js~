@@ -1,14 +1,17 @@
 var picturenames = ["baseball.png","basketball.png","billiardball.png",
 "book.png","chocolate.png","football.png","geotriangle.png","gift.png","musictriangle.png",
-"rectangle.png","redball.png","square.png","television.png","triangle.png","triangle2.png"];
+"rectangle.png","redball.png","square.png","television.png","triangle.png","triangle2.png"];	//Store the filenames of the pictures
 var forms_numberofrects = 0;
 var forms_numberofcircles = 0;
 var forms_numberoftriangles = 0;
 
+/*==============================
+	Create formsgame
+===============================*/
 function createformsgame(){
 
-removeformelements();
-clearelements();
+removeformelements();	//Remove all the elements
+clearelements();	//Clear all the inputs
 
 forms_numberofrects = 0;
 forms_numberofcircles = 0;
@@ -30,6 +33,7 @@ else{
 x = x + 140;
 }
 
+//Append the image to the formsvg
 formsvg.append("svg:image")
       .attr("xlink:href", "./images/Forms/" + picturenames[number-1])
       .attr("width", 100)
@@ -41,6 +45,9 @@ forms_countforms(picturenames[number-1]);
 
 }//End of the method
 
+/*==============================
+   Helper function countforms
+===============================*/
 function forms_countforms($name){
 
 switch($name){
@@ -69,6 +76,9 @@ break;
  }
 }
 
+/*==============================
+   Clear all the inputs
+===============================*/
 function clearelements(){
 
 sound_buttonclicked.play();
@@ -83,11 +93,17 @@ input3.value = "";
 
 }
 
+/*==============================
+   Remove all the formelements
+===============================*/
 function removeformelements(){
 $("#formssvg").empty();
 
 }
 
+/*==============================
+   Check the formresults
+===============================*/
 function checkformresults(){
 
 sound_buttonclicked.play();
@@ -95,12 +111,6 @@ sound_buttonclicked.play();
 var input1 = document.getElementById("forminput1");
 var input2 = document.getElementById("forminput2");
 var input3 = document.getElementById("forminput3");
-
-/*
-input1.setAttribute("value", forms_numberofrects);
-input2.setAttribute("value", forms_numberofcircles);
-input3.setAttribute("value", forms_numberoftriangles);
-*/
 
 var answer1 = parseInt(input1.value);
 var answer2 = parseInt(input2.value);
@@ -112,7 +122,6 @@ if(answer1 == forms_numberofrects && answer2 == forms_numberofcircles && answer3
 checkorangefields(true);
 }
 else{
-alert(forms_numberofrects + " " + forms_numberofcircles + " " + forms_numberoftriangles);
 checkorangefields(false);
 }
 

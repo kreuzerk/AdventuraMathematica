@@ -5,10 +5,12 @@ var applenumber_plate4 = 0;
 var numberofapples;
 var numberofplates;
 
+/*================================================
+Function that initialises the sharinggame
+================================================*/
 function initialise_sharinggame(){
 
-//Call the reset function
-reset_apples();
+reset_apples();	//Call the reset function
 
 do{
 numberofapples = Math.floor(Math.random() * 12) + 1;
@@ -23,12 +25,16 @@ for(var i = numberofapples; i<12; i++){
 $("#appleimage" + (i+1)).hide();
 }
 
+//Hide the tables that are not needed
 for(var i = numberofplates; i<4; i++){
 $("#dropapples" + (i+1)).hide();
 }
 
 }
 
+/*===========================================
+Function that controls the sharing_game
+============================================*/
 function control_sharing_game(){
 
 sound_buttonclicked.play();
@@ -51,24 +57,25 @@ correct = false;
 break;
 }
 
-checkdodgerblue(correct);
-
+checkdodgerblue(correct);	//Check the dodgerblue method in the mainscript.js
 }
 
 //Function that is called by the reset button
 function reset_apples(){
 
-$(".appleimages").animate({left:0,top:0});
+$(".appleimages").animate({left:0,top:0});	//Reset the apples back to the original position
 
-applenumber_plate1 = 0;
+//Reset the number of dropped apples per plate
+applenumber_plate1 = 0;	
 applenumber_plate2 = 0;
 applenumber_plate3 = 0;
 applenumber_plate4 = 0;
 
 }
 
-
-//Functions for inkrementing the variables if an element is dropped
+/*================================================================
+Functions for inkrementing the variables if an element is dropped
+================================================================*/
 function apple_on_plate1(){
 sound_blop.play();
 applenumber_plate1++;

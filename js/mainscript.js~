@@ -7,13 +7,14 @@ var cy;
 var bananacounter = 0;	//Bananamount at the beginning
 var moneycounter = 0;   //Moneyamount at the beginning
 var filename;
-var goldentered = false;
-var blackentered = false;
-var endofround = false;
+var goldentered = false;	//Checks if a golden field has been entered
+var blackentered = false;	//Checks if a black field has been entered
+var endofround = false;		//Checks if a round is over
 var round = 1;
-var dicethrown = false;
-var deletearrow = true;
-var rounds_played = 1;
+var dicethrown = false;		//Checks if the dice has already been thrown
+var deletearrow = true;		//Checks if the arrow at the beginning needs to be deleted
+var rounds_played = 1;		//Counts the number of played rounds
+var entered;		//Used to specify if the caracter has entered a field
 
 //Variables that are neeeded at the end of the game
 
@@ -25,24 +26,24 @@ var number_wrong_answered = 0;
 var width = 1200;
 var height = 820;
 
-var circleData;
+var circleData;	//Stores all the positions for the selected level
 
 //Circle Data Set for the first level
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 9},
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 190, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 3},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" :10},
-  { "cx": 750, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 11},
+  { "cx": 750, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 12},
   { "cx": 890, "cy": 660, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 13},
-  { "cx": 880, "cy": 590, "radius": 30, "color" : "silver", "fontcolor" : "white", "number" : 14},
+  { "cx": 880, "cy": 590, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 14},
   { "cx": 810, "cy": 580, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 15},
   { "cx": 740, "cy": 580, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 16},
   { "cx": 670, "cy": 580, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 17},
@@ -97,11 +98,11 @@ var level1 = [
 var level2 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
   { "cx": 70, "cy": 660, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 70, "cy": 590, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 3},
-  { "cx": 70, "cy": 520, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 4},
-  { "cx": 70, "cy": 450, "radius": 30, "color" : "salmon", "fontcolor" : "white", "number" : 5},
-  { "cx": 70, "cy": 380, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 6},
-  { "cx": 70, "cy": 310, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 7},
+  { "cx": 70, "cy": 590, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 3},
+  { "cx": 70, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 4},
+  { "cx": 70, "cy": 450, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 5},
+  { "cx": 70, "cy": 380, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 6},
+  { "cx": 70, "cy": 310, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 7},
   { "cx": 70, "cy": 240, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 8},
   { "cx": 140, "cy": 210, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 9},
   { "cx": 210, "cy": 210, "radius": 30, "color" : "green", "fontcolor" : "white", "number" :10},
@@ -151,13 +152,13 @@ var level2 = [
 var level3 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
   { "cx": 120, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 770, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 3},
-  { "cx": 280, "cy": 770, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 4},
-  { "cx": 350, "cy": 770, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 5},
+  { "cx": 190, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 3},
+  { "cx": 280, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 4},
+  { "cx": 350, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 5},
   { "cx": 420, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 6},
-  { "cx": 490, "cy": 770, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 7},
+  { "cx": 490, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 7},
   { "cx": 520, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 8},
-  { "cx": 530, "cy": 630, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 9},
+  { "cx": 530, "cy": 630, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 9},
   { "cx": 520, "cy": 560, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
   { "cx": 450, "cy": 520, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 11},
   { "cx": 380, "cy": 520, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
@@ -204,12 +205,9 @@ var level3 = [
 { "cx": 640, "cy": 680, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 53},
 { "cx": 640, "cy": 750, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 54}];
 
-
-
-/*====================================================================================================
-/*====================================================================================================
-Code for drawing the gameboard*/
-
+/*==============================
+Draw the gameboard
+===============================*/
 function drawgameboard(){
 
 //Add circles to the svgContainer
@@ -303,19 +301,16 @@ svgContainer.append("text").attr("id", "moneyamount")
 
 }
 
-
-/*====================================================================================================
-/*====================================================================================================*/
-
-//boolean variables
-var entered;		//Used to specify if the caracter has entered a field
-
+/*===========================================================================================
+Function that is used to set the filename of the character - called by the selectionscreen.js
+=============================================================================================*/
 function setfilename($file){
  filename = $file;		//Set the filepath of the character
 }
 
-
-//Function that is called when continuebutton on the startscreendiv is clicked
+/*==========================================================================
+Function that is called when continuebutton on the startscreendiv is clicked
+===========================================================================*/
 function selectionscreen_continueclicked(){
 
 $("#startscreendiv").hide();
@@ -323,17 +318,14 @@ sound_introeffect.play();
 sound_intromusic.play();
 $("#caracterselection").show();
 
-
 }
 
 /*======================================
 Throw the dice
 =======================================*/
-
 function throwdice(){
 
-//Play the sound for the diceroll
-sound_diceroll.play();
+sound_diceroll.play();	//Play the sound for the diceroll
 
 if(deletearrow){		//Defines if the arrow at the begining needs to be deleted
 var arrow = document.getElementById("click_arrow");
@@ -341,15 +333,13 @@ arrow.parentNode.removeChild(arrow);
 deletearrow = false;
 }
 
-if(dicethrown == false){
+if(dicethrown == false){	//Throw the dice only when the caracter is not moving
 
-//Call Methods at the beginning of each dice throw
-if(entered){
+if(entered){	//Call Methods at the beginning of each dice throw
 remove();
 }
 
-//Simulates the dice throw
-diceresult = Math.floor(Math.random() * 6) + 1;
+diceresult = Math.floor(Math.random() * 6) + 1;	//Simulates the dice throw
 
 var filename;
 //Draw the corresponding image to the diceresult
@@ -402,7 +392,6 @@ break;
 }
 }
 
-
 drawcube(filename);
 
 movevalue=currentfield;
@@ -410,6 +399,9 @@ move();
 }//End if
 }
 
+/*======================================================
+Function that is responsible for moving the character
+======================================================*/
 function move(){
 
   dicethrown = true;
@@ -418,12 +410,11 @@ function move(){
     window.setTimeout("move()",1000);
     movevalue++;
 
-    cx = circleData[movevalue-1].cx;
-    cy = circleData[movevalue-1].cy;
+    cx = circleData[movevalue-1].cx;	//Read the x coordinate of the next field
+    cy = circleData[movevalue-1].cy;	//Read the y coordinate of the next field
 
     //Delete the lion
     deletelion();
-
 
     //Draw the lion
     drawlion(cx,cy);
@@ -439,9 +430,6 @@ function move(){
     if(circleData[movevalue-1].number >= circleData.length){	//Detect if we are at the End of the round
 	endofround = true;
     }
-
-
-
   }
   else{
   
@@ -450,14 +438,13 @@ function move(){
   currentfield = diceresult + currentfield;
   }
 
-  if(blackentered){
+  if(blackentered){	//The character has passed a black field
   currentfield = movevalue;
   blackentered = false; //Because we are going to leave the gold field
   }
   
-
-  if(endofround == true){
-  currentfield = 1;
+  if(endofround == true){	//The round is over
+  currentfield = 1;		//Set the next field to 1
   endofround = false;
   }
 
@@ -466,30 +453,39 @@ function move(){
   goldentered = false; //Because we are going to leave the gold field
   }
   
-  removedicedisplay();
-  checkfield();
+  removedicedisplay();	//Remove the dicedisplay
+  checkfield();		//Check the field we are standing on
   dicethrown = false;
  }
 }
 
-
+/*====================================================
+Function that is responsible for drawing the lion
+====================================================*/
 function drawlion($cx, $cy){
 
 //Play the move sound
 sound_blop.play();
 
+//Append the lion to the svg container
 svgContainer.append("svg:image")
       .attr("xlink:href", filename).attr("id", "Lion")
       .attr("width", 100)
       .attr("height", 100).attr("x", $cx-50).attr("y",$cy-90);
 }
 
+/*====================================================
+Function that is responsible for deleteing the lion
+====================================================*/
 function deletelion(){
 
 var lion = document.getElementById("Lion");
 lion.parentNode.removeChild(lion);
 }
 
+/*===================================================
+Function that is responsible for drawing the cube
+===================================================*/
 function drawcube($filename){
 
 //Draw the texts and the cube according to the currentfield and the thrown number
@@ -517,7 +513,9 @@ svgContainer.append("text").attr("id", "diceresult")
 
 }
 
-//Remove the dice display in the middle of the window
+/*==================================================
+Remove the dice display in the middle of the window
+===================================================*/
 function removedicedisplay(){
 
 var dicetextone = document.getElementById("dicetextone");
@@ -530,12 +528,9 @@ diceimage.parentNode.removeChild(diceimage);
 diceresult.parentNode.removeChild(diceresult);
 }
 
-
-
 /*=================================================================================
 Hide function at the beginning of the game - Hide the not used elements
 ===================================================================================*/
-
 function hide(){
 
 
@@ -569,15 +564,12 @@ $("#minigameresultdiv").hide();
 $("#adventuregame_endresultdiv").hide();
 }
 
-
 /*=================================================================================
 Function that detects on which field the caracter is standing
 ===================================================================================*/
-
 function checkfield(){
 
-var currentcolor = circleData[currentfield-1].color;
-
+var currentcolor = circleData[currentfield-1].color;	//Read the current color the character is standing on
 
 //Stop the sound corresponding to the level
 switch(selected_level){
@@ -679,7 +671,6 @@ case "snow":
   else{
   rounds_played++;
   $("#maingamesvg").hide();
-  document.getElementById("endofround").style.backgroundImage = imagepath_endofround;
   $("#endofround").show();
   }
 break;

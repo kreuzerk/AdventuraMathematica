@@ -1,21 +1,25 @@
 var endgame_operators = ["+","-"];
-var endgame_colors = ["blue", "green", "red", "yellow", "orange"];
+var endgame_colors = ["blue", "green", "red", "yellow", "orange"];	//Random colors that are used for the color of the numbers
 var endgame_result = 0;
 var endresultgame_operators;
 
+/*================================================
+	Create the Endresultgame
+================================================*/
 function createendresultgame(){
 
 cleaninputs();
 
-var elements = [document.getElementById("number1"),document.getElementById("number2"),document.getElementById("number3"),document.getElementById("number4")];
+//Store the references for the fields that represent the numbers
+var elements = [document.getElementById("number1"),document.getElementById("number2"),document.getElementById("number3"),document.getElementById("number4")];  
 
 //Variable to store the operators
-endresultgame_operators = new Array(3);
+endresultgame_operators = new Array(3);	//This array stores the operators
 var numbers = [0,0,0,0];
 
 //Set the operators
 for(var i = 0; i<endresultgame_operators.length; i++){
-  var randomoperator = Math.floor(Math.random()* endgame_operators.length) + 1;
+  var randomoperator = Math.floor(Math.random()* endgame_operators.length) + 1;	//Randomly choose an operator
   endresultgame_operators[i] = endgame_operators[randomoperator-1];
 }
 
@@ -28,11 +32,9 @@ var randomcolor = Math.floor(Math.random() * endgame_colors.length) + 1;
 elements[i].setAttribute("color", endgame_colors[randomcolor]);
 elements[i].innerHTML = number;
 numbers[i] = number;
-
-
-
 } //End for loop
 
+//------------Calculate the endgame_result --------------------
 
 endgame_result = numbers[0];
 
@@ -49,7 +51,6 @@ break;
 }//End Switch case
 }
 
-
 //Set the result
 var randomcolor = Math.floor(Math.random() * endgame_colors.length) + 1;
 
@@ -59,7 +60,10 @@ result.setAttribute("color", endgame_colors[randomcolor]);
 result.innerHTML = endgame_result;
 }
 
-//Function for cleaning the inputs
+
+/*================================================
+	Function that cleans the inputs
+================================================*/
 function cleaninputs(){
 
 sound_buttonclicked.play();
@@ -74,7 +78,10 @@ input3.value = "";
 
 }
 
-//Function for checking the results
+
+/*================================================
+	Function that checks the results
+================================================*/
 function endgame_checkresults(){
 
 sound_buttonclicked.play();
@@ -90,5 +97,5 @@ for(var i = 0; i < endresultgame_operators.length; i++){
   }
 }
 
-checkpurplefields(correct);
+checkpurplefields(correct);	//Call the checkpurplefields method located in the mainscript.js
 }

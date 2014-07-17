@@ -1,15 +1,18 @@
 var tiger_quizgame_result;
 
-
+/*==================================================
+Function that initialises the tigerdiv
+==================================================*/
 function initialise_tiger_div(){
-
-document.getElementById("tigerdiv").style.backgroundImage = imagepath_tiger;
 
 //Reset the attributes
 document.getElementById("tigerdiv_speechbubble").innerHTML = "HaHaHaHa!!! <br /> Usted está jugando contra mí. <br/> El primer jugador en ganar seis proyectos de ley contestó correctamente.";
 document.getElementById("tigerdiv_okbutton").setAttribute("onclick","tiger_okclicked()");
 }
 
+/*=================================================
+Function that is called if the ok button is clicked
+===================================================*/
 function tiger_okclicked(){
   $("#tigerdiv").hide();
 
@@ -23,6 +26,9 @@ function tiger_okclicked(){
   $("#bossquiz").show();
 }
 
+/*=================================================
+Function that is called if the quizgame is finished
+===================================================*/
 function quizgame_finished($result){	//-1 = Tiger wins, 0 = draw, 1 = Player wins
 
 switch($result){
@@ -49,5 +55,6 @@ $("#tigerdiv").show();
 }
 
 function tiger_finish(){
+sound_tigerlaugh.play();
 checkblackfields(tiger_quizgame_result);
 }

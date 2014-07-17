@@ -4,11 +4,14 @@ var kroko_correctanswered = 0;
 var kroko_buttonclicked = false;
 var kroko_questioncounter = 0;
 
+/*=====================================================
+   Function that creates the Krokogame
+=====================================================*/
 function createkrokogame(){
 
-if(kroko_questioncounter == 2){
+if(kroko_questioncounter == 2){	//This means that there will not be a next question
 
-var continuebutton = document.getElementById("krokocontinue");
+var continuebutton = document.getElementById("krokocontinue");	//Get the bottom from the bottom of the page
 
 //Reset the questioncounter
 kroko_questioncounter = 0;
@@ -17,12 +20,14 @@ continuebutton.innerHTML = "Continuar o jogo";
 continuebutton.setAttribute("onclick", "finishkrokogame()");
 }
 
-
+//Append the left rectangle to the krokosvg - In this rectangles we will put the fishes
 kroksvg.append("rect")
                             .attr("x", 150)
                             .attr("y", 10)
                             .attr("width", 250)
                             .attr("height", 550).attr("fill","lightblue").attr("fill-opacity", "0.5").attr("stroke","black");
+
+//Append the right rectangle to the krokosvg - In this rectangles we will also put the fishes
 
 		kroksvg.append("rect")
                             .attr("x", 800)
@@ -32,7 +37,7 @@ kroksvg.append("rect")
 
 
 
-		//Adding the Text for the multiplikations
+//Adding the Text for the multiplikations (leftside)
 		kroksvg.append("text").attr("id", "multiplier1")
       			.attr("x", 0)
       			.attr("y", 300)
@@ -41,6 +46,7 @@ kroksvg.append("rect")
       			.attr("font-size", "50px")
       			.attr("fill", "black");
 
+//Adding the Text for the multiplikations (rightside)
 		kroksvg.append("text").attr("id", "multiplier2")
       			.attr("x", 1060)
       			.attr("y", 300)
@@ -52,7 +58,6 @@ kroksvg.append("rect")
 
 
 //Using multiplications inside 12x12. For reasons see the documentation
-
 var multiplier1 = Math.floor(Math.random() * 12) + 1;
 var fishes1 = Math.floor(Math.random() * 12) + 1;
 var multiplier2 = Math.floor(Math.random() * 12) + 1;
@@ -83,7 +88,7 @@ else{
 x_fish = 290;
 }
 
-
+//Append the fishimage to the krokosvg on the left side
 kroksvg.append("svg:image")
       .attr("xlink:href", "./images/Krokogame/Fish.png").attr("id", "fish1" + i)
       .attr("width", 80)
@@ -96,7 +101,7 @@ y_fish = -80;
 //Draw the fishes for the second water hole
 for(var i=0; i<fishes2; i++){
 
-if(i%2 == 0){
+if(i%2 == 0){	//Row is full - draw the next fish on a row below
 x_fish = 830;
 y_fish = y_fish+90;
 }
@@ -104,7 +109,7 @@ else{
 x_fish = 940;
 }
 
-
+//Append the fishimage to the krokosvg on the right side
 kroksvg.append("svg:image")
       .attr("xlink:href", "./images/Krokogame/Fish.png").attr("id", "fish2" + i)
       .attr("width", 80)
@@ -113,8 +118,9 @@ kroksvg.append("svg:image")
 
 } //End of CreateKrokogamefunction
 
-
-//Function for finishing the Krokogame
+/*===========================================
+  Function for finishing the Krokogame
+============================================*/
 function finishkrokogame(){
 
 sound_buttonclicked.play();
@@ -130,14 +136,15 @@ continuebutton.setAttribute("onclick", "nextquestion()");
 kroko_correctanswered = 0;
 }
 
+/*===========================================
+  Function for drawing the croco
+============================================*/
 function drawcroco($sign){
 
-
 if(kroko_buttonclicked == false){
+sound_fishbutton.play(); //Play the fishbutton sound
 
-sound_fishbutton.play(); //Play the croco sound
-
-switch ($sign){
+switch ($sign){		//Perform an action corresponding to the clicked sign
 
 case ">":
 kroksvg.append("svg:image")
@@ -171,6 +178,9 @@ alert("Click en el button 'Siguiente Pergunta'");
 }
 }//End of drawcroco method
 
+/*===========================================
+  Function to check the krokoresult
+============================================*/
 function checkkrokoresult($answer){
 
 var kroko_correct = false;
@@ -220,7 +230,7 @@ kroksvg.append("svg:image")
 kroko_correctanswered++;
 
 }
-else{
+else{		//Answer was not correct
 kroksvg.append("svg:image")
       .attr("xlink:href", "./images/bad.png").attr("id", "crocoleft")
       .attr("width", 100)
@@ -238,6 +248,10 @@ kroksvg.append("text")
 
 
 }
+
+/*======================================================
+Function that is responsible for displaying the next question
+=======================================================*/
 
 function nextquestion(){
 

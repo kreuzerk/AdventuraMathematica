@@ -1,22 +1,26 @@
 var endgame_operators = ["+","-"];
-var endgame_colors = ["blue", "green", "red", "yellow", "orange"];
+var endgame_colors = ["blue", "green", "red", "yellow", "orange"];	//Random colors that are used for the color of the numbers
 var endgame_result = 0;
-var operators;
+var endresultgame_operators;
 
+/*================================================
+	Create the Endresultgame
+================================================*/
 function createendresultgame(){
 
 cleaninputs();
 
-var elements = [document.getElementById("number1"),document.getElementById("number2"),document.getElementById("number3"),document.getElementById("number4")];
+//Store the references for the fields that represent the numbers
+var elements = [document.getElementById("number1"),document.getElementById("number2"),document.getElementById("number3"),document.getElementById("number4")];  
 
 //Variable to store the operators
-operators = new Array(3);
+endresultgame_operators = new Array(3);	//This array stores the operators
 var numbers = [0,0,0,0];
 
 //Set the operators
-for(var i = 0; i<operators.length; i++){
-  var randomoperator = Math.floor(Math.random()* endgame_operators.length) + 1;
-  operators[i] = endgame_operators[randomoperator-1];
+for(var i = 0; i<endresultgame_operators.length; i++){
+  var randomoperator = Math.floor(Math.random()* endgame_operators.length) + 1;	//Randomly choose an operator
+  endresultgame_operators[i] = endgame_operators[randomoperator-1];
 }
 
 //Set the values
@@ -28,17 +32,15 @@ var randomcolor = Math.floor(Math.random() * endgame_colors.length) + 1;
 elements[i].setAttribute("color", endgame_colors[randomcolor]);
 elements[i].innerHTML = number;
 numbers[i] = number;
-
-
-
 } //End for loop
 
+//------------Calculate the endgame_result --------------------
 
 endgame_result = numbers[0];
 
-for(var i = 0; i<operators.length; i++){
+for(var i = 0; i<endresultgame_operators.length; i++){
   
-switch(operators[i]){
+switch(endresultgame_operators[i]){
 
 case "+":
  endgame_result = endgame_result + numbers[i+1];
@@ -49,7 +51,6 @@ break;
 }//End Switch case
 }
 
-
 //Set the result
 var randomcolor = Math.floor(Math.random() * endgame_colors.length) + 1;
 
@@ -59,7 +60,10 @@ result.setAttribute("color", endgame_colors[randomcolor]);
 result.innerHTML = endgame_result;
 }
 
-//Function for cleaning the inputs
+
+/*================================================
+	Function that cleans the inputs
+================================================*/
 function cleaninputs(){
 
 sound_buttonclicked.play();
@@ -74,7 +78,10 @@ input3.value = "";
 
 }
 
-//Function for checking the results
+
+/*================================================
+	Function that checks the results
+================================================*/
 function endgame_checkresults(){
 
 sound_buttonclicked.play();
@@ -83,9 +90,9 @@ var inputs = [document.getElementById("input1"), document.getElementById("input2
 
 var correct = 0;
 
-for(var i = 0; i < operators.length; i++){
+for(var i = 0; i < endresultgame_operators.length; i++){
 
-  if(inputs[i].value == operators[i]){
+  if(inputs[i].value == endresultgame_operators[i]){
 	correct++;
   }
 }

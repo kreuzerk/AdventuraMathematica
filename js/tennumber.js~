@@ -1,9 +1,13 @@
 var numberoftenbutton = 20;
 
+/*==============================================
+Initialise the Tennumber game
+=============================================*/
 function initialisetennumber(){
 
-revertbuttoncolors();
+revertbuttoncolors();		//Revert the button colors
 
+//Get the elements
 var firsttennumber = document.getElementById("firsttennumber");
 var secondtennumber = document.getElementById("secondtennumber");
 var thirdtennumber = document.getElementById("thirdtennumber");
@@ -17,6 +21,7 @@ var tenthtennumber = document.getElementById("tenthtennumber");
 
 var randomnumber = Math.floor(Math.random() * 99) + 1;
 
+//Initialise the elements
 firsttennumber.innerHTML = randomnumber + " * 1";
 secondtennumber.innerHTML = "= " + randomnumber;
 thirdtennumber.innerHTML = randomnumber + " * 1";
@@ -30,6 +35,9 @@ tenthtennumber.innerHTML = "= " + randomnumber;
 
 }
 
+/*==============================================
+Revert the buttoncolors
+=============================================*/
 function revertbuttoncolors(){
 
 for(var i = 1; i<=numberoftenbutton; i++){
@@ -40,7 +48,9 @@ button.innerHTML = "?";
 
 }
 
-
+/*==============================================
+Function is called if a "?" button is clicked
+=============================================*/
 function tenbuttonclicked($id, $sign){
 
 sound_blop.play();
@@ -60,7 +70,9 @@ button.setAttribute("sign","0");
 
 }
 
-
+/*=====================================================
+Function is called if a the continue button is clicked
+======================================================*/
 function tencontinuebuttonclicked(){
 
 sound_buttonclicked.play();

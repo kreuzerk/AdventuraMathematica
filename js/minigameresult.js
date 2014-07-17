@@ -3,17 +3,18 @@ var minigameresult_correct;
 var minigameresult_moneydeliverd;
 var minigamesresult_money;
 
-
+/*====================================================
+Function that initialises the minigameresultscreen
+====================================================*/
 function initialiseminigameresultscreen($amount, $correct){
 
 minigameresult_amount = $amount;
 minigameresult_correct = $correct;
 
 minigamesresult_money = false;
-
 document.getElementById("minigameresultdiv_image").setAttribute("src", "./images/bananas.png");
 
-if($correct){
+if($correct){	//Exercise was correct answered
 
 number_correct_answered++;
 
@@ -21,13 +22,12 @@ number_correct_answered++;
 sound_bananaup.play();
 
 document.getElementById("minigameresult_header_h1").innerHTML = "Felicitación";
-
 document.getElementById("minigameresult_exercisetext").innerHTML = "Todo lo hace bien";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = "+ " + $amount;
 document.getElementById("maingameresultdiv_bananatext").style.color = "black";
 }
-else{
+else{		//Exercise was wrong
 
 number_wrong_answered++;
 
@@ -43,7 +43,9 @@ document.getElementById("maingameresultdiv_bananatext").style.color = "red";
 
 }
 
-
+/*====================================================
+Function that initialises the money recived
+====================================================*/
 function initialiseminigame_money_recived($delivery){
 
 minigamesresult_money = true;
@@ -51,7 +53,7 @@ minigameresult_moneydeliverd = $delivery;
 
 document.getElementById("minigameresultdiv_image").setAttribute("src", "./images/money.png");
 
-if($delivery){
+if($delivery){		//Delivery has been made
 
 //Play the money sound
 sound_moneysound.play();
@@ -63,7 +65,7 @@ document.getElementById("minigameresult_exercisetext").innerHTML = "Usted recibi
 document.getElementById("maingameresultdiv_bananatext").innerHTML = "+ " + 1;
 document.getElementById("maingameresultdiv_bananatext").style.color = "black";
 }
-else{
+else{			//No Delivery has been made
 
 sound_bananalost.play(); //Play the lost banana sound
 
@@ -79,9 +81,9 @@ document.getElementById("maingameresultdiv_bananatext").style.color = "red";
 
 }
 
-/*==========================================
+/*==================================================
 Function that is responsible for the green fields
-============================================*/
+====================================================*/
 function minigameresult_greenfields($amount, $correct){
 
 minigameresult_amount = $amount;
@@ -101,6 +103,9 @@ document.getElementById("maingameresultdiv_bananatext").style.color = "black";
 
 }
 
+/*==================================================
+Function that is responsible for the red fields
+====================================================*/
 function minigameresult_redfields($amount, $correct){
 
 minigameresult_amount = $amount;
@@ -121,7 +126,9 @@ document.getElementById("maingameresultdiv_bananatext").style.color = "red";
 }
 
 
-
+/*==================================================
+Function that is called when the minigameresult ok button is clicked
+====================================================*/
 function minigameresult_button_ok_clicked(){
 
 $("#minigameresultdiv").hide();

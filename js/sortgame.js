@@ -2,7 +2,9 @@ var sortgame_range = 20;
 var sortgame_numberoflis = 7;
 var resultarray = new Array(sortgame_numberoflis);
 
-
+/*======================================================
+Function that initialises the divisiongame
+=======================================================*/
 function initialisedivisiongame(){
 
 for(var z = 1; z<=sortgame_numberoflis; z++){
@@ -14,11 +16,10 @@ var moduloiszero = false;
 var number1 = Math.floor(Math.random() * sortgame_range) + 1;
 var number2 = Math.floor(Math.random() * sortgame_range) + 1;
 
-if(number1 % number2 == 0 && number1 - number2 > 0){
+if(number1 % number2 == 0 && number1 - number2 > 0){	//Make sure that the number is a whole number and not negative
 var alreadyexists = false;
 
-//Make sure that the result of this devision does not already exists
-for(var j = 0; j<resultarray.length; j++){
+for(var j = 0; j<resultarray.length; j++){		//Make sure that the result of this devision does not already exists
   if(resultarray[j] == (operators[level_operator](number1, number2))){
    	alreadyexists =true;
 	break;
@@ -70,11 +71,11 @@ for (var i = 0; i < items.length; ++i) {
 }
 
 if(correct){
-checkmediumaquamarinefields(true);
+checkmediumaquamarinefields(true);		//Call the checkmediumaquamarinefields with true located in the mainscript.js
 }
 else
 {
-checkmediumaquamarinefields(false);
+checkmediumaquamarinefields(false);		//Call the checkmediumaquamarinefields with false located in the mainscript.js
 }
 }
 

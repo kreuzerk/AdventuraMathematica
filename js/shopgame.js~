@@ -6,33 +6,35 @@ var actualtotal = 0;
 var counter = 1;
 var total = 0;
 
+/*===============================================================
+Function for adding an element (called by a click on an element)
+================================================================*/
 function addelement($src, $number){
 
+//Append the image that was clicked on to the svg
 svgelement.append("svg:image")
       		.attr("xlink:href", $src)
       		.attr("width", 80)
       		.attr("height", 80).attr("x", cart_x).attr("y", cart_y);
 
-//Make sure that the elments are added properly
-if(counter < 5){
+if(counter < 5){	//Make sure that the elments are added properly
 cart_x = cart_x + 30;
 }
 
-
-if(counter > 5){
+if(counter > 5){	//Change the x and y coordinates
 
 cart_y = 80;
 cart_x = cart_x - 30;
 }
 
 
-if(counter > 10){
+if(counter > 10){	//Change the x and y coordinates
 
 cart_y = 60;
 cart_x = cart_x + 30;
 }
 
-if(counter > 15){
+if(counter > 15){	//Change the x and y coordinates
 
 cart_y = 40;
 cart_x = cart_x - 30;
@@ -45,6 +47,9 @@ alert("Maximo de 20 elementos");
 addelementtolist($number);
 }
 
+/*==========================================
+Function that adds an element to the list
+===========================================*/
 function addelementtolist($number){
 
 //Play the golf sound when an elment is added
@@ -61,10 +66,9 @@ counter++;
 
 }
 
-
-//This function is called by the 'Vaciar' Button
-
-
+/*===================================================================
+This function is called by the 'Vaciar' Button and clears the list
+================================================================*/
 function clearlist(){
 for(var i = 1; i <= 20; i++){
   var tditem = document.getElementById("item" + i);
@@ -93,8 +97,9 @@ cart_y = 100;
 counter = 1;
 }
 
-
-//This function is called by the Pagar button
+/*================================================
+This function is called by the Pagar button
+================================================*/
 function pagar(){
 
 //Play the button clicked sound
