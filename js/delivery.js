@@ -13,7 +13,7 @@ Function for not delivering bananas (Executed when "Yes" clicked)
 function initialise_delivery_screen(){
 
 getdeliveryelements();
-bananadelivery_speechbubble.innerHTML = "Me encantan los plátanos <br /> Me da 50?";	//Set the welcome text of the monkey into the spechbubble
+bananadelivery_speechbubble.innerHTML = "Me encantan los platanos.<br /> Me puedes dar 50? ";	//Set the welcome text of the monkey into the spechbubble
 }
 
 function deliverbananas(){
@@ -23,12 +23,12 @@ sound_monkey.play();
 
 if(bananacounter >= 50){	//Bananas can only be delivered if the amount is bigger than 50
 
-bananadelivery_speechbubble.innerHTML = "Gracias. <br /> Toma este dineiro.";
+bananadelivery_speechbubble.innerHTML = "Gracias, <br /> toma este oro.";
 deliver = true;			//Bananas has been delivered
 }
 else{
 
-bananadelivery_speechbubble.innerHTML = "Lo siento. <br /> Tu no tiene suficientes plátanos. <br /> Inténtelo de nuevo más tarde.";
+bananadelivery_speechbubble.innerHTML = "Lo siento, <br /> no tienes suficientes plátanos. <br /> Inténtalo de nuevo más tarde.";
 deliver = false;		//Delivery failed
 }
 

@@ -13,7 +13,7 @@ Function for not delivering bananas (Executed when "Yes" clicked)
 function initialise_delivery_screen(){
 
 getdeliveryelements();
-bananadelivery_speechbubble.innerHTML = "Me encantan los plátanos <br /> Me da 50?";	//Set the welcome text of the monkey into the spechbubble
+bananadelivery_speechbubble.innerHTML = "Me encantan los platanos.<br /> Me puedes dar 50? ";	//Set the welcome text of the monkey into the spechbubble
 }
 
 function deliverbananas(){
@@ -62,6 +62,9 @@ deliverybutton1.setAttribute("onclick", "deliveryokclicked()");	//Change the onc
 $("#deliverybutton2").hide();
 }
 
+/*=============================================================
+Function that is called if the delivery ok button is clicked
+==============================================================*/
 function deliveryokclicked(){
 
 sound_buttonclicked.play();
@@ -76,7 +79,9 @@ checkgoldenfields(false);
 }
 }
 
-//Reset the buttons to the state of the beginning
+/*=============================================================
+Function that reverts the changes
+==============================================================*/
 function delivery_revertchanges(){
 //Revert all the changes
 deliverybutton1.innerHTML = "Si";
