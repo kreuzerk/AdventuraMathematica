@@ -1326,13 +1326,13 @@ switch(selected_level){
 case "level1":
 if(level != 2 || level != 3){
 localStorage.setItem("level", 2);	//Set the amount of levels
-document.getElementById("unlockedtext").innerHTML = "Universo Mathematicas ha sido liberado";
+document.getElementById("unlockedtext").innerHTML = "Has desbloqueado Universo Matemático";
 }
 break;
 case "level2":
 if(level != 3){
 localStorage.setItem("level", 3);
-document.getElementById("unlockedtext").innerHTML = "Sheriff Mathematicas ha sido liberado";
+document.getElementById("unlockedtext").innerHTML = "Has desbloqueado Viejo Oeste Matemático";
 }
 break;
 

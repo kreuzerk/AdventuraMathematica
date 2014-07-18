@@ -80,13 +80,13 @@ level = 1;
 switch(level){	//Lock the levels corresponding to the level variable
 
 case "1":
-//Make the second element uncklickable
+//Lock the second level
 document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Level2_locked.png)';
-document.getElementById("levelimage2").setAttribute("onclick","alert_locked()");
+document.getElementById("levelimage2").setAttribute("onclick","alert_locked(1)");
 
-//Make the third element uncklickable
+//Lock the third level
 document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Level3_locked.png)';
-document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
+document.getElementById("levelimage3").setAttribute("onclick","alert_locked(2)");
 
 break;
 
@@ -94,7 +94,7 @@ case "2":		//Only the third level is locked
 
 //Make the third element uncklickable
 document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Level3_locked.png)';
-document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
+document.getElementById("levelimage3").setAttribute("onclick","alert_locked(2)");
 
 break;
 }
@@ -104,8 +104,8 @@ break;
 /*===============================================
 Function that alerts that an element is locked
 ================================================*/
-function alert_locked(){
-alert("Lo sentimos, este artículo está bloqueado. Primer nivel 1 juegos de desbloqueo a la misma");
+function alert_locked($leveltoplay){
+alert("Lo sentimos, este mundo está bloqueado. Para desbloquearlo, primero juega el nivel " + $leveltoplay + ".");
 }
 
 /*===============================================
@@ -127,7 +127,7 @@ Function that is called by the continue button
 function characterselectioncontinue(){
 
 if(selectedcharacter == null || imageclickedbefore == null || adventuregame_number_of_rounds == null){
-alert("Por favor, seleccione el número de rondas, un personaje y un mundo");
+alert("Por favor, selecciona el número de rondas, un personaje y un mundo");
 }
 else{
 $("#caracterselection").hide();
@@ -222,33 +222,26 @@ document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Bac
 circleData = level2;
 document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Background-Level2.png)';
 
-//Paths for the bananadelivery images
-
+//Background for the bananadelivery 
 document.getElementById("bananadelivery").style.backgroundImage = "url(./images/delivery/level2/bananadelivery.png)";
-
-//Variable for the wallgame background
+//Background for the wallgame 
 document.getElementById("wallgame").style.backgroundImage = "url(./images/selectiongame/Walls_level2.png)";
-
-//Variable for the end of the round
+//Background for the end of the round
 document.getElementById("endofround").style.backgroundImage = "url(./images/endofround/Round_level2.png)";
-
-//Path for the tigergame
+//Background for the tigergame
 document.getElementById("tigerdiv").style.backgroundImage = "url(./images/quizgame/Tiger_Level2.png)";
 
 //Choose the settings for the display
 item_display_color = "white";
 
-
 //Set the difficulty of the level
 level_operator = "*";
-
 break;
 
 //=======================================================================================
-
 //Set all the properties for level 3
+//=======================================================================================
 
-//=============================================================================================
 case "levelimage3":
 
 selected_level = "level3";
@@ -257,29 +250,21 @@ document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Bac
 circleData = level3;
 document.getElementById("maingamesvg").style.backgroundImage = 'url(./images/Background-Level3.png)';
 
-//Paths for the bananadelivery images
+//Background for the bananadelivery
 document.getElementById("bananadelivery").style.backgroundImage = "url(./images/delivery/level3/bananadelivery.png)";
-
-//Variable for the wallgame background
+//Background for the wallgame 
 document.getElementById("wallgame").style.backgroundImage = "url(./images/selectiongame/Walls_level3.png)";
-
-//Variable for the end of the round
+//Background for the end of the round
 document.getElementById("endofround").style.backgroundImage = "url(./images/endofround/Round_level3.png)";
-
-//Path for the tigergame
+//Background for the tigergame
 document.getElementById("tigerdiv").style.backgroundImage = "url(./images/quizgame/Tiger_Level3.png)";
-
 //Choose the settings for the display
 item_display_color = "black";
 
-
 //Set the difficulty of the level
 level_operator = "-";
-
 break;
 
 }
-
 imageclickedbefore = $id;
-
 }

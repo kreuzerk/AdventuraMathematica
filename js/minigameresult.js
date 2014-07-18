@@ -21,7 +21,7 @@ number_correct_answered++;
 //Play the banana up sound
 sound_bananaup.play();
 
-document.getElementById("minigameresult_header_h1").innerHTML = "Felicitación";
+document.getElementById("minigameresult_header_h1").innerHTML = "Felicitaciones";
 document.getElementById("minigameresult_exercisetext").innerHTML = "Todo lo hace bien";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = "+ " + $amount;
@@ -33,9 +33,9 @@ number_wrong_answered++;
 
 sound_bananalost.play(); //Play the lost banana sound
 
-document.getElementById("minigameresult_header_h1").innerHTML = "Triste";
+document.getElementById("minigameresult_header_h1").innerHTML = "Qué lástima";
 
-document.getElementById("minigameresult_exercisetext").innerHTML = "Por desgracia, no está debidamente";
+document.getElementById("minigameresult_exercisetext").innerHTML = "Desafortunadamente, <br /> la respuesta es incorrecta.";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = "- " + $amount;
 document.getElementById("maingameresultdiv_bananatext").style.color = "red";
@@ -96,7 +96,7 @@ sound_bananaup.play();
 
 document.getElementById("minigameresult_header_h1").innerHTML = "Felicitación";
 
-document.getElementById("minigameresult_exercisetext").innerHTML = "Campo verde: Tu recibirás 3 plátanos";
+document.getElementById("minigameresult_exercisetext").innerHTML = "Campo verde: Recibes 3 plátanos";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = "+ 3";
 document.getElementById("maingameresultdiv_bananatext").style.color = "black";
@@ -119,7 +119,7 @@ document.getElementById("minigameresultdiv_image").setAttribute("src", "./images
 
 document.getElementById("minigameresult_header_h1").innerHTML = "Triste";
 
-document.getElementById("minigameresult_exercisetext").innerHTML = "Campo Rojo: Desafortunadamente, tu pierde 3 plátanos";
+document.getElementById("minigameresult_exercisetext").innerHTML = "Campo Rojo: Desafortunadamente, pierdes 3 plátanos";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = " - 3 ";
 document.getElementById("maingameresultdiv_bananatext").style.color = "red";

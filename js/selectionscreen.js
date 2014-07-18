@@ -80,13 +80,13 @@ level = 1;
 switch(level){	//Lock the levels corresponding to the level variable
 
 case "1":
-//Make the second element uncklickable
+//Lock the second level
 document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Level2_locked.png)';
-document.getElementById("levelimage2").setAttribute("onclick","alert_locked()");
+document.getElementById("levelimage2").setAttribute("onclick","alert_locked(1)");
 
-//Make the third element uncklickable
+//Lock the third level
 document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Level3_locked.png)';
-document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
+document.getElementById("levelimage3").setAttribute("onclick","alert_locked(2)");
 
 break;
 
@@ -94,7 +94,7 @@ case "2":		//Only the third level is locked
 
 //Make the third element uncklickable
 document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Level3_locked.png)';
-document.getElementById("levelimage3").setAttribute("onclick","alert_locked()");
+document.getElementById("levelimage3").setAttribute("onclick","alert_locked(2)");
 
 break;
 }
@@ -104,8 +104,8 @@ break;
 /*===============================================
 Function that alerts that an element is locked
 ================================================*/
-function alert_locked(){
-alert("Lo sentimos, este artículo está bloqueado. Primer nivel 1 juegos de desbloqueo a la misma");
+function alert_locked($leveltoplay){
+alert("Lo sentimos, este mundo está bloqueado. Para desbloquearlo, primero juega el nivel " + $leveltoplay + ".");
 }
 
 /*===============================================
@@ -127,7 +127,7 @@ Function that is called by the continue button
 function characterselectioncontinue(){
 
 if(selectedcharacter == null || imageclickedbefore == null || adventuregame_number_of_rounds == null){
-alert("Por favor, seleccione el número de rondas, un personaje y un mundo");
+alert("Por favor, selecciona el número de rondas, un personaje y un mundo");
 }
 else{
 $("#caracterselection").hide();

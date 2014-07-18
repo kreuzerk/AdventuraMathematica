@@ -414,10 +414,10 @@ function move(){
     cy = circleData[movevalue-1].cy;	//Read the y coordinate of the next field
 
     //Delete the lion
-    deletelion();
+    delete_character();
 
     //Draw the lion
-    drawlion(cx,cy);
+    draw_character(cx,cy);
 
     if(circleData[movevalue-1].color == "gold"){	//Detect if we entered a gold field
 	goldentered = true;
@@ -462,7 +462,7 @@ function move(){
 /*====================================================
 Function that is responsible for drawing the lion
 ====================================================*/
-function drawlion($cx, $cy){
+function draw_character($cx, $cy){
 
 //Play the move sound
 sound_blop.play();
@@ -477,7 +477,7 @@ svgContainer.append("svg:image")
 /*====================================================
 Function that is responsible for deleteing the lion
 ====================================================*/
-function deletelion(){
+function delete_character(){
 
 var lion = document.getElementById("Lion");
 lion.parentNode.removeChild(lion);

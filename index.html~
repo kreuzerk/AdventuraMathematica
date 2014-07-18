@@ -5,7 +5,7 @@
 
     <head>	
         <meta charset="utf-8">
-        <title>Adventura Matemática</title>
+        <title>Aventura Matemática</title>
 	<script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="jquery/jquery-ui-1.10.4.custom.js"></script>
@@ -84,7 +84,7 @@ var svgContainer = d3.select("body").append("svg").attr("id","maingamesvg")
 Code for the Shop Mini Game
 =============================================================================================-->
 <div id="shopdiv">
-<h1>Comprar a través de un clic para que llegue a la total.</h1>
+<h1>Compra artículos haciendo clic sobre ellos. Intenta alcanzar el valor indicado.</h1>
 <table id="shoptable">
 <tr>
 <td>
@@ -157,7 +157,7 @@ Code for the Shop Mini Game
 Krokogame
 ====================================================================-->
 <div id="krokodiv">
-<h1>De qué lado es mayor?</h1>
+<h1>Qué lado es más grande?</h1>
 <table id="krokotable">
 <tr class="krokbuttonrow">
   <td><button class="krokobuttons" sign=">" onclick="drawcroco($(this).attr('sign'))">></button></td>
@@ -193,7 +193,7 @@ Counting the forms game
 ====================================================================-->
 
 <div id="formgame">
-<h1>Cuente el número de formas</h1>
+<h1>Cuenta el número de veces que aparece cada forma</h1>
 <table>
 <tr>
 </tr>
@@ -228,7 +228,7 @@ Counting the forms game
 	</tr>
 	<tr>
 		<td><button class="formbutton" onclick="clearelements()">Vaciar</button></td>
-		<td><button class="formbutton" onclick="checkformresults()">OK</button></td>
+		<td><button class="formbutton" onclick="checkformresults()">Verificar</button></td>
 	</tr>
 	</table>
 </td>
@@ -244,7 +244,7 @@ Endresult Game
 
 <table>
 <tr>
-<h1>Rellena los personajes que faltan (+,-)</h1>
+<h1>Completa con el operador adecuado (+,-)</h1>
 </tr>
 <tr>
 	<td class="numbers"><font id="number1"></font></td>
@@ -259,7 +259,7 @@ Endresult Game
 </tr>
 </table>
 <button class="endgamebuttons" onclick="cleaninputs()">Vaciar</button>
-<button class="endgamebuttons" onclick="endgame_checkresults()">Comprobar</button>
+<button class="endgamebuttons" onclick="endgame_checkresults()">Verificar</button>
 
 </div>
 
@@ -296,7 +296,7 @@ What is next? Game
 
 <!--Adding a div with a button to position the element -->
 <div class="whatisnext_correct_div">
-<button class="whatisnext_correct_button" onclick="correct_nextgame()">Correcto</button>
+<button class="whatisnext_correct_button" onclick="correct_nextgame()">Verificar</button>
 </div>
 
 </div>
@@ -307,7 +307,7 @@ Cheese Game
 
 <div id="cheese">
             <div class="centered">
-		<h1 class="cheese_h1">Dibuja la pieza que falta en el medio</h1>
+		<h1 class="cheese_h1">Arrastra la pieza que falta al medio.</h1>
 		<table>
 		<tr>	<!-- First row is the row with the pictures -->
 		<td class="cheeseexercise"><image id="firstcheese" class="cheeseimages"/></td>
@@ -353,7 +353,7 @@ Cheese Game
 Multiplikation by Ten game
 ====================================================================-->
 <div id="tengame">
-<h1>Añadir el número correcto de ceros añadidos a cada resultado.</h1>
+<h1>Añade el número correcto de ceros a cada resultado.</h1>
 <table>
 
 <tr>
@@ -414,7 +414,7 @@ Multiplikation by Ten game
 
 </table>
 <p id="continuetenbutton">
-<button id="tencontinue" onclick="tencontinuebuttonclicked()">Continuar</button>
+<button id="tencontinue" onclick="tencontinuebuttonclicked()">Verificar</button>
 </p>
 
 </div>
@@ -423,7 +423,7 @@ Multiplikation by Ten game
 Sort game
 ====================================================================-->
 <div id="divisiongame">
-    <div id="divisionheader"> Clasificar los elementos arrastrando el tamaño después </div>
+    <div id="divisionheader"> Ordena los elementos comenzando por el más pequeño </div>
     <div>
         <div id="divisionsidebar"> 
 
@@ -455,7 +455,7 @@ Sort game
   		<li id="divisionli7" class="divisionli">Item 7</li>
 	</ul>
 	<p class="divisionp">
-		<button class="divisioncontrolbutton" onclick="controldivisiongame()">Control</button>
+		<button class="divisioncontrolbutton" onclick="controldivisiongame()">Verificar</button>
 	<p>
 	
 	</div>        
@@ -467,7 +467,7 @@ Selection of the caracter
 ====================================================================-->
 <div id="caracterselection">
 <div class="selectiondiv">
-<h1>Cuántas rondas que desea jogar</h1>
+<h1>Cuántas rondas deseas jugar</h1>
 </div>
 
 <table class="selectiontable">
@@ -482,7 +482,7 @@ Selection of the caracter
 </table>
 
 <div class="selectiondiv">
-<h1>Elegir a tu personaje</h1>
+<h1>Elige a tu personaje</h1>
 </div>
 
 <!-- Display the selction of the characters -->
@@ -497,7 +497,7 @@ Selection of the caracter
 </table>
 
 <div class="selectiondiv">
-<h1>Elija el mundo</h1>
+<h1>Elige el mundo</h1>
 </div>
 
 <!-- Display the selction of the worlds -->
@@ -509,23 +509,23 @@ Selection of the caracter
 	<td><div id="levelimage3" onclick="levelimageclicked($(this).attr('id'))"></div></td>
 </tr>
 <tr>
-	<td class="leveltext">Isla Mathematicas</td>
-	<td class="leveltext">Mathematics Universo</td>
-	<td class="leveltext">Sheriff Mathematicas</td>
+	<td class="leveltext">Isla Matemática</td>
+	<td class="leveltext">Universo Matemático</td>
+	<td class="leveltext">Viejo Oeste Matemático</td>
 </tr>
 </table>
 
 <div class="selectiondiv">
-<button id="selectioncontinuebutton" onclick="characterselectioncontinue()">Continuar</button>
+<button id="selectioncontinuebutton" onclick="characterselectioncontinue()">Verificar</button>
 </div>
 
 <!-- Div that contains links for the Game rules, the Sources and a link to reset the score -->
 <div class="sourcelink_div">
-<a class="sourcelink" onclick="showgamerules()">Acerca del juego</a>
+<a class="sourcelink" onclick="showgamerules()">Reglas del juego</a>
 <br />
 <a class="sourcelink" onclick="showsources()">Fuente</a>
 <br />
-<a class="sourcelink" onclick="reset_saved_score()">Borrar Partituras</a>
+<a class="sourcelink" onclick="reset_saved_score()">Restablecer puntuación</a>
 </div>
 
 </div>
@@ -535,7 +535,7 @@ Slider Game
 ====================================================================-->
 <div id="slidergame">
 
-<h1>Punto de muestra representa la fracción</h1>
+<h1>Arrastra el punto para representar la fracción</h1>
 
 <!-- Div that contains all the different sliders -->
 
@@ -557,7 +557,7 @@ Slider Game
 <input type="range" id="slider4" class="sliders" min="0" max="100" value="0" number="4" onchange="onsliderchange(this.value, $(this).attr('number'))"/>
 
 <br /><br /><br />
-<button class="slidergamebutton" onclick="controlslidergame()">Control</button>
+<button class="slidergamebutton" onclick="controlslidergame()">Verificar</button>
 </div>
 </div>
 
@@ -615,7 +615,7 @@ Div Circlegame
 ====================================================================-->
 <div id="circlegame">
 <p>
-<h1 class="circlegameh1">Dar el ángulo</h1>
+<h1 class="circlegameh1">Dibuja el ángulo</h1>
 </p>
 <table class="circlegametable">
 <tr>
@@ -640,7 +640,7 @@ Div Circlegame
 </tr>
 </table>
 <p>
-<button class="circlegamebutton" onclick="checkcirclegame()">Control</button>
+<button class="circlegamebutton" onclick="checkcirclegame()">Verificar</button>
 </p>
 
 </div>
@@ -681,13 +681,13 @@ Div that shows all the sources
 <p><h1>Sources</h1></p>
 
 <p>
-All images used in this application are free to use. But some of those require a backlink. In this section I list all the image sources I had.
+Las imágenes utilizadas en esta aplicación son de uso libre, pero algunas requieren que se incluya el enlace. En esta sección se encuentran las fuentes de todas las imágenes utilizadas.
 </p>
 
 <p>
-The main part of the images were searched via http://search.creativecommons.org/. 
-Some Images are downloaded from www.iconarchive.com during the perio of April to July 2014.
-The commercial use of the images downloaded from Iconarchive is allowed but requires some backlinks. Here are those backlinks.
+Gran parte de las imágenes se encontraron con http://search.creativecommons.org/.
+Algunas imágenes se descargaron de www.iconarchive.co, entre abril y julio de 2014.
+El uso comercial de las imágenes descargadas de Iconarchive está permitido pero requiere que se cite la fuente. Aquí están los enlaces.
 <p>
 
 <ul>
@@ -698,7 +698,7 @@ The commercial use of the images downloaded from Iconarchive is allowed but requ
 </ul>
 
 <p>
-<button onclick="backfromsource()">Back to the game</button>
+<button onclick="backfromsource()">Volver al juego</button>
 </p>
 
 </div>
@@ -743,7 +743,7 @@ Multiplikationtable Game
 </table>
 
 <p>
-<button class="multiplikationtablebutton" onclick="control_math_table_inputs()">Control</button>
+<button class="multiplikationtablebutton" onclick="control_math_table_inputs()">Verificar</button>
 </p>
 
 </div>
@@ -754,7 +754,7 @@ Gridaddition Game
 ====================================================================-->
 <div id="gridaddition">
 
-<h1>Complete la tarea haciendo clic en el cuadrado apropiado</h1>
+<h1>Completa la tarea haciendo clic en la casilla correcta</h1>
 
 <!-- Table with 3 rows. Each row conatins a table that will contain 10 rows and 10 columns -->
 <table class="gridaditcontainertable">
@@ -785,7 +785,7 @@ Gridaddition Game
 </table>
 
 
-<button id="gridadibutton" onclick="gridadi_continue()">Continuar</button>
+<button id="gridadibutton" onclick="gridadi_continue()">Verificar</button>
 
 
 </div>
@@ -795,7 +795,7 @@ Sharing Game
 ====================================================================-->
 <div id="sharinggame">
 
-<h1>Parte de las manzanas en la justicia. Dibuja una manzana en el plato.</h1>
+<h1>Reparte las manzanas de modo que cada plato tenga el mismo número de manzanas.</h1>
 
 <!-- This table displays the different apples that you can drag to the plates -->
 
@@ -833,7 +833,7 @@ Sharing Game
 <table class="share_button_table">
 <tr>
 <td>
-<button onclick="control_sharing_game()" class="sharegamebuttons">Control</button>
+<button onclick="control_sharing_game()" class="sharegamebuttons">Verificar</button>
 </td>
 <td>
 <button onclick="reset_apples()" class="sharegamebuttons">Reset</button>
@@ -848,7 +848,7 @@ Memory Game
 ====================================================================-->
 <div id="memorygame">
 
-<h1>Encontrar los mismos resultados</h1>
+<h1>Encuentra las parejas</h1>
 
 <!-- Table with all the memory fields -->
 
@@ -921,7 +921,7 @@ Castle Game
 </tr>
 </table>
 
-<h2>Elija la respuesta correcta y disparar la cerradura</h2>
+<h2>Elige la respuesta correcta y dispara al castillo</h2>
 
 </div>
 
@@ -1034,15 +1034,15 @@ Startscreen div
 ====================================================================-->
 <div id="startscreendiv">
 
-<div class="startscreen_gamegoal"><h1 class="startscreen_gamegoal_h1">Recoger plátanos y cambiarlos <br /> por dinero en efectivo</h1></div>
+<div class="startscreen_gamegoal"><h1 class="startscreen_gamegoal_h1">Recoge plátanos y cambialos <br /> por dinero en efectivo</h1></div>
 
 <!-- This is the progressbar. This element displays the loading from 0% to 100% -->
 <div id="progressbar"><div class="progress-label">Cargar</div></div>
 
 <div id="progress_buttondiv">
-<button id="progress_button" onclick="selectionscreen_continueclicked()">Comienzo</button>
+<button id="progress_button" onclick="selectionscreen_continueclicked()">Comenzar</button>
 </div>
-
+fTo
 </div>
 
 <!-- ================================================================
@@ -1051,7 +1051,7 @@ Div that pops up when a new world is playable
 
 <div id="newleveldiv">
 
-<h1>Felicitaciones usted ha recibido una clave</h1>
+<h1>Felicitaciones, has recibido una llave</h1>
 
 <image src="./images/key.png"></image>
 

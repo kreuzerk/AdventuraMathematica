@@ -38,7 +38,7 @@ var number2 = Math.floor(Math.random() * 20) + 1;
 }
 while(number1 % number2 != 0);	//Make sure that the result of a division is a whole number
 
-document.getElementById("quiz_exercise_responsa_correcta").innerHTML = "Resolver esta tarea";
+document.getElementById("quiz_exercise_responsa_correcta").innerHTML = "Responde esta pregunta";
 document.getElementById("quiz_exercise_h1").innerHTML = number1 + " " + level_operator + " " + number2;
 quizgame_result =  operators[level_operator](number1,number2);
 }

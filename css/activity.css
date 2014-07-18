@@ -1810,4 +1810,11 @@ Styles for the endresult div
   color:black;
 }
 
+/*=====================================================
+Styles for the sourcediv
+=====================================================*/
+#sourcediv{
+  width: 1200px;
+  height: 820px;
+}
 

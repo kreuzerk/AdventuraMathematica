@@ -99,7 +99,6 @@ Styles for Shopactivities
   background:transparent;
 }
 
-
 /*================================================
 Styles for Kroko Game
 ================================================*/
@@ -1811,4 +1810,10 @@ Styles for the endresult div
   color:black;
 }
 
+/*=====================================================
+Styles for the sourcediv
+=====================================================*/
+#sourcediv{
+  width: 1200px;
+}
 

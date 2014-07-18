@@ -6,7 +6,7 @@ Function that initialises the tigerdiv
 function initialise_tiger_div(){
 
 //Reset the attributes
-document.getElementById("tigerdiv_speechbubble").innerHTML = "HaHaHaHa!!! <br /> Usted está jugando contra mí. <br/> El primer jugador en ganar seis proyectos de ley contestó correctamente.";
+document.getElementById("tigerdiv_speechbubble").innerHTML = "HaHaHaHa!!! <br /> Juega contra mi.. <br/> El primer jugador en alcanzar seis puntos gana.";
 document.getElementById("tigerdiv_okbutton").setAttribute("onclick","tiger_okclicked()");
 }
 
@@ -34,15 +34,15 @@ function quizgame_finished($result){	//-1 = Tiger wins, 0 = draw, 1 = Player win
 switch($result){
 
 case -1: // Tiger wins
-document.getElementById("tigerdiv_speechbubble").innerHTML = "Haha. Yo soy el maestro de Matemáticas. Dame 30 bananas";
+document.getElementById("tigerdiv_speechbubble").innerHTML = "Haha. Soy el maestro de las matemáticas. <br /> Dame 30 bananas";
 break;
 
 case 0:	// Draw game
-document.getElementById("tigerdiv_speechbubble").innerHTML = "Haha. Estamos igualmente fuerte. Es por eso que sólo tengo 10 plátanos. hahaha";
+document.getElementById("tigerdiv_speechbubble").innerHTML = "Haha. <br /> Estamos empatados, <br /> entonces yo tomo 10 de tus plátanos. Hahaha";
 break;
 
 case 1:  //Player wins
-document.getElementById("tigerdiv_speechbubble").innerHTML = "Ohhh. Eres mejor que yo, así que voy a llevar la basura cualquier bananas. Voy a entrenar. </br> Nos vemos pronto.";
+document.getElementById("tigerdiv_speechbubble").innerHTML = "Ohhh. Eres mejor que yo, así que te puedes quedar con todos tus plátanos. </br>Iré a entrenar. Nos vemos pronto.";
 break;
 }
 

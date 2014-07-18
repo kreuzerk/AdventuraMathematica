@@ -148,6 +148,7 @@ else{
 	quizgame_finished(1); // 1 = Player wins
 }
 
+//Pause and play the sounds
 sound_tigerbackground2.pause();
 sound_tigerbackground1.play();
 sound_tigerlaugh.play();
