@@ -141,6 +141,8 @@ Function that is called by the continue button
 ================================================*/
 function characterselectioncontinue(){
 
+bananacounter = 0;	//Bananamount at the beginning
+
 if(selectedcharacter == null || imageclickedbefore == null || adventuregame_number_of_rounds == null){
 alert("Por favor, selecciona el número de rondas, un personaje y un mundo");
 }
