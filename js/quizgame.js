@@ -23,6 +23,9 @@ $("#quizgame_tuanswer").hide();
 $(".quiz_answerdiv").show();
 document.getElementById("quiz_input").value = "";
 
+document.getElementById("quizgame_tiger_pointdisplay").innerHTML = "Tigre: " + quizgame_tigerpoints;
+document.getElementById("quizgame_tu_pointsdisplay").innerHTML = "Tu: " + quizgame_tupoints;
+
 quizgame_createexercise();
 }
 
