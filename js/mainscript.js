@@ -277,7 +277,7 @@ svgContainer.append("svg:image")
 
 //Adding the Bananatext
 svgContainer.append("text").attr("id", "bananaamount")
-      .attr("x", width-235)
+      .attr("x", width-240)
       .attr("y", height-50)
       .text("0 :")
       .attr("font-family", "Chalkboard")
@@ -1264,7 +1264,7 @@ svgContainer.append("text").attr("id", "bananatext")
 
 var bananaamount = document.getElementById("bananaamount");
 bananacounter = bananacounter + $amount;
-bananaamount.textContent = bananacounter + ":";
+bananaamount.textContent = bananacounter + " :";
 }
 else{
 
@@ -1327,27 +1327,29 @@ case "level1":
 if(level != 2 || level != 3){
 localStorage.setItem("level", 2);	//Set the amount of levels
 document.getElementById("unlockedtext").innerHTML = "Has desbloqueado Universo Matemático";
+sound_newlevel.play();
+$( "#newleveldiv" ).dialog( "open" );
+
 }
 break;
 case "level2":
 if(level != 3){
 localStorage.setItem("level", 3);
 document.getElementById("unlockedtext").innerHTML = "Has desbloqueado Viejo Oeste Matemático";
+sound_newlevel.play();
+$( "#newleveldiv" ).dialog( "open" );
+
 }
 break;
 
 }
-
-sound_newlevel.play();
-$( "#newleveldiv" ).dialog( "open" );
-
 }
 
 //Reduce the bananas
 
 var bananaamount = document.getElementById("bananaamount");
 bananacounter = bananacounter - 50;
-bananaamount.textContent = "+ " + bananacounter;
+bananaamount.textContent =  bananacounter + " :";
 
 }
 else{

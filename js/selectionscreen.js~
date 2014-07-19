@@ -52,13 +52,13 @@ function assignround($id){
 switch($id){
 
 case "roundbutton1":
-adventuregame_number_of_rounds = 5;
+adventuregame_number_of_rounds = 3;
 break;
 case "roundbutton2":
-adventuregame_number_of_rounds = 10;
+adventuregame_number_of_rounds = 5;
 break;
 case "roundbutton3":
-adventuregame_number_of_rounds = 15;
+adventuregame_number_of_rounds = 10;
 break;
 
 }
@@ -147,6 +147,7 @@ alert("Por favor, selecciona el número de rondas, un personaje y un mundo");
 else{
 $("#caracterselection").hide();
 
+bananacounter = 0;	//Bananamount at the beginning
 setfilename(selectedcharacter.getAttribute("src"));	//Call the setfilename method located in the mainscript.js
 drawgameboard();	//Function that draws the gameboard - method is located in the mainscript.js
 sound_intromusic.pause();
