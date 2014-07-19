@@ -77,6 +77,7 @@ localStorage.setItem("level", 1);
 level = "1";
 }
 
+
 switch(level){	//Lock the levels corresponding to the level variable
 
 case "1":
