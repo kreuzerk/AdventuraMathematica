@@ -119,7 +119,7 @@ document.getElementById("minigameresultdiv_image").setAttribute("src", "./images
 
 document.getElementById("minigameresult_header_h1").innerHTML = "Triste";
 
-document.getElementById("minigameresult_exercisetext").innerHTML = "Campo Rojo: Desafortunadamente, tu pierde 3 plátanos";
+document.getElementById("minigameresult_exercisetext").innerHTML = "Campo Rojo: Desafortunadamente, pierdes 3 plátanos";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = " - 3 ";
 document.getElementById("maingameresultdiv_bananatext").style.color = "red";

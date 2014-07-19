@@ -1264,7 +1264,7 @@ svgContainer.append("text").attr("id", "bananatext")
 
 var bananaamount = document.getElementById("bananaamount");
 bananacounter = bananacounter + $amount;
-bananaamount.textContent = "+ " + bananacounter;
+bananaamount.textContent = bananacounter + ":";
 }
 else{
 

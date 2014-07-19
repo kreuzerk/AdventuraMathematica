@@ -71,7 +71,7 @@ sound_bananalost.play(); //Play the lost banana sound
 
 document.getElementById("minigameresultdiv_image").setAttribute("src", "./images/bananas.png");
 
-document.getElementById("minigameresult_header_h1").innerHTML = "Triste";
+document.getElementById("minigameresult_header_h1").innerHTML = "Qué lástima";
 
 document.getElementById("minigameresult_exercisetext").innerHTML = "Desafortunadamente, tu no tiene suficientes plátanos";
 

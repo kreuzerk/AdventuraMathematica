@@ -42,7 +42,7 @@ document.getElementById("tigerdiv_speechbubble").innerHTML = "Haha. <br /> Estam
 break;
 
 case 1:  //Player wins
-document.getElementById("tigerdiv_speechbubble").innerHTML = "Ohhh. Eres mejor que yo, así que voy a llevar la basura cualquier bananas. Voy a entrenar. </br> Nos vemos pronto.";
+document.getElementById("tigerdiv_speechbubble").innerHTML = "Ohhh. Eres mejor que yo, así que te puedes quedar con todos tus plátanos. </br>Iré a entrenar. Nos vemos pronto.";
 break;
 }
 
