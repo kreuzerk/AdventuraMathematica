@@ -31,14 +31,14 @@ var circleData;	//Stores all the positions for the selected level
 //Circle Data Set for the first level
 var level1 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 120, "cy": 700, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 2}, 
   { "cx": 190, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 3},
-  { "cx": 260, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 4},
-  { "cx": 330, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 5},
-  { "cx": 400, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 6},
-  { "cx": 470, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 7},
-  { "cx": 540, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 8},
-  { "cx": 610, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 9},
+  { "cx": 260, "cy": 700, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 4},
+  { "cx": 330, "cy": 720, "radius": 30, "color" : "greenyellow", "fontcolor" : "black", "number" : 5},
+  { "cx": 400, "cy": 720, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 6},
+  { "cx": 470, "cy": 720, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 7},
+  { "cx": 540, "cy": 720, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "white", "number" : 8},
+  { "cx": 610, "cy": 720, "radius": 30, "color" : "lavender", "fontcolor" : "black", "number" : 9},
   { "cx": 680, "cy": 720, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" :10},
   { "cx": 750, "cy": 700, "radius": 30, "color" : "lavender", "fontcolor" : "white", "number" : 11},
   { "cx": 820, "cy": 680, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 12},
@@ -98,11 +98,11 @@ var level1 = [
 var level2 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
   { "cx": 70, "cy": 660, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 70, "cy": 590, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 3},
-  { "cx": 70, "cy": 520, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 4},
-  { "cx": 70, "cy": 450, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 5},
-  { "cx": 70, "cy": 380, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 6},
-  { "cx": 70, "cy": 310, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 7},
+  { "cx": 70, "cy": 590, "radius": 30, "color" : "khaki", "fontcolor" : "black", "number" : 3},
+  { "cx": 70, "cy": 520, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 4},
+  { "cx": 70, "cy": 450, "radius": 30, "color" : "salmon", "fontcolor" : "white", "number" : 5},
+  { "cx": 70, "cy": 380, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 6},
+  { "cx": 70, "cy": 310, "radius": 30, "color" : "green", "fontcolor" : "black", "number" : 7},
   { "cx": 70, "cy": 240, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 8},
   { "cx": 140, "cy": 210, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 9},
   { "cx": 210, "cy": 210, "radius": 30, "color" : "green", "fontcolor" : "white", "number" :10},
@@ -152,13 +152,13 @@ var level2 = [
 var level3 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
   { "cx": 120, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 2}, 
-  { "cx": 190, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 3},
-  { "cx": 280, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 4},
-  { "cx": 350, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 5},
+  { "cx": 190, "cy": 770, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 3},
+  { "cx": 280, "cy": 770, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 4},
+  { "cx": 350, "cy": 770, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 5},
   { "cx": 420, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 6},
-  { "cx": 490, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "black", "number" : 7},
+  { "cx": 490, "cy": 770, "radius": 30, "color" : "purple", "fontcolor" : "black", "number" : 7},
   { "cx": 520, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 8},
-  { "cx": 530, "cy": 630, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 9},
+  { "cx": 530, "cy": 630, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 9},
   { "cx": 520, "cy": 560, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
   { "cx": 450, "cy": 520, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 11},
   { "cx": 380, "cy": 520, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
@@ -1319,7 +1319,7 @@ var moneyamount = document.getElementById("moneyamount");
 moneycounter = moneycounter + $amount;
 moneyamount.textContent = "+ " + moneycounter;
 
-if(moneycounter >= 5){
+if(moneycounter >= 3){
 
 switch(selected_level){
 
@@ -1404,6 +1404,7 @@ function espalda_clicked(){
 if(dicethrown == false){
 if (confirm('De verdad quieres volver a la pantalla de inicio?')) {
     $("#maingamesvg").hide();
+    initialise_levels_selectionsscreen();
     $("#caracterselection").show();
 
 //Play the sound corresponding to the level
@@ -1432,6 +1433,9 @@ reset_maingamesvg();
  }
 }
 
+/*==========================================
+Function that resets the maingamesvg
+===========================================*/
 function reset_maingamesvg(){
 
 //Clear all images from maingamesvg

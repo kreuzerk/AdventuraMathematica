@@ -72,15 +72,19 @@ function initialise_levels_selectionsscreen(){
 
 level = localStorage.getItem("level");	//Read the level value from the local storage
 
+
 if(level == null){
+alert("hier");
 localStorage.setItem("level", 1);
 level = 1;
 }
 
-/*
+alert(level);
+
 switch(level){	//Lock the levels corresponding to the level variable
 
 case "1":
+alert("In der eins");
 //Lock the second level
 document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Level2_locked.png)';
 document.getElementById("levelimage2").setAttribute("onclick","alert_locked(1)");
@@ -90,16 +94,31 @@ document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Lev
 document.getElementById("levelimage3").setAttribute("onclick","alert_locked(2)");
 
 break;
-
 case "2":		//Only the third level is locked
+
+//Lock the second level
+document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Background-Level2_gray.png)';
+document.getElementById("levelimage2").setAttribute("onclick","levelimageclicked($(this).attr('id'))");
 
 //Make the third element uncklickable
 document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Level3_locked.png)';
 document.getElementById("levelimage3").setAttribute("onclick","alert_locked(2)");
 
 break;
+case "3": //All levels are playable
+
+//Unlock the second level
+document.getElementById("levelimage2").style.backgroundImage = 'url(./images/Background-Level2_gray.png)';
+document.getElementById("levelimage2").setAttribute("onclick","levelimageclicked($(this).attr('id'))");
+
+
+alert("Hier");
+//Unlock the third level
+document.getElementById("levelimage3").style.backgroundImage = 'url(./images/Background-Level3_gray.png)';
+document.getElementById("levelimage3").setAttribute("onclick","levelimageclicked($(this).attr('id'))");
+
+break;
 }
-*/
 
 }
 

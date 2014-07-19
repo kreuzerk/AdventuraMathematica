@@ -66,7 +66,7 @@ else{
 
 var record_result = record_correct_answered - record_wrong_answered;
 
-if(record_result >= total){
+if(record_result >= total){	//Check if the record is bigger than your total
 document.getElementById("adventuregame_endresultdiv_record_correct").innerHTML = "Respuestas correcta: " + record_correct_answered;
 document.getElementById("adventuregame_endresultdiv_record_false").innerHTML = "Respuestas incorrecta: " + record_wrong_answered;
 document.getElementById("adventuregame_endresultdiv_record_total").innerHTML = "Resultado: " + record_result;
@@ -103,11 +103,16 @@ break;
 
 }
 
+/*====================================
+	Continue Button clicked
+=====================================*/
+
 function endresultscreen_continue_clicked(){
 
 $("#adventuregame_endresultdiv").hide();
 sound_intromusic.play();
 $("#caracterselection").show();
+
 
 reset_maingamesvg(); //Reset the maingamediv
 
