@@ -6,7 +6,7 @@ Function that initialises the tigerdiv
 function initialise_tiger_div(){
 
 //Reset the attributes
-document.getElementById("tigerdiv_speechbubble").innerHTML = "HaHaHaHa!!! <br /> Juega contra mi.. <br/> El primer jugador en alcanzar seis puntos gana.";
+document.getElementById("tigerdiv_speechbubble").innerHTML = "HaHaHaHa!!! <br /> Juega contra mi. <br/> El primer jugador en alcanzar <br /> seis puntos gana.";
 document.getElementById("tigerdiv_okbutton").setAttribute("onclick","tiger_okclicked()");
 }
 
@@ -42,7 +42,7 @@ document.getElementById("tigerdiv_speechbubble").innerHTML = "Haha. <br /> Estam
 break;
 
 case 1:  //Player wins
-document.getElementById("tigerdiv_speechbubble").innerHTML = "Ohhh. Eres mejor que yo, así que te puedes quedar <br /> con todos tus plátanos. </br>Iré a entrenar. Nos vemos pronto.";
+document.getElementById("tigerdiv_speechbubble").innerHTML = "Ohhh. Eres mejor que yo, así que <br />te puedes quedar con todos tus plátanos. </br>Iré a entrenar. Nos vemos pronto.";
 break;
 }
 

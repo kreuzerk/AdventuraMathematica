@@ -475,9 +475,9 @@ Selection of the caracter
 <!-- Display the selction of the number of rounds -->
 
 <tr>
-    <td><button id="roundbutton1" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">5</button></td>
-    <td><button id="roundbutton2" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">10</button></td>
-    <td><button id="roundbutton3" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">15</button></td>
+    <td><button id="roundbutton1" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">3</button></td>
+    <td><button id="roundbutton2" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">5</button></td>
+    <td><button id="roundbutton3" class="roundbutton" onclick="round_button_clicked($(this).attr('id'))">10</button></td>
 </tr>
 </table>
 
@@ -1533,7 +1533,7 @@ $(function() {
       progressbar.progressbar( "value", val + 2 );
  
       if ( val < 99 ) {
-        setTimeout( progress, 80 );
+        setTimeout( progress, 200 );
       }
     }
  

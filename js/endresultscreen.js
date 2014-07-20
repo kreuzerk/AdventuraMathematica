@@ -3,7 +3,7 @@
 =========================================*/
 function initialise_endresultscreen(){
 
-$("#endresultdiv_newrecord").hide();
+$("#endresultdiv_newrecorddiv").hide();
 
 //Initialise the elements for the played round
 document.getElementById("adventuregame_endresultdiv_actual_correct").innerHTML = "Respuestas correctas: " + number_correct_answered;
@@ -60,7 +60,7 @@ break;
 }
 
 //Show the record div
-$("#endresultdiv_newrecord").show();
+$("#endresultdiv_newrecorddiv").show();
 }
 else{
 

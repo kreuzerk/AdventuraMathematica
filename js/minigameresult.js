@@ -73,7 +73,7 @@ document.getElementById("minigameresultdiv_image").setAttribute("src", "./images
 
 document.getElementById("minigameresult_header_h1").innerHTML = "Qué lástima";
 
-document.getElementById("minigameresult_exercisetext").innerHTML = "Desafortunadamente, tu no tiene suficientes plátanos";
+document.getElementById("minigameresult_exercisetext").innerHTML = "Desafortunadamente,<br /> tu no tiene suficientes plátanos";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = " + 0 ";
 document.getElementById("maingameresultdiv_bananatext").style.color = "red";
@@ -96,7 +96,7 @@ sound_bananaup.play();
 
 document.getElementById("minigameresult_header_h1").innerHTML = "Felicitación";
 
-document.getElementById("minigameresult_exercisetext").innerHTML = "Campo verde: Recibes 3 plátanos";
+document.getElementById("minigameresult_exercisetext").innerHTML = "Campo verde: <br />Recibes 3 plátanos";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = "+ 3";
 document.getElementById("maingameresultdiv_bananatext").style.color = "black";
@@ -119,7 +119,7 @@ document.getElementById("minigameresultdiv_image").setAttribute("src", "./images
 
 document.getElementById("minigameresult_header_h1").innerHTML = "Triste";
 
-document.getElementById("minigameresult_exercisetext").innerHTML = "Campo Rojo: Desafortunadamente, pierdes 3 plátanos";
+document.getElementById("minigameresult_exercisetext").innerHTML = "Campo Rojo: <br />Desafortunadamente, pierdes 3 plátanos";
 
 document.getElementById("maingameresultdiv_bananatext").innerHTML = " - 3 ";
 document.getElementById("maingameresultdiv_bananatext").style.color = "red";

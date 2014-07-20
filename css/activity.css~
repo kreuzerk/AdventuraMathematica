@@ -723,7 +723,6 @@ Styles for the banana delivery screen
 #bananadelivery{
   width:1200px;
   height:820px;
-  background-image: url(../images/delivery/bananadelivery.png);
 }
 
 #bananadelivery_elements{

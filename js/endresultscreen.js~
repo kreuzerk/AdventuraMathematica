@@ -113,7 +113,7 @@ $("#adventuregame_endresultdiv").hide();
 sound_intromusic.play();
 $("#caracterselection").show();
 
-
+initialise_levels_selectionsscreen();
 reset_maingamesvg(); //Reset the maingamediv
 
 }
