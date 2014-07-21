@@ -57,18 +57,9 @@ The browser already has a toolbar itself. Therefore it is not necessary to have 
 game does not fix -->
 
 
-<!--
-
 <div id="main-toolbar" class="toolbar">
-  <button class="toolbutton" id="activity-button" title="My Activity"></button>
-
-  <!-- Add more buttons here 
-
-  <!-- Buttons with class="pull-right" will be right aligned -
-  <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
-  <button class="toolbutton" id="sources-button" onclick="showsources()" title="Sources"></button>
+  <!--<button class="toolbutton pull-right" id="stop-button" title="Stop"></button>-->
 </div>
--->
 
 <script type="text/javascript">
 
@@ -492,7 +483,7 @@ Selection of the caracter
 	<td><image <image id="character1" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/elephant.png"/ width="150px" height="150px"></td>
 	<td><image <image id="character2" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/gorilla.png"/ width="150px" height="150px"></td>
 	<td><image <image id="character3" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/donkey.png"/ width="150px" height="150px"></td>
-	<td><image <image id="character4" onclick="characterclicked($(this).attr('id'))" class="selectionitem" src="./images/caracterselection/lion.png"/ width="150px" height="150px"></td>
+	<td><image <image id="character4" onclick="alert('Lo sentimos, este personaje está bloqueado. Para desbloquearlo, primero juega el nivel 3 (recoger 3 oro)')" class="selectionitem" src="./images/caracterselection/Locked_character.png"/ width="150px" height="150px"></td>
 </tr>
 </table>
 
@@ -833,10 +824,10 @@ Sharing Game
 <table class="share_button_table">
 <tr>
 <td>
-<button onclick="control_sharing_game()" class="sharegamebuttons">Verificar</button>
+<button onclick="reset_apples()" class="sharegamebuttons">Reset</button>
 </td>
 <td>
-<button onclick="reset_apples()" class="sharegamebuttons">Reset</button>
+<button onclick="control_sharing_game()" class="sharegamebuttons">Verificar</button>
 </td>
 </tr>
 </table>
@@ -916,7 +907,7 @@ Castle Game
 <img src="./images/castlegame/heart.png" width="60px" height="50px"/>
 </td>
 <td>
-<h1 id="liveplayer">Usted: 3</h1>
+<h1 id="liveplayer">Tu: 3</h1>
 </td>
 </tr>
 </table>
@@ -1236,6 +1227,9 @@ var sound_newlevel;
 //===============================================
 //Setting the sources of the audiobackgroundsound_level2
 //===============================================
+sound_backgroundmusic_level1 = new Audio('./sounds/mario.ogg');
+sound_level2 = new Audio('./sounds/backgroundsound_level2.ogg');
+sound_level3 = new Audio('./sounds/background_level3.ogg');
 sound_intromusic = new Audio('./sounds/introsound.ogg'); 
 sound_buttonclicked = new Audio('./sounds/button_click.ogg');
 sound_diceroll = new Audio('./sounds/rolldice.ogg');
@@ -1260,46 +1254,27 @@ sound_introeffect = new Audio('./sounds/introeffect.ogg');
 sound_moneysound = new Audio('./sounds/moneysound.ogg');
 sound_newlevel = new Audio('./sounds/newlevel.ogg');
 
-/*Only load level sounds(they have the biggest size) when needed - Kind of lazy loading - Performance reasons on the OLPC
-Those methods are called from the selectionscreen.js
-========================================================================*/
-
-function load_sound_level1(){
-sound_backgroundmusic_level1 = new Audio('./sounds/mario.ogg');
-
-sound_backgroundmusic_level1.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
-}
-
-function load_sound_level2(){
-sound_level2 = new Audio('./sounds/backgroundsound_level2.ogg');
-
-sound_level2.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
-}
-
-function load_sound_level3(){
-sound_level3 = new Audio('./sounds/background_level3.ogg');
-
-sound_level3.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
-}
-
 /*=======================================================
 Adding the event listener to the different sounds.
 The event listener recognizes when a song is finished
 and plays it again. Due to performance reasons I cutted 
 the sound at a point where it sounds good if it starts again. 
 =======================================================*/
+sound_backgroundmusic_level1.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+sound_level2.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+
+sound_level3.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
 
 sound_intromusic.addEventListener('ended', function() {
     this.currentTime = 0;

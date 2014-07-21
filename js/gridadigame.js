@@ -13,6 +13,7 @@ var number1 = Math.floor(Math.random() * 100) + 1;
 var number2 = 100 - 1;
 
 document.getElementById("adi_text_first").innerHTML = number1;
+document.getElementById("adi_text_second").innerHTML = "_ _";
 
 //Remove all the elements from the Grid table
 $('#gridaditable1 tr').remove();
@@ -48,9 +49,9 @@ var different = true;	//Used to make sure that all three tables are different
 
 do{
 
-var randomnumber1 = Math.floor(Math.random() * 100) + 1;
-var randomnumber2 = Math.floor(Math.random() * 100) + 1;
-var randomnumber3 = Math.floor(Math.random() * 100) + 1;
+var randomnumber1 = Math.floor(Math.random() * 99) + 1;
+var randomnumber2 = Math.floor(Math.random() * 99) + 1;
+var randomnumber3 = Math.floor(Math.random() * 99) + 1;
 
 if(randomnumber1 == number1 || randomnumber2 == number1){	//Check if the elements are different
  different = false;

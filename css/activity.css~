@@ -305,7 +305,7 @@ Styles for the Endresultgame
 .whatisnext_correct_div{
   position: absolute;
   left: 50px;
-  top: 720px;
+  top: 770px;
 }
 
 .whatisnext_correct_button{
@@ -616,7 +616,7 @@ Styles for the selection screen
 .sourcelink_div{
   position: absolute;
   left: 800px;
-  top: 700px;
+  top: 800px;
 }
 
 .sourcelink{
@@ -853,13 +853,13 @@ Styles for the wall game
 .wallgametablediv{
   position:absolute;
   left: 100px;
-  top: 200px;
+  top: 280px;
 }
 
 #wallgame_display{
   position:absolute;
   left: 700px;
-  top: 20px;
+  top: 100px;
   background-color:white;
   border-style:solid;
   border-color: gray;
@@ -993,7 +993,7 @@ Styles for the MultiplikationTable Game
 ===============================================*/
 
 #multiplikationtable{
-  width: 1200px;
+  width: 1100px;
   height: 600px;
   border-style: solid;
   border-width: 5px;
@@ -1294,7 +1294,7 @@ Styles for the castle game
 .castle_result_paper{
   position: absolute;
   left: 575px;
-  top: 50px;
+  top: 100px;
   width: 150px;
   height: 100px;
   background-image: url(../images/castlegame/paper.png);
@@ -1427,7 +1427,7 @@ Styles for the boss game
 
   position:absolute;
   left: 50px;
-  top: 200px;
+  top: 250px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1440,7 +1440,7 @@ Styles for the boss game
 
   position:absolute;
   left: 950px;
-  top: 200px;
+  top: 250px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1464,7 +1464,7 @@ Styles for the boss game
 #quizgame_tigerpoints{
   position:absolute;
   left: 50px;
-  top: 20px;
+  top: 100px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1476,7 +1476,7 @@ Styles for the boss game
 #quizgame_playerpoints{
   position:absolute;
   left: 950px;
-  top: 20px;
+  top: 100px;
   width: 200px;
   height: 200px;
   margin: 5px;
@@ -1557,7 +1557,7 @@ Styles for the start screen
 .progress-label {
   position: absolute;
   left: 540px;
-  top: 70%;
+  top: 80%;
   font-size: 50px;
   font-weight: bold;
   text-align: center;
@@ -1574,7 +1574,7 @@ Styles for the start screen
 #progress_buttondiv{
   position: absolute;
   left: 455px;
-  top: 600px;
+  top: 700px;
   font-size: 50px;
 }
 
@@ -1619,7 +1619,7 @@ Styles for the start screen
 
 .startscreen_gamegoal{
   position: absolute;
-  top: 450px;
+  top: 550px;
   left: 350px;
 }
 

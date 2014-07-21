@@ -3,6 +3,7 @@ var imageclickedbefore = null;
 var item_display_color = "black";
 var selected_level;
 var level;
+var charakter_locked;
 
 var lastclicked_round_button;
 var adventuregame_number_of_rounds;
@@ -70,13 +71,27 @@ Function that is responsible for initialising the levels
 ===========================================================*/
 function initialise_levels_selectionsscreen(){
 
+charakter_locked = localStorage.getItem("character");
 level = localStorage.getItem("level");	//Read the level value from the local storage
+
+if(charakter_locked == null){
+localStorage.setItem("character", 0);
+charakter_locked = 0;
+}
 
 if(level == null){
 localStorage.setItem("level", 1);
 level = "1";
 }
 
+if(charakter_locked != "0"){
+document.getElementById("character4").setAttribute("src", "./images/caracterselection/lion.png");
+document.getElementById("character4").setAttribute("onclick", "characterclicked($(this).attr('id'))");
+}
+else{
+document.getElementById("character4").setAttribute("src", "./images/caracterselection/Locked_character.png");
+document.getElementById("character4").setAttribute("onclick", "alert('Lo sentimos, este personaje está bloqueado. Para desbloquearlo, primero juega el nivel 3 (recoger 3 oro)')");
+}
 
 switch(level){	//Lock the levels corresponding to the level variable
 
@@ -120,7 +135,7 @@ break;
 Function that alerts that an element is locked
 ================================================*/
 function alert_locked($leveltoplay){
-alert("Lo sentimos, este mundo está bloqueado. Para desbloquearlo, primero juega el nivel " + $leveltoplay + ".");
+alert("Lo sentimos, este mundo está bloqueado. Para desbloquearlo, primero juega el nivel " + $leveltoplay + ". (recoger 3 oro)");
 }
 
 /*===============================================
@@ -141,8 +156,6 @@ Function that is called by the continue button
 ================================================*/
 function characterselectioncontinue(){
 
-adventuregame_number_of_rounds = 1;
-
 if(selectedcharacter == null || imageclickedbefore == null || adventuregame_number_of_rounds == null){
 alert("Por favor, selecciona el número de rondas, un personaje y un mundo");
 }
@@ -150,6 +163,7 @@ else{
 $("#caracterselection").hide();
 
 bananacounter = 0;	//Bananamount at the beginning
+moneycounter = 0;	//Reset the amount of bananas
 setfilename(selectedcharacter.getAttribute("src"));	//Call the setfilename method located in the mainscript.js
 drawgameboard();	//Function that draws the gameboard - method is located in the mainscript.js
 sound_intromusic.pause();
@@ -158,22 +172,18 @@ sound_buttonclicked.play();
 switch(selected_level){	//Choose the sound that needs to be played corresponding to the selected level
 
 case "level1":
-load_sound_level1();
 sound_backgroundmusic_level1.play();
 break;
 case "level2":
-load_sound_level2();
 sound_level2.play();
 break;
 case "level3":
-load_sound_level3();
 sound_level3.play();
 break;
 
 }
 
 $("#maingamesvg").show();
-//$("#sources-button").hide();	//Only needed if there is a visible Toolbar
 }
 }
 
@@ -280,7 +290,7 @@ document.getElementById("tigerdiv").style.backgroundImage = "url(./images/quizga
 item_display_color = "black";
 
 //Set the difficulty of the level
-level_operator = "-";
+level_operator = "*";
 break;
 
 }

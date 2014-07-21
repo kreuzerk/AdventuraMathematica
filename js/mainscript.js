@@ -86,7 +86,7 @@ var level1 = [
   { "cx": 640, "cy": 330, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 54},
   { "cx": 570, "cy": 330, "radius": 30, "color" : "black", "fontcolor" : "white", "number" : 55},
   { "cx": 500, "cy": 330, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 56},
-  { "cx": 430, "cy": 330, "radius": 30, "color" : "skyblue", "fontcolor" : "white", "number" : 57},
+  { "cx": 430, "cy": 330, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 57},
   { "cx": 360, "cy": 330, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 58},
   { "cx": 290, "cy": 350, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 59},
   { "cx": 220, "cy": 420, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 60},
@@ -127,7 +127,7 @@ var level2 = [
   { "cx": 880, "cy": 530, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 29},
   { "cx": 810, "cy": 500, "radius": 30, "color" : "chocolate", "fontcolor" : "white", "number" : 30},
   { "cx": 860, "cy": 430, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 31},
-  { "cx": 930, "cy": 400, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 32},
+  { "cx": 930, "cy": 400, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 32},
   { "cx": 1000, "cy": 350, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 33},
   { "cx": 1070, "cy": 300, "radius": 30, "color" : "gold", "fontcolor" : "black", "number" : 34},
   { "cx": 1070, "cy": 230, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 35},
@@ -151,7 +151,7 @@ var level2 = [
 //Datas for the third level
 var level3 = [
   { "cx": 50, "cy": 770, "radius": 30, "color" : "snow", "fontcolor" : "black", "number" : 1 },
-  { "cx": 120, "cy": 770, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 2}, 
+  { "cx": 120, "cy": 770, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 2}, 
   { "cx": 190, "cy": 770, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 3},
   { "cx": 280, "cy": 770, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 4},
   { "cx": 350, "cy": 770, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 5},
@@ -160,7 +160,7 @@ var level3 = [
   { "cx": 520, "cy": 700, "radius": 30, "color" : "midnightblue", "fontcolor" : "white", "number" : 8},
   { "cx": 530, "cy": 630, "radius": 30, "color" : "purple", "fontcolor" : "white", "number" : 9},
   { "cx": 520, "cy": 560, "radius": 30, "color" : "red", "fontcolor" : "white", "number" :10},
-  { "cx": 450, "cy": 520, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 11},
+  { "cx": 450, "cy": 520, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 11},
   { "cx": 380, "cy": 520, "radius": 30, "color" : "silver", "fontcolor" : "black", "number" : 12},
   { "cx": 310, "cy": 520, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 13},
   { "cx": 240, "cy": 520, "radius": 30, "color" : "gold", "fontcolor" : "black", "number" : 14},
@@ -366,13 +366,6 @@ break;
 
 var mainscript_operators = ['+','-','*','/'];
 
-if(selected_level == "level3"){
-
-var randomposition = Math.floor(Math.random() * mainscript_operators.length);
-level_operator = mainscript_operators[randomposition];
-
-}
-else{
 //Change the level_operator
 switch(level_operator){
 
@@ -389,7 +382,6 @@ case "/":
 level_operator = "*";
 break;
 
-}
 }
 
 drawcube(filename);
@@ -1324,24 +1316,34 @@ if(moneycounter >= 3){
 switch(selected_level){
 
 case "level1":
-if(level != 2 || level != 3){
+
+if(level != "2" && level != "3"){
 localStorage.setItem("level", 2);	//Set the amount of levels
 document.getElementById("unlockedtext").innerHTML = "Has desbloqueado Universo Matemático";
 sound_newlevel.play();
+level = "2";
 $( "#newleveldiv" ).dialog( "open" );
-
 }
 break;
 case "level2":
-if(level != 3){
+if(level != "3"){
 localStorage.setItem("level", 3);
+level = "3";
 document.getElementById("unlockedtext").innerHTML = "Has desbloqueado Viejo Oeste Matemático";
+sound_newlevel.play();
+$( "#newleveldiv" ).dialog( "open" );
+}
+break;
+case "level3":
+if(charakter_locked == "0"){		//Check if the character is already playable
+localStorage.setItem("character", 1);	//Unlock the character
+charakter_locked = 1;
+document.getElementById("unlockedtext").innerHTML = "Has desbloqueado hipopótamo";
 sound_newlevel.play();
 $( "#newleveldiv" ).dialog( "open" );
 
 }
 break;
-
 }
 }
 
@@ -1414,15 +1416,12 @@ switch(selected_level){
 
 case "level1":
 sound_backgroundmusic_level1.pause();
-//sound_backgroundmusic.currentTime = 0;
 break;
 case "level2":
 sound_level2.pause();
-//sound_level2.currentTime = 0;
 break;
 case "level3":
 sound_level3.pause();
-//sound_level3.currentTime = 0;
 break;
 
 } // End Switch Case
@@ -1473,6 +1472,8 @@ localStorage.removeItem("wrong_level2");
 
 localStorage.removeItem("correct_level3");
 localStorage.removeItem("wrong_level3");
+
+localStorage.removeItem("character");	//Unlock the character
 
 initialise_levels_selectionsscreen();
 

@@ -187,7 +187,7 @@ else
 {
 //Call the function that is responsible for checking this fields
 
-if(memorygame_numberoftries <= 20){
+if(memorygame_numberoftries <= 30){
   checkchocolate(true, 10);
 }
 else{

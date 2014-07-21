@@ -18,6 +18,10 @@ function castlegame_initialise(){
 
 document.getElementById("castlegame_maincaracter").setAttribute("src", filename);
 
+//Reset the lives
+document.getElementById("livecastle").innerHTML = "Castillo: 3";
+document.getElementById("liveplayer").innerHTML = "Tu: 3";
+
 //Hide the fireballs from the castle and from the player
 $( ".fireball" ).hide();
 $( ".fireball_player1" ).hide();

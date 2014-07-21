@@ -13,6 +13,7 @@ var number1 = Math.floor(Math.random() * 100) + 1;
 var number2 = 100 - 1;
 
 document.getElementById("adi_text_first").innerHTML = number1;
+document.getElementById("adi_text_second").innerHTML = "_ _";
 
 //Remove all the elements from the Grid table
 $('#gridaditable1 tr').remove();
@@ -150,6 +151,6 @@ function gridadi_continue(){
 sound_buttonclicked.play();
 
 //Call the function from the main script
-checkgreenyellowfields(gridadi_correct);
+checkgreenyellowfields(gridadi_correct);	//Call the checkgreenyellowfields located in the mainscript.js
 
 }

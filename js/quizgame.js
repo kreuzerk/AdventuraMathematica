@@ -36,8 +36,8 @@ Function that is responsible for creating the exercise
 function quizgame_createexercise(){
 
 do{
-var number1 = Math.floor(Math.random() * 20) + 1;
-var number2 = Math.floor(Math.random() * 20) + 1;
+var number1 = Math.floor(Math.random() * 12) + 1;
+var number2 = Math.floor(Math.random() * 12) + 1;
 }
 while(number1 % number2 != 0);	//Make sure that the result of a division is a whole number
 

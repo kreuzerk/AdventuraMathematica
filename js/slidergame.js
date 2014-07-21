@@ -10,6 +10,9 @@ var randomnumber = Math.floor(Math.random() * sliderexercises.length) + 1;
 var h = document.getElementById("sliderh" + i); 
 h.innerHTML = sliderexercises[randomnumber-1];
 
+var valor = document.getElementById("valor" + i);
+valor.innerHTML = 0;
+
 //Reset the slider
 var slider = document.getElementById("slider" + i);
 slider.value = 0;

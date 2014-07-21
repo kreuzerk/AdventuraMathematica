@@ -10,6 +10,9 @@ var randomnumber = Math.floor(Math.random() * sliderexercises.length) + 1;
 var h = document.getElementById("sliderh" + i); 
 h.innerHTML = sliderexercises[randomnumber-1];
 
+var valor = document.getElementById("valor" + i);
+valor.innerHTML = 0;
+
 //Reset the slider
 var slider = document.getElementById("slider" + i);
 slider.value = 0;
@@ -54,11 +57,11 @@ if(slider.value != result){
 }
 
 if(iscorrect){
-checkkhakifields(true);
+checkkhakifields(true);		//Call the checkkhakifields located in the mainscript.js
 }
 else
 {
-checkkhakifields(false);
+checkkhakifields(false);	//Call the checkkhakifields located in the mainscript.js
 }
 
 }

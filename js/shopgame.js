@@ -1,6 +1,6 @@
 var cart_x = 130;
 var cart_y = 100;
-var names = ["Futbol", "Jabon", "Guitarra", "Bola","Soportar"];
+var names = ["Baloncesto", "Jabon", "Guitarra", "Bola","Soportar"];
 var prices = [5, 10, 20, 50, 100];
 var actualtotal = 0;
 var counter = 1;
@@ -40,7 +40,7 @@ cart_y = 40;
 cart_x = cart_x - 30;
 }
 
-if(counter > 20){
+if(counter > 19){
 alert("Maximo de 20 elementos");
 }
 

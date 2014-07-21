@@ -16,6 +16,22 @@ Function that initialises the quizgame
 ===============================================*/
 function initialise_quizgame(){
 
+//Only plus and minus in the third level
+if(selected_level == "level3"){
+
+switch(level_operator){
+
+case "+":
+level_operator = "*";
+break;
+case "-":
+level_operator = "/";
+break; 
+
+}
+
+}
+
 $("#quizgame_tigeranswer").hide();
 $("#quizgame_tuanswer").hide();
 
@@ -36,8 +52,8 @@ Function that is responsible for creating the exercise
 function quizgame_createexercise(){
 
 do{
-var number1 = Math.floor(Math.random() * 20) + 1;
-var number2 = Math.floor(Math.random() * 20) + 1;
+var number1 = Math.floor(Math.random() * 12) + 1;
+var number2 = Math.floor(Math.random() * 12) + 1;
 }
 while(number1 % number2 != 0);	//Make sure that the result of a division is a whole number
 
