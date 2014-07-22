@@ -52,10 +52,6 @@ sound_buttonclicked.play();
 var correct = true;
 var result = parseInt(numberofapples / numberofplates);
 
-alert(numberofapples);
-alert(numberofplates);
-alert(result);
-
 switch(numberofplates){
 case 2:
 if(applenumber_plate1 != result || applenumber_plate2 != result)

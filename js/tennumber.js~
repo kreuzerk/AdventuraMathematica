@@ -42,6 +42,7 @@ function revertbuttoncolors(){
 
 for(var i = 1; i<=numberoftenbutton; i++){
 var button = document.getElementById("tenbutton" + i);
+button.setAttribute("onclick","tenbuttonclicked($(this).attr('id'), $(this).attr('sign'))");
 button.style.backgroundColor='Grey';
 button.innerHTML = "?";
 }
@@ -118,10 +119,10 @@ break;
 }
 
 if(correct){
-checkskybluefields(true);
+checkskybluefields(true);	//Call the checkskybluefields located in the mainscript.js
 }
 else{
-checkskybluefields(false);
+checkskybluefields(false);	//Call the checkskybluefields located in the mainscript.js
 }
 
 }

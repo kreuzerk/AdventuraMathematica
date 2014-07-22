@@ -42,6 +42,7 @@ function revertbuttoncolors(){
 
 for(var i = 1; i<=numberoftenbutton; i++){
 var button = document.getElementById("tenbutton" + i);
+button.setAttribute("sign","?");
 button.style.backgroundColor='Grey';
 button.innerHTML = "?";
 }
