@@ -1305,7 +1305,7 @@ var moneyamount = document.getElementById("moneyamount");
 moneycounter = moneycounter + $amount;
 moneyamount.textContent = "+ " + moneycounter;
 
-if(moneycounter >= 1){
+if(moneycounter >= 3){
 
 switch(selected_level){
 

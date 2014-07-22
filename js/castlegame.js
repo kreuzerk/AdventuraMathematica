@@ -9,6 +9,9 @@ var castlegame_livecastle;
 function castlegame_resetlives(){
 castlegame_liveplayer = 3;
 castlegame_livecastle = 3;
+//Reset the lives on the display
+document.getElementById("livecastle").innerHTML = "Castillo: 3";
+document.getElementById("liveplayer").innerHTML = "Tu: 3";
 }
 
 /*==============================
@@ -17,10 +20,6 @@ castlegame_livecastle = 3;
 function castlegame_initialise(){
 
 document.getElementById("castlegame_maincaracter").setAttribute("src", filename);
-
-//Reset the lives
-document.getElementById("livecastle").innerHTML = "Castillo: 3";
-document.getElementById("liveplayer").innerHTML = "Tu: 3";
 
 //Hide the fireballs from the castle and from the player
 $( ".fireball" ).hide();
