@@ -75,7 +75,7 @@ else		//New record
 {
 
 //Show the record div
-$("#endresultdiv_newrecord").show();
+$("#endresultdiv_newrecorddiv").show();
 
 document.getElementById("adventuregame_endresultdiv_record_correct").innerHTML = "Respuestas correcta: " + record_correct_answered;
 document.getElementById("adventuregame_endresultdiv_record_false").innerHTML = "Respuestas incorrecta: " + record_wrong_answered;

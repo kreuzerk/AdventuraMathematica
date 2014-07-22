@@ -55,7 +55,7 @@ var level1 = [
   { "cx": 320, "cy": 510, "radius": 30, "color" : "blue", "fontcolor" : "white", "number" : 23},
   { "cx": 390, "cy": 500, "radius": 30, "color" : "turquoise", "fontcolor" : "black", "number" : 24},
   { "cx": 460, "cy": 500, "radius": 30, "color" : "green", "fontcolor" : "white", "number" : 25},
-  { "cx": 520, "cy": 500, "radius": 30, "color" : "salmon", "fontcolor" : "black", "number" : 26},
+  { "cx": 525, "cy": 500, "radius": 30, "color" : "salmon", "fontcolor" : "black", "number" : 26},
   { "cx": 590, "cy": 500, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 27},
   { "cx": 660, "cy": 500, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 28},
   { "cx": 730, "cy": 500, "radius": 30, "color" : "pink", "fontcolor" : "black", "number" : 29},
@@ -133,7 +133,7 @@ var level2 = [
   { "cx": 1070, "cy": 230, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 35},
   { "cx": 1000, "cy": 200, "radius": 30, "color" : "red", "fontcolor" : "white", "number" : 36},
   { "cx": 930, "cy": 180, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 37},
-  { "cx": 860, "cy": 180, "radius": 30, "color" : "orange", "fontcolor" : "black", "number" : 38},
+  { "cx": 860, "cy": 180, "radius": 30, "color" : "yellow", "fontcolor" : "black", "number" : 38},
   { "cx": 790, "cy": 160, "radius": 30, "color" : "skyblue", "fontcolor" : "black", "number" : 39},
   { "cx": 720, "cy": 180, "radius": 30, "color" : "mediumaquamarine", "fontcolor" : "black", "number" : 40},
   { "cx": 650, "cy": 220, "radius": 30, "color" : "dodgerblue", "fontcolor" : "white", "number" : 41},
@@ -856,18 +856,12 @@ $("#minigameresultdiv").show();
 Function for purple fields
 ===================================================================================*/
 
-function checkpurplefields($number_correct){
-
-switch($number_correct){
-
-case 0:
-case 1:
-case 2:
-  initialiseminigameresultscreen(5, false);
-break;
-case 3:
+function checkpurplefields($correct){
+if($correct){
   initialiseminigameresultscreen(20, true);
-break;
+}
+else{
+  initialiseminigameresultscreen(5, false);
 }
 
 hidepurple();

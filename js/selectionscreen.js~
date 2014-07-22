@@ -92,7 +92,7 @@ else{
 document.getElementById("character4").setAttribute("src", "./images/caracterselection/Locked_character.png");
 document.getElementById("character4").setAttribute("onclick", "alert('Lo sentimos, este personaje está bloqueado. Para desbloquearlo, primero juega el nivel 3 (recoger 3 oro)')");
 }
-
+/*
 switch(level){	//Lock the levels corresponding to the level variable
 
 case "1":
@@ -128,7 +128,7 @@ document.getElementById("levelimage3").setAttribute("onclick","levelimageclicked
 
 break;
 }
-
+*/
 }
 
 /*===============================================

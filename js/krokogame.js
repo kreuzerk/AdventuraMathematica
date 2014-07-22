@@ -130,7 +130,7 @@ $("#krokosvg").empty();
 kroko_buttonclicked = false;
 
 var continuebutton = document.getElementById("krokocontinue");
-continuebutton.innerHTML = "Siguiente Pergunta";
+continuebutton.innerHTML = "Adelante";
 continuebutton.setAttribute("onclick", "nextquestion()");
 
 kroko_correctanswered = 0;

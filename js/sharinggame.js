@@ -12,6 +12,16 @@ function initialise_sharinggame(){
 
 reset_apples();	//Call the reset function
 
+//Show all the table images
+for(var i=1; i<=4; i++){
+$("#dropapples" + (i)).show();
+}
+
+//Show all the apple images
+for(var i=1; i<=12; i++){
+$("#appleimage" + (i)).show();		
+}
+
 do{
 numberofapples = Math.floor(Math.random() * 12) + 1;
 }while(numberofapples <= 4);
@@ -21,12 +31,12 @@ numberofplates = Math.floor(Math.random() * 4) + 1;
 }while(numberofplates <= 2);
 
 //Hide the elements that are not needed
-for(var i = numberofapples; i<12; i++){
-$("#appleimage" + (i+1)).hide();
+for(var i = numberofapples; i<=12; i++){
+$("#appleimage" + (i+1)).hide();		//Hide the next one
 }
 
 //Hide the tables that are not needed
-for(var i = numberofplates; i<4; i++){
+for(var i = numberofplates; i<=4; i++){
 $("#dropapples" + (i+1)).hide();
 }
 
@@ -41,6 +51,10 @@ sound_buttonclicked.play();
 
 var correct = true;
 var result = parseInt(numberofapples / numberofplates);
+
+alert(numberofapples);
+alert(numberofplates);
+alert(result);
 
 switch(numberofplates){
 case 2:

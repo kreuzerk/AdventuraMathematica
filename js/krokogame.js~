@@ -252,7 +252,6 @@ kroksvg.append("text")
 /*======================================================
 Function that is responsible for displaying the next question
 =======================================================*/
-
 function nextquestion(){
 
 sound_buttonclicked.play();

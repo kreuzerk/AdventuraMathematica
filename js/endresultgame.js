@@ -2,6 +2,7 @@ var endgame_operators = ["+","-"];
 var endgame_colors = ["blue", "green", "red", "yellow", "orange"];	//Random colors that are used for the color of the numbers
 var endgame_result = 0;
 var endresultgame_operators;
+var endresultgame_numbers = [0,0,0,0];
 
 /*================================================
 	Create the Endresultgame
@@ -15,7 +16,6 @@ var elements = [document.getElementById("number1"),document.getElementById("numb
 
 //Variable to store the operators
 endresultgame_operators = new Array(3);	//This array stores the operators
-var numbers = [0,0,0,0];
 
 //Set the operators
 for(var i = 0; i<endresultgame_operators.length; i++){
@@ -31,22 +31,22 @@ var randomcolor = Math.floor(Math.random() * endgame_colors.length) + 1;
 
 elements[i].setAttribute("color", endgame_colors[randomcolor]);
 elements[i].innerHTML = number;
-numbers[i] = number;
+endresultgame_numbers[i] = number;
 } //End for loop
 
 //------------Calculate the endgame_result --------------------
 
-endgame_result = numbers[0];
+endgame_result = endresultgame_numbers[0];
 
 for(var i = 0; i<endresultgame_operators.length; i++){
   
 switch(endresultgame_operators[i]){
 
 case "+":
- endgame_result = endgame_result + numbers[i+1];
+ endgame_result = endgame_result + endresultgame_numbers[i+1];
 break;
 case "-":
- endgame_result = endgame_result - numbers[i+1];
+ endgame_result = endgame_result - endresultgame_numbers[i+1];
 break;
 }//End Switch case
 }
@@ -86,16 +86,27 @@ function endgame_checkresults(){
 
 sound_buttonclicked.play();
 
-var inputs = [document.getElementById("input1"), document.getElementById("input2"), document.getElementById("input3")];
+var inputs = [document.getElementById("input1").value, document.getElementById("input2").value, document.getElementById("input3").value];
 
-var correct = 0;
+var userresult = endresultgame_numbers[0];	//Set the first value as result
 
-for(var i = 0; i < endresultgame_operators.length; i++){
+for(var i = 0; i < inputs.length; i++){
 
-  if(inputs[i].value == endresultgame_operators[i]){
-	correct++;
-  }
+switch(inputs[i]){
+case "+":
+userresult += endresultgame_numbers[i+1];	//Add the next number to the result
+break;
+case "-":
+userresult -= endresultgame_numbers[i+1];	//Subtract the next number from the result
+break;
 }
 
-checkpurplefields(correct);	//Call the checkpurplefields method located in the mainscript.js
+}
+
+if(endgame_result == userresult){
+checkpurplefields(true);	//Call the checkpurplefields method with true located in the mainscript.js
+}
+else{
+checkpurplefields(false);	//Call the checkpurplefields method with false located in the mainscript.js
+}
 }
