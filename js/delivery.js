@@ -54,6 +54,8 @@ getdeliveryelements();
 
 bananadelivery_speechbubble.innerHTML = "Okay. <br /> Nos vemos más tarde.";
 
+deliver = false;
+
 //Change the first button
 deliverybutton1.innerHTML = "Ok";
 deliverybutton1.setAttribute("onclick", "deliveryokclicked()");	//Change the onclick function of the first button
